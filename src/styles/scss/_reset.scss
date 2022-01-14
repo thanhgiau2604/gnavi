@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 body,
 h1,
@@ -13,32 +13,32 @@ h6,
 p,
 figure,
 picture {
-	margin: 0;
+  margin: 0;
 }
 body {
-	min-height: 100vh;
-	line-height: 1.5;
-	font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
 }
 input,
 button,
 select,
 textarea {
-	font: inherit;
+  font: inherit;
 }
 img,
 picture {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 /* remove animation for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
