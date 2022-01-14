@@ -4,15 +4,15 @@ import Head from 'next/head'
 import Home from 'containers/home'
 
 const HomePage: NextPage = () => {
-	return (
-		<>
-			<Head>
-				<title>Home</title>
-			</Head>
+  return (
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
 
-			<Home />
-		</>
-	)
+      <Home />
+    </>
+  )
 }
 
 export default HomePage
