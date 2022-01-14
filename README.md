@@ -2,7 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+if you use VSCode, I recommend you tell VSCode to auto-fix eslint errors on save.
+Open `settings.json` or at root folder create a `.vscode/settings.json` file with the following content:
+
+```
+"editor.codeActionsOnSave": { "source.fixAll.eslint": true }
+```
+
+Run the development server:
 
 ```bash
 npm run dev
