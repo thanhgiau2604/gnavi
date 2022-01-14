@@ -6,7 +6,9 @@ if you use VSCode, I recommend you tell VSCode to auto-fix eslint errors on save
 Open `settings.json` or at root folder create a `.vscode/settings.json` file with the following content:
 
 ```
-"editor.codeActionsOnSave": { "source.fixAll.eslint": true }
+"editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "esbenp.prettier-vscode"
 ```
 
 Run the development server:
