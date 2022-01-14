@@ -4,4 +4,3 @@ interface LoginPayload {
 }
 
 export type { LoginPayload }
-
