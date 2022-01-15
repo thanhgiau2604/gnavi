@@ -1,6 +1,8 @@
 {
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
+    "airbnb",
+    "airbnb/hooks",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
@@ -26,6 +28,14 @@
     "no-extra-semi": "off",
     "@typescript-eslint/no-extra-semi": ["error"],
     "no-loss-of-precision": "off",
-    "@typescript-eslint/no-loss-of-precision": ["error"]
+    "@typescript-eslint/no-loss-of-precision": ["error"],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-filename-extension": "off",
+    "import/extensions": [2, { "tsx": "never", "ts": "never" }]
   }
 }
