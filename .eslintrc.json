@@ -32,6 +32,8 @@
     "react/function-component-definition": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": "off",
-    "import/extensions": [2, { "tsx": "never", "ts": "never" }]
+    "import/extensions": [2, { "tsx": "never", "ts": "never" }],
+    "import/prefer-default-export": "off",
+    "@next/next/no-img-element": "off"
   }
 }
