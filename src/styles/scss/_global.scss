@@ -1,0 +1,17 @@
+.wrapper {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $color-text-common;
+}
