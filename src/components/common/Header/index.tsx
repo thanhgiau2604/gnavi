@@ -7,7 +7,7 @@ const Header = ({ title, showLogo, shadow, children }: HeaderProps) => {
   return (
     <div className="wrapper">
       <HeaderContainer shadow={shadow}>
-        <div>
+        <div className={!showLogo ? 'back-btn' : ''}>
           {showLogo ? (
             <Image src="/images/logo.png" alt="logo" width="121" height="34" />
           ) : (

@@ -17,7 +17,7 @@ const HeaderContainer = styled.header<HeaderProps>`
       ? `box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);`
       : `border-bottom: 1px solid ${Variables.color3};`}
 
-  .back-icon {
+  .back-btn {
     cursor: pointer;
     position: absolute;
     top: 50%;
