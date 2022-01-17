@@ -5,6 +5,7 @@ import { ButtonContainer, ButtonTitle } from './styled'
 const Button: React.FC<ButtonProps> = ({
   width,
   height,
+  radius,
   color,
   fontSize,
   fontWeight,
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
     <ButtonContainer
       width={width}
       height={height}
+      radius={radius}
       color={color}
       fontWeight={fontWeight}
       onClick={() => event()}

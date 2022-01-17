@@ -3,6 +3,7 @@ import styled from 'styled-components'
 interface ButtonProps {
   width: number
   height: number
+  radius: number
   color: string
   fontWeight: number
 }
@@ -20,7 +21,7 @@ const ButtonContainer = styled.button<ButtonProps>`
     (color === 'transparent' && 'transparent') ||
     (color === 'green' && '#59B7C5') ||
     (color === 'red' && '#FF7C8A')};
-  border-radius: 4px;
+  border-radius: ${({ radius }) => `${radius}px`};
   color: ${({ color }) => (color === 'transparent' ? '#59B7C5' : '#fff')};
   border: ${({ color }) =>
     ((color === 'green' || color === 'transparent') && '1px solid #2ca2ab') ||
