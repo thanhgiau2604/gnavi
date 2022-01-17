@@ -24,7 +24,7 @@ const HeaderContainer = styled.header<HeaderProps>`
     transform: translateY(-50%);
   }
 
-  .btn-authen {
+  .authen-btn {
     margin-left: auto;
     display: flex;
     gap: 0 11px;
