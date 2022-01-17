@@ -1,5 +1,6 @@
 import React from 'react'
 import { HeaderProps } from 'interfaces/Header'
+import Image from 'next/image'
 import { HeaderContainer, HeaderTitle } from './styled'
 
 const Header = ({ title, showLogo, shadow, children }: HeaderProps) => {
@@ -8,9 +9,9 @@ const Header = ({ title, showLogo, shadow, children }: HeaderProps) => {
       <HeaderContainer shadow={shadow}>
         <div>
           {showLogo ? (
-            <img srcSet="/images/logo.png 2x" alt="logo" />
+            <Image src="/images/logo.png" alt="logo" width="121" height="34" />
           ) : (
-            <img className="back-icon" srcSet="/images/arrow_back.png 2x" alt="back-icon" />
+            <Image src="/images/arrow_back.png" alt="" width="24" height="24" />
           )}
         </div>
         {title && <HeaderTitle>{title}</HeaderTitle>}
