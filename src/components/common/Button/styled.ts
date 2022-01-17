@@ -21,7 +21,7 @@ const ButtonContainer = styled.button<ButtonProps>`
     (color === 'green' && '#59B7C5') ||
     (color === 'red' && '#FF7C8A')};
   border-radius: 4px;
-  color: ${({ color }) => (color === 'transparent' || color === 'green' ? '#59B7C5' : '#fff')};
+  color: ${({ color }) => (color === 'transparent' ? '#59B7C5' : '#fff')};
   border: ${({ color }) =>
     ((color === 'green' || color === 'transparent') && '1px solid #2ca2ab') ||
     (color === 'red' && '1px solid #F44F6D')};
