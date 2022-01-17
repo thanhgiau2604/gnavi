@@ -1,4 +1,5 @@
 {
+  "root": true,
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "airbnb",
@@ -10,13 +11,9 @@
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "off",
+    "no-param-reassign": ["error", { "props": false }],
     "@typescript-eslint/no-unused-vars": ["error"],
-    "@typescript-eslint/no-empty-interface": [
-      "error",
-      {
-        "allowSingleExtends": false
-      }
-    ],
+    "@typescript-eslint/no-empty-interface": ["error", { "allowSingleExtends": false }],
     "@typescript-eslint/no-extra-non-null-assertion": ["error"],
     "@typescript-eslint/no-for-in-array": ["error"],
     "@typescript-eslint/no-non-null-asserted-optional-chain": ["error"],
@@ -29,13 +26,11 @@
     "@typescript-eslint/no-extra-semi": ["error"],
     "no-loss-of-precision": "off",
     "@typescript-eslint/no-loss-of-precision": ["error"],
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function"
-      }
-    ],
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "react/jsx-filename-extension": "off",
-    "import/extensions": [2, { "tsx": "never", "ts": "never" }]
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": [2, { "tsx": "never", "ts": "never" }],
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default": "off"
   }
 }
