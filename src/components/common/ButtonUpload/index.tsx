@@ -5,7 +5,7 @@ import { UploadContainer } from './styled'
 const ButtonUpload: React.FC<ButtonUploadProps> = ({
   width,
   height,
-  color,
+  buttonUploadColor,
   fontSize,
   fontWeight,
   title,
@@ -16,7 +16,7 @@ const ButtonUpload: React.FC<ButtonUploadProps> = ({
     <UploadContainer
       width={width}
       height={height}
-      color={color}
+      buttonUploadColor={buttonUploadColor}
       fontSize={fontSize}
       fontWeight={fontWeight}
     >
