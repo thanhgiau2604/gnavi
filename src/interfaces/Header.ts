@@ -1,6 +1,6 @@
 interface HeaderProps {
   title?: string
-  showLogo?: boolean
+  showBtnBack?: boolean
   shadow?: boolean
   children?: JSX.Element | JSX.Element[]
 }

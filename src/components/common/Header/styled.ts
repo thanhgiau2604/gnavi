@@ -7,8 +7,8 @@ interface HeaderProps {
 
 const HeaderContainer = styled.header<HeaderProps>`
   width: 100%;
-  height: 48px;
-  padding: 0 5px;
+  height: 4.8rem;
+  padding: 0 0.5rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -27,13 +27,13 @@ const HeaderContainer = styled.header<HeaderProps>`
   .authen-btn {
     margin-left: auto;
     display: flex;
-    gap: 0 11px;
+    gap: 0 1.1rem;
   }
 `
 
 const HeaderTitle = styled.h1`
   font-family: ${Variables.fontSecondary};
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   color: inherit;
   margin: 0 auto;

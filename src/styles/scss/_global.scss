@@ -1,14 +1,18 @@
+html {
+  font-size: 62.5%;
+}
+
 .wrapper {
-  max-width: 800px;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
 .container {
-  padding: 0 27px;
+  padding: 0 2.7rem;
 }
 
 body {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: calc(20 / 14);
   font-family: $font-primary;
   font-weight: 400;
