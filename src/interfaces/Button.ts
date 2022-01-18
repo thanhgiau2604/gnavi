@@ -1,10 +1,16 @@
+export interface ButtonColor {
+  BGCOLOR: string
+  COLOR: string
+  BORDER: string
+}
+
 export interface ButtonProps {
-  width: number
-  height: number
+  width?: number
+  height?: number
+  handleClick?: Function
   radius: number
-  color: string
+  buttonColor: ButtonColor
   fontWeight: number
   fontSize: string
   title: string
-  event: Function
 }

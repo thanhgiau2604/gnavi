@@ -6,18 +6,21 @@ const Button: React.FC<ButtonProps> = ({
   width,
   height,
   radius,
-  color,
+  buttonColor,
   fontSize,
   fontWeight,
   title,
-  event,
+  handleClick,
 }) => {
+  const event = () => {
+    handleClick && handleClick()
+  }
   return (
     <ButtonContainer
       width={width}
       height={height}
       radius={radius}
-      color={color}
+      buttonColor={buttonColor}
       fontWeight={fontWeight}
       onClick={() => event()}
     >
