@@ -1,6 +1,7 @@
 import React from 'react'
 import { HeaderProps } from 'interfaces/Header'
 import Image from 'next/image'
+import { ImageContainer } from 'styles/styled/app/Image'
 import { HeaderContainer, HeaderTitle } from './styled'
 
 const Header = ({ title, showBtnBack, shadow, children }: HeaderProps) => {
@@ -9,9 +10,13 @@ const Header = ({ title, showBtnBack, shadow, children }: HeaderProps) => {
       <HeaderContainer shadow={shadow}>
         <div className={showBtnBack ? 'back-btn' : ''}>
           {showBtnBack ? (
-            <Image src="/images/arrow_back.png" alt="" width="24" height="24" />
+            <ImageContainer width={24} height={24}>
+              <Image src="/images/arrow_back.png" alt="" layout="fill" objectFit="contain" />
+            </ImageContainer>
           ) : (
-            <Image src="/images/logo.png" alt="logo" width="121" height="34" />
+            <ImageContainer width={121} height={34}>
+              <Image src="/images/logo.png" alt="logo" layout="fill" objectFit="contain" />
+            </ImageContainer>
           )}
         </div>
         {title && <HeaderTitle>{title}</HeaderTitle>}
