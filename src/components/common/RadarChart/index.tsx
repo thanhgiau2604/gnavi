@@ -1,9 +1,10 @@
 import React from 'react'
 import 'chart.js/auto' // required
 import { Radar } from 'react-chartjs-2'
+import { RadarChartProps } from 'interfaces/RadarChart'
 import { ChartContainer } from './styled'
 
-const RadarChart = () => {
+const RadarChart: React.FC<RadarChartProps> = ({ title, indicators }) => {
   const options = {
     responsive: true,
     legend: {
@@ -35,7 +36,7 @@ const RadarChart = () => {
     datasets: [
       {
         label: 'ガイドスキル',
-        data: [8, 6, 10, 7, 9], // indicators
+        data: indicators, // indicators
         /* styles */
         backgroundColor: 'rgba(255, 177, 193, 0.5)',
         borderColor: 'rgb(255, 99, 132)',
@@ -50,7 +51,7 @@ const RadarChart = () => {
   return (
     <div className="wrapper">
       <ChartContainer>
-        <p className="title">2021/11/06 18:24</p>
+        <p className="title">{title}</p>
         <Radar data={data} options={options} />
         <h5 className="note">自身の強 みや今後伸ばしていける部分を把握しましょう。</h5>
       </ChartContainer>

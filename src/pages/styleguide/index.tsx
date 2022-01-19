@@ -7,6 +7,7 @@ import Avatar from 'components/common/Avatar'
 import RadarChart from 'components/common/RadarChart'
 
 const StyleGuide = () => {
+  const indicators = [8, 6, 10, 7, 9]
   return (
     <div className="wrapper">
       <Button
@@ -54,7 +55,7 @@ const StyleGuide = () => {
         <Avatar src="" alt="no avatar" />
         <Avatar src="/images/profile_2.png" alt="avatarw" size="large" />
       </FlexContainer>
-      <RadarChart />
+      <RadarChart title="2021/11/06 18:24" indicators={indicators} />
     </div>
   )
 }
