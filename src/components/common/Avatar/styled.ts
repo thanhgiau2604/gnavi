@@ -1,15 +1,10 @@
 import styled, { css } from 'styled-components'
 import get from 'lodash/get'
+import { SIZE_CONSTANTS } from 'constants/avatar'
 
 interface AvatarContainerStyledProps {
   size?: 'small' | 'medium' | 'large'
   sx?: { height: number; width: number }
-}
-
-const SIZE_CONSTANTS = {
-  small: 2.4,
-  medium: 4.8,
-  large: 9.6,
 }
 
 export const AvatarContainer = styled.div<AvatarContainerStyledProps>`
@@ -27,8 +22,8 @@ export const AvatarContainer = styled.div<AvatarContainerStyledProps>`
     }
     const sizeValue = get(SIZE_CONSTANTS, size || 'medium')
     return css`
-      width: ${sizeValue}rem;
-      height: ${sizeValue}rem;
+      width: ${sizeValue};
+      height: ${sizeValue};
     `
   }}
   border-radius: 50%;

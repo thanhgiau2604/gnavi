@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { AvatarContainer } from 'components/common/Avatar/styled'
+import { NO_AVATAR } from 'constants/avatar'
 
 interface AvatarProps {
   src: string | undefined
@@ -12,7 +13,7 @@ interface AvatarProps {
 const Avatar = ({ alt, src, size, sx }: AvatarProps) => {
   return (
     <AvatarContainer size={size} sx={sx}>
-      <Image src={src || '/images/no_avatar.svg'} alt={alt} layout="fill" objectFit="contain" />
+      <Image src={src || NO_AVATAR} alt={alt} layout="fill" objectFit="contain" />
     </AvatarContainer>
   )
 }
