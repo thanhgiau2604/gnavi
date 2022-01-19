@@ -5,7 +5,7 @@ import ButtonUpload from 'components/common/ButtonUpload'
 
 const StyleGuide = () => {
   return (
-    <div className="styleGuide-container">
+    <div className="wrapper">
       <Button
         radius={4}
         buttonColor={buttonColors.STYLE01}
