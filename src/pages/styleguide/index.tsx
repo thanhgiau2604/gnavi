@@ -1,7 +1,9 @@
 import React from 'react'
+import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { buttonColors, buttonUploadColors, fontSize } from 'constants/index'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
+import Avatar from 'components/common/Avatar'
 
 const StyleGuide = () => {
   return (
@@ -46,6 +48,11 @@ const StyleGuide = () => {
         fontWeight={400}
         title="画像を選択する"
       />
+      <FlexContainer spacing={3} margin="10px 0">
+        <Avatar src="/images/profile_2.png" alt="avatar1" size="small" />
+        <Avatar src="" alt="no avatar" />
+        <Avatar src="/images/profile_2.png" alt="avatarw" size="large" />
+      </FlexContainer>
     </div>
   )
 }
