@@ -18,3 +18,9 @@ body {
   font-weight: 400;
   color: $color-text-common;
 }
+
+canvas {
+  width: 350px !important;
+  height: 350px !important;
+  margin: auto;
+}
