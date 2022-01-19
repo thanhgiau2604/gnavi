@@ -2,19 +2,15 @@ import styled from 'styled-components'
 import { ButtonUploadColor } from 'interfaces/ButtonUpload'
 
 export interface ButtonUploadProps {
-  width?: number
-  height?: number
   buttonUploadColor: ButtonUploadColor
   fontSize: string
   fontWeight: number
 }
 
 const UploadContainer = styled.div<ButtonUploadProps>`
-  width: fit-content;
+  width: 100%;
   .btn {
-    ${({ width }) => width && `width: ${width}px`};
-    ${({ height }) => height && `width: ${height}px`};
-    margin: auto;
+    margin: 1.8rem auto auto auto;
     display: flex;
     justify-content: center;
     align-items: center;

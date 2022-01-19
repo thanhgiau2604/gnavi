@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { ButtonColor } from 'interfaces/Button'
 
 interface ButtonProps {
-  width?: number
-  height?: number
   radius: number
   buttonColor: ButtonColor
   fontWeight: number
@@ -14,9 +12,7 @@ interface pProps {
 }
 
 const ButtonContainer = styled.button<ButtonProps>`
-  ${({ width }) => width && `width: ${width}px`};
-  ${({ height }) => height && `width: ${height}px`};
-  margin: auto;
+  margin: 1.8rem auto auto auto;
   text-align: center;
   background-color: ${({ buttonColor }) => buttonColor.BGCOLOR};
   border-radius: ${({ radius }) => `${radius}px`};
@@ -27,7 +23,7 @@ const ButtonContainer = styled.button<ButtonProps>`
 `
 
 const ButtonTitle = styled.p<pProps>`
-  padding: 2px 8px;
+  padding: 0.5rem 0.8rem;
   letter-spacing: 1.5px;
   font-size: ${({ fontSize }) => fontSize};
 `

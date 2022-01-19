@@ -3,8 +3,6 @@ import { ButtonProps } from 'interfaces/Button'
 import { ButtonContainer, ButtonTitle } from './styled'
 
 const Button: React.FC<ButtonProps> = ({
-  width,
-  height,
   radius,
   buttonColor,
   fontSize,
@@ -17,8 +15,6 @@ const Button: React.FC<ButtonProps> = ({
   }
   return (
     <ButtonContainer
-      width={width}
-      height={height}
       radius={radius}
       buttonColor={buttonColor}
       fontWeight={fontWeight}

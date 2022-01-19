@@ -20,6 +20,11 @@ const buttonColors = {
     COLOR: Variables.color1,
     BORDER: `1px solid ${Variables.colorPrimary}`,
   },
+  STYLE04: {
+    BGCOLOR: 'transparent',
+    COLOR: Variables.colorBlack,
+    BORDER: `1px solid ${Variables.colorPrimary}`,
+  },
 }
 
 const buttonUploadColors = {

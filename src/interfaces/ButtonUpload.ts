@@ -5,8 +5,6 @@ export interface ButtonUploadColor {
 }
 
 export interface ButtonUploadProps {
-  width?: number
-  height?: number
   buttonUploadColor: ButtonUploadColor
   fontSize: string
   fontWeight: number
