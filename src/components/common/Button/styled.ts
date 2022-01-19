@@ -23,7 +23,6 @@ const ButtonContainer = styled.button<ButtonProps>`
   color: ${({ buttonColor }) => buttonColor.COLOR};
   border: ${({ buttonColor }) => buttonColor.BORDER};
   font-weight: ${({ fontWeight }) => fontWeight};
-  font-size: 62.5%;
   cursor: pointer;
 `
 

@@ -10,7 +10,6 @@ export interface ButtonUploadProps {
 }
 
 const UploadContainer = styled.div<ButtonUploadProps>`
-  font-size: 62.5%;
   width: fit-content;
   .btn {
     ${({ width }) => width && `width: ${width}px`};
@@ -22,7 +21,6 @@ const UploadContainer = styled.div<ButtonUploadProps>`
     padding: 5px 15px;
     cursor: pointer;
     color: ${({ buttonUploadColor }) => buttonUploadColor.COLOR};
-
     &-upload {
       background: ${({ buttonUploadColor }) => buttonUploadColor.BGCOLOR};
       border: ${({ buttonUploadColor }) => buttonUploadColor.BORDER};
