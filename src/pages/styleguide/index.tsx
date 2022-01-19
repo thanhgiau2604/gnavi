@@ -4,6 +4,7 @@ import { buttonColors, buttonUploadColors, fontSize } from 'constants/index'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'
+import RadarChart from 'components/common/RadarChart'
 
 const StyleGuide = () => {
   return (
@@ -53,6 +54,7 @@ const StyleGuide = () => {
         <Avatar src="" alt="no avatar" />
         <Avatar src="/images/profile_2.png" alt="avatarw" size="large" />
       </FlexContainer>
+      <RadarChart />
     </div>
   )
 }
