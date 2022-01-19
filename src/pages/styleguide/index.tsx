@@ -9,15 +9,16 @@ const StyleGuide = () => {
       <Button
         radius={4}
         buttonColor={buttonColors.STYLE01}
-        fontSize={fontSize.LARGE}
+        fontSize={fontSize.XSMALL}
         fontWeight={700}
         title="編集する"
       />
       <ButtonUpload
+        width={320}
         buttonUploadColor={buttonUploadColors.STYLE02}
-        fontSize={fontSize.LARGE}
-        fontWeight={700}
-        title="編集する"
+        fontSize={fontSize.SMALL}
+        fontWeight={400}
+        title="画像を選択する"
       />
     </div>
   )

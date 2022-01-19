@@ -34,10 +34,10 @@ const buttonUploadColors = {
 }
 
 const fontSize = {
-  XSMALL: '12px',
-  SMALL: '14px',
-  MEDIUM: '16px',
-  LARGE: '18px',
+  XSMALL: '1.2em',
+  SMALL: '1.4em',
+  MEDIUM: '1.6em',
+  LARGE: '1.8em',
 }
 
 export { routes, buttonColors, fontSize, buttonUploadColors }

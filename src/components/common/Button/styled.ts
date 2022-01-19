@@ -23,10 +23,12 @@ const ButtonContainer = styled.button<ButtonProps>`
   color: ${({ buttonColor }) => buttonColor.COLOR};
   border: ${({ buttonColor }) => buttonColor.BORDER};
   font-weight: ${({ fontWeight }) => fontWeight};
+  font-size: 62.5%;
   cursor: pointer;
 `
 
 const ButtonTitle = styled.p<pProps>`
+  padding: 2px 8px;
   letter-spacing: 1.5px;
   font-size: ${({ fontSize }) => fontSize};
 `
