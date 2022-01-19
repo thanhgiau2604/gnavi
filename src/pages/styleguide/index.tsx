@@ -5,7 +5,7 @@ import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'
 import RadarChart from 'components/common/RadarChart'
-import { ChartContainer } from 'components/common/RadarChart/styled'
+import { ChartContainer } from 'styles/styled/layout/ChartLayout'
 
 const StyleGuide = () => {
   const indicators = [8, 6, 10, 7, 9]
