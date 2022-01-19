@@ -27,7 +27,9 @@ const HeaderContainer = styled.header<HeaderProps>`
   .authen-btn {
     margin-left: auto;
     display: flex;
-    gap: 0 1.1rem;
+    button:not(:first-child) {
+      margin-left: 1.1rem;
+    }
   }
 `
 
