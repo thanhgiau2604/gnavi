@@ -1,5 +1,5 @@
-import { ButtonUploadColor } from 'interfaces/ButtonUpload'
 import styled from 'styled-components'
+import { ButtonUploadColor } from 'interfaces/ButtonUpload'
 
 export interface ButtonUploadProps {
   width?: number

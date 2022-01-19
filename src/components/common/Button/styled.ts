@@ -1,5 +1,5 @@
-import { ButtonColor } from 'interfaces/Button'
 import styled from 'styled-components'
+import { ButtonColor } from 'interfaces/Button'
 
 interface ButtonProps {
   width?: number

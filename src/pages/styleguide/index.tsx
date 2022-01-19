@@ -1,6 +1,6 @@
-import Button from 'components/common/Button'
-import { buttonColors, buttonUploadColors, fontSize } from '../../constants'
 import React from 'react'
+import { buttonColors, buttonUploadColors, fontSize } from 'constants/index'
+import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 
 const StyleGuide = () => {
