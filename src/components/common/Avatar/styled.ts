@@ -36,9 +36,6 @@ export const AvatarContainer = styled.div<AvatarContainerStyledProps>`
   user-select: none;
 
   img {
-    width: 100%;
-    height: 100%;
     text-align: center;
-    object-fit: cover;
   }
 `
