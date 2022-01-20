@@ -11,43 +11,19 @@ const StyleGuide = () => {
   const indicators = [8, 6, 10, 7, 9]
   return (
     <div className="wrapper">
-      <Button
-        radius={4}
-        buttonColor={buttonColors.STYLE01}
-        fontSize={fontSize.SMALL}
-        fontWeight={700}
-        title="上記内容で質問する"
-      />
-      <Button
-        radius={4}
-        buttonColor={buttonColors.STYLE02}
-        fontSize={fontSize.SMALL}
-        fontWeight={700}
-        title="上記内容で質問する"
-      />
-      <Button
-        radius={4}
-        buttonColor={buttonColors.STYLE03}
-        fontSize={fontSize.SMALL}
-        fontWeight={700}
-        title="上記内容で質問する"
-      />
-      <Button
-        radius={4}
-        buttonColor={buttonColors.STYLE04}
-        fontSize={fontSize.SMALL}
-        fontWeight={700}
-        title="上記内容で質問する"
-      />
+      <Button title="上記内容で質問するss" />
+      <Button buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
+      <Button buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
+      <Button buttonColor={buttonColors.STYLE04} title="上記内容で質問する" />
       <ButtonUpload
         buttonUploadColor={buttonUploadColors.STYLE01}
-        fontSize={fontSize.SMALL}
+        _fontSize={fontSize.SMALL}
         fontWeight={400}
         title="画像を選択する"
       />
       <ButtonUpload
         buttonUploadColor={buttonUploadColors.STYLE02}
-        fontSize={fontSize.SMALL}
+        _fontSize={fontSize.MEDIUM}
         fontWeight={400}
         title="画像を選択する"
       />
