@@ -33,6 +33,7 @@
     "react/require-default-props": "off",
     "import/extensions": [2, { "tsx": "never", "ts": "never" }],
     "import/prefer-default-export": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "react/default-props-match-prop-types": "off"
   }
 }
