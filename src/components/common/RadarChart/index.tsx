@@ -37,10 +37,13 @@ const RadarChart: React.FC<RadarChartProps> = ({ indicators }) => {
         label: 'ガイドスキル',
         data: indicators, // indicators
         /* styles */
-        backgroundColor: 'rgba(255, 177, 193, 0.5)',
-        borderColor: 'rgb(255, 99, 132)',
-        pointBackgroundColor: 'rgb(255, 99, 132)',
-        pointBorderColor: '#fff',
+        backgroundColor: 'rgba(255, 177, 193, 0.8)',
+        borderColor: 'rgba(255, 138, 162, 255)',
+        borderWidth: 1.5,
+        pointBackgroundColor: 'rgba(255, 138, 162, 255)',
+        pointBorderColor: 'rgba(255, 138, 162, 255)',
+        pointBorderWidth: 0.25,
+        pointRadius: 1.5,
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgb(255, 99, 132)',
         /* styles */
