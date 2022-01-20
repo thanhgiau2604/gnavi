@@ -11,6 +11,7 @@ const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, ...rest }) => {
       buttonUploadColor={buttonUploadColor}
       fontSize={_fontSize}
       fontWeight={fontWeight}
+      {...rest}
     >
       <input
         id="upload-file"
