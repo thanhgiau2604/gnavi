@@ -2,7 +2,16 @@ import React from 'react'
 import { ButtonProps } from 'interfaces/Button'
 import { ButtonContainer, ButtonTitle } from './styled'
 
-const Button: React.FC<ButtonProps> = ({
+interface DefaultProps {
+  type?: string
+}
+
+const defaultProps: DefaultProps = {
+  type: 'button',
+}
+
+const Button: React.FC<ButtonProps & DefaultProps> = ({
+  type,
   radius,
   buttonColor,
   fontSize,
@@ -11,8 +20,10 @@ const Button: React.FC<ButtonProps> = ({
   handleClick,
 }) => {
   const event = () => {
+    // eslint-disable-next-line
     handleClick && handleClick()
   }
+  console.log(type)
   return (
     <ButtonContainer
       radius={radius}
@@ -24,5 +35,7 @@ const Button: React.FC<ButtonProps> = ({
     </ButtonContainer>
   )
 }
+
+Button.defaultProps = defaultProps
 
 export default Button
