@@ -27,8 +27,8 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = (props) => {
         </FieldLabel>
       )}
 
-      {type === 'text' ? (
-        <input id={name} {...field} disabled={disabled} placeholder={placeholder} />
+      {type !== 'text-area' ? (
+        <input id={name} {...field} disabled={disabled} placeholder={placeholder} type={type} />
       ) : (
         <textarea id={name} {...field} disabled={disabled} placeholder={placeholder} />
       )}

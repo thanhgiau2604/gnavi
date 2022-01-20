@@ -6,11 +6,15 @@ import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'
 import RadarChart from 'components/common/RadarChart'
 import { ChartContainer } from 'styles/styled/layout/ChartLayout'
+import Header from 'components/common/Header'
+import FormInput from './FormInput'
 
 const StyleGuide = () => {
   const indicators = [8, 6, 10, 7, 9]
   return (
     <div className="wrapper">
+      <Header shadow />
+      <Header showBtnBack title="ガイドの知恵袋" />
       <Button title="上記内容で質問する" />
       <Button buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
       <Button buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
@@ -37,6 +41,7 @@ const StyleGuide = () => {
         <RadarChart indicators={indicators} />
         <h5 className="note">自身の強 みや今後伸ばしていける部分を把握しましょう。</h5>
       </ChartContainer>
+      <FormInput />
     </div>
   )
 }
