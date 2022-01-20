@@ -1,17 +1,9 @@
 import React from 'react'
-import { ButtonColor, ButtonProps } from 'interfaces/Button'
+import { ButtonProps } from 'interfaces/Button'
 import { buttonColors, fontSize } from 'constants/index'
 import { ButtonContainer, ButtonTitle } from './styled'
 
-interface DefaultProps {
-  type?: string
-  radius?: number
-  buttonColor?: ButtonColor
-  fontWeight?: number
-  _fontSize?: string
-}
-
-const Button: React.FC<ButtonProps & DefaultProps> = ({ title, ...rest }) => {
+const Button: React.FC<ButtonProps> = ({ title, ...rest }) => {
   const { radius, buttonColor, fontWeight, _fontSize } = rest
   return (
     <ButtonContainer

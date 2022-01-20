@@ -11,7 +11,7 @@ const StyleGuide = () => {
   const indicators = [8, 6, 10, 7, 9]
   return (
     <div className="wrapper">
-      <Button title="上記内容で質問するss" />
+      <Button title="上記内容で質問する" />
       <Button buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
       <Button buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
       <Button buttonColor={buttonColors.STYLE04} title="上記内容で質問する" />
