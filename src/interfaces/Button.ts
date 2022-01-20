@@ -5,7 +5,8 @@ export interface ButtonColor {
 }
 
 export interface ButtonProps {
-  handleClick?: Function
+  type?: 'button'
+  handleClick?: () => any
   radius: number
   buttonColor: ButtonColor
   fontWeight: number
