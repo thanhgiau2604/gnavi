@@ -11,6 +11,7 @@ const Button: React.FC<ButtonProps> = ({ title, ...rest }) => {
       radius={radius}
       buttonColor={buttonColor}
       fontWeight={fontWeight}
+      {...rest}
     >
       <ButtonTitle fontSize={_fontSize}>{title}</ButtonTitle>
     </ButtonContainer>
