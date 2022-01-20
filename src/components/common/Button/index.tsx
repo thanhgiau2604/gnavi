@@ -11,6 +11,7 @@ const defaultProps: DefaultProps = {
 }
 
 const Button: React.FC<ButtonProps & DefaultProps> = ({
+  // eslint-disable-next-line
   type,
   radius,
   buttonColor,
@@ -23,7 +24,6 @@ const Button: React.FC<ButtonProps & DefaultProps> = ({
     // eslint-disable-next-line
     handleClick && handleClick()
   }
-  console.log(type)
   return (
     <ButtonContainer
       radius={radius}
