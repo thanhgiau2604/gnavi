@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { ButtonUploadColor } from 'interfaces/ButtonUpload'
 
 export interface ButtonUploadProps {
-  buttonUploadColor: ButtonUploadColor
-  fontSize: string
-  fontWeight: number
+  buttonUploadColor?: ButtonUploadColor
+  fontSize?: string
+  fontWeight?: number
 }
 
 const UploadContainer = styled.div<ButtonUploadProps>`
@@ -16,10 +16,10 @@ const UploadContainer = styled.div<ButtonUploadProps>`
     align-items: center;
     padding: 5px 15px;
     cursor: pointer;
-    color: ${({ buttonUploadColor }) => buttonUploadColor.COLOR};
+    color: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.COLOR};
     &-upload {
-      background: ${({ buttonUploadColor }) => buttonUploadColor.BGCOLOR};
-      border: ${({ buttonUploadColor }) => buttonUploadColor.BORDER};
+      background: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.BGCOLOR};
+      border: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.BORDER};
       box-sizing: border-box;
       border-radius: 4px;
       font-size: ${({ fontSize }) => fontSize};
