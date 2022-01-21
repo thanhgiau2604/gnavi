@@ -16,12 +16,12 @@ export const ModalContainer = styled.div<ModalContainerProps>`
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 
-  .section__content_container {
+  .content-container {
     margin: auto;
     width: 90%;
   }
 
-  .section__content {
+  .content {
     background-color: ${Variables.colorWhite};
     border: 1px solid #888;
     border-radius: 8px;
@@ -45,7 +45,7 @@ export const ModalHeader = styled.div`
     outline: none;
   }
 
-  .btn__back {
+  .btn-back {
     position: absolute;
     width: 1.2rem;
     height: 1.2rem;
@@ -54,16 +54,16 @@ export const ModalHeader = styled.div`
     transform: translateY(-50%);
   }
 
-  .section__title {
+  .title-container {
     width: 90%;
     font-weight: 700;
     font-size: 1.6rem;
-    .p__text_title {
+    .text-title {
       text-align: center;
     }
   }
 
-  .btn__close {
+  .btn-close {
     position: absolute;
     right: 12px;
     top: 50%;
