@@ -7,6 +7,8 @@ import Avatar from 'components/common/Avatar'
 import RadarChart from 'components/common/RadarChart'
 import { ChartContainer } from 'styles/styled/layout/ChartLayout'
 import Modal from 'components/common/Modal'
+import Header from 'components/common/Header'
+import FormInput from './FormInput'
 
 const StyleGuide = () => {
   const indicators = [8, 6, 10, 7, 9]
@@ -17,6 +19,8 @@ const StyleGuide = () => {
 
   return (
     <div className="wrapper">
+      <Header shadow />
+      <Header showBtnBack title="ガイドの知恵袋" />
       <Button title="上記内容で質問する" />
       <Button buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
       <Button buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
@@ -53,6 +57,7 @@ const StyleGuide = () => {
           <h1>children</h1>
         </Modal>
       )}
+      <FormInput />
     </div>
   )
 }

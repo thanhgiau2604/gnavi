@@ -9,7 +9,6 @@ const HomePage: NextPage = () => {
       <Head>
         <title>Home</title>
       </Head>
-
       <Home />
     </>
   )
