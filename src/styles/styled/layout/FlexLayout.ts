@@ -18,7 +18,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
   margin: ${({ margin }) => margin};
-  margin: ${({ padding }) => padding};
+  padding: ${({ padding }) => padding};
   ${({ full }) =>
     full &&
     css`
