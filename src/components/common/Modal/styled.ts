@@ -15,19 +15,60 @@ export const ModalContainer = styled.div<ModalContainerProps>`
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
-`
 
-export const ModalContent = styled.div`
-  background-color: ${Variables.colorWhite};
-  margin: auto;a
-  padding: 30px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  width: 60%;
+  .section__content_container {
+    margin: auto;
+    width: 90%;
+  }
+
+  .section__content {
+    background-color: ${Variables.colorWhite};
+    border: 1px solid #888;
+    border-radius: 8px;
+    margin: 15px 0;
+  }
 `
 
 export const ModalHeader = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
+  height: 5rem;
 
-  border-bottom: 1px solid rgb(202, 207, 211);
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+
+  .btn__back {
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .section__title {
+    width: 90%;
+    font-weight: 700;
+    font-size: 1.6rem;
+    .p__text_title {
+      text-align: center;
+    }
+  }
+
+  .btn__close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    padding: 0;
+  }
 `
