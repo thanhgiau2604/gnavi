@@ -3,12 +3,17 @@ import { FieldProps } from 'formik'
 import { CustomSelectProps } from 'interfaces/CustomField'
 import { FieldContainer, FieldLabel } from '../styled'
 
-const CustomSelect: React.FC<FieldProps & CustomSelectProps> = (props) => {
-  const { field, form } = props
-  const { label, disabled, options, required } = props
+const CustomSelect: React.FC<FieldProps & CustomSelectProps> = ({
+  field,
+  form: { touched, errors },
+  label,
+  options,
+  disabled,
+  required,
+  ...props
+}) => {
   const { width, height, pb, txtAlign, lbWeight } = props
   const { name, value } = field
-  const { errors, touched } = form
   const showError = Boolean(errors[name] && touched[name])
 
   const currentOption = options.find((option) => option.value === value)
@@ -42,6 +47,8 @@ const CustomSelect: React.FC<FieldProps & CustomSelectProps> = (props) => {
       )}
 
       <select
+        {...field}
+        {...props}
         id={name}
         disabled={disabled}
         value={currentOption?.value}

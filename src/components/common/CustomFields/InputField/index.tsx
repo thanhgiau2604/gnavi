@@ -3,12 +3,18 @@ import { FieldProps } from 'formik'
 import { CustomInputProps } from 'interfaces/CustomField'
 import { FieldContainer, FieldLabel } from '../styled'
 
-const CustomInput: React.FC<FieldProps & CustomInputProps> = (props) => {
-  const { field, form } = props // props from formik
-  const { type, label, placeholder, disabled, required } = props // additional props
+const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
+  field,
+  form: { touched, errors },
+  type,
+  label,
+  placeholder,
+  disabled,
+  required,
+  ...props
+}) => {
   const { width, height, pb, txtAlign, lbWeight } = props // css props
   const { name } = field
-  const { errors, touched } = form
   const showError = Boolean(errors[name] && touched[name])
 
   return (
@@ -28,9 +34,16 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = (props) => {
       )}
 
       {type !== 'text-area' ? (
-        <input id={name} {...field} disabled={disabled} placeholder={placeholder} type={type} />
+        <input
+          {...field}
+          {...props}
+          id={name}
+          disabled={disabled}
+          placeholder={placeholder}
+          type={type}
+        />
       ) : (
-        <textarea id={name} {...field} disabled={disabled} placeholder={placeholder} />
+        <textarea id={name} {...field} {...props} disabled={disabled} placeholder={placeholder} />
       )}
     </FieldContainer>
   )
