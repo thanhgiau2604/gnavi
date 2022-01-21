@@ -50,6 +50,10 @@ const FieldContainer = styled.div<FieldStyleProps>`
     font-size: ${fontSize.MEDIUM};
     padding-bottom: 1.5rem;
   }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: url('/images/date_picker.png') no-repeat;
+  }
 `
 
 const FieldLabel = styled.div`

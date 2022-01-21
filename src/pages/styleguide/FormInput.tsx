@@ -97,7 +97,13 @@ const FormInputWithFormik: React.FC = () => {
                 label="Moto"
                 theme={CHECKBOX_THEME.SECONDARY}
               />
-
+              <FastField
+                name="datetime"
+                component={CustomInput}
+                label="誕生日"
+                type="date"
+                required
+              />
               <Button title="参加する" type="submit" />
             </Form>
           )
