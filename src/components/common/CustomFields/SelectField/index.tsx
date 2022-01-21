@@ -72,6 +72,7 @@ CustomSelect.defaultProps = {
   required: false,
   disabled: false,
   options: [],
+  lbWeight: 'bold',
 }
 
 export default CustomSelect

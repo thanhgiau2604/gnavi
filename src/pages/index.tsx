@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import Home from 'containers/home'
-import Header from 'components/common/Header'
 
 const HomePage: NextPage = () => {
   return (
@@ -10,7 +9,6 @@ const HomePage: NextPage = () => {
       <Head>
         <title>Home</title>
       </Head>
-      <Header title="ガイドの知恵袋" />
       <Home />
     </>
   )

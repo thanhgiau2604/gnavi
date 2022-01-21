@@ -1,5 +1,5 @@
 import { OptionProps } from 'interfaces/CustomField'
-import { FastField, Formik, Form, FormikProps } from 'formik'
+import { FastField, Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import CustomInput from 'components/common/CustomFields/InputField'
@@ -37,9 +37,9 @@ const FormInputWithFormik: React.FC = () => {
   ]
 
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required('This field is required.'),
-    password: Yup.string().required('This field is required.'),
-    gender: Yup.string().required('This field is required.'),
+    username: Yup.string().required(),
+    password: Yup.string().required(),
+    gender: Yup.string().required(),
   })
 
   return (
@@ -51,10 +51,7 @@ const FormInputWithFormik: React.FC = () => {
           actions.setSubmitting(false)
         }}
       >
-        {(formikProps: FormikProps<FormValues>) => {
-          const { values, errors, touched } = formikProps
-          console.log({ values, errors, touched })
-
+        {() => {
           return (
             <Form>
               <FastField name="username" component={CustomInput} label="ユーザー名" required />

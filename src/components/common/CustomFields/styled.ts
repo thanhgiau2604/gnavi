@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
+import { FIELD_LABEL_WEIGHT } from 'constants/customField'
+import { LabelWeight, TextAlign } from 'interfaces/CustomField'
 
 interface FieldStyleProps {
   width?: number
   height?: number
   pb?: number | null // padding-bottom (if null --> common value)
-  lbWeight?: 'bold' | 'normal'
-  txtAlign?: 'left' | 'right' | 'center'
+  lbWeight?: LabelWeight
+  txtAlign?: TextAlign
   showError: boolean
 }
 
@@ -27,7 +29,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     color: ${Variables.colorTextCommon};
     border-radius: 4px;
     font-size: ${fontSize.MEDIUM};
-    line-height: calc(23 / ${fontSize.MEDIUM});
+    line-height: calc(23 / 16);
     ${({ txtAlign }) => txtAlign && `text-align: ${txtAlign}`};
   }
 
@@ -36,8 +38,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
   }
 
   select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
     background-image: url('/images/arrow_down.png');
     background-position: 95% 50%;
     background-repeat: no-repeat;
@@ -45,7 +46,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
   }
 
   label {
-    font-weight: ${({ lbWeight }) => (lbWeight === 'normal' ? 400 : 700)};
+    font-weight: ${({ lbWeight }) => lbWeight && FIELD_LABEL_WEIGHT[lbWeight]};
     font-size: ${fontSize.MEDIUM};
     padding-bottom: 1.5rem;
   }

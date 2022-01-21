@@ -1,10 +1,13 @@
+type LabelWeight = 'bold' | 'normal'
+type TextAlign = 'left' | 'right' | 'center'
+
 interface CustomFieldProps {
   label?: string
   width?: number
   height?: number
   pb?: number | null
-  lbWeight?: 'bold' | 'normal'
-  txtAlign?: 'left' | 'right' | 'center'
+  lbWeight?: LabelWeight
+  txtAlign?: TextAlign
   disabled?: boolean
   required?: boolean
 }
@@ -23,4 +26,11 @@ interface CustomSelectProps extends CustomFieldProps {
   options: OptionProps[]
 }
 
-export type { CustomFieldProps, OptionProps, CustomSelectProps, CustomInputProps }
+export type {
+  CustomFieldProps,
+  OptionProps,
+  CustomSelectProps,
+  CustomInputProps,
+  LabelWeight,
+  TextAlign,
+}

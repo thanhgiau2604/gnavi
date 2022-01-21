@@ -58,6 +58,7 @@ CustomInput.defaultProps = {
   pb: null,
   required: false,
   disabled: false,
+  lbWeight: 'bold',
 }
 
 export default CustomInput
