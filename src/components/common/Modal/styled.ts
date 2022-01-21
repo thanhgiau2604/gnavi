@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
 interface ModalContainerProps {
-  displayModal?: boolean
+  displayModal: boolean
 }
 
 export const ModalContainer = styled.div<ModalContainerProps>`
