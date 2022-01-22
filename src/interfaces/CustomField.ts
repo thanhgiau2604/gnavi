@@ -6,7 +6,7 @@ interface CustomFieldProps {
   width?: number
   height?: number
   pb?: number | null
-  lbWeight?: LabelWeight
+  lbweight?: LabelWeight
   txtAlign?: TextAlign
   disabled?: boolean
   required?: boolean
@@ -26,6 +26,18 @@ interface CustomSelectProps extends CustomFieldProps {
   options: OptionProps[]
 }
 
+interface CheckboxTheme {
+  border: string
+  checkedBg: string
+  checkedColor: string
+  checkedWidth: string
+  checkedHeight: string
+  checkedWeight: string
+}
+interface CustomCheckboxProps extends CustomFieldProps {
+  theme: CheckboxTheme
+}
+
 export type {
   CustomFieldProps,
   OptionProps,
@@ -33,4 +45,6 @@ export type {
   CustomInputProps,
   LabelWeight,
   TextAlign,
+  CheckboxTheme,
+  CustomCheckboxProps,
 }

@@ -5,12 +5,15 @@ import CustomSelect from 'components/common/CustomFields/SelectField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import Button from 'components/common/Button'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
+import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
+import { CHECKBOX_THEME } from 'constants/field'
 
 interface FormValues {
   username: string
   password: string
   description: string
   gender: string
+  transport: string[]
 }
 
 const FormInputWithFormik: React.FC = () => {
@@ -19,6 +22,7 @@ const FormInputWithFormik: React.FC = () => {
     password: '',
     description: '',
     gender: 'male',
+    transport: [],
   }
 
   const options: OptionProps[] = [
@@ -38,6 +42,7 @@ const FormInputWithFormik: React.FC = () => {
 
   const validationSchema = Yup.object().shape({
     username: Yup.string().required(),
+    transport: Yup.array().min(1),
     password: Yup.string().required(),
     gender: Yup.string().required(),
   })
@@ -79,6 +84,20 @@ const FormInputWithFormik: React.FC = () => {
                 options={options}
                 required
               />
+
+              <FastField
+                name="transport"
+                component={CustomCheckBox}
+                label="Car"
+                theme={CHECKBOX_THEME.PRIMARY}
+              />
+              <FastField
+                name="transport"
+                component={CustomCheckBox}
+                label="Moto"
+                theme={CHECKBOX_THEME.SECONDARY}
+              />
+
               <Button title="参加する" type="submit" />
             </Form>
           )

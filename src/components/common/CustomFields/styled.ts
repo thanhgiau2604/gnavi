@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
-import { FIELD_LABEL_WEIGHT } from 'constants/customField'
+import { FIELD_LABEL_WEIGHT } from 'constants/field'
 import { LabelWeight, TextAlign } from 'interfaces/CustomField'
 
 interface FieldStyleProps {
   width?: number
   height?: number
   pb?: number | null // padding-bottom (if null --> common value)
-  lbWeight?: LabelWeight
+  lbweight?: LabelWeight
   txtAlign?: TextAlign
-  showError: boolean
+  showError?: boolean
 }
 
 const FieldContainer = styled.div<FieldStyleProps>`
@@ -46,7 +46,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
   }
 
   label {
-    font-weight: ${({ lbWeight }) => lbWeight && FIELD_LABEL_WEIGHT[lbWeight]};
+    font-weight: ${({ lbweight }) => lbweight && FIELD_LABEL_WEIGHT[lbweight]};
     font-size: ${fontSize.MEDIUM};
     padding-bottom: 1.5rem;
   }
@@ -54,6 +54,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
 
 const FieldLabel = styled.div`
   display: flex;
+
   .require-mark {
     color: ${Variables.colorSecondary};
     border: 1px solid ${Variables.colorSecondary};
@@ -64,5 +65,4 @@ const FieldLabel = styled.div`
     font-size: 1.2rem;
   }
 `
-
 export { FieldContainer, FieldLabel }

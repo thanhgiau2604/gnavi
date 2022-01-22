@@ -13,7 +13,7 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
   required,
   ...props
 }) => {
-  const { width, height, pb, txtAlign, lbWeight } = props // css props
+  const { width, height, pb, txtAlign, lbweight } = props // css props
   const { name } = field
   const showError = Boolean(errors[name] && touched[name])
 
@@ -23,7 +23,7 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
       height={height}
       pb={pb}
       txtAlign={txtAlign}
-      lbWeight={lbWeight}
+      lbweight={lbweight}
       showError={showError}
     >
       {label && (
@@ -58,7 +58,7 @@ CustomInput.defaultProps = {
   pb: null,
   required: false,
   disabled: false,
-  lbWeight: 'bold',
+  lbweight: 'bold',
 }
 
 export default CustomInput
