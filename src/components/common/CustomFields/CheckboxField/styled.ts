@@ -38,7 +38,6 @@ const FieldCheckboxContainer = styled.div<FieldCheckboxStyleProps>`
       border-style: solid;
       border-color: ${({ cbTheme }) => cbTheme.checkedColor};
       border-width: ${({ cbTheme }) => `0px ${cbTheme.checkedWeight} ${cbTheme.checkedWeight} 0px`};
-      border-radius: 0.5px;
       transform: rotate(45deg);
     }
   }
