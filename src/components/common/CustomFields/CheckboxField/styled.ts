@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
 import { CheckboxTheme, LabelWeight } from 'interfaces/CustomField'
+import { FIELD_LABEL_WEIGHT } from 'constants/field'
 
 interface FieldCheckboxStyleProps {
   width?: number
@@ -52,6 +53,7 @@ const FieldCheckboxLabel = styled.label<FieldCheckboxStyleProps>`
   display: flex;
   align-items: center;
   width: fit-content;
+  font-weight: ${({ lbweight }) => lbweight && FIELD_LABEL_WEIGHT[lbweight]};
 
   input[type='checkbox'] {
     position: absolute;

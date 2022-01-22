@@ -9,7 +9,7 @@ const CustomCheckBox: React.FC<FieldProps & CustomCheckboxProps> = ({
   label,
   ...props
 }) => {
-  const { width, height, pb, lbweight, theme, ...rest } = props // css props
+  const { width, height, pb, lbweight, theme } = props // css props
   const { name } = field
   field.value = label
   const showError = Boolean(errors[name] && touched[name])
@@ -23,7 +23,7 @@ const CustomCheckBox: React.FC<FieldProps & CustomCheckboxProps> = ({
     >
       <FieldCheckboxLabel lbweight={lbweight} cbTheme={theme}>
         {label}
-        <input type="checkbox" {...field} {...rest} />
+        <input type="checkbox" {...field} {...props} />
         <span className="check-mark" />
       </FieldCheckboxLabel>
     </FieldCheckboxContainer>
@@ -37,7 +37,7 @@ CustomCheckBox.defaultProps = {
   pb: null,
   required: false,
   disabled: false,
-  lbweight: 'bold',
+  lbweight: 'normal',
 }
 
 export default CustomCheckBox
