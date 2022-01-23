@@ -1,4 +1,3 @@
-// import Image from 'next/image'
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import { FieldProps } from 'formik'
@@ -30,6 +29,12 @@ const CustomDate: React.FC<FieldProps & CustomInputProps> = ({
     field.onChange(changeEvent)
   }
 
+  const handleClickOutside = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if ((e.target as Element).className !== 'calendar-btn') {
+      setOpen(false)
+    }
+  }
+
   return (
     <FieldContainer
       width={width}
@@ -55,10 +60,10 @@ const CustomDate: React.FC<FieldProps & CustomInputProps> = ({
           onChange={handleChangeDateTime}
           dateFormat="yyyy/MM/dd"
           open={isOpen}
-          onClickOutside={() => setOpen(false)}
           disabled={disabled}
+          onClickOutside={handleClickOutside}
         />
-        <input type="button" onClick={() => setOpen((state) => !state)} />
+        <input type="button" className="calendar-btn" onClick={() => setOpen((open) => !open)} />
       </div>
     </FieldContainer>
   )

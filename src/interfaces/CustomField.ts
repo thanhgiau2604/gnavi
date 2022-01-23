@@ -21,6 +21,7 @@ interface OptionProps {
 interface CustomInputProps extends CustomFieldProps {
   type?: string
   placeholder?: string
+  maxLength?: number
 }
 
 interface CustomSelectProps extends CustomFieldProps {

@@ -63,7 +63,13 @@ const FormInputWithFormik: React.FC = () => {
         {() => {
           return (
             <Form>
-              <FastField name="username" component={CustomInput} label="ユーザー名" required />
+              <FastField
+                name="username"
+                component={CustomInput}
+                label="ユーザー名"
+                required
+                maxLength={50}
+              />
 
               <FastField
                 name="password"
@@ -71,6 +77,7 @@ const FormInputWithFormik: React.FC = () => {
                 label="パスワード"
                 type="password"
                 lbTag="require"
+                maxLength={100}
               />
 
               <FastField
@@ -103,13 +110,7 @@ const FormInputWithFormik: React.FC = () => {
                 theme={CHECKBOX_THEME.SECONDARY}
               />
 
-              <FastField
-                name="birthday"
-                component={CustomDate}
-                label="バースデー"
-                lbTag="any"
-                width={800}
-              />
+              <FastField name="birthday" component={CustomDate} label="バースデー" lbTag="any" />
               <Button title="参加する" type="submit" />
             </Form>
           )

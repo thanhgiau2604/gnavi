@@ -47,6 +47,10 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
       ) : (
         <textarea id={name} {...field} {...props} disabled={disabled} placeholder={placeholder} />
       )}
+
+      {props.maxLength && (
+        <p className="count-words">{`${String(field.value).length} / ${props.maxLength}`}</p>
+      )}
     </FieldContainer>
   )
 }
