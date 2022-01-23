@@ -1,22 +1,34 @@
-import React from 'react'
+// import Image from 'next/image'
+import React, { useState } from 'react'
+import DatePicker from 'react-datepicker'
 import { FieldProps } from 'formik'
 import { CustomInputProps } from 'interfaces/CustomField'
 import { LABEL_TAGS } from 'constants/field'
 import { FieldContainer, FieldLabel } from '../styled'
 
-const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
+const CustomDate: React.FC<FieldProps & CustomInputProps> = ({
   field,
   form: { touched, errors },
-  type,
   label,
   placeholder,
   disabled,
   lbTag,
   ...props
 }) => {
+  const [isOpen, setOpen] = useState<boolean>(false)
   const { width, height, pb, txtAlign, lbweight } = props // css props
   const { name } = field
   const showError = Boolean(errors[name] && touched[name])
+
+  const handleChangeDateTime = (date: Date) => {
+    const changeEvent = {
+      target: {
+        name,
+        value: date,
+      },
+    }
+    field.onChange(changeEvent)
+  }
 
   return (
     <FieldContainer
@@ -35,25 +47,25 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
         </FieldLabel>
       )}
 
-      {type !== 'text-area' ? (
-        <input
+      <div className="date-wrapper">
+        <DatePicker
           {...field}
-          {...props}
-          id={name}
+          placeholderText={placeholder}
+          selected={field.value}
+          onChange={handleChangeDateTime}
+          dateFormat="yyyy/MM/dd"
+          open={isOpen}
+          onClickOutside={() => setOpen(false)}
           disabled={disabled}
-          placeholder={placeholder}
-          type={type}
         />
-      ) : (
-        <textarea id={name} {...field} {...props} disabled={disabled} placeholder={placeholder} />
-      )}
+        <input type="button" onClick={() => setOpen((state) => !state)} />
+      </div>
     </FieldContainer>
   )
 }
 
-CustomInput.defaultProps = {
-  type: 'text',
-  placeholder: '',
+CustomDate.defaultProps = {
+  placeholder: 'YYYY/MM/DD',
   label: '',
   width: 0,
   height: 0,
@@ -62,5 +74,4 @@ CustomInput.defaultProps = {
   disabled: false,
   lbweight: 'bold',
 }
-
-export default CustomInput
+export default CustomDate

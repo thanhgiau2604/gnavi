@@ -35,7 +35,6 @@ CustomCheckBox.defaultProps = {
   width: 0,
   height: 0,
   pb: null,
-  required: false,
   disabled: false,
   lbweight: 'normal',
 }

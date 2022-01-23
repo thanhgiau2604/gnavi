@@ -1,6 +1,7 @@
 import React from 'react'
 import { FieldProps } from 'formik'
 import { CustomSelectProps } from 'interfaces/CustomField'
+import { LABEL_TAGS } from 'constants/field'
 import { FieldContainer, FieldLabel } from '../styled'
 
 const CustomSelect: React.FC<FieldProps & CustomSelectProps> = ({
@@ -9,7 +10,7 @@ const CustomSelect: React.FC<FieldProps & CustomSelectProps> = ({
   label,
   options,
   disabled,
-  required,
+  lbTag,
   ...props
 }) => {
   const { width, height, pb, txtAlign, lbweight } = props
@@ -42,7 +43,8 @@ const CustomSelect: React.FC<FieldProps & CustomSelectProps> = ({
       {label && (
         <FieldLabel>
           <label htmlFor={name}>{label}</label>
-          {required && <p className="require-mark">必須</p>}
+          {lbTag === LABEL_TAGS.REQUIRE && <p className="lb-tag lb-tag--require">必須</p>}
+          {lbTag === LABEL_TAGS.ANY && <p className="lb-tag lb-tag--any">任意</p>}
         </FieldLabel>
       )}
 
@@ -69,7 +71,7 @@ CustomSelect.defaultProps = {
   width: 0,
   height: 0,
   pb: null,
-  required: false,
+  lbTag: 'none',
   disabled: false,
   options: [],
   lbweight: 'bold',

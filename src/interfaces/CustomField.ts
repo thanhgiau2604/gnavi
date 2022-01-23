@@ -1,4 +1,5 @@
 type LabelWeight = 'bold' | 'normal'
+type LabelTag = 'require' | 'any' | 'none'
 type TextAlign = 'left' | 'right' | 'center'
 
 interface CustomFieldProps {
@@ -7,9 +8,9 @@ interface CustomFieldProps {
   height?: number
   pb?: number | null
   lbweight?: LabelWeight
+  lbTag?: LabelTag
   txtAlign?: TextAlign
   disabled?: boolean
-  required?: boolean
 }
 
 interface OptionProps {
@@ -47,4 +48,5 @@ export type {
   TextAlign,
   CheckboxTheme,
   CustomCheckboxProps,
+  LabelTag,
 }

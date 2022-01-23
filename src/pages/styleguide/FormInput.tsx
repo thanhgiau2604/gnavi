@@ -7,6 +7,7 @@ import Button from 'components/common/Button'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import { CHECKBOX_THEME } from 'constants/field'
+import CustomDate from 'components/common/CustomFields/DateField'
 
 interface FormValues {
   username: string
@@ -14,6 +15,7 @@ interface FormValues {
   description: string
   gender: string
   transport: string[]
+  birthday: Date
 }
 
 const FormInputWithFormik: React.FC = () => {
@@ -23,6 +25,7 @@ const FormInputWithFormik: React.FC = () => {
     description: '',
     gender: 'male',
     transport: [],
+    birthday: new Date(),
   }
 
   const options: OptionProps[] = [
@@ -53,6 +56,7 @@ const FormInputWithFormik: React.FC = () => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values, actions) => {
+          console.log(values)
           actions.setSubmitting(false)
         }}
       >
@@ -66,7 +70,7 @@ const FormInputWithFormik: React.FC = () => {
                 component={CustomInput}
                 label="パスワード"
                 type="password"
-                required
+                lbTag="require"
               />
 
               <FastField
@@ -75,6 +79,7 @@ const FormInputWithFormik: React.FC = () => {
                 label="説明"
                 type="text-area"
                 height={335}
+                lbTag="any"
               />
 
               <FastField
@@ -82,7 +87,7 @@ const FormInputWithFormik: React.FC = () => {
                 component={CustomSelect}
                 label="性別"
                 options={options}
-                required
+                lbTag="require"
               />
 
               <FastField
@@ -97,12 +102,13 @@ const FormInputWithFormik: React.FC = () => {
                 label="Moto"
                 theme={CHECKBOX_THEME.SECONDARY}
               />
+
               <FastField
-                name="datetime"
-                component={CustomInput}
-                label="誕生日"
-                type="date"
-                required
+                name="birthday"
+                component={CustomDate}
+                label="バースデー"
+                lbTag="any"
+                width={800}
               />
               <Button title="参加する" type="submit" />
             </Form>

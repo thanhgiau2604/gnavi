@@ -1,15 +1,11 @@
 import styled, { css } from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
-import { CheckboxTheme, LabelWeight } from 'interfaces/CustomField'
+import { CheckboxTheme } from 'interfaces/CustomField'
 import { FIELD_LABEL_WEIGHT } from 'constants/field'
+import { FieldStyleProps } from '../styled'
 
-interface FieldCheckboxStyleProps {
-  width?: number
-  height?: number
-  pb?: number | null
-  lbweight?: LabelWeight
-  showError?: boolean
+interface FieldCheckboxStyleProps extends FieldStyleProps {
   cbTheme: CheckboxTheme
 }
 

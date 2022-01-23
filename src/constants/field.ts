@@ -1,4 +1,4 @@
-import { CheckboxTheme } from 'interfaces/CustomField'
+import { CheckboxTheme, LabelTag } from 'interfaces/CustomField'
 import { Variables } from 'styles/styled/app/Variables'
 
 export const FIELD_LABEL_WEIGHT = {
@@ -27,4 +27,14 @@ export const CHECKBOX_THEME: CheckboxThemes = {
     checkedHeight: '1rem',
     checkedWeight: '0px',
   },
+}
+
+interface LabelTags {
+  [name: string]: LabelTag
+}
+
+export const LABEL_TAGS: LabelTags = {
+  REQUIRE: 'require',
+  ANY: 'any',
+  NONE: 'none',
 }
