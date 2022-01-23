@@ -14,5 +14,7 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   buttonColor?: ButtonColor
   fontWeight?: number
   _fontSize?: string
+  width?: string
+  height?: string
   title: string
 }
