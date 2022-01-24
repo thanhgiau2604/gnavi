@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { fontSize } from 'constants/index'
-import { FIELD_LABEL_WEIGHT } from 'constants/customField'
+import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { Variables } from 'styles/styled/app/Variables'
 
 const TourPlanDetailContainer = styled.div`

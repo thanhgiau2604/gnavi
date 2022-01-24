@@ -1,5 +1,5 @@
-import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { fontSize } from 'constants/index'
+import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 

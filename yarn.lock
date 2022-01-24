@@ -4291,6 +4291,7 @@ chart.js@3.0.0:
     fsevents "~2.3.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
@@ -4370,6 +4371,9 @@ classnames@^2.2.6:
 =======
 classnames@^2.2.5:
 >>>>>>> e845b09 (feat: build base detail view tour-plan)
+=======
+classnames@^2.2.5, classnames@^2.2.6:
+>>>>>>> a39830a (chore: update path)
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==

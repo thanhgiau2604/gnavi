@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FIELD_LABEL_WEIGHT } from 'constants/customField'
+import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { fontSize } from 'constants/index'
 
 const ScheduleContainer = styled.div`
