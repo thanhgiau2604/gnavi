@@ -4,7 +4,7 @@ import { FIELD_LABEL_WEIGHT } from 'constants/customField'
 import { Variables } from 'styles/styled/app/Variables'
 
 const TourPlanDetailContainer = styled.div`
-  margin: 2.4rem auto 2.2rem auto;
+  margin: 2.4rem auto auto auto;
   font-family: ${Variables.fontSecondary};
   text-align: justify;
   line-height: 2rem;
@@ -12,7 +12,7 @@ const TourPlanDetailContainer = styled.div`
     font-weight: ${FIELD_LABEL_WEIGHT.bold};
     font-size: ${fontSize.XLARGE};
     width: 90%;
-    height: 2.2rem;
+    height: 2rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -25,6 +25,30 @@ const TourPlanDetailContainer = styled.div`
     }
     &--medium {
       font-size: ${fontSize.MEDIUM};
+    }
+  }
+  .slider {
+    position: relative;
+    .slick-slider.slick-initialized {
+      margin: 2.2rem auto 7.7rem auto;
+    }
+    .image-box {
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      width: 8.8rem;
+      height: 3.2rem;
+      right: 0;
+      bottom: 0;
+      transform: translate(-10%, -50%);
+      border-radius: 4px;
+      .icon {
+        margin: 0.6rem auto 0.8rem 1.1rem;
+      }
+      .counter {
+        color: ${Variables.colorPrimary};
+        font-weight: ${FIELD_LABEL_WEIGHT.bold};
+        margin: 0.6rem auto 0.8rem 1.1rem;
+      }
     }
   }
 `
