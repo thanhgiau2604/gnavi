@@ -22,9 +22,9 @@ const StyleGuide = () => {
       <Header shadow />
       <Header showBtnBack title="ガイドの知恵袋" />
       <Button title="上記内容で質問する" />
-      <Button buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
-      <Button buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
-      <Button buttonColor={buttonColors.STYLE04} title="上記内容で質問する" />
+      <Button width={32} buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
+      <Button width={20} buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
+      <Button width={10} buttonColor={buttonColors.STYLE04} title="編集する" />
       <ButtonUpload
         buttonUploadColor={buttonUploadColors.STYLE01}
         _fontSize={fontSize.SMALL}

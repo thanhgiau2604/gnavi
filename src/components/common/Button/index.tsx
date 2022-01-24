@@ -15,6 +15,7 @@ Button.defaultProps = {
   buttonColor: buttonColors.STYLE01,
   fontWeight: 400,
   _fontSize: fontSize.MEDIUM,
+  margin: '1.8rem auto auto auto',
 }
 
 export default Button

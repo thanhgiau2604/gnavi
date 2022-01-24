@@ -9,6 +9,7 @@ export interface ButtonColor {
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   width?: number | string
   height?: number | string
+  margin?: string
   radius?: number
   buttonColor?: ButtonColor
   fontWeight?: number
