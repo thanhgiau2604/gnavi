@@ -21,7 +21,7 @@ const StyleGuide = () => {
     <div className="wrapper">
       <div className="container">
         <Header shadow />
-        <Header showBtnBack title="ガイドの知恵袋" />
+        <Header showBtnBack title="ガイドの知恵袋" backTo="/login" />
         <Button width={200} buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
         <Button width={320} buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
         <Button width="90%" buttonColor={buttonColors.STYLE04} title="編集する" />
