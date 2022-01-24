@@ -11,11 +11,29 @@ interface ButtonProps {
   _fontSize?: string
 }
 
+const setValue = (param: string | number): string => {
+  if (typeof param === 'string') {
+    // width
+    if (param === 'full') {
+      return '100%'
+    }
+    // height
+    if (param === 'auto') {
+      return 'auto'
+    }
+    // width | height
+
+    return `${param}%`
+  }
+  // width | height
+  return `calc(${param}rem/10)`
+}
+
 const ButtonContainer = styled.button<ButtonProps>`
   text-align: center;
   margin: ${({ margin }) => margin && margin};
-  width: ${({ width }) => (width && width === 'full' ? '100%' : `${width}rem`)};
-  height: ${({ height }) => (height && height === 'auto' ? 'auto' : `${height}rem`)};
+  width: ${({ width }) => width && setValue(width)};
+  height: ${({ height }) => height && setValue(height)};
   background-color: ${({ buttonColor }) => buttonColor && buttonColor.BGCOLOR};
   border-radius: ${({ radius }) => radius && `${radius}px`};
   color: ${({ buttonColor }) => buttonColor && buttonColor.COLOR};
