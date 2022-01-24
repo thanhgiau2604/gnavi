@@ -32,6 +32,7 @@ const ScheduleBlockContainer = styled.div`
     -webkit-box-orient: vertical;
     margin-bottom: 3.5rem;
     padding: 0 1.5rem;
+    line-height: 2.317rem;
   }
   .btn {
     width: 2.2rem;
@@ -42,12 +43,13 @@ const ScheduleBlockContainer = styled.div`
       right: 0;
       top: 0;
       transform: translate(-50%, -50%);
+      padding-bottom: 3rem;
     }
     &-more {
       position: absolute;
       top: 0;
       right: 0;
-      transform: translate(-100%, 150%);
+      transform: translate(-100%, 105%);
     }
   }
   .image-container {

@@ -1,21 +1,19 @@
 import React from 'react'
+import { TourPlan } from 'interfaces/TourPlan'
+import { ScheduleInformation, PlanDetail } from 'interfaces/TourPlan/Schedule'
 import ScheduleBlock from './Block'
 import { DateTimeLabel, YearLabel } from './styled'
 
-interface ScheduleProps {
-  data: any
-}
-
-const Schedule: React.FC<ScheduleProps> = ({ data }) => {
+const Schedule: React.FC<TourPlan> = ({ plans }) => {
   return (
     <div className="schedule-container">
-      {data?.map((item: any, i: number) => (
+      {plans?.map((plan: PlanDetail, i: number) => (
         <div key={i}>
-          <YearLabel>{item.year}</YearLabel>
-          {item.schedules?.map((schedule: any, j: number) => (
+          <YearLabel>{plan.year}</YearLabel>
+          {plan.scheduleInfos?.map((scheduleInfo: ScheduleInformation, j: number) => (
             <div key={j}>
-              <DateTimeLabel>{schedule.datetime}</DateTimeLabel>
-              <ScheduleBlock data={schedule} />
+              <DateTimeLabel>{scheduleInfo.datetime}</DateTimeLabel>
+              <ScheduleBlock scheduleInfo={scheduleInfo} />
             </div>
           ))}
         </div>

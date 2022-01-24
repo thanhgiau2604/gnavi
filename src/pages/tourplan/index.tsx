@@ -10,7 +10,7 @@ const TourPlan = () => {
     {
       id: 1,
       year: '2021年',
-      schedules: [
+      scheduleInfos: [
         {
           id: 1,
           datetime: '12月15日',
@@ -49,7 +49,7 @@ const TourPlan = () => {
           _fontSize={fontSize.LARGE}
           fontWeight={700}
         />
-        <Schedule data={data} />
+        <Schedule plans={data} />
       </Container>
     </div>
   )
