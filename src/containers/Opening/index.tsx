@@ -1,6 +1,6 @@
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { buttonColors } from 'constants/index'
+import { buttonColors, fontSize } from 'constants/index'
 import type { FC } from 'react'
 import { OpeningSession } from './styled'
 
@@ -10,8 +10,24 @@ const Opening: FC = () => {
       <OpeningSession>
         <Header shadow>
           <div className="authen-btn">
-            <Button title="新規登録" buttonColor={buttonColors.STYLE01} radius={4} _fontSize="12" />
-            <Button title="ログイン" buttonColor={buttonColors.STYLE03} radius={4} _fontSize="12" />
+            <Button
+              title="新規登録"
+              buttonColor={buttonColors.STYLE01}
+              radius={4}
+              _fontSize={fontSize.XSMALL}
+              margin="0"
+              height={32}
+              width={80}
+            />
+            <Button
+              title="ログイン"
+              buttonColor={buttonColors.STYLE03}
+              radius={4}
+              _fontSize={fontSize.XSMALL}
+              margin="0"
+              height={32}
+              width={80}
+            />
           </div>
         </Header>
         <div className="container">
@@ -23,15 +39,19 @@ const Opening: FC = () => {
               title="メールアドレスで登録する"
               buttonColor={buttonColors.STYLE01}
               radius={4}
-              _fontSize="12"
+              _fontSize={fontSize.LARGE}
               fontWeight={700}
+              height={48}
+              width="100%"
             />
             <Button
               title="ログイン"
               buttonColor={buttonColors.STYLE03}
               radius={4}
-              _fontSize="12"
+              _fontSize={fontSize.LARGE}
               fontWeight={700}
+              height={48}
+              width="100%"
             />
           </div>
         </div>

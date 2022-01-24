@@ -4,10 +4,6 @@ const OpeningSession = styled.section`
   .opening {
     &-main {
       margin-top: 4.5rem;
-      button {
-        width: 100%;
-        height: 4.8rem;
-      }
       button:first-of-type {
         margin-top: 10rem;
       }
@@ -16,6 +12,8 @@ const OpeningSession = styled.section`
       }
     }
     &-intro {
+      font-size: 1.8rem;
+      text-align: center;
       padding: 0 2.4rem;
     }
   }
