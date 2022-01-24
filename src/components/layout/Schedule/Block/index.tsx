@@ -24,10 +24,7 @@ const ScheduleBlock: React.FC<ScheduleBlockProps> = ({ scheduleInfo }) => {
             <Image src={scheduleInfo.image} alt="" layout="fill" objectFit="fill" priority />
           </div>
         )}
-
-        <p className="content">
-          西表島では仲間川マングローブクルーズにご乗船。水牛車で由布島に渡り、亜熱帯特有の動植物を観察できる由布島植物……
-        </p>
+        <p className="content">{scheduleInfo.content}</p>
         {/* Will replace soon */}
         <div className="btn btn-icon">
           <Image src="/images/like.png" layout="fill" objectFit="contain" />
