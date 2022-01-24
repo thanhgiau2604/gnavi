@@ -12,7 +12,7 @@ const CustomSelect: React.FC<FieldProps & CustomSelectProps> = ({
   required,
   ...props
 }) => {
-  const { width, height, pb, txtAlign, lbWeight } = props
+  const { width, height, pb, txtAlign, lbweight } = props
   const { name, value } = field
   const showError = Boolean(errors[name] && touched[name])
 
@@ -36,7 +36,7 @@ const CustomSelect: React.FC<FieldProps & CustomSelectProps> = ({
       height={height}
       pb={pb}
       txtAlign={txtAlign}
-      lbWeight={lbWeight}
+      lbweight={lbweight}
       showError={showError}
     >
       {label && (
@@ -72,7 +72,7 @@ CustomSelect.defaultProps = {
   required: false,
   disabled: false,
   options: [],
-  lbWeight: 'bold',
+  lbweight: 'bold',
 }
 
 export default CustomSelect
