@@ -11,7 +11,7 @@ interface ScheduleBlockProps {
 
 const ScheduleBlock: React.FC<ScheduleBlockProps> = ({ scheduleInfo }) => {
   return (
-    <Link href="#">
+    <Link href={`/tourplan/detail?id=${scheduleInfo.id}`}>
       <ScheduleBlockContainer>
         <FlexContainer position="relative">
           <p className="title">{scheduleInfo.title}</p>

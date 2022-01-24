@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import Schedule from 'components/layout/Schedule'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import { fontSize } from 'constants/index'
+import Schedule from 'components/layout/TourPlan/Schedule'
 
 const TourPlan = () => {
   const data = [
