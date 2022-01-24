@@ -1,22 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
+import DatePicker from 'react-datepicker'
 import { FieldProps } from 'formik'
 import { CustomInputProps } from 'interfaces/CustomField'
 import { FIELD_DF_VALUE, LABEL_TAGS } from 'constants/custom_field'
 import { FieldContainer, FieldLabel } from '../styled'
 
-const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
+const CustomDate: React.FC<FieldProps & CustomInputProps> = ({
   field,
   form: { touched, errors },
-  type,
   label,
   placeholder,
   disabled,
   lbTag,
   ...props
 }) => {
+  const [isOpen, setOpen] = useState<boolean>(false)
   const { width, height, pb, txtAlign, lbweight } = props // css props
   const { name } = field
   const showError = Boolean(errors[name] && touched[name])
+
+  const handleChangeDateTime = (date: Date) => {
+    const changeEvent = {
+      target: {
+        name,
+        value: date,
+      },
+    }
+    field.onChange(changeEvent)
+  }
+
+  const handleClickOutside = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if ((e.target as Element).className !== 'calendar-btn') {
+      setOpen(false)
+    }
+  }
 
   return (
     <FieldContainer
@@ -35,29 +52,25 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
         </FieldLabel>
       )}
 
-      {type !== 'text-area' ? (
-        <input
+      <div className="date-wrapper">
+        <DatePicker
           {...field}
-          {...props}
-          id={name}
+          placeholderText={placeholder}
+          selected={field.value}
+          onChange={handleChangeDateTime}
+          dateFormat="yyyy/MM/dd"
+          open={isOpen}
           disabled={disabled}
-          placeholder={placeholder}
-          type={type}
+          onClickOutside={handleClickOutside}
         />
-      ) : (
-        <textarea id={name} {...field} {...props} disabled={disabled} placeholder={placeholder} />
-      )}
-
-      {props.maxLength && (
-        <p className="count-letters">{`${String(field.value).length} / ${props.maxLength}`}</p>
-      )}
+        <input type="button" className="calendar-btn" onClick={() => setOpen((open) => !open)} />
+      </div>
     </FieldContainer>
   )
 }
 
-CustomInput.defaultProps = {
-  type: FIELD_DF_VALUE.type,
-  placeholder: FIELD_DF_VALUE.placeholder,
+CustomDate.defaultProps = {
+  placeholder: 'YYYY/MM/DD',
   label: FIELD_DF_VALUE.label,
   width: FIELD_DF_VALUE.width,
   height: FIELD_DF_VALUE.height,
@@ -66,5 +79,4 @@ CustomInput.defaultProps = {
   disabled: FIELD_DF_VALUE.disabled,
   lbweight: FIELD_DF_VALUE.label_weight,
 }
-
-export default CustomInput
+export default CustomDate

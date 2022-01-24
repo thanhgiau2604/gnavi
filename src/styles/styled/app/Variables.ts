@@ -15,6 +15,7 @@ const Variables = {
   color2: '#ff7c8a',
   color3: '#cccccc',
   color4: '#777777',
+  color5: '#888888',
 }
 
 export { Variables }

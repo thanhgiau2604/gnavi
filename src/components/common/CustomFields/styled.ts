@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
-import { FIELD_LABEL_WEIGHT } from 'constants/field'
-import { LabelWeight, TextAlign } from 'interfaces/CustomField'
+import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
+import { FieldPaddingBottom, FieldWidth, LabelWeight, TextAlign } from 'interfaces/CustomField'
 
-interface FieldStyleProps {
-  width?: number
+export interface FieldStyleProps {
+  width?: FieldWidth
   height?: number
-  pb?: number | null // padding-bottom (if null --> common value)
+  pb?: FieldPaddingBottom // padding-bottom (if null --> common value)
   lbweight?: LabelWeight
   txtAlign?: TextAlign
   showError?: boolean
@@ -17,11 +17,12 @@ const FieldContainer = styled.div<FieldStyleProps>`
   display: flex;
   flex-direction: column;
   padding-bottom: ${({ pb }) => (pb ? `calc( ${pb}rem / 10)` : `2.5rem`)};
+
   input,
   textarea,
   select {
-    width: ${({ width }) => (width ? `calc( ${width}rem / 10)` : `32rem`)};
-    height: ${({ height }) => (height ? `calc( ${height}rem / 10)` : `4.8rem`)};
+    width: ${({ width }) => (typeof width === 'string' ? width : `calc( ${width}rem / 10)`)};
+    height: ${({ height }) => `calc( ${height}rem / 10)`};
     border: ${({ showError }) =>
       showError ? `1px solid ${Variables.colorSecondary}` : `1px solid ${Variables.color3}`};
     background-color: ${Variables.colorWhite};
@@ -50,19 +51,68 @@ const FieldContainer = styled.div<FieldStyleProps>`
     font-size: ${fontSize.MEDIUM};
     padding-bottom: 1.5rem;
   }
+
+  .count-letters {
+    color: ${Variables.color5};
+    padding-top: 0.8rem;
+    font-size: ${fontSize.SMALL};
+    text-align: right;
+    font-weight: 700;
+  }
+
+  //custom datepicker from lib react-date-picker
+  .react-datepicker {
+    width: ${({ width }) => (width ? `calc( ${width}rem / 10)` : `32rem`)};
+    &__month-container,
+    &__current-month {
+      width: 100%;
+      font-size: 1.3rem;
+    }
+    &__day-names,
+    &__week {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .date-wrapper {
+    position: relative;
+  }
+
+  input[type='button'] {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+
+    background-image: url('/images/date_picker.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 2rem;
+    height: 2.3rem;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 `
 
 const FieldLabel = styled.div`
   display: flex;
 
-  .require-mark {
-    color: ${Variables.colorSecondary};
-    border: 1px solid ${Variables.colorSecondary};
+  .lb-tag {
     border-radius: 2px;
     padding: 0.3rem;
     height: fit-content;
     margin-left: 0.5rem;
     font-size: 1.2rem;
+    &--require {
+      color: ${Variables.colorSecondary};
+      border: 1px solid ${Variables.colorSecondary};
+    }
+    &--any {
+      color: ${Variables.color5};
+      border: 1px solid ${Variables.color5};
+    }
   }
 `
 export { FieldContainer, FieldLabel }
