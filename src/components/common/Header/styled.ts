@@ -6,7 +6,6 @@ interface HeaderProps {
 }
 
 const HeaderContainer = styled.header<HeaderProps>`
-  background-color: ${Variables.colorWhite};
   width: 100%;
   height: 4.8rem;
   padding: 0 0.5rem;

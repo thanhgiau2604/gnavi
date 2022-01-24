@@ -5,11 +5,15 @@ html {
 .wrapper {
   max-width: 80rem;
   margin: 0 auto;
-  text-align: center;
 }
 
 .container {
   padding: 0 2.7rem;
+  height: 100%;
+  overflow: scroll;
+  &--deep {
+    background-color: rgba(239, 239, 239, 255);
+  }
 }
 
 body {
@@ -18,7 +22,6 @@ body {
   font-family: $font-primary;
   font-weight: 400;
   color: $color-text-common;
-  background-color: rgba(239, 239, 239, 255);
 }
 
 canvas {

@@ -39,7 +39,7 @@ const TourPlan = () => {
   return (
     <div className="wrapper">
       <Header shadow showBtnBack title="ツアープラン一覧" />
-      <div className="container">
+      <div className="container container--deep">
         <Button title="＋新規ツアープランの追加" radius={4} />
         <Schedule data={data} />
       </div>
