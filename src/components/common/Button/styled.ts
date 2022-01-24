@@ -22,7 +22,6 @@ const setValue = (param: string | number): string => {
       return 'auto'
     }
     // width | height
-
     return `${param}%`
   }
   // width | height
