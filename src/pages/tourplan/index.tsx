@@ -2,6 +2,8 @@ import React from 'react'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
 import Schedule from 'components/layout/Schedule'
+import { Container } from 'styles/styled/layout/ContainerLayout'
+import { fontSize } from 'constants/index'
 
 const TourPlan = () => {
   const data = [
@@ -39,10 +41,16 @@ const TourPlan = () => {
   return (
     <div className="wrapper">
       <Header shadow showBtnBack title="ツアープラン一覧" />
-      <div className="container container--deep">
-        <Button title="＋新規ツアープランの追加" radius={4} />
+      <Container padding="0 2rem" backgroundColor="rgba(239, 239, 239, 255)">
+        <Button
+          title="＋新規ツアープランの追加"
+          radius={4}
+          margin="2.2rem auto auto auto"
+          _fontSize={fontSize.LARGE}
+          fontWeight={700}
+        />
         <Schedule data={data} />
-      </div>
+      </Container>
     </div>
   )
 }

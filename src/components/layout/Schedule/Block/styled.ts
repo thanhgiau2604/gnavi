@@ -8,7 +8,7 @@ const ScheduleBlockContainer = styled.div`
   background-color: ${Variables.colorWhite};
   margin-bottom: 2.6rem;
   .title {
-    width: 85%;
+    width: 80%;
     height: 6.5rem;
     margin-bottom: 1.1rem;
     font-size: ${fontSize.LARGE};
@@ -19,7 +19,7 @@ const ScheduleBlockContainer = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    padding: 1.5rem;
+    padding: 1.7rem;
   }
   .content {
     font-size: ${fontSize.MEDIUM};

@@ -9,11 +9,6 @@ html {
 
 .container {
   padding: 0 2.7rem;
-  height: 100%;
-  overflow: scroll;
-  &--deep {
-    background-color: rgba(239, 239, 239, 255);
-  }
 }
 
 body {
