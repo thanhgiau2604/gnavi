@@ -6,7 +6,7 @@ import CustomInput from 'components/common/CustomFields/InputField'
 import Button from 'components/common/Button'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
-import { CHECKBOX_THEME } from 'constants/field'
+import { CHECKBOX_THEME } from 'constants/custom_field'
 import CustomDate from 'components/common/CustomFields/DateField'
 
 interface FormValues {
@@ -69,7 +69,6 @@ const FormInputWithFormik: React.FC = () => {
                 label="ユーザー名"
                 required
                 maxLength={50}
-                width="full"
               />
 
               <FastField
@@ -79,7 +78,6 @@ const FormInputWithFormik: React.FC = () => {
                 type="password"
                 lbTag="require"
                 maxLength={100}
-                width="full"
               />
 
               <FastField
@@ -89,7 +87,6 @@ const FormInputWithFormik: React.FC = () => {
                 type="text-area"
                 height={335}
                 lbTag="any"
-                width="full"
               />
 
               <FastField
@@ -98,7 +95,6 @@ const FormInputWithFormik: React.FC = () => {
                 label="性別"
                 options={options}
                 lbTag="require"
-                width="full"
               />
 
               <FastField
@@ -116,13 +112,7 @@ const FormInputWithFormik: React.FC = () => {
                 lbweight="normal"
               />
 
-              <FastField
-                name="birthday"
-                component={CustomDate}
-                label="バースデー"
-                lbTag="any"
-                width="full"
-              />
+              <FastField name="birthday" component={CustomDate} label="バースデー" lbTag="any" />
               <Button title="参加する" type="submit" />
             </Form>
           )

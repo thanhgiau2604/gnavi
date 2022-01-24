@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
-import { FIELD_LABEL_WEIGHT } from 'constants/field'
+import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { FieldPaddingBottom, FieldWidth, LabelWeight, TextAlign } from 'interfaces/CustomField'
 
 export interface FieldStyleProps {
@@ -21,7 +21,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
   input,
   textarea,
   select {
-    width: ${({ width }) => (width === 'full' ? `100%` : `calc( ${width}rem / 10)`)};
+    width: ${({ width }) => (typeof width === 'string' ? width : `calc( ${width}rem / 10)`)};
     height: ${({ height }) => `calc( ${height}rem / 10)`};
     border: ${({ showError }) =>
       showError ? `1px solid ${Variables.colorSecondary}` : `1px solid ${Variables.color3}`};

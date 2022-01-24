@@ -5,7 +5,7 @@ const DF_LABEL_TAG: LabelTag = 'none'
 const DF_LABEL_WIGHT: LabelWeight = 'bold'
 export const FIELD_DF_VALUE = {
   type: 'text',
-  width: 320,
+  width: '100%',
   height: 48,
   padding_bottom: null,
   placeholder: '',

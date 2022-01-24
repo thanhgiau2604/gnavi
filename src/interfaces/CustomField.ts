@@ -1,7 +1,7 @@
 type LabelWeight = 'bold' | 'normal'
 type LabelTag = 'require' | 'any' | 'none'
 type TextAlign = 'left' | 'right' | 'center'
-type FieldWidth = number | 'full'
+type FieldWidth = number | string
 type FieldPaddingBottom = number | null
 
 interface CustomFieldProps {

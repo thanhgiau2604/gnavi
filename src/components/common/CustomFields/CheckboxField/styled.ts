@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
 import { CheckboxTheme } from 'interfaces/CustomField'
-import { FIELD_LABEL_WEIGHT } from 'constants/field'
+import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { FieldStyleProps } from '../styled'
 
 interface FieldCheckboxStyleProps extends FieldStyleProps {
@@ -13,8 +13,8 @@ const FieldCheckboxContainer = styled.div<FieldCheckboxStyleProps>`
   padding-bottom: ${({ pb }) => (pb ? `calc( ${pb}rem / 10)` : `2.5rem`)};
 
   .check-mark {
-    width: ${({ width }) => (width ? `calc( ${width}rem / 10)` : `2.4rem`)};
-    height: ${({ height }) => (height ? `calc( ${height}rem / 10)` : `2.4rem`)};
+    width: ${({ width }) => (typeof width === 'string' ? width : `calc( ${width}rem / 10)`)};
+    height: ${({ height }) => `calc( ${height}rem / 10)`};
     position: absolute;
     top: 0;
     left: 0;
