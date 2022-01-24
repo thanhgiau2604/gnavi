@@ -3,6 +3,7 @@ import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ScheduleInformation } from 'interfaces/TourPlan/Schedule'
+import { ImageContainer } from 'styles/styled/app/Image'
 import { ScheduleBlockContainer } from './styled'
 
 interface ScheduleBlockProps {
@@ -20,9 +21,9 @@ const ScheduleBlock: React.FC<ScheduleBlockProps> = ({ scheduleInfo }) => {
           </div>
         </FlexContainer>
         {scheduleInfo.image && (
-          <div className="image-container">
+          <ImageContainer width="100%" height={200} margin="1.1rem auto 2rem auto">
             <Image src={scheduleInfo.image} alt="" layout="fill" objectFit="fill" priority />
-          </div>
+          </ImageContainer>
         )}
         <p className="content">{scheduleInfo.content}</p>
         {/* Will replace soon */}
