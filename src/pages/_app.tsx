@@ -1,4 +1,5 @@
 import 'styles/scss/index.scss'
+import 'react-datepicker/dist/react-datepicker.css'
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
 import { store } from 'app/store'

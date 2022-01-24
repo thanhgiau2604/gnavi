@@ -1,15 +1,18 @@
 type LabelWeight = 'bold' | 'normal'
+type LabelTag = 'require' | 'any' | 'none'
 type TextAlign = 'left' | 'right' | 'center'
+type FieldWidth = number | string
+type FieldPaddingBottom = number | null
 
 interface CustomFieldProps {
   label?: string
-  width?: number
+  width?: FieldWidth
   height?: number
-  pb?: number | null
+  pb?: FieldPaddingBottom
   lbweight?: LabelWeight
+  lbTag?: LabelTag
   txtAlign?: TextAlign
   disabled?: boolean
-  required?: boolean
 }
 
 interface OptionProps {
@@ -20,6 +23,7 @@ interface OptionProps {
 interface CustomInputProps extends CustomFieldProps {
   type?: string
   placeholder?: string
+  maxLength?: number
 }
 
 interface CustomSelectProps extends CustomFieldProps {
@@ -47,4 +51,7 @@ export type {
   TextAlign,
   CheckboxTheme,
   CustomCheckboxProps,
+  LabelTag,
+  FieldWidth,
+  FieldPaddingBottom,
 }
