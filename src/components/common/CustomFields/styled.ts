@@ -59,6 +59,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     text-align: right;
     font-weight: 700;
   }
+
   //custom datepicker from lib react-date-picker
   .react-datepicker {
     width: ${({ width }) => (width ? `calc( ${width}rem / 10)` : `32rem`)};
