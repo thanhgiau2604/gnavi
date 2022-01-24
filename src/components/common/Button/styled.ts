@@ -13,10 +13,6 @@ interface ButtonProps {
 
 const setValue = (param: string | number): string => {
   if (typeof param === 'string') {
-    // width
-    if (param === 'full') {
-      return '100%'
-    }
     // height
     if (param === 'auto') {
       return 'auto'
@@ -25,7 +21,7 @@ const setValue = (param: string | number): string => {
     return `${param}%`
   }
   // width | height
-  return `calc(${param}rem/10)`
+  return `calc(${param}rem / 10)`
 }
 
 const ButtonContainer = styled.button<ButtonProps>`
