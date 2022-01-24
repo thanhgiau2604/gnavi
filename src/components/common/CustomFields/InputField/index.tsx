@@ -49,7 +49,7 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
       )}
 
       {props.maxLength && (
-        <p className="count-words">{`${String(field.value).length} / ${props.maxLength}`}</p>
+        <p className="count-letters">{`${String(field.value).length} / ${props.maxLength}`}</p>
       )}
     </FieldContainer>
   )

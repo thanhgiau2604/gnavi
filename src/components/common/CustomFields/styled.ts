@@ -52,7 +52,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     padding-bottom: 1.5rem;
   }
 
-  .count-words {
+  .count-letters {
     color: ${Variables.color5};
     padding-top: 0.8rem;
     font-size: ${fontSize.SMALL};
