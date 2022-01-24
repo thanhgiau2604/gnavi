@@ -69,6 +69,7 @@ const FormInputWithFormik: React.FC = () => {
                 label="ユーザー名"
                 required
                 maxLength={50}
+                width="full"
               />
 
               <FastField
@@ -78,6 +79,7 @@ const FormInputWithFormik: React.FC = () => {
                 type="password"
                 lbTag="require"
                 maxLength={100}
+                width="full"
               />
 
               <FastField
@@ -87,6 +89,7 @@ const FormInputWithFormik: React.FC = () => {
                 type="text-area"
                 height={335}
                 lbTag="any"
+                width="full"
               />
 
               <FastField
@@ -95,6 +98,7 @@ const FormInputWithFormik: React.FC = () => {
                 label="性別"
                 options={options}
                 lbTag="require"
+                width="full"
               />
 
               <FastField
@@ -102,15 +106,23 @@ const FormInputWithFormik: React.FC = () => {
                 component={CustomCheckBox}
                 label="Car"
                 theme={CHECKBOX_THEME.PRIMARY}
+                lbweight="normal"
               />
               <FastField
                 name="transport"
                 component={CustomCheckBox}
                 label="Moto"
                 theme={CHECKBOX_THEME.SECONDARY}
+                lbweight="normal"
               />
 
-              <FastField name="birthday" component={CustomDate} label="バースデー" lbTag="any" />
+              <FastField
+                name="birthday"
+                component={CustomDate}
+                label="バースデー"
+                lbTag="any"
+                width="full"
+              />
               <Button title="参加する" type="submit" />
             </Form>
           )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FieldProps } from 'formik'
 import { CustomInputProps } from 'interfaces/CustomField'
-import { LABEL_TAGS } from 'constants/field'
+import { FIELD_DF_VALUE, LABEL_TAGS } from 'constants/field'
 import { FieldContainer, FieldLabel } from '../styled'
 
 const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
@@ -56,15 +56,15 @@ const CustomInput: React.FC<FieldProps & CustomInputProps> = ({
 }
 
 CustomInput.defaultProps = {
-  type: 'text',
-  placeholder: '',
-  label: '',
-  width: 0,
-  height: 0,
-  pb: null,
-  lbTag: 'none',
-  disabled: false,
-  lbweight: 'bold',
+  type: FIELD_DF_VALUE.type,
+  placeholder: FIELD_DF_VALUE.placeholder,
+  label: FIELD_DF_VALUE.label,
+  width: FIELD_DF_VALUE.width,
+  height: FIELD_DF_VALUE.height,
+  pb: FIELD_DF_VALUE.padding_bottom,
+  lbTag: FIELD_DF_VALUE.label_tag,
+  disabled: FIELD_DF_VALUE.disabled,
+  lbweight: FIELD_DF_VALUE.label_weight,
 }
 
 export default CustomInput

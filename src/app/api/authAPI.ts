@@ -1,5 +1,5 @@
 import { routes } from 'constants/index'
-import { LoginPayload } from 'interfaces/auth'
+import { LoginPayload } from 'interfaces/Auth'
 import axiosClient from './axiosClient'
 
 export const authApi = {

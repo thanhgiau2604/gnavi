@@ -1,12 +1,14 @@
 type LabelWeight = 'bold' | 'normal'
 type LabelTag = 'require' | 'any' | 'none'
 type TextAlign = 'left' | 'right' | 'center'
+type FieldWidth = number | 'full'
+type FieldPaddingBottom = number | null
 
 interface CustomFieldProps {
   label?: string
-  width?: number
+  width?: FieldWidth
   height?: number
-  pb?: number | null
+  pb?: FieldPaddingBottom
   lbweight?: LabelWeight
   lbTag?: LabelTag
   txtAlign?: TextAlign
@@ -50,4 +52,6 @@ export type {
   CheckboxTheme,
   CustomCheckboxProps,
   LabelTag,
+  FieldWidth,
+  FieldPaddingBottom,
 }

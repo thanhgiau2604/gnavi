@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
 import { FIELD_LABEL_WEIGHT } from 'constants/field'
-import { LabelWeight, TextAlign } from 'interfaces/CustomField'
+import { FieldPaddingBottom, FieldWidth, LabelWeight, TextAlign } from 'interfaces/CustomField'
 
 export interface FieldStyleProps {
-  width?: number
+  width?: FieldWidth
   height?: number
-  pb?: number | null // padding-bottom (if null --> common value)
+  pb?: FieldPaddingBottom // padding-bottom (if null --> common value)
   lbweight?: LabelWeight
   txtAlign?: TextAlign
   showError?: boolean
@@ -21,8 +21,8 @@ const FieldContainer = styled.div<FieldStyleProps>`
   input,
   textarea,
   select {
-    width: ${({ width }) => (width ? `calc( ${width}rem / 10)` : `32rem`)};
-    height: ${({ height }) => (height ? `calc( ${height}rem / 10)` : `4.8rem`)};
+    width: ${({ width }) => (width === 'full' ? `100%` : `calc( ${width}rem / 10)`)};
+    height: ${({ height }) => `calc( ${height}rem / 10)`};
     border: ${({ showError }) =>
       showError ? `1px solid ${Variables.colorSecondary}` : `1px solid ${Variables.color3}`};
     background-color: ${Variables.colorWhite};

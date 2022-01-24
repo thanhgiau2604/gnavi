@@ -1,6 +1,7 @@
 import React from 'react'
 import { FieldProps } from 'formik'
 import { CustomCheckboxProps } from 'interfaces/CustomField'
+import { FIELD_DF_VALUE } from 'constants/field'
 import { FieldCheckboxContainer, FieldCheckboxLabel } from './styled'
 
 const CustomCheckBox: React.FC<FieldProps & CustomCheckboxProps> = ({
@@ -31,12 +32,12 @@ const CustomCheckBox: React.FC<FieldProps & CustomCheckboxProps> = ({
 }
 
 CustomCheckBox.defaultProps = {
-  label: '',
-  width: 0,
-  height: 0,
-  pb: null,
-  disabled: false,
-  lbweight: 'normal',
+  label: FIELD_DF_VALUE.label,
+  width: FIELD_DF_VALUE.checkbox_width,
+  height: FIELD_DF_VALUE.checkbox_height,
+  pb: FIELD_DF_VALUE.padding_bottom,
+  disabled: FIELD_DF_VALUE.disabled,
+  lbweight: FIELD_DF_VALUE.label_weight,
 }
 
 export default CustomCheckBox
