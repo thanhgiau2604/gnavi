@@ -1,24 +1,24 @@
 import React from 'react'
 import { TourPlan } from 'interfaces/TourPlan'
 import { ScheduleInformation, PlanDetail } from 'interfaces/TourPlan/Schedule'
+import { ScheduleContainer } from './styled'
 import ScheduleBlock from './Block'
-import { DateTimeLabel, YearLabel } from './styled'
 
 const Schedule: React.FC<TourPlan> = ({ plans }) => {
   return (
-    <div className="schedule-container">
+    <ScheduleContainer>
       {plans?.map((plan: PlanDetail, i: number) => (
         <div key={i}>
-          <YearLabel>{plan.year}</YearLabel>
+          <h3 className="title">{plan.year}</h3>
           {plan.scheduleInfos?.map((scheduleInfo: ScheduleInformation, j: number) => (
             <div key={j}>
-              <DateTimeLabel>{scheduleInfo.datetime}</DateTimeLabel>
+              <p className="datetime">{scheduleInfo.datetime}</p>
               <ScheduleBlock scheduleInfo={scheduleInfo} />
             </div>
           ))}
         </div>
       ))}
-    </div>
+    </ScheduleContainer>
   )
 }
 
