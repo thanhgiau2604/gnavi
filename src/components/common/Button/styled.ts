@@ -18,7 +18,7 @@ const setValue = (param: string | number): string => {
       return 'auto'
     }
     // width | height
-    return `${param}%`
+    return param
   }
   // width | height
   return `calc(${param}rem / 10)`

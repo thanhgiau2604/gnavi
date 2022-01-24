@@ -9,7 +9,7 @@ const Button: React.FC<ButtonProps> = ({ title, ...rest }) => {
 
 Button.defaultProps = {
   type: 'button',
-  width: '100',
+  width: '100%',
   height: 'auto',
   radius: 2,
   buttonColor: buttonColors.STYLE01,
