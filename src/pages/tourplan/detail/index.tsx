@@ -1,8 +1,8 @@
 import React from 'react'
 import TourPlanDetail from 'containers/TourPlan/Detail'
 
-const TourPlan = () => {
+const TourPlanDetailPage = () => {
   return <TourPlanDetail />
 }
 
-export default TourPlan
+export default TourPlanDetailPage
