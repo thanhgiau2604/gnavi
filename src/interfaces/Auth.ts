@@ -1,6 +1,18 @@
 interface LoginPayload {
-  Username: string
-  Password: string
+  email: string
+  password: string
 }
 
-export type { LoginPayload }
+interface SignupPayload {
+  username: string
+  nickname: string
+  email: string
+  password: string
+  last_name: string
+  first_name: string
+  public_setting: string
+  birthday: Date
+  gender: string
+}
+
+export type { LoginPayload, SignupPayload }

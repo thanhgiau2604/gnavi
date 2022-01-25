@@ -1,61 +1,70 @@
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import Header from 'components/common/Header'
+import { INIT_LOGIN_FORM_VALUE, VALIDATE_LOGIN_SCHEMA } from 'constants/auth'
+import { buttonColors, routes } from 'constants/index'
 import { FastField, Form, Formik } from 'formik'
-import { LoginPayload } from 'interfaces/Auth'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
-import * as Yup from 'yup'
+import { LoginSession } from './styled'
 
 const LoginForm: React.FC = () => {
-  const initialLoginForm: LoginPayload = {
-    Username: '',
-    Password: '',
-  }
-
-  const validationSchema = Yup.object().shape({
-    username: Yup.string().required(),
-    password: Yup.string().required(),
-  })
+  const router = useRouter()
 
   return (
-    <div className="session-login">
+    <LoginSession>
       <Header shadow />
-      <div className="login-main">
-        <h1 className="login-title">ログイン</h1>
-        <Formik
-          initialValues={initialLoginForm}
-          validationSchema={validationSchema}
-          onSubmit={(values, actions) => {
-            console.log(values)
-            actions.setSubmitting(false)
-          }}
-        >
-          {() => {
-            return (
-              <Form>
-                <FastField
-                  name="username"
-                  component={CustomInput}
-                  label="メールアドレス"
-                  required
-                  maxLength={50}
-                />
+      <div className="container">
+        <div className="login-main">
+          <h1 className="global-heading login-title">ログイン</h1>
+          <Formik
+            initialValues={INIT_LOGIN_FORM_VALUE}
+            validationSchema={VALIDATE_LOGIN_SCHEMA}
+            onSubmit={(values, actions) => {
+              actions.setSubmitting(false)
+            }}
+          >
+            {() => {
+              return (
+                <Form>
+                  <FastField
+                    name="email"
+                    component={CustomInput}
+                    label="メールアドレス"
+                    lbTag="require"
+                  />
 
-                <FastField
-                  name="password"
-                  component={CustomInput}
-                  label="パスワード"
-                  type="password"
-                  lbTag="require"
-                  maxLength={100}
-                />
-                <Button title="ログイン" type="submit" />
-              </Form>
-            )
-          }}
-        </Formik>
+                  <FastField
+                    name="password"
+                    component={CustomInput}
+                    label="パスワード"
+                    type="password"
+                    lbTag="require"
+                  />
+                  <Button
+                    title="ログイン"
+                    type="submit"
+                    buttonColor={buttonColors.STYLE02}
+                    height={48}
+                  />
+                </Form>
+              )
+            }}
+          </Formik>
+          <Link href="#!">
+            <a className="login-forgot-pass">パスワードを忘れた方はこちら</a>
+          </Link>
+          <Button
+            title="新規登録はこちら"
+            buttonColor={buttonColors.STYLE01}
+            height={48}
+            margin="5.5rem 0 2rem 0"
+            onClick={() => router.push(routes.SIGNUP)}
+          />
+        </div>
       </div>
-    </div>
+    </LoginSession>
   )
 }
 

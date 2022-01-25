@@ -28,3 +28,21 @@ canvas {
 form {
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: $color-primary;
+  font-weight: 700;
+}
+
+.global-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: calc(29 / 20);
+}
+
+.global-desc {
+  font-size: 1.2rem;
+  color: $color-4;
+  line-height: calc(17 / 12);
+}
