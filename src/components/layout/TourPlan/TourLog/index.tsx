@@ -23,7 +23,7 @@ const TourLog: React.FC<TourLogProps> = ({ tourLog }) => {
       <TourLogContainer ref={ref}>
         <FlexContainer position="relative" justifyContent="space-between">
           <p className="title">{tourLog.title}</p>
-          <ButtonAction state={status} setState={setStatus} />
+          <ButtonAction state={status} setState={setStatus} margin="3.1rem 1.5rem 4rem auto" />
         </FlexContainer>
         {!!tourLog.images.length && (
           <ImageContainer width="100%" height={200} margin="1.1rem auto 2rem auto">

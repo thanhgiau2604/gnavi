@@ -6,9 +6,10 @@ import { ActionContainer } from './styled'
 interface ActionMenuProps {
   id: number | string
   status: boolean
+  transform?: string
 }
 
-const Actions: React.FC<ActionMenuProps> = ({ id, status }) => {
+const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
   const edit = (e: React.MouseEvent<HTMLElement>, ID: number | string) => {
     e.stopPropagation()
     console.log(ID)
@@ -27,7 +28,7 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status }) => {
   }
 
   return (
-    <ActionContainer status={status}>
+    <ActionContainer status={status} transform={transform}>
       <Button
         onClick={(e: React.MouseEvent<HTMLElement>) => edit(e, id)}
         width={120}
@@ -59,6 +60,10 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status }) => {
       />
     </ActionContainer>
   )
+}
+
+Actions.defaultProps = {
+  transform: 'translate(0, 24%)',
 }
 
 export default Actions

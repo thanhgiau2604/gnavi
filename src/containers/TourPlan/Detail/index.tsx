@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -9,6 +9,8 @@ import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
 import TourInfo from 'components/layout/TourPlan/TourInfo'
+import ButtonAction from 'components/layout/TourPlan/Actions/ButtonAction'
+import Actions from 'components/layout/TourPlan/Actions'
 import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
@@ -126,12 +128,17 @@ const TourPlanDetail = () => {
       },
     ],
   }
+  const [status, setStatus] = useState<boolean>(false)
+
   return (
     <div className="wrapper">
       <Header shadow showBtnBack title={data.title} />
       <Container padding="0 2rem">
         <TourPlanDetailContainer>
-          <h3 className="title">{data.title}</h3>
+          <FlexContainer>
+            <h3 className="title">{data.title}</h3>
+            <ButtonAction state={status} setState={setStatus} />
+          </FlexContainer>
           <div className="slider">
             {!!data.images.length && (
               <>
@@ -161,6 +168,8 @@ const TourPlanDetail = () => {
           </div>
           {!!data.infos.length &&
             data.infos.map((info: IInfomartion, i: number) => <TourInfo key={i} info={info} />)}
+
+          <Actions status={status} id={data.id} transform="translate(-2%,50%)" />
         </TourPlanDetailContainer>
       </Container>
     </div>
