@@ -7,7 +7,7 @@ import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
-import TourPlanDetailBlock from 'components/layout/TourPlan/Detail/Block'
+import TourInfo from 'components/layout/TourPlan/TourInfo'
 import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
@@ -138,7 +138,7 @@ const TourPlanDetail = () => {
           </div>
           {data.details &&
             data.details.map((detail: any, i: number) => (
-              <TourPlanDetailBlock key={i} field={detail.field} content={detail.content} />
+              <TourInfo key={i} field={detail.field} content={detail.content} />
             ))}
         </TourPlanDetailContainer>
       </Container>

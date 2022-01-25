@@ -1,9 +1,11 @@
 import React from 'react'
 import Header from 'components/common/Header'
 import { Container } from 'styles/styled/layout/ContainerLayout'
-import Schedule from 'components/layout/TourPlan/Schedule'
 import Button from 'components/common/Button'
 import { fontSize } from 'constants/index'
+import { ScheduleInformation } from 'interfaces/TourPlan/Schedule'
+import TourLog from 'components/layout/TourPlan/TourLog'
+import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
   const data = [
@@ -48,7 +50,20 @@ const TourPlan = () => {
           _fontSize={fontSize.LARGE}
           radius={4}
         />
-        {data && <Schedule plans={data} />}
+        <TourPlanContainer>
+          {data &&
+            data.map((item: any, i: number) => (
+              <div key={i}>
+                <h3 className="title">{item.year}</h3>
+                {item.scheduleInfos?.map((scheduleInfo: ScheduleInformation, j: number) => (
+                  <div key={j}>
+                    <p className="datetime">{scheduleInfo.datetime}</p>
+                    <TourLog scheduleInfo={scheduleInfo} />
+                  </div>
+                ))}
+              </div>
+            ))}
+        </TourPlanContainer>
       </Container>
     </div>
   )

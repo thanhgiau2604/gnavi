@@ -3,7 +3,7 @@ import { Variables } from 'styles/styled/app/Variables'
 import { fontSize } from 'constants/index'
 import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 
-const ScheduleBlockContainer = styled.div`
+const TourLogContainer = styled.div`
   border-radius: 8px;
   background-color: ${Variables.colorWhite};
   margin-bottom: 2.6rem;
@@ -60,4 +60,4 @@ const ScheduleBlockContainer = styled.div`
   }
 `
 
-export { ScheduleBlockContainer }
+export { TourLogContainer }

@@ -2,7 +2,7 @@ import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
-const TourPlanDetailBlockContainer = styled.div`
+const TourInfoContainer = styled.div`
   position: relative;
   margin: 6.1rem auto;
   .field {
@@ -24,4 +24,4 @@ const TourPlanDetailBlockContainer = styled.div`
   }
 `
 
-export { TourPlanDetailBlockContainer }
+export { TourInfoContainer }

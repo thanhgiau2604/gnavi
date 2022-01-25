@@ -4,16 +4,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ScheduleInformation } from 'interfaces/TourPlan/Schedule'
 import { ImageContainer } from 'styles/styled/app/Image'
-import { ScheduleBlockContainer } from './styled'
+import { TourLogContainer } from './styled'
 
-interface ScheduleBlockProps {
+interface TourLogProps {
   scheduleInfo: ScheduleInformation
 }
 
-const ScheduleBlock: React.FC<ScheduleBlockProps> = ({ scheduleInfo }) => {
+const TourLog: React.FC<TourLogProps> = ({ scheduleInfo }) => {
   return (
     <Link href={`/tourplan/detail?id=${scheduleInfo.id}`}>
-      <ScheduleBlockContainer>
+      <TourLogContainer>
         <FlexContainer position="relative">
           <p className="title">{scheduleInfo.title}</p>
           <div className="btn-more">
@@ -30,9 +30,9 @@ const ScheduleBlock: React.FC<ScheduleBlockProps> = ({ scheduleInfo }) => {
         <div className="btn btn-icon">
           <Image src="/images/like.png" layout="fill" objectFit="contain" />
         </div>
-      </ScheduleBlockContainer>
+      </TourLogContainer>
     </Link>
   )
 }
 
-export default ScheduleBlock
+export default TourLog

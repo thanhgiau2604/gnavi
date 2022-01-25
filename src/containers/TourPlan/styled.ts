@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { fontSize } from 'constants/index'
 
-const ScheduleContainer = styled.div`
+const TourPlanContainer = styled.div`
   text-align: justify;
   margin: 2.4rem auto;
   .title {
@@ -19,4 +19,4 @@ const ScheduleContainer = styled.div`
   }
 `
 
-export { ScheduleContainer }
+export { TourPlanContainer }

@@ -3,14 +3,15 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import Content from './Content'
-import { TourPlanDetailBlockContainer } from './styled'
+import TourInfoAdvanced from './Advanced'
+import TourInfoBasic from './Basic'
+import { TourInfoContainer } from './styled'
 
-const TourPlanDetailBlock: React.FC<Detail> = ({ field, content }) => {
+const TourInfo: React.FC<Detail> = ({ field, content }) => {
   const [show, setShow] = useState<boolean>(true)
 
   return (
-    <TourPlanDetailBlockContainer>
+    <TourInfoContainer>
       <FlexContainer justifyContent="space-between">
         <p className="field text--large">{field}</p>
         <ImageContainer
@@ -23,10 +24,18 @@ const TourPlanDetailBlock: React.FC<Detail> = ({ field, content }) => {
         </ImageContainer>
       </FlexContainer>
       <hr />
-      {content &&
-        content.map((c: IContent, i: number) => <Content key={i} tag={c.tag} info={c.info} />)}
-    </TourPlanDetailBlockContainer>
+      {field === 'スケジュール' ? (
+        <TourInfoAdvanced />
+      ) : (
+        <div>
+          {content &&
+            content.map((c: IContent, i: number) => (
+              <TourInfoBasic key={i} tag={c.tag} info={c.info} />
+            ))}
+        </div>
+      )}
+    </TourInfoContainer>
   )
 }
 
-export default TourPlanDetailBlock
+export default TourInfo

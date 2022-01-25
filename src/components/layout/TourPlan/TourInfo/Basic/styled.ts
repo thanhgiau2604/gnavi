@@ -3,7 +3,7 @@ import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
-const ContentContainer = styled.div`
+const BasicInfoContainer = styled.div`
   font-size: ${fontSize.MEDIUM};
   margin: 2.3rem auto;
   .tag {
@@ -20,4 +20,4 @@ const ContentContainer = styled.div`
   }
 `
 
-export { ContentContainer }
+export { BasicInfoContainer }
