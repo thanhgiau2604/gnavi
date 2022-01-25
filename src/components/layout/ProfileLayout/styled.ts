@@ -1,7 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { ItemGroupButtonProps } from 'interfaces/Button'
 import { Variables } from 'styles/styled/app/Variables'
 
 export const ProfileLayoutStyled = styled.div`
+  margin-top: 2rem;
+
   div {
     margin-bottom: 1rem;
   }
@@ -34,8 +37,7 @@ export const ProfileLayoutStyled = styled.div`
     border: 1px solid ${Variables.color3};
     border-radius: 4px;
     background: url('/icons/arrow_down_full_fill.svg') no-repeat;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
     background-position: 100% 5px;
   }
 
@@ -51,40 +53,22 @@ export const ProfileLayoutStyled = styled.div`
   }
 `
 
-export const GroupButton = styled.div`
-  button {
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    overflow: hidden;
-    outline: none;
-    color: ${Variables.colorPrimary};
-  }
-
-  .btn {
-    &-1 {
-      border: 1px solid ${Variables.color3};
-    }
-    &-2,
-    &-3 {
-      border-top: 1px solid ${Variables.color3};
-      border-right: 1px solid ${Variables.color3};
-      border-bottom: 1px solid ${Variables.color3};
-    }
-    &-4 {
-      border-left: 1px solid ${Variables.color3};
-      border-right: 1px solid ${Variables.color3};
-      border-bottom: 1px solid ${Variables.color3};
-    }
-    &-5,
-    &-6 {
-      border-right: 1px solid ${Variables.color3};
-      border-bottom: 1px solid ${Variables.color3};
-    }
-  }
-
-  .active {
-    background-color: ${Variables.color6};
-    color: ${Variables.colorBlack};
-  }
+export const ButtonItemGroup = styled.button<ItemGroupButtonProps>`
+  background-color: transparent;
+  color: ${Variables.colorPrimary};
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  ${({ borderFull }) => borderFull && `border: 1px solid ${Variables.color3}`};
+  ${({ borderTop }) => borderTop && `border-top: 1px solid ${Variables.color3}`};
+  ${({ borderRight }) => borderRight && `border-right: 1px solid ${Variables.color3}`};
+  ${({ borderBottom }) => borderBottom && `border-bottom: 1px solid ${Variables.color3}`};
+  ${({ borderLeft }) => borderLeft && `border-left: 1px solid ${Variables.color3}`};
+  ${({ active }) =>
+    active &&
+    css`
+      background-color: ${Variables.color6};
+      color: ${Variables.colorBlack};
+    `}
 `

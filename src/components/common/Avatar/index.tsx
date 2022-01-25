@@ -18,7 +18,7 @@ const Avatar = ({ alt, src, size, sx }: AvatarProps) => {
         alt={alt}
         layout="fill"
         objectFit="contain"
-        priority={size === 'large' || (sx && (sx?.height > 69 || sx?.width > 69))}
+        priority={size === 'large' || (sx && (sx.height > 69 || sx.width > 69))}
       />
     </AvatarContainer>
   )

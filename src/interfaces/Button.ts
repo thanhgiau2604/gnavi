@@ -16,3 +16,12 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   _fontSize?: string
   title: string
 }
+
+export interface ItemGroupButtonProps {
+  borderFull?: boolean
+  borderTop?: boolean
+  borderRight?: boolean
+  borderBottom?: boolean
+  borderLeft?: boolean
+  active?: boolean
+}
