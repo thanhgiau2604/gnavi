@@ -13,7 +13,13 @@ interface AvatarProps {
 const Avatar = ({ alt, src, size, sx }: AvatarProps) => {
   return (
     <AvatarContainer size={size} sx={sx}>
-      <Image src={src || NO_AVATAR} alt={alt} layout="fill" objectFit="contain" />
+      <Image
+        src={src || NO_AVATAR}
+        alt={alt}
+        layout="fill"
+        objectFit="contain"
+        priority={size === 'large' || (sx && (sx?.height > 69 || sx?.width > 69))}
+      />
     </AvatarContainer>
   )
 }

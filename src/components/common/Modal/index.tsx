@@ -18,7 +18,7 @@ const Modal = ({ open, title, onBack, onClose, children }: ModalContainerProps) 
           <ModalHeader>
             {onBack && (
               <button type="button" className="btn-back" onClick={onBack}>
-                <Image src="/images/arrow_back.png" alt="" layout="fill" objectFit="contain" />
+                <Image src="/icons/arrow_back.png" alt="" layout="fill" objectFit="contain" />
               </button>
             )}
             {title && (

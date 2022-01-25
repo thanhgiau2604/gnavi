@@ -15,7 +15,7 @@ const Header = ({ title, showBtnBack, shadow, backTo, children }: HeaderProps) =
         <div className={showBtnBack ? 'back-btn' : ''}>
           {showBtnBack ? (
             <ImageContainer width={24} height={24} onClick={handleNavigateBack}>
-              <Image src="/images/arrow_back.png" alt="" layout="fill" objectFit="contain" />
+              <Image src="/icons/arrow_back.png" alt="" layout="fill" objectFit="contain" />
             </ImageContainer>
           ) : (
             <ImageContainer width={121} height={34}>

@@ -40,7 +40,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
 
   select {
     appearance: none;
-    background-image: url('/images/arrow_down.png');
+    background-image: url('/icons/arrow_down.png');
     background-position: 95% 50%;
     background-repeat: no-repeat;
     background-size: 1.2rem 0.74rem;
@@ -84,7 +84,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     cursor: pointer;
     border: none;
 
-    background-image: url('/images/date_picker.png');
+    background-image: url('/icons/date_picker.png');
     background-repeat: no-repeat;
     background-size: contain;
 

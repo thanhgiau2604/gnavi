@@ -9,6 +9,7 @@ interface AvatarContainerStyledProps {
 
 export const AvatarContainer = styled.div<AvatarContainerStyledProps>`
   position: relative;
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;
