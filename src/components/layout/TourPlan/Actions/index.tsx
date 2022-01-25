@@ -35,6 +35,7 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
         radius={4}
         margin="1rem 1.1rem 0 1.3rem"
         title="編集する"
+        fontWeight={700}
       />
       <Button
         onClick={(e: React.MouseEvent<HTMLElement>) => duplicate(e, id)}
@@ -42,6 +43,7 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
         radius={4}
         margin="1rem 1.1rem 0 1.3rem"
         title="複製する"
+        fontWeight={700}
       />
       <Button
         onClick={(e: React.MouseEvent<HTMLElement>) => docs(e, id)}
@@ -49,6 +51,7 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
         radius={4}
         margin="1rem 1.1rem 0 1.3rem"
         title="ツアーログ"
+        fontWeight={700}
       />
       <Button
         onClick={(e: React.MouseEvent<HTMLElement>) => remove(e, id)}
@@ -56,6 +59,7 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
         radius={4}
         margin="1rem 1.1rem 1rem 1.3rem"
         title="削除"
+        fontWeight={700}
         buttonColor={buttonColors.STYLE02}
       />
     </ActionContainer>
