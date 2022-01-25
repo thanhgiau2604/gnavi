@@ -4,6 +4,7 @@ import { fontSize } from 'constants/index'
 import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 
 const TourLogContainer = styled.div`
+  position: relative;
   border-radius: 8px;
   background-color: ${Variables.colorWhite};
   margin-bottom: 2.6rem;
@@ -44,12 +45,6 @@ const TourLogContainer = styled.div`
       top: 0;
       transform: translate(-50%, -50%);
       padding-bottom: 3rem;
-    }
-    &-more {
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 105%);
     }
   }
   .image-container {
