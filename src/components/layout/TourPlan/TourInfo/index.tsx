@@ -1,4 +1,4 @@
-import { Detail, IContent } from 'interfaces/TourPlan/Detail'
+import { IDetailInformation, IInfomartion } from 'interfaces/TourPlan/TourInfo'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
@@ -7,13 +7,17 @@ import TourInfoAdvanced from './Advanced'
 import TourInfoBasic from './Basic'
 import { TourInfoContainer } from './styled'
 
-const TourInfo: React.FC<Detail> = ({ field, content }) => {
+interface TourInfoProps {
+  info: IInfomartion
+}
+
+const TourInfo: React.FC<TourInfoProps> = ({ info }) => {
   const [show, setShow] = useState<boolean>(true)
 
   return (
     <TourInfoContainer>
       <FlexContainer justifyContent="space-between">
-        <p className="field text--large">{field}</p>
+        <p className="field text--large">{info.field}</p>
         <ImageContainer
           onClick={() => setShow(!show)}
           className={`icon icon-${show ? 'expand' : 'collapse'}`}
@@ -24,13 +28,13 @@ const TourInfo: React.FC<Detail> = ({ field, content }) => {
         </ImageContainer>
       </FlexContainer>
       <hr />
-      {field === 'スケジュール' ? (
+      {info.field === 'スケジュール' ? (
         <TourInfoAdvanced />
       ) : (
         <div>
-          {content &&
-            content.map((c: IContent, i: number) => (
-              <TourInfoBasic key={i} tag={c.tag} info={c.info} />
+          {info.details &&
+            info.details.map((detail: IDetailInformation, i: number) => (
+              <TourInfoBasic key={i} detail={detail} />
             ))}
         </div>
       )}

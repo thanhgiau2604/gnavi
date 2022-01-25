@@ -1,12 +1,16 @@
 import React from 'react'
-import { IContent } from 'interfaces/TourPlan/Detail'
+import { IDetailInformation } from 'interfaces/TourPlan/TourInfo'
 import { BasicInfoContainer } from './styled'
 
-const TourInfoBasic: React.FC<IContent> = ({ tag, info }) => {
+interface TourInfoBasicProps {
+  detail: IDetailInformation
+}
+
+const TourInfoBasic: React.FC<TourInfoBasicProps> = ({ detail }) => {
   return (
     <BasicInfoContainer>
-      <p className="tag">{tag}</p>
-      <p className="information">{info}</p>
+      {detail.tag && <p className="tag">{detail.tag}</p>}
+      {detail.content && <p className="information">{detail.content}</p>}
     </BasicInfoContainer>
   )
 }
