@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { ITourLog } from 'interfaces/TourPlan/TourLog'
 import ButtonAction from 'components/layout/TourPlan/Actions/ButtonAction'
-import useOnClickOutSide from 'constants/handleOutSide'
+import useOnClickOutSide from 'constants/utils'
 import { TourLogContainer } from './styled'
 import Actions from '../Actions'
 
