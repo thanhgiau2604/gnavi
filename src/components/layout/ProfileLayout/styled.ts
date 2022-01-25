@@ -82,4 +82,9 @@ export const GroupButton = styled.div`
       border-bottom: 1px solid ${Variables.color3};
     }
   }
+
+  .active {
+    background-color: ${Variables.color6};
+    color: ${Variables.colorBlack};
+  }
 `

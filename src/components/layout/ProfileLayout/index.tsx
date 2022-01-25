@@ -84,7 +84,7 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
       </div>
       <GroupButton>
         <Grid col={3}>
-          <button type="button" className="btn btn-1">
+          <button type="button" className="btn btn-1 active">
             ホーム
           </button>
           <button type="button" className="btn btn-2">
