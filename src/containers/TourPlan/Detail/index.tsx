@@ -7,8 +7,8 @@ import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
-import TourInfo from 'components/layout/TourPlan/TourInfo'
 import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
+import TourInfo from 'components/layout/TourPlan/TourInfo'
 import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
@@ -106,11 +106,19 @@ const TourPlanDetail = () => {
               {
                 timeline: '10:00',
                 title: 'クーラ川SUP',
-                image: '',
+                image: '/images/schedule02.png',
                 content: `・SUPかカヌーをお好みでお選びいただけます 
                 ・自然観察にうってつけのクーラ川をのんびりクルーズでマングローブの森を抜けていきます 
                 ・普段見ることのない亜熱帯独特の植物は生き物を見て楽しみましょう`,
                 transportation: ['徒歩', 'タクシー'],
+              },
+
+              {
+                timeline: '10:30',
+                title: 'トレッキング',
+                image: '/images/schedule03.png',
+                content: `SUP（またはカヌー）を岸につけたらジャングルを抜けてクーラの滝を目指します`,
+                transportation: ['徒歩'],
               },
             ],
           },

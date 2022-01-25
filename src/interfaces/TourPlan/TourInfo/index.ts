@@ -24,4 +24,4 @@ interface ITourInfo {
   infos: IInfomartion[]
 }
 
-export type { ITourInfo, IInfomartion, IDetailInformation }
+export type { ITourInfo, IInfomartion, IDetailInformation, ISchedule }
