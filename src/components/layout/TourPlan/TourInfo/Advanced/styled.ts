@@ -5,6 +5,7 @@ import { Variables } from 'styles/styled/app/Variables'
 
 const AdvancedInfoContainer = styled.div`
   font-size: ${fontSize.MEDIUM};
+  position: relative;
   .title {
     font-size: ${fontSize.LARGE};
     font-weight: ${FIELD_LABEL_WEIGHT.bold};
@@ -28,6 +29,14 @@ const AdvancedInfoContainer = styled.div`
           content: ' / ';
         }
       }
+    }
+  }
+  .icon {
+    &-doc {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(0, 10%);
     }
   }
 `

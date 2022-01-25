@@ -29,35 +29,27 @@ const TourInfo: React.FC<TourInfoProps> = ({ info }) => {
       </FlexContainer>
       <hr />
       {info.field === 'スケジュール' ? (
-        <div className="schedule">
-          <table className="schedules-table">
-            <tbody>
-              {!!info?.details[0]?.schedules?.length &&
-                info.details[0].schedules.map((schedule: ISchedule, i: number) => (
-                  <tr key={i}>
-                    <td>
-                      <p className="timeline">{schedule.timeline}</p>
-                      <div className="circle" />
-                    </td>
-                    <td>
-                      <TourInfoAdvanced
-                        title={schedule.title}
-                        image={schedule.image}
-                        content={schedule.content}
-                        transportation={schedule.transportation}
-                      />
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-
-          <div className="icon icon-doc">
-            <ImageContainer width={16} height={20}>
-              <Image src="/images/doc.png" layout="fill" objectFit="fill" />
-            </ImageContainer>
-          </div>
-        </div>
+        <table className="schedules-table">
+          <tbody>
+            {!!info?.details[0]?.schedules?.length &&
+              info.details[0].schedules.map((schedule: ISchedule, i: number) => (
+                <tr key={i}>
+                  <td>
+                    <p className="timeline">{schedule.timeline}</p>
+                    <div className="circle" />
+                  </td>
+                  <td>
+                    <TourInfoAdvanced
+                      title={schedule.title}
+                      image={schedule.image}
+                      content={schedule.content}
+                      transportation={schedule.transportation}
+                    />
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
       ) : (
         <div>
           {info.details &&

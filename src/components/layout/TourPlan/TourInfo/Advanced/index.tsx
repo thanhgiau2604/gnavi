@@ -38,6 +38,11 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({
           </FlexContainer>
         </div>
       )}
+      <div className="icon icon-doc">
+        <ImageContainer width={16} height={20}>
+          <Image src="/images/doc.png" layout="fill" objectFit="fill" />
+        </ImageContainer>
+      </div>
     </AdvancedInfoContainer>
   )
 }

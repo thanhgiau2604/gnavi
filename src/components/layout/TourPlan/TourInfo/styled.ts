@@ -23,17 +23,6 @@ const TourInfoContainer = styled.div`
       transform: rotate(0deg);
     }
   }
-  .schedule {
-    position: relative;
-    .icon {
-      &-doc {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-130%, 50%);
-      }
-    }
-  }
   .schedules-table {
     border-collapse: collapse;
     width: 100%;
