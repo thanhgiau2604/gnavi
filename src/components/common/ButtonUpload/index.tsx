@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonUploadProps } from 'interfaces/ButtonUpload'
-import { buttonUploadColors, fontSize } from 'constants/index'
+import { BUTTON_UPLOAD_COLORS, FONT_SIZES } from 'constants/index'
 import { UploadContainer } from './styled'
 
 const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, ...rest }) => {
@@ -29,9 +29,9 @@ const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, ...rest }) => {
 }
 
 ButtonUpload.defaultProps = {
-  buttonUploadColor: buttonUploadColors.STYLE01,
+  buttonUploadColor: BUTTON_UPLOAD_COLORS.style01,
   fontWeight: 400,
-  _fontSize: fontSize.MEDIUM,
+  _fontSize: FONT_SIZES.medium,
 }
 
 export default ButtonUpload

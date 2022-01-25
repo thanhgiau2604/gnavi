@@ -1,12 +1,6 @@
 import React from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import {
-  buttonColors,
-  buttonHeartThemes,
-  buttonLikeThemes,
-  buttonUploadColors,
-  fontSize,
-} from 'constants/index'
+import { BUTTON_COLORS, BUTTON_UPLOAD_COLORS, FONT_SIZES } from 'constants/index'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'

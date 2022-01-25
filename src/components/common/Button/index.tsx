@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonProps } from 'interfaces/Button'
-import { buttonColors, fontSize } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES } from 'constants/index'
 import { ButtonContainer } from './styled'
 
 const Button: React.FC<ButtonProps> = ({ title, ...rest }) => {
@@ -14,7 +14,7 @@ Button.defaultProps = {
   radius: 2,
   buttonColor: buttonColors.STYLE01,
   fontWeight: 700,
-  _fontSize: fontSize.MEDIUM,
+  _fontSize: FONT_SIZES.medium,
   margin: '1.8rem auto auto auto',
 }
 
