@@ -14,7 +14,7 @@ const ContentContainer = styled.div`
   }
   .information {
     font-weight: ${FIELD_LABEL_WEIGHT.normal};
-    line-height: 1.9rem;
+    line-height: 2.3rem;
     padding: 0 1.4rem;
     margin-top: 1.5rem;
   }

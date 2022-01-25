@@ -8,7 +8,7 @@ interface ContainerProps {
 
 const Container = styled.div<ContainerProps>`
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
   padding: ${({ padding }) => padding && padding};
   background-color: ${({ backgroundColor }) => backgroundColor && backgroundColor};
 `
