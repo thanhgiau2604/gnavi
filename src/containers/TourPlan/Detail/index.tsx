@@ -132,7 +132,7 @@ const TourPlanDetail = () => {
 
   return (
     <div className="wrapper">
-      <Header shadow showBtnBack title={data.title} />
+      <Header shadow showBtnBack title={data.title} backTo="/tourplan" />
       <Container padding="0 2rem">
         <TourPlanDetailContainer>
           <FlexContainer>
