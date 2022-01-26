@@ -6,9 +6,9 @@ import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
-import TourInfo from 'components/layout/TourPlan/TourInfo'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
+import TourInfo from 'components/layout/TourPlan/TourInfo'
 import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {

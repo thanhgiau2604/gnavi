@@ -13,7 +13,7 @@ const AdvancedInfoContainer = styled.div`
   .fm-noto {
     font-family: ${Variables.fontPrimary};
     font-weight: ${FIELD_LABEL_WEIGHT.normal};
-    line-height: 1;
+    line-height: 1.5;
     margin: 1.7rem auto;
   }
   .transportation {
