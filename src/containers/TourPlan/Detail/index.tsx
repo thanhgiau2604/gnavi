@@ -7,8 +7,8 @@ import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
 import TourInfo from 'components/layout/TourPlan/TourInfo'
-import ButtonAction from 'components/layout/TourPlan/Actions/ButtonAction'
-import Actions from 'components/layout/TourPlan/Actions'
+import ButtonAction from 'components/common/TourPlan/ButtonAction'
+import ActionMenu from 'components/common/TourPlan'
 import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
@@ -166,8 +166,7 @@ const TourPlanDetail = () => {
           </div>
           {!!data.infos.length &&
             data.infos.map((info: IInfomartion, i: number) => <TourInfo key={i} info={info} />)}
-
-          <Actions status={status} id={data.id} transform="translate(-13%, 65%)" />
+          <ActionMenu status={status} id={data.id} transform="translate(-13%, 65%)" />
         </TourPlanDetailContainer>
       </Container>
     </div>

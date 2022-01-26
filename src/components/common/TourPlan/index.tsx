@@ -9,7 +9,7 @@ interface ActionMenuProps {
   transform?: string
 }
 
-const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
+const ActionMenu: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
   const edit = (e: React.MouseEvent<HTMLElement>, ID: number | string) => {
     e.stopPropagation()
     console.log(ID)
@@ -62,4 +62,4 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
   )
 }
 
-export default Actions
+export default ActionMenu

@@ -4,10 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { ITourLog } from 'interfaces/TourPlan/TourLog'
-import ButtonAction from 'components/layout/TourPlan/Actions/ButtonAction'
 import useOnClickOutSide from 'constants/utils'
+import ButtonAction from 'components/common/TourPlan/ButtonAction'
+import ActionMenu from 'components/common/TourPlan'
 import { TourLogContainer } from './styled'
-import Actions from '../Actions'
 
 interface TourLogProps {
   tourLog: ITourLog
@@ -35,7 +35,7 @@ const TourLog: React.FC<TourLogProps> = ({ tourLog }) => {
         <div className="btn btn-icon">
           <Image src="/images/like.png" layout="fill" objectFit="contain" />
         </div>
-        <Actions status={status} id={tourLog.id} />
+        <ActionMenu status={status} id={tourLog.id} />
       </TourLogContainer>
     </Link>
   )
