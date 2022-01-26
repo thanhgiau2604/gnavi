@@ -22,6 +22,7 @@ const ConfirmationSession = styled.section`
       font-size: 1.6rem;
       text-align: center;
     }
+
     &-note {
       padding-top: 3.5rem;
     }
