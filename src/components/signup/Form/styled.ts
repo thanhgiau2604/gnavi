@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const SignupSession = styled.section`
+const SignupSection = styled.section`
   .signup {
     &-main {
       form {
@@ -23,4 +23,4 @@ const SignupSession = styled.section`
   }
 `
 
-export { SignupSession }
+export { SignupSection }

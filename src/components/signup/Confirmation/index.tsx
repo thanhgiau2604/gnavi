@@ -6,11 +6,11 @@ import { buttonColors } from 'constants/'
 import { FastField, Form, Formik } from 'formik'
 import { CfFormProps } from 'interfaces/Auth'
 import { INIT_CONFIRM_FORM_VALUE, VALIDATE_CONFIRM_SCHEMA } from 'constants/auth'
-import { ConfirmationSession } from './styled'
+import { ConfirmationSection } from './styled'
 
 const Confirmation: React.FC<CfFormProps> = ({ handleConfirm }) => {
   return (
-    <ConfirmationSession>
+    <ConfirmationSection>
       <Header shadow />
       <div className="container">
         <div className="cf-main">
@@ -59,7 +59,7 @@ const Confirmation: React.FC<CfFormProps> = ({ handleConfirm }) => {
           </Formik>
         </div>
       </div>
-    </ConfirmationSession>
+    </ConfirmationSection>
   )
 }
 

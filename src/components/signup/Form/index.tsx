@@ -13,11 +13,11 @@ import {
   VALIDATE_SIGNUP_SCHEMA,
 } from 'constants/auth'
 import { SignupFormProps } from 'interfaces/Auth'
-import { SignupSession } from './styled'
+import { SignupSection } from './styled'
 
 const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
   return (
-    <SignupSession>
+    <SignupSection>
       <Header shadow />
       <div className="container">
         <div className="signup-main">
@@ -121,7 +121,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
           </Formik>
         </div>
       </div>
-    </SignupSession>
+    </SignupSection>
   )
 }
 

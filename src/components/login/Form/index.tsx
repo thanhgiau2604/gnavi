@@ -8,13 +8,13 @@ import { buttonColors, routes } from 'constants/index'
 import { FastField, Form, Formik } from 'formik'
 import { LoginFormProps } from 'interfaces/Auth'
 import { useRouter } from 'next/router'
-import { LoginSession } from './styled'
+import { LoginSection } from './styled'
 
 const LoginForm: React.FC<LoginFormProps> = ({ handleLogin }) => {
   const router = useRouter()
 
   return (
-    <LoginSession>
+    <LoginSection>
       <Header shadow />
       <div className="container">
         <div className="login-main">
@@ -66,7 +66,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ handleLogin }) => {
           />
         </div>
       </div>
-    </LoginSession>
+    </LoginSection>
   )
 }
 

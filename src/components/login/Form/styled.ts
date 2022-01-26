@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const LoginSession = styled.section`
+const LoginSection = styled.section`
   .login {
     &-main {
       form {
@@ -21,4 +21,4 @@ const LoginSession = styled.section`
   }
 `
 
-export { LoginSession }
+export { LoginSection }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const ConfirmationSession = styled.section`
+const ConfirmationSection = styled.section`
   .cf {
     &-main {
       form {
@@ -29,4 +29,4 @@ const ConfirmationSession = styled.section`
   }
 `
 
-export { ConfirmationSession }
+export { ConfirmationSection }
