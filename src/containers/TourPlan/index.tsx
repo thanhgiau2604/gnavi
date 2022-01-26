@@ -4,10 +4,11 @@ import { Container } from 'styles/styled/layout/ContainerLayout'
 import Button from 'components/common/Button'
 import { fontSize } from 'constants/index'
 import { ITourLog, ITourPlan } from 'interfaces/TourPlan/TourLog'
-import { TourPlanContainer } from './styled'
 import TourLog from 'components/layout/TourPlan/TourLog'
+import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
+  // const data: ITourPlan[] = []
   const data: ITourPlan[] = [
     {
       id: 1,
@@ -43,7 +44,11 @@ const TourPlan = () => {
   return (
     <div className="wrapper">
       <Header shadow showBtnBack title="ツアープラン一覧" />
-      <Container padding="0 2rem" backgroundColor="rgba(239,239,239,255)">
+      <Container
+        padding="0 2rem"
+        backgroundColor="rgba(239,239,239,255)"
+        height={data.length ? 'max-content' : '100%'}
+      >
         <Button
           title="＋新規ツアープランの追加"
           fontWeight={700}

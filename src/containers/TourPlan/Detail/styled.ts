@@ -51,6 +51,9 @@ const TourPlanDetailContainer = styled.div`
       }
     }
   }
+  div[class*='TourInfoContainer']:nth-child(7) {
+    margin-bottom: 1rem;
+  }
 `
 
 export { TourPlanDetailContainer }
