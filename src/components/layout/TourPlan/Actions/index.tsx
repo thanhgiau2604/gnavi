@@ -1,7 +1,7 @@
 import Button from 'components/common/Button'
 import { buttonColors } from 'constants/index'
 import React from 'react'
-import { ActionContainer } from './styled'
+import { BoxContainer } from 'styles/styled/layout/BoxLayout'
 
 interface ActionMenuProps {
   id: number | string
@@ -28,12 +28,12 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
   }
 
   return (
-    <ActionContainer status={status} transform={transform}>
+    <BoxContainer status={status} transform={transform} padding="1rem">
       <Button
         onClick={(e: React.MouseEvent<HTMLElement>) => edit(e, id)}
         width={120}
         radius={4}
-        margin="1rem 1.1rem 0 1.3rem"
+        margin="0 0 0.8rem 0"
         title="編集する"
         fontWeight={700}
       />
@@ -41,7 +41,7 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
         onClick={(e: React.MouseEvent<HTMLElement>) => duplicate(e, id)}
         width={120}
         radius={4}
-        margin="1rem 1.1rem 0 1.3rem"
+        margin="0 0 0.8rem 0"
         title="複製する"
         fontWeight={700}
       />
@@ -49,7 +49,7 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
         onClick={(e: React.MouseEvent<HTMLElement>) => docs(e, id)}
         width={120}
         radius={4}
-        margin="1rem 1.1rem 0 1.3rem"
+        margin="0 0 0.8rem 0"
         title="ツアーログ"
         fontWeight={700}
       />
@@ -57,17 +57,17 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
         onClick={(e: React.MouseEvent<HTMLElement>) => remove(e, id)}
         width={120}
         radius={4}
-        margin="1rem 1.1rem 1rem 1.3rem"
+        margin="auto"
         title="削除"
         fontWeight={700}
         buttonColor={buttonColors.STYLE02}
       />
-    </ActionContainer>
+    </BoxContainer>
   )
 }
 
-Actions.defaultProps = {
-  transform: 'translate(0, 24%)',
-}
+// Actions.defaultProps = {
+//   transform: 'translate(0, 24%)',
+// }
 
 export default Actions
