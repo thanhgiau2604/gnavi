@@ -9,6 +9,6 @@ export interface ButtonReactionProps {
   top?: string
   left?: string
   right?: string
-  bottm?: string
+  bottom?: string
   margin?: string
 }
