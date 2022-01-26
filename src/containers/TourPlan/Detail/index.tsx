@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick'
+import { TourPlanDetailContainer } from './styled'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
@@ -9,7 +10,6 @@ import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import TourInfo from 'components/layout/TourPlan/TourInfo'
-import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
   const settings = {
