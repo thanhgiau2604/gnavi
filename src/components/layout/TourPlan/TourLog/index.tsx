@@ -17,6 +17,9 @@ const TourLog: React.FC<TourLogProps> = ({ tourLog }) => {
   const [status, setStatus] = useState<boolean>(false)
   const ref = useRef(null)
   useOnClickOutSide(ref, () => setStatus(false))
+  const myLoader = ({ src }: any) => {
+    return `${src}?w=100&q=75`
+  }
 
   return (
     <Link href={`/tourplan/detail?id=${tourLog.id}`} passHref>
@@ -27,7 +30,14 @@ const TourLog: React.FC<TourLogProps> = ({ tourLog }) => {
         </FlexContainer>
         {!!tourLog.images.length && (
           <ImageContainer width="100%" height={200} margin="1.1rem auto 2rem auto">
-            <Image src={tourLog.images[0]} alt="image" layout="fill" objectFit="fill" priority />
+            <Image
+              loader={myLoader}
+              src={tourLog.images[0]}
+              alt="image"
+              layout="fill"
+              objectFit="fill"
+              priority
+            />
           </ImageContainer>
         )}
         <p className="content">{tourLog.content}</p>
