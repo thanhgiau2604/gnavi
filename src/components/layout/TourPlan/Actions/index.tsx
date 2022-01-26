@@ -66,8 +66,4 @@ const Actions: React.FC<ActionMenuProps> = ({ id, status, transform }) => {
   )
 }
 
-// Actions.defaultProps = {
-//   transform: 'translate(0, 24%)',
-// }
-
 export default Actions
