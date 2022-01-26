@@ -27,7 +27,7 @@ const BoxContainer = styled.div<BoxContainerProps>`
 `
 
 BoxContainer.defaultProps = {
-  transform: 'translate(0, 24%)',
+  transform: 'translate(0, 30%)',
   padding: '0',
   margin: 'auto',
 }

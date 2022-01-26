@@ -167,7 +167,7 @@ const TourPlanDetail = () => {
           {!!data.infos.length &&
             data.infos.map((info: IInfomartion, i: number) => <TourInfo key={i} info={info} />)}
 
-          <Actions status={status} id={data.id} transform="translate(-2%,50%)" />
+          <Actions status={status} id={data.id} transform="translate(-13%, 65%)" />
         </TourPlanDetailContainer>
       </Container>
     </div>
