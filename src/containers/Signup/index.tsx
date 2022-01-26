@@ -1,7 +1,7 @@
+import React, { useState } from 'react'
 import Confirmation from 'components/signup/Confirmation'
 import SignupForm from 'components/signup/Form'
 import { ConfirmPayload, SignupPayload } from 'interfaces/Auth'
-import React, { useState } from 'react'
 
 const Signup = () => {
   const [showCf, setShowCf] = useState<boolean>(false)

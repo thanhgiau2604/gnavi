@@ -1,6 +1,5 @@
-// import SignupForm from 'components/signup/Form'
-import SignupContainer from 'containers/Signup'
 import React from 'react'
+import SignupContainer from 'containers/Signup'
 
 const Signup: React.FC = () => {
   return (

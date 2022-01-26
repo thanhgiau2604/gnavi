@@ -1,3 +1,4 @@
+import React from 'react'
 import Button from 'components/common/Button'
 import CustomDate from 'components/common/CustomFields/DateField'
 import CustomInput from 'components/common/CustomFields/InputField'
@@ -5,7 +6,6 @@ import CustomSelect from 'components/common/CustomFields/SelectField'
 import Header from 'components/common/Header'
 import { buttonColors } from 'constants/index'
 import { FastField, Form, Formik } from 'formik'
-import React from 'react'
 import {
   INIT_SIGNUP_FORM_VALUE,
   OPTIONS_GENDER,
