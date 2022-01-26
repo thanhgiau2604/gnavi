@@ -4,6 +4,24 @@ const routes = {
   LOGIN: '/login',
 }
 
+const buttonLikeThemes = {
+  STYLE01: {
+    src: '/images/like.png',
+    activeSrc: '/images/like_active_green.png',
+  },
+  STYLE02: {
+    src: '/images/like.png',
+    activeSrc: '/images/like_active_red.png',
+  },
+}
+
+const buttonHeartThemes = {
+  STYLE01: {
+    src: '/images/heart.png',
+    activeSrc: '/images/heart_active_red.png',
+  },
+}
+
 const buttonColors = {
   STYLE01: {
     BGCOLOR: Variables.color1,
@@ -47,4 +65,4 @@ const fontSize = {
   LARGE: '1.8rem',
 }
 
-export { routes, buttonColors, fontSize, buttonUploadColors }
+export { routes, buttonColors, fontSize, buttonUploadColors, buttonLikeThemes, buttonHeartThemes }
