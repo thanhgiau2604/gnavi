@@ -43,6 +43,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
 
                   <p className="global-desc signup-desc-username">
                     あなたの公開プロフィールURLは、https://guidenavi.com/user/
+                    <br />
                     になります。後から変更できません。
                   </p>
 

@@ -26,6 +26,7 @@ const Confirmation: React.FC<CfFormProps> = ({ handleConfirm }) => {
 
           <p className="global-desc cf-note">
             こちらのメールアドレスを再送してください。
+            <br />
             本登録時にメールアドレスを間違えた場合、お手数をおかけしますが、最初から登録しなおしてください。
           </p>
 
