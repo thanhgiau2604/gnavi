@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { ITourLog } from 'interfaces/TourPlan/TourLog'
 import useOnClickOutSide from 'constants/utils'
-import ButtonAction from 'components/common/TourPlan/ButtonAction'
-import ActionMenu from 'components/common/TourPlan'
+import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
+import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import { TourLogContainer } from './styled'
 
 interface TourLogProps {
