@@ -13,7 +13,7 @@ Button.defaultProps = {
   height: 'auto',
   radius: 2,
   buttonColor: buttonColors.STYLE01,
-  fontWeight: 400,
+  fontWeight: 700,
   _fontSize: fontSize.MEDIUM,
   margin: '1.8rem auto auto auto',
 }
