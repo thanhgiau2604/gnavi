@@ -4,8 +4,8 @@ import { Container } from 'styles/styled/layout/ContainerLayout'
 import Button from 'components/common/Button'
 import { fontSize } from 'constants/index'
 import { ITourLog, ITourPlan } from 'interfaces/TourPlan/TourLog'
-import { TourPlanContainer } from './styled'
 import TourLog from 'components/layout/TourPlan/TourLog'
+import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
   // const data: ITourPlan[] = []
@@ -57,11 +57,11 @@ const TourPlan = () => {
         />
         <TourPlanContainer>
           {data &&
-            data.map((item: ITourPlan, i: number) => (
-              <div key={i}>
+            data.map((item: ITourPlan) => (
+              <div key={item.id}>
                 <h3 className="title">{item.year}</h3>
-                {item.tourLogs?.map((tourLog: ITourLog, j: number) => (
-                  <div key={j}>
+                {item.tourLogs?.map((tourLog: ITourLog) => (
+                  <div key={tourLog.id}>
                     <p className="datetime">{tourLog.datetime}</p>
                     <TourLog tourLog={tourLog} />
                   </div>
