@@ -1,6 +1,41 @@
 interface LoginPayload {
-  Username: string
-  Password: string
+  email: string
+  password: string
 }
 
-export type { LoginPayload }
+interface SignupPayload {
+  username: string
+  nickname: string
+  email: string
+  password: string
+  last_name: string
+  first_name: string
+  public_setting: string
+  birthday: Date
+  gender: string
+}
+
+interface ConfirmPayload {
+  email: string
+}
+
+interface LoginFormProps {
+  handleLogin: (payload: LoginPayload) => void
+}
+
+interface SignupFormProps {
+  handleSignup: (payload: SignupPayload) => void
+}
+
+interface CfFormProps {
+  handleConfirm: (payload: ConfirmPayload) => void
+}
+
+export type {
+  LoginPayload,
+  SignupPayload,
+  ConfirmPayload,
+  LoginFormProps,
+  SignupFormProps,
+  CfFormProps,
+}

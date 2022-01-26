@@ -2,6 +2,7 @@ import { Variables } from 'styles/styled/app/Variables'
 
 const routes = {
   LOGIN: '/login',
+  SIGNUP: '/signup',
 }
 
 const buttonLikeThemes = {
