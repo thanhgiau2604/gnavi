@@ -7,7 +7,7 @@ const TourPlanDetailContainer = styled.div`
   margin: 2.4rem auto auto auto;
   font-family: ${Variables.fontSecondary};
   text-align: justify;
-  line-height: 2rem;
+  line-height: 1;
   .title {
     font-weight: ${FIELD_LABEL_WEIGHT.bold};
     font-size: ${fontSize.XLARGE};

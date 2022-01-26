@@ -33,7 +33,7 @@ const TourLogContainer = styled.div`
     -webkit-box-orient: vertical;
     margin-bottom: 3.5rem;
     padding: 0 1.5rem;
-    line-height: 2.317rem;
+    line-height: 1;
   }
   .btn {
     width: 2.2rem;
