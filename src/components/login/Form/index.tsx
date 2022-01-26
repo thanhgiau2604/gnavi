@@ -4,12 +4,13 @@ import Header from 'components/common/Header'
 import { INIT_LOGIN_FORM_VALUE, VALIDATE_LOGIN_SCHEMA } from 'constants/auth'
 import { buttonColors, routes } from 'constants/index'
 import { FastField, Form, Formik } from 'formik'
+import { LoginFormProps } from 'interfaces/Auth'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { LoginSession } from './styled'
 
-const LoginForm: React.FC = () => {
+const LoginForm: React.FC<LoginFormProps> = ({ handleLogin }) => {
   const router = useRouter()
 
   return (
@@ -22,6 +23,7 @@ const LoginForm: React.FC = () => {
             initialValues={INIT_LOGIN_FORM_VALUE}
             validationSchema={VALIDATE_LOGIN_SCHEMA}
             onSubmit={(values, actions) => {
+              handleLogin(values)
               actions.setSubmitting(false)
             }}
           >

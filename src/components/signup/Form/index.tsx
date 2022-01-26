@@ -12,9 +12,10 @@ import {
   OPTIONS_PUBLIC_SETTING,
   VALIDATE_SIGNUP_SCHEMA,
 } from 'constants/auth'
+import { SignupFormProps } from 'interfaces/Auth'
 import { SignupSession } from './styled'
 
-const SignupForm: React.FC = () => {
+const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
   return (
     <SignupSession>
       <Header shadow />
@@ -25,7 +26,7 @@ const SignupForm: React.FC = () => {
             initialValues={INIT_SIGNUP_FORM_VALUE}
             validationSchema={VALIDATE_SIGNUP_SCHEMA}
             onSubmit={(values, actions) => {
-              console.log(values)
+              handleSignup(values)
               actions.setSubmitting(false)
             }}
           >

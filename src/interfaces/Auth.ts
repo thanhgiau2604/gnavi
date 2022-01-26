@@ -15,4 +15,27 @@ interface SignupPayload {
   gender: string
 }
 
-export type { LoginPayload, SignupPayload }
+interface ConfirmPayload {
+  email: string
+}
+
+interface LoginFormProps {
+  handleLogin: (payload: LoginPayload) => void
+}
+
+interface SignupFormProps {
+  handleSignup: (payload: SignupPayload) => void
+}
+
+interface CfFormProps {
+  handleConfirm: (payload: ConfirmPayload) => void
+}
+
+export type {
+  LoginPayload,
+  SignupPayload,
+  ConfirmPayload,
+  LoginFormProps,
+  SignupFormProps,
+  CfFormProps,
+}

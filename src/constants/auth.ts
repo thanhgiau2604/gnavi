@@ -1,4 +1,4 @@
-import { LoginPayload, SignupPayload } from 'interfaces/Auth'
+import { ConfirmPayload, LoginPayload, SignupPayload } from 'interfaces/Auth'
 import { OptionProps } from 'interfaces/CustomField'
 import * as Yup from 'yup'
 
@@ -19,6 +19,10 @@ const INIT_SIGNUP_FORM_VALUE: SignupPayload = {
   gender: 'male',
 }
 
+const INIT_CONFIRM_FORM_VALUE: ConfirmPayload = {
+  email: '',
+}
+
 const VALIDATE_LOGIN_SCHEMA = Yup.object().shape({
   email: Yup.string().required(),
   password: Yup.string().required(),
@@ -33,6 +37,10 @@ const VALIDATE_SIGNUP_SCHEMA = Yup.object().shape({
   public_setting: Yup.string().required(),
   birthday: Yup.string().required(),
   gender: Yup.string().required(),
+})
+
+const VALIDATE_CONFIRM_SCHEMA = Yup.object().shape({
+  email: Yup.string().required(),
 })
 
 const OPTIONS_PUBLIC_SETTING: OptionProps[] = [
@@ -64,4 +72,6 @@ export {
   VALIDATE_SIGNUP_SCHEMA,
   OPTIONS_PUBLIC_SETTING,
   OPTIONS_GENDER,
+  INIT_CONFIRM_FORM_VALUE,
+  VALIDATE_CONFIRM_SCHEMA,
 }

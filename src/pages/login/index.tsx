@@ -1,10 +1,10 @@
-import LoginForm from 'containers/LoginForm'
+import LoginContainer from 'containers/Login'
 import React from 'react'
 
 const Login: React.FC = () => {
   return (
     <div className="wrapper">
-      <LoginForm />
+      <LoginContainer />
     </div>
   )
 }

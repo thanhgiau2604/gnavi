@@ -1,10 +1,11 @@
-import SignupForm from 'containers/SignupForm'
+// import SignupForm from 'components/signup/Form'
+import SignupContainer from 'containers/Signup'
 import React from 'react'
 
 const Signup: React.FC = () => {
   return (
     <div className="wrapper">
-      <SignupForm />
+      <SignupContainer />
     </div>
   )
 }
