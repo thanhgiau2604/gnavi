@@ -1,6 +1,12 @@
 import React from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import { buttonColors, buttonUploadColors, fontSize } from 'constants/index'
+import {
+  buttonColors,
+  buttonHeartThemes,
+  buttonLikeThemes,
+  buttonUploadColors,
+  fontSize,
+} from 'constants/index'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'
@@ -8,6 +14,7 @@ import RadarChart from 'components/common/RadarChart'
 import { ChartContainer } from 'styles/styled/layout/ChartLayout'
 import Modal from 'components/common/Modal'
 import Header from 'components/common/Header'
+import ButtonReaction from 'components/common/ButtonReaction'
 import FormInput from './FormInput'
 
 const StyleGuide = () => {
@@ -59,6 +66,11 @@ const StyleGuide = () => {
           </Modal>
         )}
         <FormInput />
+        <FlexContainer justifyContent="space-between" margin="20px 0">
+          <ButtonReaction theme={buttonLikeThemes.THEME01} />
+          <ButtonReaction theme={buttonLikeThemes.THEME02} />
+          <ButtonReaction theme={buttonHeartThemes.THEME01} />
+        </FlexContainer>
       </div>
     </div>
   )
