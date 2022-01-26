@@ -5,18 +5,18 @@ const routes = {
 }
 
 const buttonLikeThemes = {
-  STYLE01: {
+  THEME01: {
     src: '/images/like.png',
     activeSrc: '/images/like_active_green.png',
   },
-  STYLE02: {
+  THEME02: {
     src: '/images/like.png',
     activeSrc: '/images/like_active_red.png',
   },
 }
 
 const buttonHeartThemes = {
-  STYLE01: {
+  THEME01: {
     src: '/images/heart.png',
     activeSrc: '/images/heart_active_red.png',
   },

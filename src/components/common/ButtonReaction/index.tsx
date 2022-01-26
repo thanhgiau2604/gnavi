@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { ButtonReactionContainer } from './styled'
 
-const ButtonReaction: React.FC<ButtonReactionProps> = ({ theme }) => {
+const ButtonReaction: React.FC<ButtonReactionProps> = ({ theme, ...rest }) => {
   const [active, setActive] = useState<boolean>(false)
   const [src, setSrc] = useState<string>(theme.src)
   const handleActive = () => {
@@ -20,7 +20,7 @@ const ButtonReaction: React.FC<ButtonReactionProps> = ({ theme }) => {
   }
 
   return (
-    <ButtonReactionContainer onClick={() => handleActive()}>
+    <ButtonReactionContainer onClick={() => handleActive()} {...rest}>
       <ImageContainer width={20} height={18}>
         <Image src={src} alt="reaction" layout="fill" objectFit="contain" />
       </ImageContainer>
