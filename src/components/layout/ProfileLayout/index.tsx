@@ -84,7 +84,7 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
           </ProfileLayoutStyled>
         </div>
       </div>
-      <div>
+      <div className="wrapper">
         <Grid col={3}>
           <ButtonItemGroup type="button" borderFull active>
             ホーム
@@ -105,8 +105,8 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
             写真ギャラリー
           </ButtonItemGroup>
         </Grid>
+        {children}
       </div>
-      <div className="wrapper">{children}</div>
     </>
   )
 }
