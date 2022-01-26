@@ -4,8 +4,8 @@ import { Container } from 'styles/styled/layout/ContainerLayout'
 import Button from 'components/common/Button'
 import { fontSize } from 'constants/index'
 import { ITourLog, ITourPlan } from 'interfaces/TourPlan/TourLog'
-import TourLog from 'components/layout/TourPlan/TourLog'
 import { TourPlanContainer } from './styled'
+import TourLog from 'components/layout/TourPlan/TourLog'
 
 const TourPlan = () => {
   // const data: ITourPlan[] = []
