@@ -7,6 +7,8 @@ import { ITourLog } from 'interfaces/TourPlan/TourLog'
 import useOnClickOutSide from 'constants/utils'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
+import ButtonReaction from 'components/common/ButtonReaction'
+import { buttonLikeThemes } from 'constants/index'
 import { TourLogContainer } from './styled'
 
 interface TourLogProps {
@@ -41,10 +43,16 @@ const TourLog: React.FC<TourLogProps> = ({ tourLog }) => {
           </ImageContainer>
         )}
         <p className="content">{tourLog.content}</p>
-        {/* Will replace soon */}
-        <div className="btn btn-icon">
-          <Image src="/images/like.png" layout="fill" objectFit="contain" />
-        </div>
+        <ButtonReaction
+          theme={buttonLikeThemes.THEME01}
+          id={tourLog.id}
+          position="relative"
+          bottom="0"
+          right="0"
+          margin="0 0 0 auto"
+          transform="translate(-50%, -50%)"
+          padding="0 0 0.5rem 0"
+        />
         <ActionMenu status={status} id={tourLog.id} />
       </TourLogContainer>
     </Link>
