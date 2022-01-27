@@ -47,12 +47,20 @@ const TourPlanDetailContainer = styled.div`
       .counter {
         color: ${Variables.colorPrimary};
         font-weight: ${FIELD_LABEL_WEIGHT.bold};
-        margin: 0.6rem auto 0.8rem 1.1rem;
+        margin: 1rem auto 1rem 1.1rem;
       }
     }
   }
-  div[class*='TourInfoContainer']:nth-child(7) {
-    margin-bottom: 1rem;
+  .header {
+    position: relative;
+  }
+  .tour-logs {
+    > div[class*='TourInfoContainer']:first-child {
+      margin-top: 0;
+    }
+    > div[class*='TourInfoContainer']:last-child {
+      margin-bottom: 3.7rem;
+    }
   }
 `
 

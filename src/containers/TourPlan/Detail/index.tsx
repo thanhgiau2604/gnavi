@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick'
-import { TourPlanDetailContainer } from './styled'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
@@ -10,6 +9,9 @@ import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import TourInfo from 'components/layout/TourPlan/TourInfo'
+import ButtonReaction from 'components/common/ButtonReaction'
+import { buttonLikeThemes } from 'constants/index'
+import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
   const settings = {
@@ -133,39 +135,52 @@ const TourPlanDetail = () => {
       <Header shadow showBtnBack title={data.title} backTo="/tourplan" />
       <Container padding="0 2rem">
         <TourPlanDetailContainer>
-          <FlexContainer>
-            <h3 className="title">{data.title}</h3>
-            <ButtonAction state={status} setState={setStatus} />
-          </FlexContainer>
-          <div className="slider">
-            {!!data.images.length && (
-              <>
-                <Slider {...settings}>
-                  {data.images.map((image: string, i: number) => (
-                    <ImageContainer key={i} width="100%" height={230}>
-                      <Image src={image} alt="" layout="fill" objectFit="fill" priority />
-                    </ImageContainer>
-                  ))}
-                </Slider>
-                <div className="image-box">
-                  <FlexContainer justifyContent="space-between">
-                    <ImageContainer className="icon icon-camera" width={20} height={18}>
-                      <Image
-                        src="/images/camera.png"
-                        alt=""
-                        layout="fill"
-                        objectFit="fill"
-                        priority
-                      />
-                    </ImageContainer>
-                    <p className="counter">{`(${data.images.length})`}</p>
-                  </FlexContainer>
-                </div>
-              </>
-            )}
+          <div className="header">
+            <FlexContainer>
+              <h3 className="title">{data.title}</h3>
+              <ButtonAction state={status} setState={setStatus} />
+            </FlexContainer>
+            <div className="slider">
+              {!!data.images.length && (
+                <>
+                  <Slider {...settings}>
+                    {data.images.map((image: string, i: number) => (
+                      <ImageContainer key={i} width="100%" height={230}>
+                        <Image src={image} alt="" layout="fill" objectFit="fill" priority />
+                      </ImageContainer>
+                    ))}
+                  </Slider>
+                  <div className="image-box">
+                    <FlexContainer justifyContent="space-between">
+                      <ImageContainer className="icon icon-camera" width={20} height={18}>
+                        <Image
+                          src="/images/camera.png"
+                          alt=""
+                          layout="fill"
+                          objectFit="fill"
+                          priority
+                        />
+                      </ImageContainer>
+                      <p className="counter">{`(${data.images.length})`}</p>
+                    </FlexContainer>
+                  </div>
+                </>
+              )}
+            </div>
+            <ButtonReaction
+              id={data.id}
+              theme={buttonLikeThemes.THEME01}
+              margin="0 0 0 auto"
+              position="absolute"
+              bottom="0"
+              right="0"
+              transform="translate(0, 250%)"
+            />
           </div>
-          {!!data.infos.length &&
-            data.infos.map((info: IInfomartion, i: number) => <TourInfo key={i} info={info} />)}
+          <div className="tour-logs">
+            {!!data.infos.length &&
+              data.infos.map((info: IInfomartion, i: number) => <TourInfo key={i} info={info} />)}
+          </div>
           <ActionMenu status={status} id={data.id} transform="translate(-13%, 65%)" />
         </TourPlanDetailContainer>
       </Container>
