@@ -1,25 +1,24 @@
 import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import Router from 'next/router'
 import isNaN from 'lodash/isNaN'
+import { ProfileHomeContainerProps } from 'interfaces/Profile'
+import Header from 'components/common/Header'
 import ProfileLayout from 'components/layout/ProfileLayout'
 
-interface ProfileHomeProps {
-  id: number
-}
-
-const ProfileHome = ({ id }: ProfileHomeProps) => {
-  const router = useRouter()
-
+const ProfileHome = ({ id }: ProfileHomeContainerProps) => {
   useEffect(() => {
     if (isNaN(id)) {
-      router.push('/404')
+      Router.push('/404')
     }
-  }, [id, router])
+  }, [id])
 
   return (
-    <ProfileLayout userId={id}>
-      <p>Tag home</p>
-    </ProfileLayout>
+    <>
+      <Header showBtnBack title="ページ編集" />
+      <ProfileLayout userId={id}>
+        <p>Tag home</p>
+      </ProfileLayout>
+    </>
   )
 }
 

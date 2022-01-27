@@ -60,6 +60,7 @@ export const ButtonItemGroup = styled.button<ItemGroupButtonProps>`
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  margin: 0;
   ${({ borderFull }) => borderFull && `border: 1px solid ${Variables.color3}`};
   ${({ borderTop }) => borderTop && `border-top: 1px solid ${Variables.color3}`};
   ${({ borderRight }) => borderRight && `border-right: 1px solid ${Variables.color3}`};

@@ -2,8 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import toNumber from 'lodash/toNumber'
-import { ProfilePageProps } from 'interfaces/Profile'
-import ProfileHome from 'containers/Profile'
+import EditProfileContainer from 'containers/Profile/EditProfile'
+
+interface ProfilePageProps {
+  idUser: number
+}
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id } = context.query
@@ -13,17 +16,17 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 }
 
-const ProfilePage: NextPage = ({
+const EditProfilePage: NextPage = ({
   idUser,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
       <Head>
-        <title>My Profile</title>
+        <title>Home</title>
       </Head>
-      <ProfileHome id={toNumber(idUser)} />
+      <EditProfileContainer id={toNumber(idUser)} />
     </>
   )
 }
 
-export default ProfilePage
+export default EditProfilePage
