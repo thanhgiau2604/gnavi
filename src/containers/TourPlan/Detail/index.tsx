@@ -10,8 +10,8 @@ import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import ButtonReaction from 'components/common/ButtonReaction'
 import { buttonLikeThemes } from 'constants/index'
-import { TourPlanDetailContainer } from './styled'
 import TourInfo from 'components/layout/TourPlan/TourInfo'
+import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
   const settings = {
@@ -145,7 +145,8 @@ const TourPlanDetail = () => {
                 <>
                   <Slider {...settings}>
                     {data.images.map((image: string, i: number) => (
-                      <ImageContainer key={i} width="100%" height={230}>
+                      // eslint-disable-next-line react/no-array-index-key
+                      <ImageContainer key={`${i}`} width="100%" height={230}>
                         <Image src={image} alt="" layout="fill" objectFit="fill" priority />
                       </ImageContainer>
                     ))}
@@ -179,7 +180,10 @@ const TourPlanDetail = () => {
           </div>
           <div className="tour-logs">
             {!!data.infos.length &&
-              data.infos.map((info: IInfomartion, i: number) => <TourInfo key={i} info={info} />)}
+              data.infos.map((info: IInfomartion, i: number) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <TourInfo key={`${i}`} info={info} />
+              ))}
           </div>
           <ActionMenu status={status} id={data.id} transform="translate(-13%, 65%)" />
         </TourPlanDetailContainer>

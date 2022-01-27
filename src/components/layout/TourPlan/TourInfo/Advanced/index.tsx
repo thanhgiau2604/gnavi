@@ -31,7 +31,8 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({
           <h6 className="title">移動手段</h6>
           <FlexContainer>
             {transportation.map((trans: string, i: number) => (
-              <p key={i} className="content">
+              // eslint-disable-next-line react/no-array-index-key
+              <p key={`${i}`} className="content">
                 {trans}
               </p>
             ))}

@@ -33,7 +33,8 @@ const TourInfo: React.FC<TourInfoProps> = ({ info }) => {
           <tbody>
             {!!info?.details[0]?.schedules?.length &&
               info.details[0].schedules.map((schedule: ISchedule, i: number) => (
-                <tr key={i}>
+                // eslint-disable-next-line react/no-array-index-key
+                <tr key={`${i}`}>
                   <td>
                     <p className="timeline">{schedule.timeline}</p>
                     <div className="circle" />
@@ -54,7 +55,8 @@ const TourInfo: React.FC<TourInfoProps> = ({ info }) => {
         <div>
           {info.details &&
             info.details.map((detail: IDetailInformation, i: number) => (
-              <TourInfoBasic key={i} detail={detail} />
+              // eslint-disable-next-line react/no-array-index-key
+              <TourInfoBasic key={`${i}`} detail={detail} />
             ))}
         </div>
       )}
