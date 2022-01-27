@@ -8,10 +8,10 @@ import Header from 'components/common/Header'
 import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
-import TourInfo from 'components/layout/TourPlan/TourInfo'
 import ButtonReaction from 'components/common/ButtonReaction'
 import { buttonLikeThemes } from 'constants/index'
 import { TourPlanDetailContainer } from './styled'
+import TourInfo from 'components/layout/TourPlan/TourInfo'
 
 const TourPlanDetail = () => {
   const settings = {
