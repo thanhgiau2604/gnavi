@@ -50,11 +50,7 @@ const RadarChart: React.FC<RadarChartProps> = ({ indicators }) => {
       },
     ],
   }
-  return (
-    <div className="wrapper">
-      <Radar data={data} options={options} />
-    </div>
-  )
+  return <Radar data={data} options={options} />
 }
 
 export default RadarChart
