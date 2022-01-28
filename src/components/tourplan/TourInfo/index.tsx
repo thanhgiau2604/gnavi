@@ -24,7 +24,7 @@ const TourInfo: React.FC<TourInfoProps> = ({ info }) => {
           width={20}
           height={20}
         >
-          <Image src="/images/circle_arrow.png" layout="fill" objectFit="contain" />
+          <Image src="/icons/circle_arrow.svg" layout="fill" objectFit="contain" />
         </ImageContainer>
       </FlexContainer>
       <hr />

@@ -41,7 +41,7 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({
       )}
       <div className="icon icon-doc">
         <ImageContainer width={16} height={20}>
-          <Image src="/images/doc.png" layout="fill" objectFit="fill" />
+          <Image src="/icons/doc.svg" layout="fill" objectFit="fill" />
         </ImageContainer>
       </div>
     </AdvancedInfoContainer>
