@@ -10,8 +10,8 @@ import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import ButtonReaction from 'components/common/ButtonReaction'
 import { buttonLikeThemes } from 'constants/index'
-import { TourPlanDetailContainer } from './styled'
 import TourInfo from 'components/layout/TourPlan/TourInfo'
+import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
   const settings = {
@@ -152,7 +152,7 @@ const TourPlanDetail = () => {
                     {data.images.map((image: string, i: number) => (
                       // eslint-disable-next-line react/no-array-index-key
                       <ImageContainer key={`${i}`} width="100%" height={230}>
-                        <Image src={image} alt="" layout="fill" objectFit="fill" priority />
+                        <Image src={image} alt="" layout="fill" objectFit="contain" priority />
                       </ImageContainer>
                     ))}
                   </Slider>

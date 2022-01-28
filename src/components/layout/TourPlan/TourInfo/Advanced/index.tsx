@@ -22,7 +22,7 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({
       <h5 className="title">{title}</h5>
       {image && (
         <ImageContainer width="100%" height={155} margin="1rem auto 1.7rem auto">
-          <Image src={image} layout="fill" objectFit="fill" />
+          <Image src={image} layout="fill" objectFit="contain" />
         </ImageContainer>
       )}
       <p className="content fm-noto">{content}</p>

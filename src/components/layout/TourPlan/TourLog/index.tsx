@@ -36,13 +36,13 @@ const TourLog: React.FC<Props> = ({ data }) => {
           <ButtonAction margin="3.1rem 1.5rem 4rem auto" onClick={handleDropdownMenu} />
         </FlexContainer>
         {!!data?.images?.length && (
-          <ImageContainer width="100%" height={200} margin="1.1rem auto 2rem auto">
+          <ImageContainer width="100%" height={250} margin="1.1rem auto 2rem auto">
             <Image
               loader={myLoader}
               src={data.images[0]}
               alt="image"
               layout="fill"
-              objectFit="fill"
+              objectFit="contain"
               priority
             />
           </ImageContainer>
