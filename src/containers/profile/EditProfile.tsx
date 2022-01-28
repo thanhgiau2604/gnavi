@@ -27,7 +27,7 @@ const EditProfileContainer = ({ id }: ProfileEditContainerProps) => {
 
   return (
     <>
-      <Header showBtnBack title="ページ編集" />
+      <Header showBtnBack title="ページ編集" backTo={`/profile/${id}`} />
       <div className="container">
         <h1 className="global-heading profile-page-title">プロフィール編集</h1>
         <FormEditProfile handleSubmit={handleSubmitForm} />

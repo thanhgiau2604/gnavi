@@ -1,4 +1,5 @@
 import React from 'react'
+import Router from 'next/router'
 import Avatar from 'components/common/Avatar'
 import Button from 'components/common/Button'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
@@ -38,10 +39,10 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
                     radius={4}
                     fontWeight={400}
                     _fontSize={fontSize.SMALL}
+                    onClick={() => Router.push(`/profile/${userId}/edit`)}
                   />
                 </div>
               )}
-              <p>ID user {userId}</p>
             </FlexItem>
           </FlexContainer>
           <div>
