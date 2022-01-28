@@ -1,8 +1,8 @@
 import React from 'react'
 import SignupContainer from 'containers/Signup'
 
-const Signup: React.FC = () => {
+const SignupPage: React.FC = () => {
   return <SignupContainer />
 }
 
-export default Signup
+export default SignupPage

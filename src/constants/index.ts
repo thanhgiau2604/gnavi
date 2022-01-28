@@ -3,6 +3,8 @@ import { Variables } from 'styles/styled/app/Variables'
 const routes = {
   LOGIN: '/login',
   SIGNUP: '/signup',
+  SKILL_INSTRUCTION: '/skillcheck/instruction',
+  SKILL_CHECK: '/skillcheck',
 }
 
 const buttonLikeThemes = {
