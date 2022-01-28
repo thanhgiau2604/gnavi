@@ -3,6 +3,10 @@ const Variables = {
   fontPrimary: `'Noto Sans JP', sans-serif`,
   fontSecondary: `'Roboto', sans-serif`,
 
+  // font weight
+  fontWeightNormal: 400,
+  fontWeightBold: 700,
+
   // colors
   colorTextCommon: '#232b39',
   colorPrimary: '#2ca2ab',

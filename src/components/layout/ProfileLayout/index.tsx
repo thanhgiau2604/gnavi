@@ -3,7 +3,7 @@ import Avatar from 'components/common/Avatar'
 import Button from 'components/common/Button'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
 import Grid from 'styles/styled/layout/GridLayout'
-import { buttonColors } from 'constants/index'
+import { buttonColors, fontSize } from 'constants/index'
 import { ProfileLayoutStyled, ButtonItemGroup } from './styled'
 
 interface ProfileLayoutProps {
@@ -29,12 +29,17 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
             </FlexItem>
             <FlexItem flex="1">
               {isMyProfile && (
-                <Button
-                  width="100%"
-                  buttonColor={buttonColors.STYLE03}
-                  title="プロフィールを編集"
-                  margin="0"
-                />
+                <div className="btn-edit-form">
+                  <Button
+                    width="100%"
+                    buttonColor={buttonColors.STYLE03}
+                    title="プロフィールを編集"
+                    margin="0"
+                    radius={4}
+                    fontWeight={400}
+                    _fontSize={fontSize.SMALL}
+                  />
+                </div>
               )}
               <p>ID user {userId}</p>
             </FlexItem>

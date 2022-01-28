@@ -19,7 +19,7 @@ const EditProfileContainer = ({ id }: ProfileEditContainerProps) => {
 
   const handleSubmitForm = async (payload: EditProfilePayload) => {
     // ===================================================================================
-    await sleep(500)
+    await sleep(2000)
     // eslint-disable-next-line no-console
     console.log('payload: ', payload)
     // ===================================================================================
@@ -28,7 +28,10 @@ const EditProfileContainer = ({ id }: ProfileEditContainerProps) => {
   return (
     <>
       <Header showBtnBack title="ページ編集" />
-      <FormEditProfile handleSubmit={handleSubmitForm} />
+      <div className="container">
+        <h1 className="global-heading profile-page-title">プロフィール編集</h1>
+        <FormEditProfile handleSubmit={handleSubmitForm} />
+      </div>
     </>
   )
 }

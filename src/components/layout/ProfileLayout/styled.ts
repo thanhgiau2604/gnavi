@@ -19,8 +19,12 @@ export const ProfileLayoutStyled = styled.div`
     inset: auto auto 7px 73px;
   }
 
+  .btn-edit-form {
+    max-width: 16rem;
+  }
+
   .name-jp {
-    font-weight: 700;
+    font-weight: ${Variables.fontWeightBold};
     font-size: 2rem;
   }
 
@@ -45,7 +49,7 @@ export const ProfileLayoutStyled = styled.div`
   }
 
   .value-follower {
-    font-weight: 700;
+    font-weight: ${Variables.fontWeightBold};
   }
 
   .text-value {
@@ -61,6 +65,7 @@ export const ButtonItemGroup = styled.button<ItemGroupButtonProps>`
   overflow: hidden;
   outline: none;
   margin: 0;
+  height: 3.2rem;
   ${({ borderFull }) => borderFull && `border: 1px solid ${Variables.color3}`};
   ${({ borderTop }) => borderTop && `border-top: 1px solid ${Variables.color3}`};
   ${({ borderRight }) => borderRight && `border-right: 1px solid ${Variables.color3}`};
@@ -71,5 +76,6 @@ export const ButtonItemGroup = styled.button<ItemGroupButtonProps>`
     css`
       background-color: ${Variables.color6};
       color: ${Variables.colorBlack};
+      font-weight: ${Variables.fontWeightBold};
     `}
 `
