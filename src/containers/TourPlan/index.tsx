@@ -4,8 +4,8 @@ import { TourLogProps, TourPlanProps } from 'interfaces/TourLog'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import Button from 'components/common/Button'
-import TourLog from 'components/layout/TourPlan/TourLog'
 import { TourPlanContainer } from './styled'
+import TourLog from 'components/layout/TourPlan/TourLog'
 
 const TourPlan = () => {
   // const data: TourPlanProps[] = []
