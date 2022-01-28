@@ -1,5 +1,5 @@
 import React from 'react'
-import { IDetailInformation } from 'interfaces/TourPlan/TourInfo'
+import { IDetailInformation } from 'interfaces/TourInfo'
 import { BasicInfoContainer } from './styled'
 
 interface TourInfoBasicProps {

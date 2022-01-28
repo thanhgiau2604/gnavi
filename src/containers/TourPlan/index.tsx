@@ -1,15 +1,15 @@
 import React from 'react'
 import { fontSize } from 'constants/index'
-import { ITourLog, ITourPlan } from 'interfaces/TourPlan/TourLog'
+import { TourLogProps, TourPlanProps } from 'interfaces/TourLog'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import Button from 'components/common/Button'
-import { TourPlanContainer } from './styled'
 import TourLog from 'components/layout/TourPlan/TourLog'
+import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
-  // const data: ITourPlan[] = []
-  const data: ITourPlan[] = [
+  // const data: TourPlanProps[] = []
+  const data: TourPlanProps[] = [
     {
       id: 1,
       year: '2021年',
@@ -56,14 +56,14 @@ const TourPlan = () => {
           radius={4}
         />
         <TourPlanContainer>
-          {data &&
-            data.map((item: ITourPlan) => (
+          {!!data?.length &&
+            data.map((item: TourPlanProps) => (
               <div key={item.id}>
                 <h3 className="title">{item.year}</h3>
-                {item.tourLogs?.map((tourLog: ITourLog) => (
+                {item.tourLogs?.map((tourLog: TourLogProps) => (
                   <div key={tourLog.id}>
                     <p className="datetime">{tourLog.datetime}</p>
-                    <TourLog tourLog={tourLog} />
+                    <TourLog data={tourLog} />
                   </div>
                 ))}
               </div>

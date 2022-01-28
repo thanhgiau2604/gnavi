@@ -3,7 +3,7 @@ import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ImageContainer } from 'styles/styled/app/Image'
-import { ITourLog } from 'interfaces/TourPlan/TourLog'
+import { TourLogProps } from 'interfaces/TourLog'
 import useOnClickOutSide from 'constants/utils'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
@@ -11,30 +11,35 @@ import ButtonReaction from 'components/common/ButtonReaction'
 import { buttonLikeThemes } from 'constants/index'
 import { TourLogContainer } from './styled'
 
-interface TourLogProps {
-  tourLog: ITourLog
+interface Props {
+  data: TourLogProps
 }
 
-const TourLog: React.FC<TourLogProps> = ({ tourLog }) => {
-  const [status, setStatus] = useState<boolean>(false)
+const TourLog: React.FC<Props> = ({ data }) => {
+  const [state, setState] = useState<boolean>(false)
   const ref = useRef(null)
-  useOnClickOutSide(ref, () => setStatus(false))
+  useOnClickOutSide(ref, () => setState(false))
   const myLoader = ({ src }: any) => {
     return `${src}?w=100&q=75`
   }
+  const handleDropdownMenu = (e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation()
+    setState(!state)
+    // call reaction api...
+  }
 
   return (
-    <Link href={`/tourplan/detail?id=${tourLog.id}`} passHref>
+    <Link href={`/tourplan/detail?id=${data.id}`} passHref>
       <TourLogContainer ref={ref}>
         <FlexContainer position="relative" justifyContent="space-between">
-          <p className="title">{tourLog.title}</p>
-          <ButtonAction state={status} setState={setStatus} margin="3.1rem 1.5rem 4rem auto" />
+          <p className="title">{data.title}</p>
+          <ButtonAction margin="3.1rem 1.5rem 4rem auto" onClick={handleDropdownMenu} />
         </FlexContainer>
-        {!!tourLog.images.length && (
+        {!!data?.images?.length && (
           <ImageContainer width="100%" height={200} margin="1.1rem auto 2rem auto">
             <Image
               loader={myLoader}
-              src={tourLog.images[0]}
+              src={data.images[0]}
               alt="image"
               layout="fill"
               objectFit="fill"
@@ -42,18 +47,18 @@ const TourLog: React.FC<TourLogProps> = ({ tourLog }) => {
             />
           </ImageContainer>
         )}
-        <p className="content">{tourLog.content}</p>
+        <p className="content">{data.content}</p>
         <ButtonReaction
           theme={buttonLikeThemes.THEME01}
-          id={tourLog.id}
+          id={data.id}
           position="relative"
           bottom="0"
           right="0"
           margin="0 0 0 auto"
-          transform="translate(-50%, -50%)"
+          transform="translate(-70%, -50%)"
           padding="0 0 0.5rem 0"
         />
-        <ActionMenu status={status} id={tourLog.id} />
+        <ActionMenu state={state} id={data.id} />
       </TourLogContainer>
     </Link>
   )

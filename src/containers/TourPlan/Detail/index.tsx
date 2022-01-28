@@ -5,7 +5,7 @@ import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
-import { IInfomartion, ITourInfo } from 'interfaces/TourPlan/TourInfo'
+import { IInfomartion, ITourInfo } from 'interfaces/TourInfo'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import ButtonReaction from 'components/common/ButtonReaction'
@@ -128,7 +128,12 @@ const TourPlanDetail = () => {
       },
     ],
   }
-  const [status, setStatus] = useState<boolean>(false)
+  const [state, setState] = useState<boolean>(false)
+  const handleDropdownMenu = (e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation()
+    setState(!state)
+    // call reaction api...
+  }
 
   return (
     <div className="wrapper">
@@ -138,10 +143,10 @@ const TourPlanDetail = () => {
           <div className="header">
             <FlexContainer justifyContent="space-between">
               <h3 className="title">{data.title}</h3>
-              <ButtonAction state={status} setState={setStatus} margin="auto 0" />
+              <ButtonAction margin="auto 0" onClick={handleDropdownMenu} />
             </FlexContainer>
             <div className="slider">
-              {!!data.images.length && (
+              {!!data?.images?.length && (
                 <>
                   <Slider {...settings}>
                     {data.images.map((image: string, i: number) => (
@@ -177,10 +182,10 @@ const TourPlanDetail = () => {
               right="0"
               transform="translate(0, 250%)"
             />
-            <ActionMenu status={status} id={data.id} transform="translate(0,20%)" />
+            <ActionMenu state={state} id={data.id} transform="translate(0,20%)" />
           </div>
           <div className="tour-logs">
-            {!!data.infos.length &&
+            {!!data?.infos?.length &&
               data.infos.map((info: IInfomartion, i: number) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <TourInfo key={`${i}`} info={info} />

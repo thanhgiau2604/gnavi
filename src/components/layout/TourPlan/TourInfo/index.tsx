@@ -1,4 +1,4 @@
-import { IDetailInformation, IInfomartion, ISchedule } from 'interfaces/TourPlan/TourInfo'
+import { IDetailInformation, IInfomartion, ISchedule } from 'interfaces/TourInfo'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'

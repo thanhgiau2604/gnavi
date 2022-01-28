@@ -1,4 +1,4 @@
-interface ITourLog {
+interface TourLogProps {
   id: number | string
   datetime: string
   title: string
@@ -6,10 +6,10 @@ interface ITourLog {
   images: string[]
 }
 
-interface ITourPlan {
+interface TourPlanProps {
   id: number | string
   year: string
-  tourLogs: ITourLog[] | []
+  tourLogs: TourLogProps[] | []
 }
 
-export type { ITourPlan, ITourLog }
+export type { TourPlanProps, TourLogProps }

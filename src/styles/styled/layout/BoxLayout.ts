@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
 interface BoxContainerProps {
-  status: boolean
+  state: boolean
   transform?: string
   padding?: string
   margin?: string
 }
 
 const BoxContainer = styled.div<BoxContainerProps>`
-  display: ${({ status }) => (status ? 'block' : 'none')};
+  display: ${({ state }) => (state ? 'block' : 'none')};
   position: absolute;
   top: 0;
   right: 0;
