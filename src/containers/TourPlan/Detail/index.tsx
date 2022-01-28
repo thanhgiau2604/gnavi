@@ -160,7 +160,7 @@ const TourPlanDetail = () => {
                     <FlexContainer justifyContent="space-between">
                       <ImageContainer className="icon icon-camera" width={20} height={18}>
                         <Image
-                          src="/images/camera.png"
+                          src="/icons/camera.svg"
                           alt=""
                           layout="fill"
                           objectFit="fill"
