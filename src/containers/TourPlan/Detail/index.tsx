@@ -10,7 +10,7 @@ import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import ButtonReaction from 'components/common/ButtonReaction'
 import { buttonLikeThemes } from 'constants/index'
-import TourInfo from 'components/layout/TourPlan/TourInfo'
+import TourInfo from 'components/tourplan/TourInfo'
 import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
