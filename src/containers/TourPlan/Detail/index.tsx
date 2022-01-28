@@ -136,9 +136,9 @@ const TourPlanDetail = () => {
       <Container padding="0 2rem">
         <TourPlanDetailContainer>
           <div className="header">
-            <FlexContainer>
+            <FlexContainer justifyContent="space-between">
               <h3 className="title">{data.title}</h3>
-              <ButtonAction state={status} setState={setStatus} />
+              <ButtonAction state={status} setState={setStatus} margin="auto 0" />
             </FlexContainer>
             <div className="slider">
               {!!data.images.length && (
@@ -177,6 +177,7 @@ const TourPlanDetail = () => {
               right="0"
               transform="translate(0, 250%)"
             />
+            <ActionMenu status={status} id={data.id} transform="translate(0,20%)" />
           </div>
           <div className="tour-logs">
             {!!data.infos.length &&
@@ -185,7 +186,6 @@ const TourPlanDetail = () => {
                 <TourInfo key={`${i}`} info={info} />
               ))}
           </div>
-          <ActionMenu status={status} id={data.id} transform="translate(-13%, 65%)" />
         </TourPlanDetailContainer>
       </Container>
     </div>

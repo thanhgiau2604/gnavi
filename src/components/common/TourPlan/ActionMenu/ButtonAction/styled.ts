@@ -5,6 +5,7 @@ interface ButtonActionContainerProps {
 }
 
 const ButtonActionContainer = styled.div<ButtonActionContainerProps>`
+  cursor: pointer;
   margin: ${({ margin }) => margin && margin};
 `
 
