@@ -1,6 +1,6 @@
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { buttonColors } from 'constants/index'
+import { buttonColors, routes } from 'constants/index'
 import { SkillCheckProps } from 'constants/skill_check'
 import Image from 'next/image'
 import React from 'react'
@@ -11,7 +11,7 @@ import { TestInfoSection } from './styled'
 const TestInfo: React.FC<SkillCheckProps> = ({ updateShowTestForm }) => {
   return (
     <TestInfoSection>
-      <Header showBtnBack title="スキルチェック" />
+      <Header showBtnBack title="スキルチェック" backTo={routes.SKILL_INSTRUCTION} />
       <div className="container">
         <div className="test-info-main">
           <h3>
