@@ -41,6 +41,30 @@ const InfoGuide = styled.div`
     transform: rotate(180deg);
     width: 24px;
   }
+  p {
+    font-size: 16px;
+  }
+  .info-guide-logo {
+    width: 30%;
+  }
+  .info-guide-title {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    .home-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .home-text {
+      font-size: 14px;
+      color: #2ca2ab;
+    }
+  }
+  .info-guide-button {
+    transform: rotate(180deg);
+    width: 24px;
+  }
 `
 const InfoGeneral = styled.div`
   margin-bottom: 40px;
