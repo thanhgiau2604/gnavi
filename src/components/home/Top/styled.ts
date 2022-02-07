@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-const OpeningSession = styled.section`
-  .opening {
+const HomeTopSection = styled.section`
+  .home-top {
     &-main {
       margin-top: 4.5rem;
       button:first-of-type {
@@ -19,4 +19,4 @@ const OpeningSession = styled.section`
   }
 `
 
-export { OpeningSession }
+export { HomeTopSection }
