@@ -136,7 +136,7 @@ const TourPlanDetail = () => {
               <ButtonAction margin="auto 0" onClick={handleDropdownMenu} />
             </div>
           </FlexContainer>
-          <ActionMenu state={state} id={data.id} transform="translate(-1%,62%)" />
+          <ActionMenu state={state} id={data.id} transform="translate(-10%,62%)" />
           <div className="tour-logs">
             {!!data?.infos?.length &&
               data.infos.map((info: IInfomartion, i: number) => (
