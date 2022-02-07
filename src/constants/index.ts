@@ -69,7 +69,7 @@ const fontSize = {
   SMALL: '1.4rem',
   MEDIUM: '1.6rem',
   LARGE: '1.8rem',
-  XLARGE: '20px',
+  XLARGE: '2rem',
 }
 
 export { routes, buttonColors, fontSize, buttonUploadColors, buttonLikeThemes, buttonHeartThemes }
