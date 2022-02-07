@@ -4,7 +4,7 @@ import { ImageContainer } from 'styles/styled/app/Image'
 import type { FC } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { HomeContainer } from './styled'
-import Menu from './Menu'
+import Menu from '../Menu'
 
 const HomeMain: FC = () => {
   return (
