@@ -6,25 +6,14 @@ import { AdvancedInfoContainer } from './styled'
 
 interface TourInfoAdvancedProps {
   title: string
-  image: string
   content: string
   transportation: string[]
 }
 
-const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({
-  title,
-  image,
-  content,
-  transportation,
-}) => {
+const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({ title, content, transportation }) => {
   return (
     <AdvancedInfoContainer>
       <h5 className="title">{title}</h5>
-      {image && (
-        <ImageContainer width="100%" height={155} margin="1rem auto 1.7rem auto">
-          <Image src={image} layout="fill" objectFit="contain" />
-        </ImageContainer>
-      )}
       <p className="content fm-noto">{content}</p>
       {!!transportation.length && (
         <div className="transportation">
@@ -41,7 +30,7 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({
       )}
       <div className="icon icon-doc">
         <ImageContainer width={16} height={20}>
-          <Image src="/icons/doc.svg" layout="fill" objectFit="fill" />
+          <Image src="/icons/doc.svg" alt="icon" layout="fill" objectFit="fill" />
         </ImageContainer>
       </div>
     </AdvancedInfoContainer>

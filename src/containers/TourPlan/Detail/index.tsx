@@ -1,27 +1,14 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
-import Slider from 'react-slick'
-import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import { IInfomartion, ITourInfo } from 'interfaces/TourInfo'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
-import ButtonReaction from 'components/common/ButtonReaction'
-import { buttonLikeThemes } from 'constants/index'
-import { TourPlanDetailContainer } from './styled'
 import TourInfo from 'components/tourplan/TourInfo'
+import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 100,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  }
   const data: ITourInfo = {
     id: 1,
     title: 'マングローブSUPバラス島上陸',
@@ -145,43 +132,6 @@ const TourPlanDetail = () => {
               <h3 className="title">{data.title}</h3>
               <ButtonAction margin="auto 0" onClick={handleDropdownMenu} />
             </FlexContainer>
-            <div className="slider">
-              {!!data?.images?.length && (
-                <>
-                  <Slider {...settings}>
-                    {data.images.map((image: string, i: number) => (
-                      // eslint-disable-next-line react/no-array-index-key
-                      <ImageContainer key={`${i}`} width="100%" height={230}>
-                        <Image src={image} alt="" layout="fill" objectFit="contain" priority />
-                      </ImageContainer>
-                    ))}
-                  </Slider>
-                  <div className="image-box">
-                    <FlexContainer justifyContent="space-between">
-                      <ImageContainer className="icon icon-camera" width={20} height={18}>
-                        <Image
-                          src="/icons/camera.svg"
-                          alt=""
-                          layout="fill"
-                          objectFit="fill"
-                          priority
-                        />
-                      </ImageContainer>
-                      <p className="counter">{`(${data.images.length})`}</p>
-                    </FlexContainer>
-                  </div>
-                </>
-              )}
-            </div>
-            <ButtonReaction
-              id={data.id}
-              theme={buttonLikeThemes.THEME01}
-              margin="0 0 0 auto"
-              position="absolute"
-              bottom="0"
-              right="0"
-              transform="translate(0, 250%)"
-            />
             <ActionMenu state={state} id={data.id} transform="translate(0,20%)" />
           </div>
           <div className="tour-logs">

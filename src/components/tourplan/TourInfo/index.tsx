@@ -42,7 +42,6 @@ const TourInfo: React.FC<TourInfoProps> = ({ info }) => {
                   <td>
                     <TourInfoAdvanced
                       title={schedule.title}
-                      image={schedule.image}
                       content={schedule.content}
                       transportation={schedule.transportation}
                     />

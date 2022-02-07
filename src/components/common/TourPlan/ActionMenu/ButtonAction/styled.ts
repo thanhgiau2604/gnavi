@@ -9,6 +9,7 @@ const ButtonActionContainer = styled.button<ButtonActionContainerProps>`
   margin: ${({ margin }) => margin && margin};
   border: none;
   background-color: transparent;
+  height: fit-content;
 `
 
 export { ButtonActionContainer }

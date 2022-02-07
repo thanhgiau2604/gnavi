@@ -27,30 +27,6 @@ const TourPlanDetailContainer = styled.div`
       font-size: ${fontSize.MEDIUM};
     }
   }
-  .slider {
-    position: relative;
-    .slick-slider.slick-initialized {
-      margin: 2.2rem auto 7.7rem auto;
-    }
-    .image-box {
-      background: rgba(255, 255, 255, 0.8);
-      position: absolute;
-      width: 8.8rem;
-      height: 3.2rem;
-      right: 0;
-      bottom: 0;
-      transform: translate(-10%, -50%);
-      border-radius: 4px;
-      .icon {
-        margin: 0.6rem auto 0.8rem 1.1rem;
-      }
-      .counter {
-        color: ${Variables.colorPrimary};
-        font-weight: ${FIELD_LABEL_WEIGHT.bold};
-        margin: 1rem auto 1rem 1.1rem;
-      }
-    }
-  }
   .header {
     position: relative;
   }
@@ -61,6 +37,7 @@ const TourPlanDetailContainer = styled.div`
     > div[class*='TourInfoContainer']:last-child {
       margin-bottom: 3.7rem;
     }
+    margin-top: 4.1rem;
   }
 `
 

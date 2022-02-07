@@ -9,6 +9,7 @@ const TourLogContainer = styled.div`
   border-radius: 8px;
   background-color: ${Variables.colorWhite};
   margin-bottom: 2.6rem;
+  padding: 1.7rem 1.7rem 2.3rem 1.7rem;
   .title {
     width: 80%;
     height: 6.5rem;
@@ -21,7 +22,7 @@ const TourLogContainer = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    padding: 1.7rem;
+    padding: 0;
   }
   .content {
     font-size: ${fontSize.MEDIUM};
@@ -32,14 +33,6 @@ const TourLogContainer = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    margin-bottom: 3.5rem;
-    padding: 0 1.5rem;
-  }
-  .image-container {
-    position: relative;
-    width: 100%;
-    height: 20rem;
-    margin: 1.1rem auto 2rem auto;
   }
 `
 
