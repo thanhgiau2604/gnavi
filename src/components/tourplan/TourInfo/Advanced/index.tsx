@@ -15,7 +15,17 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({ title, content, tra
 
   return (
     <AdvancedInfoContainer>
-      <h5 className="title">{title}</h5>
+      <FlexContainer>
+        <h5 className="title">{title}</h5>
+        <ImageContainer
+          onClick={() => setShow(!show)}
+          className={`icon-${show ? 'expand' : 'collapse'}`}
+          width={20}
+          height={20}
+        >
+          <Image src="/icons/circle_arrow.svg" layout="fill" objectFit="contain" />
+        </ImageContainer>
+      </FlexContainer>
       <p className="content fm-noto">{content}</p>
       {!!transportation.length && (
         <div className="transportation">
@@ -30,14 +40,6 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({ title, content, tra
           </FlexContainer>
         </div>
       )}
-      <ImageContainer
-        onClick={() => setShow(!show)}
-        className={`icon icon-${show ? 'expand' : 'collapse'}`}
-        width={20}
-        height={20}
-      >
-        <Image src="/icons/circle_arrow.svg" layout="fill" objectFit="contain" />
-      </ImageContainer>
     </AdvancedInfoContainer>
   )
 }
