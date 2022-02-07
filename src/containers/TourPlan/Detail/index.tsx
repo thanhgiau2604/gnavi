@@ -119,7 +119,7 @@ const TourPlanDetail = () => {
   const handleDropdownMenu = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
     setState(!state)
-    // call reaction api...
+    // call actions api...
   }
 
   return (

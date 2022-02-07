@@ -5,10 +5,20 @@ import { ButtonActionProps } from 'interfaces/ButtonAction'
 import { ButtonActionContainer } from './styled'
 
 const ButtonAction: React.FC<ButtonActionProps> = ({ ...rest }) => {
+  const myLoader = ({ src, width, quality }: any) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+  }
   return (
     <ButtonActionContainer {...rest}>
       <ImageContainer width={16} height={4}>
-        <Image src="/icons/more.svg" alt="" layout="fill" objectFit="fill" priority />
+        <Image
+          loader={myLoader}
+          src="/icons/more.svg"
+          alt=""
+          layout="fill"
+          objectFit="fill"
+          priority
+        />
       </ImageContainer>
     </ButtonActionContainer>
   )
