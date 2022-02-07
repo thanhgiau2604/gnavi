@@ -17,7 +17,6 @@ const TourInfoContainer = styled.div`
   .icon {
     &-expand {
       transform: rotate(180deg);
-      transition: all ease 0.3s;
     }
     &-collapse {
       transform: rotate(0deg);

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { AdvancedInfoContainer } from './styled'
@@ -11,6 +11,8 @@ interface TourInfoAdvancedProps {
 }
 
 const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({ title, content, transportation }) => {
+  const [show, setShow] = useState<boolean>(true)
+
   return (
     <AdvancedInfoContainer>
       <h5 className="title">{title}</h5>
@@ -28,11 +30,14 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({ title, content, tra
           </FlexContainer>
         </div>
       )}
-      <div className="icon icon-doc">
-        <ImageContainer width={16} height={20}>
-          <Image src="/icons/doc.svg" alt="icon" layout="fill" objectFit="fill" />
-        </ImageContainer>
-      </div>
+      <ImageContainer
+        onClick={() => setShow(!show)}
+        className={`icon icon-${show ? 'expand' : 'collapse'}`}
+        width={20}
+        height={20}
+      >
+        <Image src="/icons/circle_arrow.svg" layout="fill" objectFit="contain" />
+      </ImageContainer>
     </AdvancedInfoContainer>
   )
 }

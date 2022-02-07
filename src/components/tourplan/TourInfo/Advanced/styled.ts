@@ -32,12 +32,9 @@ const AdvancedInfoContainer = styled.div`
     }
   }
   .icon {
-    &-doc {
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(0, 10%);
-    }
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 `
 
