@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
@@ -6,6 +6,7 @@ import { IInfomartion, ITourInfo } from 'interfaces/TourInfo'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import TourInfo from 'components/tourplan/TourInfo'
+import useOnClickOutSide from 'hooks/useOnClickOutSide'
 import { TourPlanDetailContainer } from './styled'
 
 const TourPlanDetail = () => {
@@ -116,6 +117,8 @@ const TourPlanDetail = () => {
     ],
   }
   const [state, setState] = useState<boolean>(false)
+  const ref = useRef(null)
+  useOnClickOutSide(ref, () => setState(false))
   const handleDropdownMenu = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
     setState(!state)
@@ -127,13 +130,13 @@ const TourPlanDetail = () => {
       <Header shadow showBtnBack title={data.title} backTo="/tourplan" />
       <Container padding="0 2rem">
         <TourPlanDetailContainer>
-          <div className="header">
-            <FlexContainer justifyContent="space-between">
-              <h3 className="title">{data.title}</h3>
+          <FlexContainer justifyContent="space-between">
+            <h3 className="title">{data.title}</h3>
+            <div ref={ref}>
               <ButtonAction margin="auto 0" onClick={handleDropdownMenu} />
-            </FlexContainer>
-            <ActionMenu state={state} id={data.id} transform="translate(0,20%)" />
-          </div>
+            </div>
+          </FlexContainer>
+          <ActionMenu state={state} id={data.id} transform="translate(-1%,62%)" />
           <div className="tour-logs">
             {!!data?.infos?.length &&
               data.infos.map((info: IInfomartion, i: number) => (
