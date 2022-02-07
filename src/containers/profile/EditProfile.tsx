@@ -12,17 +12,9 @@ const EditProfileContainer = ({ id }: ProfileEditContainerProps) => {
     }
   }, [id])
 
-  // ===================================================================================
-  // eslint-disable-next-line no-promise-executor-return
-  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
-  // ===================================================================================
-
   const handleSubmitForm = async (payload: EditProfilePayload) => {
-    // ===================================================================================
-    await sleep(2000)
     // eslint-disable-next-line no-console
     console.log('payload: ', payload)
-    // ===================================================================================
   }
 
   return (
