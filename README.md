@@ -1,6 +1,28 @@
-## Getting Started
+![Node](https://img.shields.io/badge/node%40latest-%3E%3D16.13.2-red) ![Yarn](https://img.shields.io/badge/yarn%40latest-%3E%3D1.22.17-yellow) ![Next](https://img.shields.io/badge/next-12.0.8-brightgreen) ![Storybook](https://img.shields.io/badge/storybook-%5E6.4.18-blue)
 
-if you use VSCode, I recommend you tell VSCode to auto-fix eslint errors on save.
+# GUIDENAVI
+
+### Getting start
+
+##### Run the development server:
+
+```bash
+$ yarn dev
+```
+
+The application is now running on http://localhost:3000.
+
+##### Run storybook
+
+```bash
+$ yarn storybook
+```
+
+The storybook is now running on http://localhost:6006.
+
+### Editor Config
+
+If you use VSCode, I recommend you tell VSCode to auto-fix eslint errors on save.
 Open `settings.json` or at root folder create a `.vscode/settings.json` file with the following content:
 
 ```json
@@ -8,16 +30,6 @@ Open `settings.json` or at root folder create a `.vscode/settings.json` file wit
 "editor.formatOnSave": true,
 "editor.defaultFormatter": "esbenp.prettier-vscode"
 ```
-
-Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### Commitlint Rules
 
