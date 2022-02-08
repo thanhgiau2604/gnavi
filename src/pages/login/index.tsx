@@ -1,7 +1,8 @@
 import React from 'react'
 import LoginContainer from 'containers/Login'
+import { NextPage } from 'next'
 
-const LoginPage: React.FC = () => {
+const LoginPage: NextPage = () => {
   return <LoginContainer />
 }
 

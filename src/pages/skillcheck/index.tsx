@@ -1,7 +1,8 @@
 import SkillCheckContainer from 'containers/SkillCheck'
+import { NextPage } from 'next'
 import React from 'react'
 
-const SkillCheckPage = () => {
+const SkillCheckPage: NextPage = () => {
   return <SkillCheckContainer />
 }
 
