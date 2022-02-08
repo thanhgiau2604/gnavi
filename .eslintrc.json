@@ -27,16 +27,18 @@
     "@typescript-eslint/no-extra-semi": ["error"],
     "no-loss-of-precision": "off",
     "@typescript-eslint/no-loss-of-precision": ["error"],
-    "import/no-named-as-default": "off",
     "react/function-component-definition": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": "off",
     "react/require-default-props": "off",
-    "import/extensions": [2, { "tsx": "never", "ts": "never" }],
-    "import/prefer-default-export": "off",
-    "@next/next/no-img-element": "off",
     "react/default-props-match-prop-types": "off",
+    "import/no-named-as-default": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": [2, { "tsx": "never", "ts": "never" }],
+    "@next/next/no-img-element": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "import/no-extraneous-dependencies": "off"
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off"
   }
 }

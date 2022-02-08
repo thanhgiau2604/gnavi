@@ -15,6 +15,7 @@ import { ChartContainer } from 'styles/styled/layout/ChartLayout'
 import Modal from 'components/common/Modal'
 import Header from 'components/common/Header'
 import ButtonReaction from 'components/common/ButtonReaction'
+import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import FormInput from './FormInput'
 
 const StyleGuide = () => {
@@ -24,6 +25,7 @@ const StyleGuide = () => {
   const showModal = () => setOpenModal(true)
   const hideModal = () => setOpenModal(false)
 
+  const [isActive, setIsActive] = React.useState<number>(1)
   return (
     <div className="container">
       <Header shadow />
@@ -70,6 +72,31 @@ const StyleGuide = () => {
         <ButtonReaction theme={buttonLikeThemes.THEME02} />
         <ButtonReaction theme={buttonHeartThemes.THEME01} />
       </FlexContainer>
+
+      <ButtonGroup itemPerRow={3}>
+        <ButtonGroupItem handleClick={() => setIsActive(1)} active={isActive === 1} text="ホーム" />
+        <ButtonGroupItem
+          handleClick={() => setIsActive(2)}
+          active={isActive === 2}
+          text="案内できる観光地"
+        />
+        <ButtonGroupItem handleClick={() => setIsActive(3)} active={isActive === 3} text="スキル" />
+        <ButtonGroupItem
+          handleClick={() => setIsActive(4)}
+          active={isActive === 4}
+          text="最近の活動"
+        />
+        <ButtonGroupItem
+          handleClick={() => setIsActive(5)}
+          active={isActive === 5}
+          text="対応可能ツアー"
+        />
+        <ButtonGroupItem
+          handleClick={() => setIsActive(6)}
+          active={isActive === 6}
+          text="写真ギャラリー"
+        />
+      </ButtonGroup>
     </div>
   )
 }
