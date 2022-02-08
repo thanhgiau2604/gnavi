@@ -13,7 +13,7 @@ export const ButtonGroupStyledContainer = styled.table`
 export const ButtonGroupStyledItem = styled.td<props>`
   border: 1px solid ${Variables.color3};
   text-align: center;
-  padding: 8px;
+  padding: 5px;
   color: ${Variables.colorPrimary};
   cursor: pointer;
   width: 1px;

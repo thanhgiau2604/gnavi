@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components'
-import { ItemGroupButtonProps } from 'interfaces/Button'
+import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
 export const ProfileLayoutStyled = styled.div`
@@ -55,27 +54,4 @@ export const ProfileLayoutStyled = styled.div`
   .text-value {
     color: ${Variables.colorPrimary};
   }
-`
-
-export const ButtonItemGroup = styled.button<ItemGroupButtonProps>`
-  background-color: transparent;
-  color: ${Variables.colorPrimary};
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  margin: 0;
-  height: 3.2rem;
-  ${({ borderFull }) => borderFull && `border: 1px solid ${Variables.color3}`};
-  ${({ borderTop }) => borderTop && `border-top: 1px solid ${Variables.color3}`};
-  ${({ borderRight }) => borderRight && `border-right: 1px solid ${Variables.color3}`};
-  ${({ borderBottom }) => borderBottom && `border-bottom: 1px solid ${Variables.color3}`};
-  ${({ borderLeft }) => borderLeft && `border-left: 1px solid ${Variables.color3}`};
-  ${({ active }) =>
-    active &&
-    css`
-      background-color: ${Variables.color6};
-      color: ${Variables.colorBlack};
-      font-weight: ${Variables.fontWeightBold};
-    `}
 `

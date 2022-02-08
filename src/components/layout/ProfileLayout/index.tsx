@@ -2,10 +2,10 @@ import React from 'react'
 import Router from 'next/router'
 import Avatar from 'components/common/Avatar'
 import Button from 'components/common/Button'
+import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
-import Grid from 'styles/styled/layout/GridLayout'
 import { buttonColors, fontSize } from 'constants/index'
-import { ProfileLayoutStyled, ButtonItemGroup } from './styled'
+import { ProfileLayoutStyled } from './styled'
 
 interface ProfileLayoutProps {
   userId: number
@@ -89,26 +89,14 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
         </ProfileLayoutStyled>
       </div>
 
-      <Grid col={3}>
-        <ButtonItemGroup type="button" borderFull active>
-          ホーム
-        </ButtonItemGroup>
-        <ButtonItemGroup type="button" borderTop borderRight borderBottom>
-          案内できる観光地
-        </ButtonItemGroup>
-        <ButtonItemGroup type="button" borderTop borderRight borderBottom>
-          スキル
-        </ButtonItemGroup>
-        <ButtonItemGroup type="button" borderLeft borderRight borderBottom>
-          最近の活動
-        </ButtonItemGroup>
-        <ButtonItemGroup type="button" borderRight borderBottom>
-          対応可能ツアー
-        </ButtonItemGroup>
-        <ButtonItemGroup type="button" borderRight borderBottom>
-          写真ギャラリー
-        </ButtonItemGroup>
-      </Grid>
+      <ButtonGroup itemPerRow={3}>
+        <ButtonGroupItem text="ホーム" active />
+        <ButtonGroupItem text="案内できる観光地" />
+        <ButtonGroupItem text="スキル" />
+        <ButtonGroupItem text="最近の活動" />
+        <ButtonGroupItem text="対応可能ツアー" />
+        <ButtonGroupItem text="写真ギャラリー" />
+      </ButtonGroup>
 
       <div className="container">{children}</div>
     </>
