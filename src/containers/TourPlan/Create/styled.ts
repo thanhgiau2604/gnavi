@@ -14,6 +14,24 @@ const TourPlanCreateContainer = styled.div`
       border: 1px solid ${Variables.color3};
     }
   }
+  .unit {
+    font-size: ${fontSize.MEDIUM};
+    &-currency {
+      margin: 1rem 0 0 1.3rem;
+    }
+    &-people {
+      margin: 4rem 2rem 0 1rem;
+    }
+    &-age {
+      margin: 1rem 0 0 1.3rem;
+    }
+  }
+  .no {
+    font-weight: ${Variables.fontWeightBold};
+    font-size: ${fontSize.MEDIUM};
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
 `
 
 export { TourPlanCreateContainer }
