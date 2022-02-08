@@ -68,9 +68,9 @@ const StyleGuide = () => {
       )}
       <FormInput />
       <FlexContainer justifyContent="space-between" margin="20px 0">
-        <ButtonReaction theme={buttonLikeThemes.THEME01} />
-        <ButtonReaction theme={buttonLikeThemes.THEME02} />
-        <ButtonReaction theme={buttonHeartThemes.THEME01} />
+        <ButtonReaction theme={buttonLikeThemes.THEME01} id={1} />
+        <ButtonReaction theme={buttonLikeThemes.THEME02} id={2} />
+        <ButtonReaction theme={buttonHeartThemes.THEME01} id={3} />
       </FlexContainer>
 
       <ButtonGroup itemPerRow={3}>

@@ -7,19 +7,19 @@ const routes = {
 
 const buttonLikeThemes = {
   THEME01: {
-    src: '/images/like.png',
-    activeSrc: '/images/like_active_green.png',
+    src: '/icons/like.svg',
+    activeSrc: '/icons/like_active_green.svg',
   },
   THEME02: {
-    src: '/images/like.png',
-    activeSrc: '/images/like_active_red.png',
+    src: '/icons/like.svg',
+    activeSrc: '/icons/like_active_red.svg',
   },
 }
 
 const buttonHeartThemes = {
   THEME01: {
-    src: '/images/heart.png',
-    activeSrc: '/images/heart_active_red.png',
+    src: '/icons/heart.svg',
+    activeSrc: '/icons/heart_active_red.svg',
   },
 }
 
@@ -69,6 +69,7 @@ const fontSize = {
   SMALL: '1.4rem',
   MEDIUM: '1.6rem',
   LARGE: '1.8rem',
+  XLARGE: '2rem',
 }
 
 export { routes, buttonColors, fontSize, buttonUploadColors, buttonLikeThemes, buttonHeartThemes }
