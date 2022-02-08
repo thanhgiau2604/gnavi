@@ -44,6 +44,11 @@ const buttonColors = {
     COLOR: Variables.colorBlack,
     BORDER: `1px solid ${Variables.colorPrimary}`,
   },
+  STYLE05: {
+    BGCOLOR: Variables.colorWhite,
+    COLOR: Variables.colorTextCommon,
+    BORDER: `none`,
+  },
 }
 
 const buttonUploadColors = {

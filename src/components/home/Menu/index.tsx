@@ -8,7 +8,10 @@ const Menu: FC = () => {
   return (
     <HomeMenuContainer>
       {MENU_DATA.map((item: MenuGroup, index: number) => (
-        <div className="menu-group-item" key={`menu-group-${index.toString()}`}>
+        <div
+          className={`menu-group menu-group-${index.toString()}`}
+          key={`menu-group-${index.toString()}`}
+        >
           {item.label && (
             <div className="container">
               <h5 className="menu-group-title">{item.label}</h5>
