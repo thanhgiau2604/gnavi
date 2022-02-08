@@ -47,7 +47,7 @@ const TourPlan = () => {
       <Container
         padding="0 2rem"
         backgroundColor="rgba(239,239,239,255)"
-        height={data.length ? 'max-content' : '100%'}
+        height="100vh"
       >
         <Button
           title="＋新規ツアープランの追加"
