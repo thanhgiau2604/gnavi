@@ -56,7 +56,7 @@ export const ModalHeader = styled.div`
 
   .title-container {
     width: 90%;
-    font-weight: 700;
+    font-weight: ${Variables.fontWeightBold};
     font-size: 1.6rem;
     .text-title {
       text-align: center;

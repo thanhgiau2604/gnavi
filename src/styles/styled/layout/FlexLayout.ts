@@ -1,16 +1,5 @@
 import styled, { css } from 'styled-components'
-
-interface FlexContainerProps {
-  full?: boolean
-  col?: boolean
-  justifyContent?: string
-  alignItems?: string
-  wrap?: boolean
-  position?: string
-  margin?: string
-  padding?: string
-  spacing?: number
-}
+import { FlexContainerProps, FlexItemProps } from 'interfaces/FlexLayout'
 
 const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
@@ -30,6 +19,7 @@ const FlexContainer = styled.div<FlexContainerProps>`
     css`
       flex-direction: column;
     `};
+
   ${({ wrap }) =>
     wrap &&
     css`
@@ -40,6 +30,14 @@ const FlexContainer = styled.div<FlexContainerProps>`
     spacing &&
     css`
       gap: ${spacing}rem;
+    `};
+`
+
+export const FlexItem = styled.div<FlexItemProps>`
+  ${({ flex }) =>
+    flex &&
+    css`
+      flex: ${flex};
     `};
 `
 
