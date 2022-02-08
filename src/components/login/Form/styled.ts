@@ -14,7 +14,6 @@ const LoginSection = styled.section`
     }
 
     &-forgot-pass {
-      display: block;
       padding-top: 3rem;
       text-align: center;
     }

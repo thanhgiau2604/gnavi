@@ -54,9 +54,12 @@ const LoginForm: React.FC<LoginFormProps> = ({ handleLogin }) => {
               )
             }}
           </Formik>
-          <Link href="#!">
-            <a className="login-forgot-pass">パスワードを忘れた方はこちら</a>
-          </Link>
+          <div className="login-forgot-pass">
+            <Link href="#!">
+              <a>パスワードを忘れた方はこちら</a>
+            </Link>
+          </div>
+
           <Button
             title="新規登録はこちら"
             buttonColor={buttonColors.STYLE01}

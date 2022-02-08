@@ -1,8 +1,9 @@
 import React from 'react'
 import LoginContainer from 'containers/Login'
+import { NextPage } from 'next'
 
-const Login: React.FC = () => {
+const LoginPage: NextPage = () => {
   return <LoginContainer />
 }
 
-export default Login
+export default LoginPage

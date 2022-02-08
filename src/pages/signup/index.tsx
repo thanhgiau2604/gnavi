@@ -1,8 +1,9 @@
 import React from 'react'
+import { NextPage } from 'next'
 import SignupContainer from 'containers/Signup'
 
-const Signup: React.FC = () => {
+const SignupPage: NextPage = () => {
   return <SignupContainer />
 }
 
-export default Signup
+export default SignupPage
