@@ -26,10 +26,11 @@ const HomeMenuContainer = styled.div`
 const MenuItemContainer = styled.div`
   margin-top: 1px;
   background-color: ${Variables.colorWhite};
+  cursor: pointer;
   .flex-container {
     height: 4.8rem;
   }
-  a {
+  p.menu-item-title {
     font-size: 1.6rem;
     font-weight: 400;
     color: ${Variables.colorTextCommon};
