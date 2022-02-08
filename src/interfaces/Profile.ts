@@ -19,7 +19,7 @@ export interface EditProfilePayload {
   eng_name: string
   birthday: Date
   gender: string
-  chua_biet: string
+  membership: string
   phone_number: string
   public_setting_phone_number: string
   email_contact: string

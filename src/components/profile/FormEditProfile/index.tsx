@@ -47,25 +47,25 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
             <FastField
               name="first_name"
               component={CustomInput}
-              label="本名（苗字)"
+              label="本名 (苗字)"
               lbTag="require"
             />
             <FastField
               name="last_name"
               component={CustomInput}
-              label="本名（名前)"
+              label="本名 (名前)"
               lbTag="require"
             />
             <FastField
               name="public_setting_full_name"
               component={CustomSelect}
-              label="公開設定（本名）"
+              label="公開設定(本名)"
               options={OPTIONS_PUBLIC_SETTING}
             />
             <FastField
               name="eng_name"
               component={CustomInput}
-              label="名前（英語/ローマ字表記)"
+              label="名前(英語/ローマ字表記)"
               lbTag="any"
             />
             <FastField name="birthday" component={CustomDate} label="誕生日" lbTag="require" />
@@ -76,14 +76,14 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
               lbTag="require"
               options={OPTIONS_GENDER}
             />
-            <FastField name="chua_biet" component={CustomInput} label="所属団体" lbTag="any" />
+            <FastField name="membership" component={CustomInput} label="所属団体" lbTag="any" />
 
             <FastField name="phone_number" component={CustomInput} label="所属団体" lbTag="any" />
 
             <FastField
               name="public_setting_phone_number"
               component={CustomSelect}
-              label="公開設定（連絡先電話番号）"
+              label="公開設定 (連絡先電話番号)"
               options={OPTIONS_PUBLIC_SETTING}
             />
             <FastField
@@ -95,7 +95,7 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
             <FastField
               name="public_setting_email_contact"
               component={CustomSelect}
-              label="公開設定（連絡先メールアドレス）"
+              label="公開設定 (連絡先メールアドレス)"
               options={OPTIONS_PUBLIC_SETTING}
             />
             <Button
