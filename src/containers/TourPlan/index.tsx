@@ -6,8 +6,13 @@ import Header from 'components/common/Header'
 import Button from 'components/common/Button'
 import TourLog from 'components/tourplan/TourLog'
 import { TourPlanContainer } from './styled'
+import { useRouter } from 'next/router'
 
 const TourPlan = () => {
+  const router = useRouter()
+  const createTourPlan = () => {
+    router.push('/tourplan/create')
+  }
   // const data: TourPlanProps[] = []
   const data: TourPlanProps[] = [
     {
@@ -41,6 +46,7 @@ const TourPlan = () => {
       ],
     },
   ]
+
   return (
     <div className="wrapper">
       <Header shadow showBtnBack title="ツアープラン一覧" />
@@ -50,6 +56,7 @@ const TourPlan = () => {
           fontWeight={700}
           _fontSize={FONT_SIZES.large}
           radius={4}
+          onClick={createTourPlan}
         />
         <TourPlanContainer>
           {!!data?.length &&
