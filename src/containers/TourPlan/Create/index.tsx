@@ -42,6 +42,7 @@ const TourPlanCreate = () => {
     dissolutionPlace: '',
     events: [
       {
+        id: 1,
         eventName: '',
         postCode: '',
         provinces: '',

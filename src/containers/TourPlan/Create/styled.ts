@@ -17,16 +17,16 @@ const TourPlanCreateContainer = styled.div`
   .unit {
     font-size: ${fontSize.MEDIUM};
     &-currency {
-      margin: 1rem 0 0 1.3rem;
+      margin: 0.25rem 0 0 1.3rem;
     }
     &-people {
-      margin: 4rem 2rem 0 1rem;
+      margin: 2rem 2rem 0 1rem;
     }
     &-age {
-      margin: 1rem 0 0 1.3rem;
+      margin: 0.25rem 0 0 1.3rem;
     }
   }
-  .no {
+  .label {
     font-weight: ${Variables.fontWeightBold};
     font-size: ${fontSize.MEDIUM};
     padding-bottom: 1.5rem;

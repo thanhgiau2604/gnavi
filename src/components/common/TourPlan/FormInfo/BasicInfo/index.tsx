@@ -19,16 +19,17 @@ const BasicInfo: React.FC = () => {
     <Container padding="0 3rem">
       <div className="basic-info">
         <h3 className="title">ツアー情報</h3>
-        <FastField name="tourName" component={CustomInput} label="ツアー名（テーマ）" />
-        <FastField name="orderDate" component={CustomDate} label="受注日" />
-        <FastField name="startDate" component={CustomDate} label="催行日" />
-        <FastField name="startTime" component={CustomInput} label="催行時間" />
+        <FastField name="tourName" component={CustomInput} label="ツアー名（テーマ" pb={34} />
+        <FastField name="orderDate" component={CustomDate} label="受注日" pb={34} />
+        <FastField name="startDate" component={CustomDate} label="催行日" pb={34} />
+        <FastField name="startTime" component={CustomInput} label="催行時間" pb={34} />
         <FastField
           name="overview"
           component={CustomInput}
           label="概要"
           type="text-area"
           height={200}
+          pb={34}
         />
         <h3 className="title">依頼元情報</h3>
         <FastField
@@ -36,19 +37,20 @@ const BasicInfo: React.FC = () => {
           component={CustomSelect}
           label="受注形態"
           options={orderFormOptions}
+          pb={34}
         />
-        <FastField name="companyName" component={CustomInput} label="会社名" />
-        <FastField name="phone" component={CustomInput} label="電話番号" />
-        <FastField name="email" component={CustomInput} label="メールアドレス" />
+        <FastField name="companyName" component={CustomInput} label="会社名" pb={34} />
+        <FastField name="phone" component={CustomInput} label="電話番号" pb={34} />
+        <FastField name="email" component={CustomInput} label="メールアドレス" pb={34} />
         <FlexContainer alignItems="center">
-          <FastField name="remuneration" component={CustomInput} label="報酬" />
-          <p className="unit-currency">円</p>
+          <FastField name="remuneration" component={CustomInput} label="報酬" pb={34} />
+          <p className="unit unit-currency">円</p>
         </FlexContainer>
         <FlexContainer alignItems="center">
-          <FastField name="price" component={CustomInput} label="経費" />
-          <p className="unit-currency">円</p>
+          <FastField name="price" component={CustomInput} label="経費" pb={34} />
+          <p className="unit unit-currency">円</p>
         </FlexContainer>
-        <FastField name="paymentDate" component={CustomDate} label="入金日" />
+        <FastField name="paymentDate" component={CustomDate} label="入金日" pb={34} />
         <FastField name="methodPayment" component={CustomInput} label="支払い方法" />
       </div>
     </Container>
