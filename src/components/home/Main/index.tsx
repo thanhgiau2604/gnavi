@@ -4,7 +4,7 @@ import { ImageContainer } from 'styles/styled/app/Image'
 import type { FC } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Button from 'components/common/Button'
-import { BUTTON_COLORS, FONT_SIZES } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { HomeMainSection } from './styled'
 import Menu from '../Menu'
 

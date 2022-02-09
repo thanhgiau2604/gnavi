@@ -4,7 +4,7 @@ import CustomDate from 'components/common/CustomFields/DateField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import Header from 'components/common/Header'
-import { BUTTON_COLORS } from 'constants/index'
+import { BUTTON_COLORS } from '@constants'
 import { FastField, Form, Formik } from 'formik'
 import {
   INIT_SIGNUP_FORM_VALUE,

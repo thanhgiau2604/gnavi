@@ -1,5 +1,5 @@
 import React from 'react'
-import { FONT_SIZES } from 'constants/index'
+import { FONT_SIZES } from '@constants'
 import { TourLogProps, TourPlanProps } from 'interfaces/TourLog'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'

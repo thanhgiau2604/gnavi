@@ -1,4 +1,4 @@
-import { FONT_SIZES } from 'constants/index'
+import { FONT_SIZES } from '@constants'
 import styled from 'styled-components'
 
 const ChartContainer = styled.div`

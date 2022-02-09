@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonUploadProps } from 'interfaces/ButtonUpload'
-import { BUTTON_UPLOAD_COLORS, FONT_SIZES } from 'constants/index'
+import { BUTTON_UPLOAD_COLORS, FONT_SIZES } from '@constants'
 import { UploadContainer } from './styled'
 
 const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, ...rest }) => {

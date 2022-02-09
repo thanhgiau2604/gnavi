@@ -1,7 +1,7 @@
 import React from 'react'
 import { FieldProps } from 'formik'
 import { CustomInputProps } from 'interfaces/CustomField'
-import { FIELD_DF_VALUE, LABEL_TAGS } from 'constants/index'
+import { FIELD_DF_VALUE, LABEL_TAGS } from '@constants'
 import { FieldContainer, FieldLabel } from '../styled'
 
 const CustomInput: React.FC<FieldProps & CustomInputProps> = ({

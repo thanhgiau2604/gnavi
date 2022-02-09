@@ -1,5 +1,5 @@
 import Button from 'components/common/Button'
-import { BUTTON_COLORS } from 'constants/index'
+import { BUTTON_COLORS } from '@constants'
 import React from 'react'
 import { BoxContainer } from 'styles/styled/layout/BoxLayout'
 

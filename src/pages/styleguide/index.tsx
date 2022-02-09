@@ -6,7 +6,7 @@ import {
   FONT_SIZES,
   BUTTON_LIKE_THEMES,
   BUTTON_HEART_THEMES,
-} from 'constants/index'
+} from '@constants'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'

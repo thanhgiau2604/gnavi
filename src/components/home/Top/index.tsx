@@ -1,6 +1,6 @@
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { BUTTON_COLORS, FONT_SIZES, ROUTES } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES, ROUTES } from '@constants'
 import { useRouter } from 'next/router'
 import type { FC } from 'react'
 import { HomeTopSection } from './styled'

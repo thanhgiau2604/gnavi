@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
-import { FIELD_LABEL_WEIGHT, FONT_SIZES } from 'constants/index'
+import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { FieldPaddingBottom, FieldWidth, LabelWeight, TextAlign } from 'interfaces/CustomField'
 
 export interface FieldStyleProps {

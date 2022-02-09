@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
-import { FIELD_LABEL_WEIGHT, FONT_SIZES } from 'constants/index'
+import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { CheckboxTheme } from 'interfaces/CustomField'
 import { FieldStyleProps } from '../styled'
 

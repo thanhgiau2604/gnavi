@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
-import { FONT_SIZES } from 'constants/index'
+import { FONT_SIZES } from '@constants'
 
 const TourPlanContainer = styled.div`
   text-align: justify;

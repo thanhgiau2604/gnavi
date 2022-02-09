@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonProps } from 'interfaces/Button'
-import { BUTTON_COLORS, FONT_SIZES } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { ButtonContainer } from './styled'
 
 const Button: React.FC<ButtonProps> = ({ title, ...rest }) => {

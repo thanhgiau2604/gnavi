@@ -1,4 +1,4 @@
-import { ROUTES } from 'constants/index'
+import { ROUTES } from '@constants'
 import { LoginPayload } from 'interfaces/Auth'
 import axiosClient from './axiosClient'
 
