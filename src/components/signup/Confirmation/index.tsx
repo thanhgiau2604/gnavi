@@ -2,10 +2,9 @@ import React from 'react'
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import Header from 'components/common/Header'
-import { BUTTON_COLORS } from 'constants/'
+import { BUTTON_COLORS, INIT_CONFIRM_FORM_VALUE, VALIDATE_CONFIRM_SCHEMA } from '@constants'
 import { FastField, Form, Formik } from 'formik'
 import { CfFormProps } from 'interfaces/Auth'
-import { INIT_CONFIRM_FORM_VALUE, VALIDATE_CONFIRM_SCHEMA } from 'constants/auth'
 import { ConfirmationSection } from './styled'
 
 const Confirmation: React.FC<CfFormProps> = ({ handleConfirm }) => {

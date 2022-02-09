@@ -1,6 +1,6 @@
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { BUTTON_COLORS, ROUTES } from 'constants/'
+import { BUTTON_COLORS, ROUTES } from '@constants'
 import { SkillCheckProps } from 'interfaces/SkillCheck'
 import Image from 'next/image'
 import React from 'react'

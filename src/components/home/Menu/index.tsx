@@ -1,4 +1,4 @@
-import { MENU_DATA } from 'constants/home'
+import { MENU_DATA } from '@constants'
 import { MenuGroup } from 'interfaces/Home'
 import type { FC } from 'react'
 import MenuItem from './Item'
