@@ -1,5 +1,5 @@
 import Button from 'components/common/Button'
-import { buttonColors, fontSize } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { Form } from 'formik'
 import React from 'react'
 import BasicInfo from './BasicInfo'
@@ -20,11 +20,11 @@ const FormInfo: React.FC<FormInfoProps> = ({ tab }) => {
         <Button
           title="保存する"
           type="submit"
-          buttonColor={buttonColors.STYLE02}
+          buttonColor={BUTTON_COLORS.style02}
           width={320}
           height={40}
           margin="0.8rem auto"
-          _fontSize={fontSize.LARGE}
+          _fontSize={FONT_SIZES.large}
         />
       </div>
     </Form>

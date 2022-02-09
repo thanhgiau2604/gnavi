@@ -2,8 +2,7 @@ import Button from 'components/common/Button'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
-import { CHECKBOX_THEME } from 'constants/custom_field'
-import { buttonColors } from 'constants/index'
+import { CHECKBOX_THEME, BUTTON_COLORS } from '@constants'
 import { FastField } from 'formik'
 import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
@@ -49,7 +48,7 @@ const PlanInfo: React.FC = () => {
           />
           <Button
             title="住所検索"
-            buttonColor={buttonColors.STYLE06}
+            buttonColor={BUTTON_COLORS.style06}
             radius={4}
             height={48}
             margin="3.8rem auto auto 2.3rem"
@@ -64,7 +63,7 @@ const PlanInfo: React.FC = () => {
           component={CustomCheckBox}
           label="要予約"
           pb={46}
-          theme={CHECKBOX_THEME.PRIMARY}
+          theme={CHECKBOX_THEME.primary}
           lbweight="normal"
         />
         <FastField name="events[0].startTime" component={CustomSelect} label="開始時間" pb={41} />
@@ -85,7 +84,7 @@ const PlanInfo: React.FC = () => {
               component={CustomCheckBox}
               label="徒歩"
               pb={27}
-              theme={CHECKBOX_THEME.PRIMARY}
+              theme={CHECKBOX_THEME.primary}
               lbweight="normal"
             />
           </FlexItem>
@@ -95,7 +94,7 @@ const PlanInfo: React.FC = () => {
               component={CustomCheckBox}
               label="自転車"
               pb={27}
-              theme={CHECKBOX_THEME.PRIMARY}
+              theme={CHECKBOX_THEME.primary}
               lbweight="normal"
             />
           </FlexItem>
@@ -105,7 +104,7 @@ const PlanInfo: React.FC = () => {
               component={CustomCheckBox}
               label="電車"
               pb={27}
-              theme={CHECKBOX_THEME.PRIMARY}
+              theme={CHECKBOX_THEME.primary}
               lbweight="normal"
             />
           </FlexItem>
@@ -115,7 +114,7 @@ const PlanInfo: React.FC = () => {
               component={CustomCheckBox}
               label="バス"
               pb={27}
-              theme={CHECKBOX_THEME.PRIMARY}
+              theme={CHECKBOX_THEME.primary}
               lbweight="normal"
             />
           </FlexItem>
@@ -125,7 +124,7 @@ const PlanInfo: React.FC = () => {
               component={CustomCheckBox}
               label="タクシー"
               pb={52}
-              theme={CHECKBOX_THEME.PRIMARY}
+              theme={CHECKBOX_THEME.primary}
               lbweight="normal"
             />
           </FlexItem>
@@ -135,13 +134,13 @@ const PlanInfo: React.FC = () => {
               component={CustomCheckBox}
               label="ハイヤー"
               pb={52}
-              theme={CHECKBOX_THEME.PRIMARY}
+              theme={CHECKBOX_THEME.primary}
               lbweight="normal"
             />
           </FlexItem>
           <Button
             title="スポット情報を追加"
-            buttonColor={buttonColors.STYLE06}
+            buttonColor={BUTTON_COLORS.style06}
             radius={4}
             height={48}
             margin="0 0 8.2rem 0"

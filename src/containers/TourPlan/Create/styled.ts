@@ -1,4 +1,4 @@
-import { fontSize } from 'constants/index'
+import { FONT_SIZES } from '@constants'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
@@ -6,7 +6,7 @@ const TourPlanCreateContainer = styled.div`
   .title {
     text-align: center;
     margin: 4rem auto 2.5rem auto;
-    font-size: ${fontSize.MEDIUM};
+    font-size: ${FONT_SIZES.medium};
   }
   .btn {
     &-submit {
@@ -15,7 +15,7 @@ const TourPlanCreateContainer = styled.div`
     }
   }
   .unit {
-    font-size: ${fontSize.MEDIUM};
+    font-size: ${FONT_SIZES.medium};
     &-currency {
       margin: 0.25rem 0 0 1.3rem;
     }
@@ -28,7 +28,7 @@ const TourPlanCreateContainer = styled.div`
   }
   .label {
     font-weight: ${Variables.fontWeightBold};
-    font-size: ${fontSize.MEDIUM};
+    font-size: ${FONT_SIZES.medium};
     padding-bottom: 1.5rem;
     margin-bottom: 1rem;
   }

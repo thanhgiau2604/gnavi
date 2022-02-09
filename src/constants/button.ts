@@ -44,6 +44,11 @@ const BUTTON_COLORS = {
     color: Variables.colorTextCommon,
     border: `none`,
   },
+  style06: {
+    bgColor: 'linear-gradient(180deg, #FFFFFF 0%, #EEEEEE 100%)',
+    color: Variables.colorBlack,
+    border: `1px solid ${Variables.color3}`,
+  },
 }
 
 const BUTTON_UPLOAD_COLORS = {
