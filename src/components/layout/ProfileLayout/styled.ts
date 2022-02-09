@@ -1,3 +1,4 @@
+import { FONT_SIZES } from '@constants'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
@@ -24,7 +25,7 @@ export const ProfileLayoutStyled = styled.div`
 
   .name-jp {
     font-weight: ${Variables.fontWeightBold};
-    font-size: 2rem;
+    font-size: ${FONT_SIZES.xlarge};
   }
 
   .name-eng {
