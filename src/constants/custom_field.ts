@@ -28,7 +28,7 @@ interface CheckboxThemes {
 }
 
 export const CHECKBOX_THEME: CheckboxThemes = {
-  PRIMARY: {
+  primary: {
     border: `0.2rem solid ${Variables.color3}`,
     checkedBg: Variables.colorWhite,
     checkedColor: Variables.colorBlack,
@@ -36,7 +36,7 @@ export const CHECKBOX_THEME: CheckboxThemes = {
     checkedHeight: '1.7rem',
     checkedWeight: '2px',
   },
-  SECONDARY: {
+  secondary: {
     border: 'none',
     checkedBg: 'check_circle',
     checkedColor: Variables.colorWhite,
@@ -51,7 +51,7 @@ interface LabelTags {
 }
 
 export const LABEL_TAGS: LabelTags = {
-  REQUIRE: 'require',
-  ANY: 'any',
-  NONE: 'none',
+  require: 'require',
+  any: 'any',
+  none: 'none',
 }

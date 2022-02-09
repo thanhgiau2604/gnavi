@@ -1,12 +1,12 @@
 import React from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import {
-  buttonColors,
-  buttonHeartThemes,
-  buttonLikeThemes,
-  buttonUploadColors,
-  fontSize,
-} from 'constants/index'
+  BUTTON_COLORS,
+  BUTTON_UPLOAD_COLORS,
+  FONT_SIZES,
+  BUTTON_LIKE_THEMES,
+  BUTTON_HEART_THEMES,
+} from '@constants'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'
@@ -30,19 +30,19 @@ const StyleGuide = () => {
     <div className="container">
       <Header shadow />
       <Header showBtnBack title="ガイドの知恵袋" backTo="/login" />
-      <Button width={200} buttonColor={buttonColors.STYLE02} title="上記内容で質問する" />
-      <Button width={320} buttonColor={buttonColors.STYLE03} title="上記内容で質問する" />
-      <Button width="90%" buttonColor={buttonColors.STYLE04} title="編集する" />
+      <Button width={200} buttonColor={BUTTON_COLORS.style02} title="上記内容で質問する" />
+      <Button width={320} buttonColor={BUTTON_COLORS.style03} title="上記内容で質問する" />
+      <Button width="90%" buttonColor={BUTTON_COLORS.style04} title="編集する" />
       <Button title="上記内容で質問する" />
       <ButtonUpload
-        buttonUploadColor={buttonUploadColors.STYLE01}
-        _fontSize={fontSize.SMALL}
+        buttonUploadColor={BUTTON_UPLOAD_COLORS.style01}
+        _fontSize={FONT_SIZES.small}
         fontWeight={400}
         title="画像を選択する"
       />
       <ButtonUpload
-        buttonUploadColor={buttonUploadColors.STYLE02}
-        _fontSize={fontSize.MEDIUM}
+        buttonUploadColor={BUTTON_UPLOAD_COLORS.style02}
+        _fontSize={FONT_SIZES.medium}
         fontWeight={400}
         title="画像を選択する"
       />
@@ -68,9 +68,9 @@ const StyleGuide = () => {
       )}
       <FormInput />
       <FlexContainer justifyContent="space-between" margin="20px 0">
-        <ButtonReaction theme={buttonLikeThemes.THEME01} id={1} />
-        <ButtonReaction theme={buttonLikeThemes.THEME02} id={2} />
-        <ButtonReaction theme={buttonHeartThemes.THEME01} id={3} />
+        <ButtonReaction theme={BUTTON_LIKE_THEMES.theme01} id={1} />
+        <ButtonReaction theme={BUTTON_LIKE_THEMES.theme02} id={2} />
+        <ButtonReaction theme={BUTTON_HEART_THEMES.theme01} id={3} />
       </FlexContainer>
 
       <ButtonGroup itemPerRow={3}>

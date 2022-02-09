@@ -1,6 +1,6 @@
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { buttonColors, routes } from 'constants/index'
+import { BUTTON_COLORS, ROUTES } from '@constants'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { TestInstructionSection } from './styled'
@@ -20,14 +20,14 @@ const TestInstruction = () => {
           </p>
           <Button
             title="スキルチェックをはじめる"
-            buttonColor={buttonColors.STYLE01}
+            buttonColor={BUTTON_COLORS.style01}
             margin="3.6rem 0 0 0"
             height={48}
-            onClick={() => router.push(routes.SKILL_CHECK)}
+            onClick={() => router.push(ROUTES.skill_check)}
           />
           <Button
             title="前回の結果"
-            buttonColor={buttonColors.STYLE03}
+            buttonColor={BUTTON_COLORS.style03}
             margin="3.7rem 0 2rem 0"
             height={48}
           />

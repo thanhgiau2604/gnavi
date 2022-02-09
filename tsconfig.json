@@ -14,7 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "@constants": ["constants/index"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lint-staged.config.js"],
   "exclude": ["node_modules"]

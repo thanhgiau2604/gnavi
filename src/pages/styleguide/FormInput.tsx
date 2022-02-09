@@ -6,7 +6,7 @@ import CustomInput from 'components/common/CustomFields/InputField'
 import Button from 'components/common/Button'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
-import { CHECKBOX_THEME } from 'constants/custom_field'
+import { CHECKBOX_THEME } from '@constants'
 import CustomDate from 'components/common/CustomFields/DateField'
 
 interface FormValues {
@@ -101,14 +101,14 @@ const FormInputWithFormik: React.FC = () => {
                 name="transport"
                 component={CustomCheckBox}
                 label="Car"
-                theme={CHECKBOX_THEME.PRIMARY}
+                theme={CHECKBOX_THEME.primary}
                 lbweight="normal"
               />
               <FastField
                 name="transport"
                 component={CustomCheckBox}
                 label="Moto"
-                theme={CHECKBOX_THEME.SECONDARY}
+                theme={CHECKBOX_THEME.secondary}
                 lbweight="normal"
               />
 

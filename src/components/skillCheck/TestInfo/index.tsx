@@ -1,7 +1,7 @@
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { buttonColors, routes } from 'constants/index'
-import { SkillCheckProps } from 'constants/skill_check'
+import { BUTTON_COLORS, ROUTES } from '@constants'
+import { SkillCheckProps } from 'interfaces/SkillCheck'
 import Image from 'next/image'
 import React from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
@@ -11,7 +11,7 @@ import { TestInfoSection } from './styled'
 const TestInfo: React.FC<SkillCheckProps> = ({ updateShowTestForm }) => {
   return (
     <TestInfoSection>
-      <Header showBtnBack title="スキルチェック" backTo={routes.SKILL_INSTRUCTION} />
+      <Header showBtnBack title="スキルチェック" backTo={ROUTES.skill_instruction} />
       <div className="container">
         <div className="test-info-main">
           <h3>
@@ -50,7 +50,7 @@ const TestInfo: React.FC<SkillCheckProps> = ({ updateShowTestForm }) => {
           </div>
           <Button
             title="チェックスタート"
-            buttonColor={buttonColors.STYLE01}
+            buttonColor={BUTTON_COLORS.style01}
             margin="3.6rem 0 2rem 0"
             height={48}
             onClick={() => updateShowTestForm(true)}

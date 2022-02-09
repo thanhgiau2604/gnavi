@@ -1,3 +1,4 @@
+import { FONT_SIZES } from '@constants'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
@@ -18,7 +19,7 @@ const HomeMainSection = styled.div`
       margin-left: 3rem;
       margin-bottom: 0.5rem;
       h2 {
-        font-size: 2rem;
+        font-size: ${FONT_SIZES.xlarge};
       }
       a {
         display: inline-block;

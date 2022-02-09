@@ -1,13 +1,12 @@
-import { fontSize } from 'constants/index'
-import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
+import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
 const AdvancedInfoContainer = styled.div`
-  font-size: ${fontSize.MEDIUM};
+  font-size: ${FONT_SIZES.medium};
   position: relative;
   .title {
-    font-size: ${fontSize.LARGE};
+    font-size: ${FONT_SIZES.large};
     font-weight: ${FIELD_LABEL_WEIGHT.bold};
   }
   .fm-noto {
@@ -20,7 +19,7 @@ const AdvancedInfoContainer = styled.div`
     margin: 1.7rem auto 1.6rem auto;
     line-height: 1;
     .title {
-      font-size: ${fontSize.MEDIUM};
+      font-size: ${FONT_SIZES.medium};
     }
     .content {
       margin-top: 0.5rem;

@@ -29,10 +29,10 @@ const ButtonContainer = styled.button<ButtonProps>`
   margin: ${({ margin }) => margin && margin};
   width: ${({ width }) => width && setValue(width)};
   height: ${({ height }) => height && setValue(height)};
-  background-color: ${({ buttonColor }) => buttonColor && buttonColor.BGCOLOR};
+  background-color: ${({ buttonColor }) => buttonColor && buttonColor.bgColor};
   border-radius: ${({ radius }) => radius && `${radius}px`};
-  color: ${({ buttonColor }) => buttonColor && buttonColor.COLOR};
-  border: ${({ buttonColor }) => buttonColor && buttonColor.BORDER};
+  color: ${({ buttonColor }) => buttonColor && buttonColor.color};
+  border: ${({ buttonColor }) => buttonColor && buttonColor.border};
   font-weight: ${({ fontWeight }) => fontWeight};
   font-size: ${({ _fontSize }) => _fontSize && _fontSize};
   padding: 0.5rem 0.8rem;

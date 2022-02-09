@@ -1,7 +1,7 @@
 export interface ButtonUploadColor {
-  BGCOLOR: string
-  COLOR: string
-  BORDER: string
+  bgColor: string
+  color: string
+  border: string
 }
 
 export interface ButtonUploadProps {

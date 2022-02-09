@@ -4,7 +4,7 @@ import Avatar from 'components/common/Avatar'
 import Button from 'components/common/Button'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
-import { buttonColors, fontSize } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { ProfileLayoutStyled } from './styled'
 
 interface ProfileLayoutProps {
@@ -33,12 +33,12 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
                 <div className="btn-edit-form">
                   <Button
                     width="100%"
-                    buttonColor={buttonColors.STYLE03}
+                    buttonColor={BUTTON_COLORS.style03}
                     title="プロフィールを編集"
                     margin="0"
                     radius={4}
                     fontWeight={400}
-                    _fontSize={fontSize.SMALL}
+                    _fontSize={FONT_SIZES.small}
                     onClick={() => Router.push(`/profile/${userId}/edit`)}
                   />
                 </div>

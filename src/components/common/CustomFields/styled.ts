@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
-import { fontSize } from 'constants/index'
-import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
+import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { FieldPaddingBottom, FieldWidth, LabelWeight, TextAlign } from 'interfaces/CustomField'
 
 export interface FieldStyleProps {
@@ -29,7 +28,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     padding: 1.3rem;
     color: ${Variables.colorTextCommon};
     border-radius: 4px;
-    font-size: ${fontSize.MEDIUM};
+    font-size: ${FONT_SIZES.medium};
     line-height: calc(23 / 16);
     ${({ txtAlign }) => txtAlign && `text-align: ${txtAlign}`};
   }
@@ -48,21 +47,26 @@ const FieldContainer = styled.div<FieldStyleProps>`
 
   label {
     font-weight: ${({ lbweight }) => lbweight && FIELD_LABEL_WEIGHT[lbweight]};
-    font-size: ${fontSize.MEDIUM};
+    font-size: ${FONT_SIZES.medium};
     padding-bottom: 1.5rem;
   }
 
   .count-letters {
     color: ${Variables.color5};
     padding-top: 0.8rem;
-    font-size: ${fontSize.SMALL};
+    font-size: ${FONT_SIZES.small};
     text-align: right;
     font-weight: 700;
   }
 
   //custom datepicker from lib react-date-picker
+  .react-datepicker-popper {
+    width: 100%;
+    text-align: right;
+  }
   .react-datepicker {
-    width: ${({ width }) => (width ? `calc( ${width}rem / 10)` : `32rem`)};
+    width: 100%;
+    max-width: 40rem;
     &__month-container,
     &__current-month {
       width: 100%;

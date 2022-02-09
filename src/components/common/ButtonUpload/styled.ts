@@ -16,10 +16,10 @@ const UploadContainer = styled.div<ButtonUploadProps>`
     align-items: center;
     padding: 5px 15px;
     cursor: pointer;
-    color: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.COLOR};
+    color: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.color};
     &-upload {
-      background: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.BGCOLOR};
-      border: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.BORDER};
+      background: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.bgColor};
+      border: ${({ buttonUploadColor }) => buttonUploadColor && buttonUploadColor.border};
       box-sizing: border-box;
       border-radius: 4px;
       font-size: ${({ fontSize }) => fontSize};

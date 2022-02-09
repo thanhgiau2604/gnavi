@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
-import { fontSize } from 'constants/index'
+import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { CheckboxTheme } from 'interfaces/CustomField'
-import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { FieldStyleProps } from '../styled'
 
 interface FieldCheckboxStyleProps extends FieldStyleProps {
@@ -42,7 +41,7 @@ const FieldCheckboxLabel = styled.label<FieldCheckboxStyleProps>`
   position: relative;
   padding-left: 3.8rem;
   cursor: pointer;
-  font-size: ${fontSize.MEDIUM};
+  font-size: ${FONT_SIZES.medium};
   user-select: none;
   height: ${({ height }) => (height ? `calc( ${height}rem / 10)` : `2.4rem`)};
   display: flex;

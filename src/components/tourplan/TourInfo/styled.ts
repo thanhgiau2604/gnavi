@@ -1,5 +1,4 @@
-import { fontSize } from 'constants/index'
-import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
+import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
@@ -27,7 +26,7 @@ const TourInfoContainer = styled.div`
     width: 100%;
     margin-top: 2.3rem;
     color: ${Variables.colorBlack};
-    font-size: ${fontSize.MEDIUM};
+    font-size: ${FONT_SIZES.medium};
     td,
     th {
       border: 1px solid ${Variables.color3};
@@ -42,7 +41,7 @@ const TourInfoContainer = styled.div`
       width: 24.5rem;
     }
     p.timeline {
-      font-size: ${fontSize.LARGE};
+      font-size: ${FONT_SIZES.large};
       position: absolute;
       top: 0;
       left: 50%;
