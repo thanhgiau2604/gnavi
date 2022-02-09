@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { fontSize } from 'constants/index'
+import { FONT_SIZES } from 'constants/index'
 import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 import { Variables } from 'styles/styled/app/Variables'
 
@@ -10,7 +10,7 @@ const TourPlanDetailContainer = styled.div`
   line-height: 1;
   .title {
     font-weight: ${FIELD_LABEL_WEIGHT.bold};
-    font-size: ${fontSize.XLARGE};
+    font-size: ${FONT_SIZES.xlarge};
     width: 90%;
     height: 2rem;
     overflow: hidden;
@@ -21,10 +21,10 @@ const TourPlanDetailContainer = styled.div`
   }
   .text {
     &--large {
-      font-size: ${fontSize.LARGE};
+      font-size: ${FONT_SIZES.large};
     }
     &--medium {
-      font-size: ${fontSize.MEDIUM};
+      font-size: ${FONT_SIZES.medium};
     }
   }
   .header {

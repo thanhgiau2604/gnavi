@@ -5,7 +5,7 @@ import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import CustomDate from 'components/common/CustomFields/DateField'
-import { buttonColors } from 'constants/index'
+import { BUTTON_COLORS } from 'constants/index'
 import { OPTIONS_GENDER, OPTIONS_PUBLIC_SETTING } from 'constants/auth'
 import { FORM_EDIT_PROFILE_VALIDATE_SCHEMA, INIT_FORM_EDIT_PROFILE_VALUE } from 'constants/profile'
 
@@ -101,7 +101,7 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
             <Button
               title="保存"
               type="submit"
-              buttonColor={buttonColors.STYLE02}
+              buttonColor={BUTTON_COLORS.style02}
               height={48}
               margin="4rem 0 2rem 0"
             />

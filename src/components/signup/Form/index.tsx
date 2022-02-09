@@ -4,7 +4,7 @@ import CustomDate from 'components/common/CustomFields/DateField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import Header from 'components/common/Header'
-import { buttonColors } from 'constants/index'
+import { BUTTON_COLORS } from 'constants/index'
 import { FastField, Form, Formik } from 'formik'
 import {
   INIT_SIGNUP_FORM_VALUE,
@@ -112,7 +112,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
                   <Button
                     title="メール認証へ"
                     type="submit"
-                    buttonColor={buttonColors.STYLE02}
+                    buttonColor={BUTTON_COLORS.style02}
                     height={48}
                     margin="4rem 0 2rem 0"
                   />

@@ -1,5 +1,5 @@
 import Button from 'components/common/Button'
-import { buttonColors } from 'constants/index'
+import { BUTTON_COLORS } from 'constants/index'
 import React from 'react'
 import { BoxContainer } from 'styles/styled/layout/BoxLayout'
 
@@ -38,7 +38,7 @@ const ActionMenu: React.FC<ActionMenuProps> = ({ id, state, transform }) => {
         radius={4}
         margin="auto"
         title="削除"
-        buttonColor={buttonColors.STYLE02}
+        buttonColor={BUTTON_COLORS.style02}
       />
     </BoxContainer>
   )

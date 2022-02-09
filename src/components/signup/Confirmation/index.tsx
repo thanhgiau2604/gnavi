@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import Header from 'components/common/Header'
-import { buttonColors } from 'constants/'
+import { BUTTON_COLORS } from 'constants/'
 import { FastField, Form, Formik } from 'formik'
 import { CfFormProps } from 'interfaces/Auth'
 import { INIT_CONFIRM_FORM_VALUE, VALIDATE_CONFIRM_SCHEMA } from 'constants/auth'
@@ -50,7 +50,7 @@ const Confirmation: React.FC<CfFormProps> = ({ handleConfirm }) => {
                   <Button
                     title="メール認証へ"
                     type="submit"
-                    buttonColor={buttonColors.STYLE02}
+                    buttonColor={BUTTON_COLORS.style02}
                     height={48}
                     margin="4.8rem 0 2rem 0"
                   />

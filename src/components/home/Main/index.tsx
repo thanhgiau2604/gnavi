@@ -4,7 +4,7 @@ import { ImageContainer } from 'styles/styled/app/Image'
 import type { FC } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Button from 'components/common/Button'
-import { buttonColors, fontSize } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES } from 'constants/index'
 import { HomeMainSection } from './styled'
 import Menu from '../Menu'
 
@@ -45,9 +45,9 @@ const HomeMain: FC = () => {
         <Menu />
         <Button
           title="ログアウト"
-          buttonColor={buttonColors.STYLE05}
+          buttonColor={BUTTON_COLORS.style05}
           radius={0}
-          _fontSize={fontSize.MEDIUM}
+          _fontSize={FONT_SIZES.medium}
           fontWeight={400}
           margin="4rem 0 0"
           height={48}

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
-import { fontSize } from 'constants/index'
+import { FONT_SIZES } from 'constants/index'
 import { FIELD_LABEL_WEIGHT } from 'constants/custom_field'
 
 const TourLogContainer = styled.div`
@@ -14,7 +14,7 @@ const TourLogContainer = styled.div`
     width: 80%;
     height: 6.5rem;
     margin-bottom: 1.1rem;
-    font-size: ${fontSize.LARGE};
+    font-size: ${FONT_SIZES.large};
     font-weight: ${FIELD_LABEL_WEIGHT.bold};
     color: ${Variables.colorPrimary};
     overflow: hidden;
@@ -25,7 +25,7 @@ const TourLogContainer = styled.div`
     padding: 0;
   }
   .content {
-    font-size: ${fontSize.MEDIUM};
+    font-size: ${FONT_SIZES.medium};
     font-weight: ${FIELD_LABEL_WEIGHT.normal};
     color: ${Variables.colorTextCommon};
     overflow: hidden;

@@ -1,11 +1,11 @@
 import React from 'react'
-import { fontSize } from 'constants/index'
+import { FONT_SIZES } from 'constants/index'
 import { TourLogProps, TourPlanProps } from 'interfaces/TourLog'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import Button from 'components/common/Button'
-import { TourPlanContainer } from './styled'
 import TourLog from 'components/tourplan/TourLog'
+import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
   // const data: TourPlanProps[] = []
@@ -44,15 +44,11 @@ const TourPlan = () => {
   return (
     <div className="wrapper">
       <Header shadow showBtnBack title="ツアープラン一覧" />
-      <Container
-        padding="0 2rem"
-        backgroundColor="rgba(239,239,239,255)"
-        height="100vh"
-      >
+      <Container padding="0 2rem" backgroundColor="rgba(239,239,239,255)" height="100vh">
         <Button
           title="＋新規ツアープランの追加"
           fontWeight={700}
-          _fontSize={fontSize.LARGE}
+          _fontSize={FONT_SIZES.large}
           radius={4}
         />
         <TourPlanContainer>

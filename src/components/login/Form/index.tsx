@@ -4,7 +4,7 @@ import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import Header from 'components/common/Header'
 import { INIT_LOGIN_FORM_VALUE, VALIDATE_LOGIN_SCHEMA } from 'constants/auth'
-import { buttonColors, routes } from 'constants/index'
+import { BUTTON_COLORS, ROUTES } from 'constants/index'
 import { FastField, Form, Formik } from 'formik'
 import { LoginFormProps } from 'interfaces/Auth'
 import { useRouter } from 'next/router'
@@ -47,7 +47,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ handleLogin }) => {
                   <Button
                     title="ログイン"
                     type="submit"
-                    buttonColor={buttonColors.STYLE02}
+                    buttonColor={BUTTON_COLORS.style02}
                     height={48}
                   />
                 </Form>
@@ -62,10 +62,10 @@ const LoginForm: React.FC<LoginFormProps> = ({ handleLogin }) => {
 
           <Button
             title="新規登録はこちら"
-            buttonColor={buttonColors.STYLE01}
+            buttonColor={BUTTON_COLORS.style01}
             height={48}
             margin="5.5rem 0 2rem 0"
-            onClick={() => router.push(routes.SIGNUP)}
+            onClick={() => router.push(ROUTES.signup)}
           />
         </div>
       </div>

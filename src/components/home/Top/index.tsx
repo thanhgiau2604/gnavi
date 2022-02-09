@@ -1,6 +1,6 @@
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { buttonColors, fontSize, routes } from 'constants/index'
+import { BUTTON_COLORS, FONT_SIZES, ROUTES } from 'constants/index'
 import { useRouter } from 'next/router'
 import type { FC } from 'react'
 import { HomeTopSection } from './styled'
@@ -13,23 +13,23 @@ const HomeTop: FC = () => {
         <div className="authen-btn">
           <Button
             title="新規登録"
-            buttonColor={buttonColors.STYLE01}
+            buttonColor={BUTTON_COLORS.style01}
             radius={4}
-            _fontSize={fontSize.XSMALL}
+            _fontSize={FONT_SIZES.xsmall}
             margin="0"
             height={32}
             width={80}
-            onClick={() => router.push(routes.SIGNUP)}
+            onClick={() => router.push(ROUTES.signup)}
           />
           <Button
             title="ログイン"
-            buttonColor={buttonColors.STYLE03}
+            buttonColor={BUTTON_COLORS.style03}
             radius={4}
-            _fontSize={fontSize.XSMALL}
+            _fontSize={FONT_SIZES.xsmall}
             margin="0"
             height={32}
             width={80}
-            onClick={() => router.push(routes.LOGIN)}
+            onClick={() => router.push(ROUTES.login)}
           />
         </div>
       </Header>
@@ -40,23 +40,23 @@ const HomeTop: FC = () => {
           </h1>
           <Button
             title="メールアドレスで登録する"
-            buttonColor={buttonColors.STYLE01}
+            buttonColor={BUTTON_COLORS.style01}
             radius={4}
-            _fontSize={fontSize.LARGE}
+            _fontSize={FONT_SIZES.large}
             fontWeight={700}
             height={48}
             width="100%"
-            onClick={() => router.push(routes.SIGNUP)}
+            onClick={() => router.push(ROUTES.signup)}
           />
           <Button
             title="ログイン"
-            buttonColor={buttonColors.STYLE03}
+            buttonColor={BUTTON_COLORS.style03}
             radius={4}
-            _fontSize={fontSize.LARGE}
+            _fontSize={FONT_SIZES.large}
             fontWeight={700}
             height={48}
             width="100%"
-            onClick={() => router.push(routes.LOGIN)}
+            onClick={() => router.push(ROUTES.login)}
           />
         </div>
       </div>
