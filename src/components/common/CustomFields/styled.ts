@@ -60,8 +60,13 @@ const FieldContainer = styled.div<FieldStyleProps>`
   }
 
   //custom datepicker from lib react-date-picker
+  .react-datepicker-popper {
+    width: 100%;
+    text-align: right;
+  }
   .react-datepicker {
-    width: ${({ width }) => (width ? `calc( ${width}rem / 10)` : `32rem`)};
+    width: 100%;
+    max-width: 40rem;
     &__month-container,
     &__current-month {
       width: 100%;
