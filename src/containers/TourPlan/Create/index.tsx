@@ -2,12 +2,13 @@ import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import Header from 'components/common/Header'
 import FormInfo from 'components/common/TourPlan/FormInfo'
 import { Formik } from 'formik'
-import React from 'react'
+import { TourPlanInfoProps } from 'interfaces/TourPlan'
+import React, { useState } from 'react'
 import { TourPlanCreateContainer } from './styled'
 
 const TourPlanCreate = () => {
-  const [isTab, setIsTab] = React.useState<string>('ツアー情報')
-  const initialValues = {
+  const [isTab, setIsTab] = useState<string>('ツアー情報')
+  const initialValues: TourPlanInfoProps = {
     // 基本情報 - Basic info
     tourName: '',
     orderDate: '',
@@ -85,8 +86,8 @@ const TourPlanCreate = () => {
           actions.setSubmitting(false)
         }}
       >
-        {() => {
-          return <FormInfo tab={isTab} />
+        {(data) => {
+          return <FormInfo tab={isTab} data={data.values} />
         }}
       </Formik>
     </TourPlanCreateContainer>
