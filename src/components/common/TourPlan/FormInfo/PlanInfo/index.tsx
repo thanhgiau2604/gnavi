@@ -118,7 +118,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     pb={41}
                   />
                   <p className="label">移動手段</p>
-                  <FlexContainer wrap>
+                  <FlexContainer WRAP>
                     <FlexItem flex="50%">
                       <FastField
                         name={`events[${index}].transporation`}
