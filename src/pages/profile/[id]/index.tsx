@@ -1,27 +1,30 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { useRouter } from 'next/router'
 import toNumber from 'lodash/toNumber'
-import { ProfilePageProps } from 'interfaces/Profile'
 import ProfileHome from 'containers/Profile'
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { id } = context.query
-  const data: ProfilePageProps = { idUser: toNumber(id) }
-  return {
-    props: data,
-  }
-}
+const res = [
+  { type: 'title', value: '一緒に特別な思い出を作りましょう!!' },
+  {
+    type: 'content',
+    value: `<p>私は東京でフリーのツアープランニングをしています。沖縄出身のうちなーんちゅなので、ガイドブックに載っていない情報やお店の事をお伝えできます！お客様のご要望に合わせてプランを組み立てるので、一緒に特別な思い出を作りましょう！！</p>`,
+  },
+  { type: 'image', value: 'https://statics.vinpearl.com/diem-du-lich-9_1632662759.jpg' },
+]
 
-const ProfilePage: NextPage = ({
-  idUser,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const ProfilePage: NextPage = () => {
+  const router = useRouter()
+  const { id } = router.query
+
+  if (!id) return <p>Loading...</p>
+
   return (
     <>
       <Head>
         <title>My Profile</title>
       </Head>
-      <ProfileHome id={toNumber(idUser)} />
+      <ProfileHome id={toNumber(id)} res={res} />
     </>
   )
 }

@@ -9,4 +9,29 @@
     color: $color-4;
     margin-bottom: 2rem;
   }
+
+  &-tag-home {
+    padding-bottom: 6rem;
+    div {
+      margin: 2.4rem 0 0 0;
+    }
+    &-title {
+      font-weight: $font-weight-bold;
+    }
+    img {
+      margin: 12px auto;
+      padding: 0 0 12px 0;
+    }
+
+    &-footer {
+      background-color: $color-white;
+      border: 1px solid $color-3;
+      border-bottom: none;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+    }
+  }
 }

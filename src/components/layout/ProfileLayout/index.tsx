@@ -98,7 +98,7 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
         <ButtonGroupItem text="写真ギャラリー" />
       </ButtonGroup>
 
-      <div className="container">{children}</div>
+      {children}
     </>
   )
 }
