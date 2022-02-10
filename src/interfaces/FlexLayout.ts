@@ -3,7 +3,7 @@ export interface FlexContainerProps {
   col?: boolean
   justifyContent?: string
   alignItems?: string
-  wrap?: boolean | number
+  wrap?: boolean
   position?: string
   margin?: string
   padding?: string

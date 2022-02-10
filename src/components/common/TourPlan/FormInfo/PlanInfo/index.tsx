@@ -2,7 +2,7 @@ import Button from 'components/common/Button'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
-import { BUTTON_COLORS, CHECKBOX_THEME } from '@constants'
+import { BUTTON_COLORS, CHECKBOX_THEME, INIT_TOUR_EVENT } from '@constants'
 import { FastField, FieldArray } from 'formik'
 import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
@@ -118,7 +118,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     pb={41}
                   />
                   <p className="label">移動手段</p>
-                  <FlexContainer wrap={1}>
+                  <FlexContainer wrap>
                     <FlexItem flex="50%">
                       <FastField
                         name={`events[${index}].transporation`}
@@ -189,22 +189,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                 radius={4}
                 height={48}
                 margin="0 0 8.2rem 0"
-                onClick={() =>
-                  arr.push({
-                    id: events.length + 1,
-                    eventName: '',
-                    postCode: '',
-                    provinces: '',
-                    address1: '',
-                    address2: '',
-                    phone: '',
-                    reservation: false,
-                    startTime: '',
-                    endTime: '',
-                    content: '',
-                    transporation: [],
-                  })
-                }
+                onClick={() => arr.push({ ...INIT_TOUR_EVENT, id: events.length + 1 })}
               />
             </div>
           )}

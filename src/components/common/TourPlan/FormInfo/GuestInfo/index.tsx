@@ -1,27 +1,12 @@
+import { OPTIONS_GENDER } from '@constants'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import { FastField } from 'formik'
-import { OptionProps } from 'interfaces/CustomField'
 import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 
 const GuestInfo: React.FC = () => {
-  const genderOptions: OptionProps[] = [
-    {
-      value: 'male',
-      label: '男性',
-    },
-    {
-      value: 'female',
-      label: '女性',
-    },
-    {
-      value: 'others',
-      label: 'その他',
-    },
-  ]
-
   return (
     <Container padding="0 3rem">
       <div className="guest-info">
@@ -70,7 +55,7 @@ const GuestInfo: React.FC = () => {
           name="gender"
           component={CustomSelect}
           label="性別"
-          options={genderOptions}
+          options={OPTIONS_GENDER}
           pb={41}
         />
         <FlexContainer alignItems="center">
