@@ -43,11 +43,17 @@ const BasicInfo: React.FC = () => {
         <FastField name="phone" component={CustomInput} label="電話番号" pb={34} />
         <FastField name="email" component={CustomInput} label="メールアドレス" pb={34} />
         <FlexContainer alignItems="center">
-          <FastField name="remuneration" component={CustomInput} label="報酬" pb={34} />
+          <FastField
+            name="remuneration"
+            component={CustomInput}
+            label="報酬"
+            type="number"
+            pb={34}
+          />
           <p className="unit unit-currency">円</p>
         </FlexContainer>
         <FlexContainer alignItems="center">
-          <FastField name="price" component={CustomInput} label="経費" pb={34} />
+          <FastField name="price" component={CustomInput} label="経費" type="number" pb={34} />
           <p className="unit unit-currency">円</p>
         </FlexContainer>
         <FastField name="payment_date" component={CustomDate} label="入金日" pb={34} />

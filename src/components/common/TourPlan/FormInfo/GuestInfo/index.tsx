@@ -20,6 +20,7 @@ const GuestInfo: React.FC = () => {
             lbweight="normal"
             width={64}
             pb={46}
+            type="number"
           />
           <p className="unit-people">人</p>
           <FastField
@@ -29,6 +30,7 @@ const GuestInfo: React.FC = () => {
             lbweight="normal"
             width={64}
             pb={46}
+            type="number"
           />
           <p className="unit-people">人</p>
           <FastField
@@ -38,6 +40,7 @@ const GuestInfo: React.FC = () => {
             lbweight="normal"
             width={64}
             pb={46}
+            type="number"
           />
           <p className="unit-people">人</p>
         </FlexContainer>
@@ -59,7 +62,14 @@ const GuestInfo: React.FC = () => {
           pb={41}
         />
         <FlexContainer alignItems="center">
-          <FastField name="age" component={CustomInput} label="年齢" width={64} pb={41} />
+          <FastField
+            name="age"
+            component={CustomInput}
+            label="年齢"
+            type="number"
+            width={64}
+            pb={41}
+          />
           <p className="unit unit-age">歳</p>
         </FlexContainer>
         <FastField name="country" component={CustomInput} label="国籍" pb={41} />
