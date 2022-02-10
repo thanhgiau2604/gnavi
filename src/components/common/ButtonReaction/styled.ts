@@ -11,7 +11,7 @@ interface ButtonReactionCotaninerProps {
   padding?: string
 }
 
-const ButtonReactionContainer = styled.div<ButtonReactionCotaninerProps>`
+const ButtonReactionContainer = styled.button<ButtonReactionCotaninerProps>`
   cursor: pointer;
   width: fit-content;
   position: ${({ position }) => position && position};
@@ -22,6 +22,8 @@ const ButtonReactionContainer = styled.div<ButtonReactionCotaninerProps>`
   transform: ${({ transform }) => transform && transform};
   margin: ${({ margin }) => margin && margin};
   padding: ${({ padding }) => padding && padding};
+  border: none;
+  background-color: transparent;
 `
 
 export { ButtonReactionContainer }
