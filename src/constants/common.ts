@@ -3,6 +3,16 @@ const ROUTES = {
   signup: '/signup',
   skill_instruction: '/skillcheck/instruction',
   skill_check: '/skillcheck',
+  home: '/',
+  tour_plan: {
+    view: '/tourplan',
+    detail: '/tourplan/detail?id=',
+    create: '/tourplan/create',
+    edit: '',
+    tour_log: {
+      create: '',
+    },
+  },
 }
 
 const FONT_SIZES = {

@@ -1,3 +1,4 @@
+import { ROUTES } from '@constants'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import Header from 'components/common/Header'
 import FormInfo from 'components/common/TourPlan/FormInfo'
@@ -61,7 +62,7 @@ const TourPlanCreate = () => {
 
   return (
     <TourPlanCreateContainer>
-      <Header showBtnBack title="新規ツアープランの追加" backTo="/tourplan" />
+      <Header showBtnBack title="新規ツアープランの追加" backTo={ROUTES.tour_plan.view} />
       <ButtonGroup itemPerRow={3}>
         <ButtonGroupItem
           text="基本情報"

@@ -1,17 +1,17 @@
 import React from 'react'
-import { FONT_SIZES } from '@constants'
+import { FONT_SIZES, ROUTES } from '@constants'
 import { TourLogProps, TourPlanProps } from 'interfaces/TourLog'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import Button from 'components/common/Button'
-import { TourPlanContainer } from './styled'
 import TourLog from 'components/tourplan/TourLog'
 import { useRouter } from 'next/router'
+import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
   const router = useRouter()
   const createTourPlan = () => {
-    router.push('/tourplan/create')
+    router.push(ROUTES.tour_plan.create)
   }
   // const data: TourPlanProps[] = []
   const data: TourPlanProps[] = [
@@ -49,7 +49,7 @@ const TourPlan = () => {
 
   return (
     <div className="wrapper">
-      <Header shadow showBtnBack title="ツアープラン一覧" />
+      <Header shadow showBtnBack title="ツアープラン一覧" backTo={ROUTES.home} />
       <Container padding="0 2rem" backgroundColor="rgba(239,239,239,255)" height="100vh">
         <Button
           title="＋新規ツアープランの追加"
