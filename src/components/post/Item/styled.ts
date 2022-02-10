@@ -8,10 +8,6 @@ const PostItemContainer = styled.div`
   background-color: ${Variables.colorWhite};
 
   .post {
-    &-info {
-      font-size: 1.5rem;
-    }
-
     &-content {
       padding-top: 1.8rem;
       font-size: 1.6rem;
@@ -27,16 +23,14 @@ const PostItemContainer = styled.div`
     }
   }
 
-  .post-user {
-    &-detail {
-      margin-left: 1rem;
+  .post-reaction {
+    &-heart {
+      padding-left: 2.5rem;
     }
-    &-name {
-      color: ${Variables.colorPrimary};
-      span {
-        color: ${Variables.colorTextCommon};
-        padding-left: 5px;
-      }
+
+    &-like-num,
+    &-heart-num {
+      padding-left: 4px;
     }
   }
 `

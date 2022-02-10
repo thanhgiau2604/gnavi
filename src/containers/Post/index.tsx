@@ -4,7 +4,7 @@ import SearchForm from 'components/post/SearchForm'
 import PostMenu from 'components/post/Menu'
 import React from 'react'
 import Button from 'components/common/Button'
-import { BUTTON_COLORS } from '@constants'
+import { BUTTON_COLORS, POSTS_DATA } from '@constants'
 import { PostContainer } from './styled'
 
 const Post: React.FC = () => {
@@ -19,9 +19,9 @@ const Post: React.FC = () => {
           <PostMenu />
         </div>
         <div className="post-container">
-          <PostItem />
-          <PostItem />
-          <PostItem />
+          {POSTS_DATA.map((post, index) => (
+            <PostItem data={post} key={`post${index.toString()}`} />
+          ))}
         </div>
       </div>
       <div className="container">
