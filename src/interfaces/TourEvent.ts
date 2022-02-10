@@ -1,14 +1,14 @@
 export interface TourEventProps {
   id: number
-  eventName: string
-  postCode: string
+  event_name: string
+  post_code: string
   provinces: string
   address1: string
   address2: string
   phone: string
-  reservation: false
-  startTime: string
-  endTime: string
+  reservation: boolean
+  start_time: string
+  end_time: string
   content: string
   transporation: []
 }

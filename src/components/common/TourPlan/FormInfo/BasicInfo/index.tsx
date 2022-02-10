@@ -19,10 +19,10 @@ const BasicInfo: React.FC = () => {
     <Container padding="0 3rem">
       <div className="basic-info">
         <h3 className="title">ツアー情報</h3>
-        <FastField name="tourName" component={CustomInput} label="ツアー名（テーマ" pb={34} />
-        <FastField name="orderDate" component={CustomDate} label="受注日" pb={34} />
-        <FastField name="startDate" component={CustomDate} label="催行日" pb={34} />
-        <FastField name="startTime" component={CustomInput} label="催行時間" pb={34} />
+        <FastField name="tour_name" component={CustomInput} label="ツアー名（テーマ" pb={34} />
+        <FastField name="order_date" component={CustomDate} label="受注日" pb={34} />
+        <FastField name="start_date" component={CustomDate} label="催行日" pb={34} />
+        <FastField name="start_time" component={CustomInput} label="催行時間" pb={34} />
         <FastField
           name="overview"
           component={CustomInput}
@@ -33,13 +33,13 @@ const BasicInfo: React.FC = () => {
         />
         <h3 className="title">依頼元情報</h3>
         <FastField
-          name="orderForm"
+          name="order_form"
           component={CustomSelect}
           label="受注形態"
           options={orderFormOptions}
           pb={34}
         />
-        <FastField name="companyName" component={CustomInput} label="会社名" pb={34} />
+        <FastField name="company_name" component={CustomInput} label="会社名" pb={34} />
         <FastField name="phone" component={CustomInput} label="電話番号" pb={34} />
         <FastField name="email" component={CustomInput} label="メールアドレス" pb={34} />
         <FlexContainer alignItems="center">
@@ -50,8 +50,8 @@ const BasicInfo: React.FC = () => {
           <FastField name="price" component={CustomInput} label="経費" pb={34} />
           <p className="unit unit-currency">円</p>
         </FlexContainer>
-        <FastField name="paymentDate" component={CustomDate} label="入金日" pb={34} />
-        <FastField name="methodPayment" component={CustomInput} label="支払い方法" />
+        <FastField name="payment_date" component={CustomDate} label="入金日" pb={34} />
+        <FastField name="method_payment" component={CustomInput} label="支払い方法" />
       </div>
     </Container>
   )

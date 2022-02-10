@@ -1,41 +1,41 @@
 import { TourEventProps } from './TourEvent'
 
 interface BasicInfoProps {
-  tourName: string
-  orderDate: string
-  startDate: string
-  startTime: string
+  tour_name: string
+  order_date: string
+  start_date: string
+  start_time: string
   overview: string
-  orderForm: string
-  companyName: string
+  order_form: string
+  company_name: string
   phone: string
   email: string
   remuneration: number
   price: number
-  paymentDate: string
-  methodPayment: string
+  payment_date: string
+  method_payment: string
 }
 
 interface GuestInfoProps {
-  noOfAdults: number
-  noOfTeens: number
-  noOfChilds: number
+  no_of_adults: number
+  no_of_teens: number
+  no_of_childs: number
   relation: string
   diet: string
   represent: string
-  gender: 'male'
+  gender: string
   age: number
   country: string
-  contactPhone: string
-  contactEmail: string
+  contact_phone: string
+  contact_email: string
   note: string
 }
 
 interface PlanInfoProps {
-  tourStartTime: string
-  tourEndTime: string
-  meetingPlace: string
-  dissolutionPlace: string
+  tour_start_time: string
+  tour_end_time: string
+  meeting_place: string
+  dissolution_place: string
   events: TourEventProps[]
 }
 

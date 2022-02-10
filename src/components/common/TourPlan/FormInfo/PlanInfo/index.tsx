@@ -18,10 +18,10 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
     <Container padding="0 3rem">
       <div className="plan-info">
         <h3 className="title">ツアー行程</h3>
-        <FastField name="tourStartTime" component={CustomSelect} label="ツアー開始時間" pb={41} />
-        <FastField name="tourEndTime" component={CustomSelect} label="ツアー終了時間" pb={41} />
+        <FastField name="tour_start_time" component={CustomSelect} label="ツアー開始時間" pb={41} />
+        <FastField name="tour_end_time" component={CustomSelect} label="ツアー終了時間" pb={41} />
         <FastField
-          name="meetingPlace"
+          name="meeting_place"
           component={CustomInput}
           label="集合場所"
           type="text-area"
@@ -29,7 +29,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
           pb={33}
         />
         <FastField
-          name="dissolutionPlace"
+          name="dissolution_place"
           component={CustomInput}
           label="解散場所"
           type="text-area"
@@ -44,14 +44,14 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                 <div className="event" key={event.id}>
                   <h3 className="title">スポット情報{index + 1}</h3>
                   <FastField
-                    name={`events[${index}].eventName`}
+                    name={`events[${index}].event_name`}
                     component={CustomInput}
                     label="施設名（イベント名）"
                     pb={41}
                   />
                   <FlexContainer alignItems="center">
                     <FastField
-                      name={`events[${index}].postCode`}
+                      name={`events[${index}].post_code`}
                       component={CustomInput}
                       label="郵便番号"
                       pb={22}
@@ -98,13 +98,13 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     lbweight="normal"
                   />
                   <FastField
-                    name={`events[${index}].startTime`}
+                    name={`events[${index}].start_time`}
                     component={CustomSelect}
                     label="開始時間"
                     pb={41}
                   />
                   <FastField
-                    name={`events[${index}].endTime`}
+                    name={`events[${index}].end_time`}
                     component={CustomSelect}
                     label="終了時間"
                     pb={41}
