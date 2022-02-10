@@ -47,8 +47,8 @@ const CustomDate: React.FC<FieldProps & CustomInputProps> = ({
       {label && (
         <FieldLabel>
           <label htmlFor={name}>{label}</label>
-          {lbTag === LABEL_TAGS.REQUIRE && <p className="lb-tag lb-tag--require">必須</p>}
-          {lbTag === LABEL_TAGS.ANY && <p className="lb-tag lb-tag--any">任意</p>}
+          {lbTag === LABEL_TAGS.require && <p className="lb-tag lb-tag--require">必須</p>}
+          {lbTag === LABEL_TAGS.any && <p className="lb-tag lb-tag--any">任意</p>}
         </FieldLabel>
       )}
 
