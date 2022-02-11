@@ -5,12 +5,13 @@ export interface ButtonUploadProps {
   buttonUploadColor?: ButtonUploadColor
   fontSize?: string
   fontWeight?: number
+  margin?: string
 }
 
 const UploadContainer = styled.div<ButtonUploadProps>`
   width: 100%;
   .btn {
-    margin: 1.8rem auto auto auto;
+    margin: ${({ margin }) => margin && margin};
     display: flex;
     justify-content: center;
     align-items: center;

@@ -32,6 +32,7 @@ ButtonUpload.defaultProps = {
   buttonUploadColor: BUTTON_UPLOAD_COLORS.style01,
   fontWeight: 400,
   _fontSize: FONT_SIZES.medium,
+  margin: '1.8rem auto auto auto',
 }
 
 export default ButtonUpload

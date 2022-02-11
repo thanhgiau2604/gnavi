@@ -1,3 +1,6 @@
+import { BUTTON_UPLOAD_COLORS, CHECKBOX_THEME } from '@constants'
+import ButtonUpload from 'components/common/ButtonUpload'
+import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomDate from 'components/common/CustomFields/DateField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
@@ -6,8 +9,13 @@ import { OptionProps } from 'interfaces/CustomField'
 import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
+import { BasicInfoContainer } from './styled'
 
-const BasicInfo: React.FC = () => {
+interface Props {
+  of: string
+}
+
+const BasicInfo: React.FC<Props> = ({ of }) => {
   const orderFormOptions: OptionProps[] = [
     {
       value: '直接',
@@ -17,7 +25,7 @@ const BasicInfo: React.FC = () => {
 
   return (
     <Container padding="0 3rem">
-      <div className="basic-info">
+      <BasicInfoContainer>
         <h3 className="title">ツアー情報</h3>
         <FastField name="tour_name" component={CustomInput} label="ツアー名（テーマ" pb={34} />
         <FastField name="order_date" component={CustomDate} label="受注日" pb={34} />
@@ -58,7 +66,27 @@ const BasicInfo: React.FC = () => {
         </FlexContainer>
         <FastField name="payment_date" component={CustomDate} label="入金日" pb={34} />
         <FastField name="method_payment" component={CustomInput} label="支払い方法" />
-      </div>
+        {of === 'tour-log' && (
+          <>
+            <h3 className="title">プロフィールに追加</h3>
+            <FastField
+              name="add_to_profile"
+              component={CustomCheckBox}
+              theme={CHECKBOX_THEME.primary}
+              lbweight="normal"
+              pb={48}
+              label="このツアーログをプロフィールの「最近の活動」に追加する"
+            />
+            <FastField name="title" component={CustomInput} label="タイトル" pb={27} />
+            <FastField name="explanation" component={CustomInput} label="説明" pb={17} />
+            <ButtonUpload
+              title="画像を選択する"
+              margin="2.1rem auto 4.8rem auto"
+              buttonUploadColor={BUTTON_UPLOAD_COLORS.style02}
+            />
+          </>
+        )}
+      </BasicInfoContainer>
     </Container>
   )
 }

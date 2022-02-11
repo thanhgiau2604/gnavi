@@ -5,8 +5,9 @@ export interface ButtonUploadColor {
 }
 
 export interface ButtonUploadProps {
+  title: string
   buttonUploadColor?: ButtonUploadColor
   _fontSize?: string
   fontWeight?: number
-  title: string
+  margin?: string
 }

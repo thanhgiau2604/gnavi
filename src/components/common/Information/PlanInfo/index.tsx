@@ -8,6 +8,7 @@ import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
 import { TourEventProps } from 'interfaces/TourEvent'
+import { PlanInfoContainer } from './styled'
 
 interface Props {
   events: TourEventProps[]
@@ -16,7 +17,7 @@ interface Props {
 const PlanInfo: React.FC<Props> = ({ events }) => {
   return (
     <Container padding="0 3rem">
-      <div className="plan-info">
+      <PlanInfoContainer>
         <h3 className="title">ツアー行程</h3>
         <FastField name="tour_start_time" component={CustomSelect} label="ツアー開始時間" pb={41} />
         <FastField name="tour_end_time" component={CustomSelect} label="ツアー終了時間" pb={41} />
@@ -194,7 +195,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
             </div>
           )}
         />
-      </div>
+      </PlanInfoContainer>
     </Container>
   )
 }

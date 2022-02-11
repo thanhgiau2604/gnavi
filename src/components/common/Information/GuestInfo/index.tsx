@@ -5,11 +5,12 @@ import { FastField } from 'formik'
 import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
+import { GuestInfoContainer } from './styled'
 
 const GuestInfo: React.FC = () => {
   return (
     <Container padding="0 3rem">
-      <div className="guest-info">
+      <GuestInfoContainer>
         <h3 className="title">ゲスト情報</h3>
         <p className="label">参加人数</p>
         <FlexContainer alignItems="center">
@@ -88,7 +89,7 @@ const GuestInfo: React.FC = () => {
           height={335}
           pb={76}
         />
-      </div>
+      </GuestInfoContainer>
     </Container>
   )
 }

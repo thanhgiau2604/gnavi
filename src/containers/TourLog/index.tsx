@@ -3,14 +3,16 @@ import Button from 'components/common/Button'
 import Header from 'components/common/Header'
 import Modal from 'components/common/Modal'
 import { FastField, Form, Formik } from 'formik'
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
 import { hideModal, showModal } from 'utils/modal'
 import { TourLogContainer } from './styled'
 
-const TourLog = () => {
+const TourLog: React.FC = () => {
   const [openModal, setOpenModal] = useState<boolean>(false)
+  const router = useRouter()
 
   return (
     <TourLogContainer>
@@ -22,6 +24,7 @@ const TourLog = () => {
           margin="5.7rem auto 5.1rem auto"
           radius={4}
           _fontSize={FONT_SIZES.large}
+          onClick={() => router.push(ROUTES.tour_log.create)}
         />
         <Button
           title="ツアープランをコピーして追加"
