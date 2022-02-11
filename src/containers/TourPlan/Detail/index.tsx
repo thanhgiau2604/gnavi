@@ -122,7 +122,6 @@ const TourPlanDetail = () => {
   const handleDropdownMenu = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
     setState(!state)
-    // call actions api...
   }
 
   return (
@@ -132,11 +131,11 @@ const TourPlanDetail = () => {
         <TourPlanDetailContainer>
           <FlexContainer justifyContent="space-between">
             <h3 className="title">{data.title}</h3>
-            <div ref={ref}>
-              <ButtonAction margin="auto 0" onClick={handleDropdownMenu} />
-            </div>
+            <ButtonAction margin="auto 0" onClick={handleDropdownMenu} />
           </FlexContainer>
-          <ActionMenu state={state} id={data.id} transform="translate(-10%,62%)" />
+          <div ref={ref}>
+            <ActionMenu state={state} id={data.id} transform="translate(-10%,62%)" />
+          </div>
           <div className="tour-logs">
             {!!data?.infos?.length &&
               data.infos.map((info: IInfomartion, i: number) => (

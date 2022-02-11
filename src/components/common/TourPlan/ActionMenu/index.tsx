@@ -12,18 +12,22 @@ interface ActionMenuProps {
 const ActionMenu: React.FC<ActionMenuProps> = ({ id, state, transform }) => {
   const edit = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
+    // call action api...
     console.log(id)
   }
   const duplicate = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
+    // call action api...
     console.log(id)
   }
   const docs = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
+    // call action api...
     console.log(id)
   }
   const remove = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
+    // call action api...
     console.log(id)
   }
 
