@@ -19,7 +19,6 @@ const TourLog: React.FC<Props> = ({ data }) => {
   const handleDropdownMenu = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation()
     setState(!state)
-    // call actions api...
   }
 
   return (
