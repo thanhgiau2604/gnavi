@@ -32,8 +32,15 @@ const RichTextEditor: React.FC = () => {
         onEditorStateChange={onEditorStateChange}
         toolbar={{
           options: ['inline', 'list', 'blockType', 'textAlign', 'link'],
-          inline: { options: ['bold', 'italic'] },
-          list: { options: ['unordered', 'ordered'] },
+          inline: {
+            options: ['bold', 'italic'],
+            bold: { icon: '/icons/bold.svg' },
+            italic: { icon: '/icons/italic.svg' },
+          },
+          list: {
+            options: ['unordered', 'ordered'],
+            unordered: { icon: '/icons/list.svg' },
+          },
           blockType: {
             className: 'quote',
             inDropdown: false,
