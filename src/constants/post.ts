@@ -1,5 +1,6 @@
 import { OptionProps } from 'interfaces/CustomField'
-import { NewPostPayload, PostItemData, SearchPayload } from 'interfaces/Post'
+import { NewCommentPayload, NewPostPayload, PostItemData, SearchPayload } from 'interfaces/Post'
+import { NO_AVATAR } from './avatar'
 
 const INIT_SEARCH_BAR_VALUE: SearchPayload = {
   search_term: '',
@@ -21,6 +22,10 @@ const INIT_POST_FORM_VALUE: NewPostPayload = {
   new_theme: '',
 }
 
+const INIT_COMMENT_FORM_VALUE: NewCommentPayload = {
+  content: '',
+}
+
 const THEME_OPTIONS: OptionProps[] = [
   {
     value: 'none',
@@ -28,10 +33,21 @@ const THEME_OPTIONS: OptionProps[] = [
   },
 ]
 
+const PLACE_OPTIONS: OptionProps[] = [
+  {
+    value: 'tokyo',
+    label: '東京',
+  },
+  {
+    value: 'kyoto',
+    label: '京都',
+  },
+]
+
 const POSTS_DATA: PostItemData[] = [
   {
     post_info: {
-      picture: '/images/no_avatar.svg',
+      picture: NO_AVATAR,
       username: 'コンドリア水戸',
       time: '2021年12月5日 14:58',
       showTag: true,
@@ -60,4 +76,13 @@ const POSTS_DATA: PostItemData[] = [
     num_comment: 2,
   },
 ]
-export { INIT_SEARCH_BAR_VALUE, POST_MENU_OPTIONS, INIT_POST_FORM_VALUE, THEME_OPTIONS, POSTS_DATA }
+
+export {
+  INIT_SEARCH_BAR_VALUE,
+  POST_MENU_OPTIONS,
+  INIT_POST_FORM_VALUE,
+  THEME_OPTIONS,
+  POSTS_DATA,
+  PLACE_OPTIONS,
+  INIT_COMMENT_FORM_VALUE,
+}

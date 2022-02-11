@@ -18,6 +18,8 @@ const ROUTES = {
       complete: '/tourlog/create/complete',
     },
   },
+  posts: '/posts',
+  new_post: '/posts/new',
 }
 
 const FONT_SIZES = {

@@ -4,7 +4,8 @@ import SearchForm from 'components/post/SearchForm'
 import PostMenu from 'components/post/Menu'
 import React from 'react'
 import Button from 'components/common/Button'
-import { BUTTON_COLORS, POSTS_DATA } from '@constants'
+import { BUTTON_COLORS, POSTS_DATA, ROUTES } from '@constants'
+import Link from 'next/link'
 import { PostContainer } from './styled'
 
 const Post: React.FC = () => {
@@ -20,13 +21,20 @@ const Post: React.FC = () => {
         </div>
         <div className="post-container">
           {POSTS_DATA.map((post, index) => (
-            <PostItem data={post} key={`post${index.toString()}`} />
+            <PostItem
+              data={post}
+              key={`post${index.toString()}`}
+              commentControlType="link"
+              withBoxWrapper
+            />
           ))}
         </div>
       </div>
       <div className="container">
         <div className="post-btn-create">
-          <Button title="質問する" height={40} buttonColor={BUTTON_COLORS.style01} margin="0" />
+          <Link href={ROUTES.new_post} passHref>
+            <Button title="質問する" height={40} buttonColor={BUTTON_COLORS.style01} margin="0" />
+          </Link>
         </div>
       </div>
     </PostContainer>

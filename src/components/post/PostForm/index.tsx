@@ -1,4 +1,4 @@
-import { BUTTON_COLORS, INIT_POST_FORM_VALUE, THEME_OPTIONS } from '@constants'
+import { BUTTON_COLORS, INIT_POST_FORM_VALUE, PLACE_OPTIONS, THEME_OPTIONS } from '@constants'
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
@@ -19,14 +19,19 @@ const PostForm: React.FC = () => {
           return (
             <Form>
               <FastField type="text-area" name="content" component={CustomInput} height={219} />
-              <FastField name="place" component={CustomInput} label="場所" />
+              <FastField
+                name="place"
+                component={CustomSelect}
+                label="場所"
+                options={PLACE_OPTIONS}
+              />
               <FastField
                 name="theme"
                 component={CustomSelect}
                 label="テーマ"
                 options={THEME_OPTIONS}
               />
-              <FastField name="new_theme" component={CustomInput} label="テーマを作成する" />
+              <FastField name="new_theme" component={CustomInput} label="テーマを作成する" pb={0} />
 
               <Button
                 title="上記内容で質問する"

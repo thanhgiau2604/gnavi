@@ -29,9 +29,19 @@ const PostContainer = styled.div`
 `
 
 const NewPostContainer = styled.div`
-  .new-post-form {
-    padding-top: 1.9rem;
+  .new-post {
+    &-info {
+      padding-top: 1.9rem;
+    }
+    &-form {
+      padding-top: 1.7rem;
+    }
   }
 `
 
-export { PostContainer, NewPostContainer }
+const DetailPostContainer = styled.div`
+  .detail-post-info {
+    padding-top: 2.9rem;
+  }
+`
+export { PostContainer, NewPostContainer, DetailPostContainer }

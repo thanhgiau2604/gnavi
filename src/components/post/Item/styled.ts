@@ -1,11 +1,18 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
-const PostItemContainer = styled.div`
-  padding: 1.2rem 1.6rem;
+interface PostItemStyleProps {
+  withBoxWrapper?: boolean
+}
+const PostItemContainer = styled.div<PostItemStyleProps>`
   margin-top: 3.1rem;
-  border-radius: 8px;
-  background-color: ${Variables.colorWhite};
+  ${({ withBoxWrapper }) =>
+    withBoxWrapper &&
+    css`
+      border-radius: 8px;
+      background-color: ${Variables.colorWhite};
+      padding: 1.2rem 1.6rem;
+    `}
 
   .post {
     &-content {
@@ -21,16 +28,15 @@ const PostItemContainer = styled.div`
       font-size: 1.5rem;
       font-weight: 400;
     }
+
+    &-comment-form {
+      padding-top: 2.9rem;
+    }
   }
 
   .post-reaction {
     &-heart {
-      padding-left: 2.5rem;
-    }
-
-    &-like-num,
-    &-heart-num {
-      padding-left: 4px;
+      padding-left: 2rem;
     }
   }
 `

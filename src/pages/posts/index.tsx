@@ -2,8 +2,8 @@ import React from 'react'
 import PostContainer from 'containers/Post'
 import { NextPage } from 'next'
 
-const Post: NextPage = () => {
+const PostsPage: NextPage = () => {
   return <PostContainer />
 }
 
-export default Post
+export default PostsPage
