@@ -20,8 +20,8 @@ const FlexContainer = styled.div<FlexContainerProps>`
       flex-direction: column;
     `};
 
-  ${({ wrap }) =>
-    wrap &&
+  ${({ WRAP }) =>
+    WRAP &&
     css`
       flex-wrap: wrap;
     `};

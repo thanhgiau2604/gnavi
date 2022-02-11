@@ -20,12 +20,17 @@ import FormInput from './FormInput'
 
 const StyleGuide = () => {
   const indicators = [8, 6, 10, 7, 9]
-
   const [openModal, setOpenModal] = React.useState<boolean>(false)
   const showModal = () => setOpenModal(true)
   const hideModal = () => setOpenModal(false)
-
   const [isActive, setIsActive] = React.useState<number>(1)
+  const handleReaction = (id: number) => (e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation()
+    // call reaction api...
+    // eslint-disable-next-line no-console
+    console.log(id)
+  }
+
   return (
     <div className="container">
       <Header shadow />
@@ -68,9 +73,9 @@ const StyleGuide = () => {
       )}
       <FormInput />
       <FlexContainer justifyContent="space-between" margin="20px 0">
-        <ButtonReaction theme={BUTTON_LIKE_THEMES.theme01} id={1} />
-        <ButtonReaction theme={BUTTON_LIKE_THEMES.theme02} id={2} />
-        <ButtonReaction theme={BUTTON_HEART_THEMES.theme01} id={3} />
+        <ButtonReaction theme={BUTTON_LIKE_THEMES.theme01} active onClick={handleReaction(1)} />
+        <ButtonReaction theme={BUTTON_LIKE_THEMES.theme02} onClick={handleReaction(2)} />
+        <ButtonReaction theme={BUTTON_HEART_THEMES.theme01} active onClick={handleReaction(3)} />
       </FlexContainer>
 
       <ButtonGroup itemPerRow={3}>
