@@ -5,6 +5,7 @@ import { TourLogProps } from 'interfaces/TourLog'
 import useOnClickOutSide from 'hooks/useOnClickOutSide'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
+import { ROUTES } from '@constants'
 import { TourLogContainer } from './styled'
 
 interface Props {
@@ -22,7 +23,7 @@ const TourLog: React.FC<Props> = ({ data }) => {
   }
 
   return (
-    <Link href={`/tourplan/detail?id=${data.id}`} passHref>
+    <Link href={`${ROUTES.tour_plan.detail}${data.id}`} passHref>
       <TourLogContainer ref={ref}>
         <FlexContainer position="relative" justifyContent="space-between">
           <p className="title">{data.title}</p>
