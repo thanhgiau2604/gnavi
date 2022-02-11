@@ -3,9 +3,9 @@ export interface ButtonReactionTheme {
   activeSrc: string
 }
 
-export interface ButtonReactionProps {
-  id: string | number
+export interface ButtonReactionProps extends React.ComponentPropsWithoutRef<'button'> {
   theme: ButtonReactionTheme
+  active?: boolean
   position?: string
   top?: string
   left?: string
