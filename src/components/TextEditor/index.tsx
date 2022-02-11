@@ -15,11 +15,12 @@ const RichTextEditor: React.FC = () => {
     setEditorState(_editorState)
   }
 
+  const [dataShow, setDataShow] = useState<string>('')
   const showData = () => {
     const current = convertToRaw(editorState.getCurrentContent())
     const markup = draftToHtml(current)
     // eslint-disable-next-line no-console
-    console.log('markup: ', markup)
+    setDataShow(markup)
   }
 
   return (
@@ -52,6 +53,7 @@ const RichTextEditor: React.FC = () => {
       <button type="button" onClick={showData}>
         Submit demo data
       </button>
+      <textarea value={dataShow} />
     </div>
   )
 }
