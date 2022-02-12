@@ -19,10 +19,20 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
     <Container padding="0 3rem">
       <PlanInfoContainer>
         <h3 className="title">ツアー行程</h3>
-        <FastField name="tour_start_time" component={CustomSelect} label="ツアー開始時間" pb={41} />
-        <FastField name="tour_end_time" component={CustomSelect} label="ツアー終了時間" pb={41} />
         <FastField
-          name="meeting_place"
+          name="plan_info.tour_start_time"
+          component={CustomSelect}
+          label="ツアー開始時間"
+          pb={41}
+        />
+        <FastField
+          name="plan_info.tour_end_time"
+          component={CustomSelect}
+          label="ツアー終了時間"
+          pb={41}
+        />
+        <FastField
+          name="plan_info.meeting_place"
           component={CustomInput}
           label="集合場所"
           type="text-area"
@@ -30,7 +40,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
           pb={33}
         />
         <FastField
-          name="dissolution_place"
+          name="plan_info.dissolution_place"
           component={CustomInput}
           label="解散場所"
           type="text-area"
@@ -38,21 +48,21 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
           pb={38}
         />
         <FieldArray
-          name="events"
+          name="plan_info.events"
           render={(arr) => (
             <div className="tour-event">
               {events.map((event, index) => (
                 <div className="event" key={event.id}>
                   <h3 className="title">スポット情報{index + 1}</h3>
                   <FastField
-                    name={`events[${index}].event_name`}
+                    name={`plan_info.events[${index}].event_name`}
                     component={CustomInput}
                     label="施設名（イベント名）"
                     pb={41}
                   />
                   <FlexContainer alignItems="center">
                     <FastField
-                      name={`events[${index}].post_code`}
+                      name={`plan_info.events[${index}].post_code`}
                       component={CustomInput}
                       label="郵便番号"
                       pb={22}
@@ -67,31 +77,31 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     />
                   </FlexContainer>
                   <FastField
-                    name={`events[${index}].provinces`}
+                    name={`plan_info.events[${index}].provinces`}
                     component={CustomSelect}
                     label="都道府県"
                     pb={23}
                   />
                   <FastField
-                    name={`events[${index}].address1`}
+                    name={`plan_info.events[${index}].address1`}
                     component={CustomInput}
                     label="住所1"
                     pb={26}
                   />
                   <FastField
-                    name={`events[${index}].address2`}
+                    name={`plan_info.events[${index}].address2`}
                     component={CustomInput}
                     label="住所2"
                     pb={22}
                   />
                   <FastField
-                    name={`events[${index}].phone`}
+                    name={`plan_info.events[${index}].phone`}
                     component={CustomInput}
                     label="電話番号"
                     pb={41}
                   />
                   <FastField
-                    name={`events[${index}].reservation`}
+                    name={`plan_info.events[${index}].reservation`}
                     component={CustomCheckBox}
                     label="要予約"
                     pb={46}
@@ -99,19 +109,19 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     lbweight="normal"
                   />
                   <FastField
-                    name={`events[${index}].start_time`}
+                    name={`plan_info.events[${index}].start_time`}
                     component={CustomSelect}
                     label="開始時間"
                     pb={41}
                   />
                   <FastField
-                    name={`events[${index}].end_time`}
+                    name={`plan_info.events[${index}].end_time`}
                     component={CustomSelect}
                     label="終了時間"
                     pb={41}
                   />
                   <FastField
-                    name={`events[${index}].content`}
+                    name={`plan_info.events[${index}].content`}
                     component={CustomInput}
                     label="内容"
                     type="text-area"
@@ -122,7 +132,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                   <FlexContainer WRAP>
                     <FlexItem flex="50%">
                       <FastField
-                        name={`events[${index}].transporation`}
+                        name={`plan_info.events[${index}].transporation`}
                         component={CustomCheckBox}
                         label="徒歩"
                         pb={27}
@@ -132,7 +142,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     </FlexItem>
                     <FlexItem flex="50%">
                       <FastField
-                        name={`events[${index}].transporation`}
+                        name={`plan_info.events[${index}].transporation`}
                         component={CustomCheckBox}
                         label="自転車"
                         pb={27}
@@ -142,7 +152,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     </FlexItem>
                     <FlexItem flex="50%">
                       <FastField
-                        name={`events[${index}].transporation`}
+                        name={`plan_info.events[${index}].transporation`}
                         component={CustomCheckBox}
                         label="電車"
                         pb={27}
@@ -152,7 +162,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     </FlexItem>
                     <FlexItem flex="50%">
                       <FastField
-                        name={`events[${index}].transporation`}
+                        name={`plan_info.events[${index}].transporation`}
                         component={CustomCheckBox}
                         label="バス"
                         pb={27}
@@ -162,7 +172,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     </FlexItem>
                     <FlexItem flex="50%">
                       <FastField
-                        name={`events[${index}].transporation`}
+                        name={`plan_info.events[${index}].transporation`}
                         component={CustomCheckBox}
                         label="タクシー"
                         pb={52}
@@ -172,7 +182,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     </FlexItem>
                     <FlexItem flex="50%">
                       <FastField
-                        name={`events[${index}].transporation`}
+                        name={`plan_info.events[${index}].transporation`}
                         component={CustomCheckBox}
                         label="ハイヤー"
                         pb={52}
