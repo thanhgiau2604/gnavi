@@ -16,7 +16,7 @@ const TourLog: React.FC = () => {
 
   return (
     <TourLogContainer>
-      <Header title="新規ツアーログの追加" showBtnBack backTo={ROUTES.tour_plan.view} />
+      <Header title="新規ツアーログの追加" showBtnBack backTo={ROUTES.home} />
       <Container>
         <Button
           title="ツアーログを追加"
