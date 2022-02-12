@@ -1,5 +1,5 @@
 import { TourEventProps } from 'interfaces/TourEvent'
-import { TourPlanFieldProps, TourPlanInfoProps, TourPlanListProps } from 'interfaces/TourPlan'
+import { TourPlanInfoProps, TourPlanListProps } from 'interfaces/TourPlan'
 
 export const INIT_TOUR_EVENT: TourEventProps = {
   id: 0,
@@ -73,42 +73,6 @@ export const INIT_TOUR_PLAN_FORM_VALUE: TourPlanInfoProps = {
     ],
   },
 }
-
-export const TOUR_PLAN_DETAIL_FORM_FIELDS: TourPlanFieldProps[] = [
-  {
-    label: '受注日',
-  },
-  {
-    label: '催行日時',
-  },
-  {
-    label: '概要',
-  },
-  {
-    label: '受注形態',
-  },
-  {
-    label: '会社名',
-  },
-  {
-    label: '電話番号',
-  },
-  {
-    label: 'メールアドレス',
-  },
-  {
-    label: '報酬',
-  },
-  {
-    label: '経費',
-  },
-  {
-    label: '入金日',
-  },
-  {
-    label: '支払い方法',
-  },
-]
 
 // [WILL REMOVE SOON] tour-plan list fake data - full data
 export const TOUR_PLAN_LIST_FAKE_FULL_DATA: TourPlanListProps[] = [

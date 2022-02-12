@@ -61,11 +61,6 @@ interface TourPlanListProps {
   tour_plan_list: TourPlanItemProps[]
 }
 
-// tour-plan form fields
-interface TourPlanFieldProps {
-  label: string
-}
-
 export type {
   BasicInfoProps,
   GuestInfoProps,
@@ -73,5 +68,4 @@ export type {
   TourPlanInfoProps,
   TourPlanListProps,
   TourPlanItemProps,
-  TourPlanFieldProps,
 }
