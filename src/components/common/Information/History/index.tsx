@@ -14,7 +14,7 @@ const History = () => {
         <FastField name="tour_start_time" component={CustomSelect} label="ツアー開始時間" pb={41} />
         <FastField name="tour_end_time" component={CustomSelect} label="ツアー終了時間" pb={40} />
         <h3 className="title">振り返り</h3>
-        <div className="when-gathering">
+        <div className="history_info.when-gathering">
           <h3 className="label">集合時</h3>
           <FastField
             name="when_gathering"
@@ -65,7 +65,7 @@ const History = () => {
             lbweight="normal"
           />
         </div>
-        <div className="during-the-tour">
+        <div className="history_info.during-the-tour">
           <h3 className="label">ツアー中</h3>
           <FastField
             name="during_the_tour"
@@ -132,7 +132,7 @@ const History = () => {
             lbweight="normal"
           />
         </div>
-        <div className="when-disbanded">
+        <div className="history_info.when-disbanded">
           <h3 className="label">解散時</h3>
           <FastField
             name="when_disbanded"
@@ -151,7 +151,7 @@ const History = () => {
             lbweight="normal"
           />
         </div>
-        <div className="locking-back-at-later-date">
+        <div className="history_info.locking_back_at_later_date">
           <h3 className="label">後日の振り返り</h3>
           <FastField
             name="locking_back_at_later_date"
@@ -187,7 +187,7 @@ const History = () => {
           />
         </div>
         <FastField
-          name="general_comment"
+          name="history_info.general_comment"
           component={CustomInput}
           type="text-area"
           height={275}
@@ -195,7 +195,7 @@ const History = () => {
           pb={50}
         />
         <FastField
-          name="well_done"
+          name="history_info.well_done"
           component={CustomInput}
           type="text-area"
           height={169}
@@ -203,7 +203,7 @@ const History = () => {
           pb={50}
         />
         <FastField
-          name="points_to_improve"
+          name="history_info.points_to_improve"
           component={CustomInput}
           type="text-area"
           height={169}

@@ -1,4 +1,4 @@
-interface HistoryLogProps {
+interface HistoryInfoProps {
   tour_start_time: string
   tour_end_time: string
   when_gathering: string[]
@@ -30,6 +30,10 @@ interface BasicInfoProps {
   images: string[]
 }
 
-interface TourLogInfoProps extends BasicInfoProps, HistoryLogProps {}
+interface TourLogInfoProps {
+  id: 0
+  basic_info: BasicInfoProps
+  history_info: HistoryInfoProps
+}
 
-export type { HistoryLogProps, TourLogInfoProps }
+export type { HistoryInfoProps, TourLogInfoProps }

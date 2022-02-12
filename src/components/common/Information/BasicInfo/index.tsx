@@ -81,15 +81,15 @@ const BasicInfo: React.FC<Props> = ({ of }) => {
           <>
             <h3 className="title">プロフィールに追加</h3>
             <FastField
-              name="add_to_profile"
+              name="basic_info.add_to_profile"
               component={CustomCheckBox}
               theme={CHECKBOX_THEME.primary}
               lbweight="normal"
               pb={48}
               label="このツアーログをプロフィールの「最近の活動」に追加する"
             />
-            <FastField name="title" component={CustomInput} label="タイトル" pb={27} />
-            <FastField name="explanation" component={CustomInput} label="説明" pb={17} />
+            <FastField name="basic_info.title" component={CustomInput} label="タイトル" pb={27} />
+            <FastField name="basic_info.explanation" component={CustomInput} label="説明" pb={17} />
             <ButtonUpload
               title="画像を選択する"
               margin="2.1rem auto 4.8rem auto"
