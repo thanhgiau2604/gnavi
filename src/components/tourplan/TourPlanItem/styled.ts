@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
 
-const TourPlanListContainer = styled.div`
+const TourPlanItemContainer = styled.div`
   cursor: pointer;
   position: relative;
   border-radius: 8px;
@@ -35,4 +35,4 @@ const TourPlanListContainer = styled.div`
   }
 `
 
-export { TourPlanListContainer }
+export { TourPlanItemContainer }

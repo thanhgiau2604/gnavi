@@ -5,7 +5,7 @@ import Header from 'components/common/Header'
 import Button from 'components/common/Button'
 import { useRouter } from 'next/router'
 import { TourPlanItemProps, TourPlanListProps } from 'interfaces/TourPlan'
-import TourPlanList from 'components/tourplan/TourPlanList'
+import TourPlanItem from 'components/tourplan/TourPlanItem'
 import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
@@ -35,7 +35,7 @@ const TourPlan = () => {
                   item.tour_plan_list?.map((tour_plan_item: TourPlanItemProps) => (
                     <div key={tour_plan_item.id}>
                       <p className="datetime">{tour_plan_item.datetime}</p>
-                      <TourPlanList
+                      <TourPlanItem
                         id={tour_plan_item.id}
                         datetime={tour_plan_item.datetime}
                         title={tour_plan_item.title}
