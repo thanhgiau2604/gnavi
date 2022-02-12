@@ -17,7 +17,7 @@ const FormInfo: React.FC<FormInfoProps> = ({ tab, data }) => {
     <Form>
       {tab === 'ツアー情報' && <BasicInfo of="tour-plan" />}
       {tab === 'ゲスト情報' && <GuestInfo />}
-      {tab === 'スポット情報' && <PlanInfo events={data.events} />}
+      {tab === 'スポット情報' && <PlanInfo events={data.plan_info.events} />}
       <div className="btn-submit">
         <Button
           title="保存する"

@@ -2,9 +2,10 @@ import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
-const TourInfoContainer = styled.div`
+const TourPlanInfoContainer = styled.div`
   position: relative;
-  margin: 6.1rem auto;
+  /* margin: 6.1rem auto; */
+  /* Pull down menu */
   .field {
     font-weight: ${FIELD_LABEL_WEIGHT.normal};
   }
@@ -21,7 +22,21 @@ const TourInfoContainer = styled.div`
       transform: rotate(0deg);
     }
   }
-  .schedules-table {
+  .tag {
+    font-weight: ${FIELD_LABEL_WEIGHT.bold};
+    line-height: 1.5;
+    border-left: ${`4px solid ${Variables.color1}`};
+    padding: 0 1rem;
+    margin-top: 2.3rem;
+  }
+  .information {
+    font-weight: ${FIELD_LABEL_WEIGHT.normal};
+    line-height: 1.5;
+    padding: 0 1.4rem;
+    margin-top: 1.5rem;
+  }
+  /* Pull down menu */
+  .table-event {
     border-collapse: collapse;
     width: 100%;
     margin-top: 2.3rem;
@@ -60,4 +75,4 @@ const TourInfoContainer = styled.div`
   }
 `
 
-export { TourInfoContainer }
+export { TourPlanInfoContainer }

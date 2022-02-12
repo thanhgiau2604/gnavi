@@ -2,7 +2,7 @@ import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
-const AdvancedInfoContainer = styled.div`
+const TourPlanAdvancedInfoContainer = styled.div`
   font-size: ${FONT_SIZES.medium};
   position: relative;
   .title {
@@ -37,4 +37,4 @@ const AdvancedInfoContainer = styled.div`
   }
 `
 
-export { AdvancedInfoContainer }
+export { TourPlanAdvancedInfoContainer }

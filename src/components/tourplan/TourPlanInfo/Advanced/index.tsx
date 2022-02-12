@@ -2,19 +2,19 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import { AdvancedInfoContainer } from './styled'
+import { TourPlanAdvancedInfoContainer } from './styled'
 
-interface TourInfoAdvancedProps {
+interface Props {
   title: string
   content: string
   transportation: string[]
 }
 
-const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({ title, content, transportation }) => {
+const TourPlanAdvancedInfo: React.FC<Props> = ({ title, content, transportation }) => {
   const [show, setShow] = useState<boolean>(true)
 
   return (
-    <AdvancedInfoContainer>
+    <TourPlanAdvancedInfoContainer>
       <FlexContainer>
         <h5 className="title">{title}</h5>
         <ImageContainer
@@ -33,15 +33,15 @@ const TourInfoAdvanced: React.FC<TourInfoAdvancedProps> = ({ title, content, tra
           <FlexContainer>
             {transportation.map((trans: string, i: number) => (
               // eslint-disable-next-line react/no-array-index-key
-              <p key={`${i}`} className="content">
+              <p key={i} className="content">
                 {trans}
               </p>
             ))}
           </FlexContainer>
         </div>
       )}
-    </AdvancedInfoContainer>
+    </TourPlanAdvancedInfoContainer>
   )
 }
 
-export default TourInfoAdvanced
+export default TourPlanAdvancedInfo

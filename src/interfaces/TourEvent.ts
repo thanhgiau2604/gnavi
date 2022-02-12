@@ -10,5 +10,5 @@ export interface TourEventProps {
   start_time: string
   end_time: string
   content: string
-  transporation: []
+  transporation: string[]
 }
