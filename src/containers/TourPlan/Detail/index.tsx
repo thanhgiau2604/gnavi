@@ -29,11 +29,11 @@ const TourPlanDetail = () => {
         <Container padding="0 2rem">
           <FlexContainer justifyContent="space-between">
             <h3 className="title">{data.basic_info.tour_name}</h3>
-            <ButtonAction margin="0.8rem 0" onClick={handleDropdownMenu} />
+            <div ref={ref}>
+              <ButtonAction margin="0.8rem 0" onClick={handleDropdownMenu} />
+              <ActionMenu state={state} id={data.id} transform="translate(-10%,62%)" />
+            </div>
           </FlexContainer>
-          <div ref={ref}>
-            <ActionMenu state={state} id={data.id} transform="translate(-10%,62%)" />
-          </div>
         </Container>
         <ButtonGroup itemPerRow={3}>
           <ButtonGroupItem
