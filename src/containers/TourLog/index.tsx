@@ -102,7 +102,7 @@ const TourLog: React.FC = () => {
                     </label>
                   </div>
                   <Button
-                    title="保存する"
+                    title="上記でツアーログを追加"
                     type="submit"
                     buttonColor={BUTTON_COLORS.style02}
                     margin="16.5rem auto 3.4rem auto"
