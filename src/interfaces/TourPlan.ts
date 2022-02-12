@@ -39,6 +39,28 @@ interface PlanInfoProps {
   events: TourEventProps[]
 }
 
+// tour-plan form infos
 interface TourPlanInfoProps extends BasicInfoProps, GuestInfoProps, PlanInfoProps {}
 
-export type { TourPlanInfoProps, BasicInfoProps, GuestInfoProps, PlanInfoProps }
+interface TourPlanItemProps {
+  id: number
+  datetime: string
+  title: string
+  content: string
+}
+
+// get tour-plan list
+interface TourPlanListProps {
+  id: number
+  year: string
+  tour_plan_list: TourPlanItemProps[]
+}
+
+export type {
+  BasicInfoProps,
+  GuestInfoProps,
+  PlanInfoProps,
+  TourPlanInfoProps,
+  TourPlanListProps,
+  TourPlanItemProps,
+}

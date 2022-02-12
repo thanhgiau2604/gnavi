@@ -1,51 +1,19 @@
 import React from 'react'
-import { FONT_SIZES, ROUTES } from '@constants'
-import { TourLogProps, TourPlanProps } from 'interfaces/TourLog'
+import { FONT_SIZES, ROUTES, TOUR_PLAN_LIST_FAKE_FULL_DATA } from '@constants'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import Button from 'components/common/Button'
 import { useRouter } from 'next/router'
+import { TourPlanItemProps, TourPlanListProps } from 'interfaces/TourPlan'
+import TourPlanList from 'components/tourplan/TourPlanList'
 import { TourPlanContainer } from './styled'
-import TourLog from 'components/tourplan/TourLog'
 
 const TourPlan = () => {
   const router = useRouter()
   const createTourPlan = () => {
     router.push(ROUTES.tour_plan.create)
   }
-  // const data: TourPlanProps[] = []
-  const data: TourPlanProps[] = [
-    {
-      id: 1,
-      year: '2021年',
-      tourLogs: [
-        {
-          id: 1,
-          datetime: '12月15日',
-          title: '西表・由布・竹富島めぐり日帰りツアー',
-          images: [],
-          content:
-            '西表島では仲間川マングローブクルーズにご乗船。水牛車で由布島に渡り、亜熱帯特有の動植物を観察できる由布島植物……',
-        },
-        {
-          id: 2,
-          datetime: '12月12日',
-          title: 'マンタとウミガメシュノーケリング+幻の島上陸ツアー',
-          images: ['/images/schedule01.png', '/images/schedule02.png'],
-          content:
-            '西表島の大自然を満喫する凝縮ツアー！SUP（またはカヌー）で”幸運の滝”クーラの滝へ！滝遊びと鍾乳洞探検を楽し……',
-        },
-        {
-          id: 3,
-          datetime: '12月10日',
-          title: 'マングローブSUP&バラス島上陸',
-          images: ['/images/schedule02.png'],
-          content:
-            '西表島の大自然を満喫する凝縮ツアー！SUP（またはカヌー）で”幸運の滝”クーラの滝へ！滝遊びと鍾乳洞探検を楽し……',
-        },
-      ],
-    },
-  ]
+  const data: TourPlanListProps[] = TOUR_PLAN_LIST_FAKE_FULL_DATA
 
   return (
     <div className="wrapper">
@@ -60,15 +28,21 @@ const TourPlan = () => {
         />
         <TourPlanContainer>
           {!!data?.length &&
-            data.map((item: TourPlanProps) => (
+            data.map((item: TourPlanListProps) => (
               <div key={item.id}>
                 <h3 className="title">{item.year}</h3>
-                {item.tourLogs?.map((tourLog: TourLogProps) => (
-                  <div key={tourLog.id}>
-                    <p className="datetime">{tourLog.datetime}</p>
-                    <TourLog data={tourLog} />
-                  </div>
-                ))}
+                {!!item?.tour_plan_list?.length &&
+                  item.tour_plan_list?.map((tour_plan_item: TourPlanItemProps) => (
+                    <div key={tour_plan_item.id}>
+                      <p className="datetime">{tour_plan_item.datetime}</p>
+                      <TourPlanList
+                        id={tour_plan_item.id}
+                        datetime={tour_plan_item.datetime}
+                        title={tour_plan_item.title}
+                        content={tour_plan_item.content}
+                      />
+                    </div>
+                  ))}
               </div>
             ))}
         </TourPlanContainer>

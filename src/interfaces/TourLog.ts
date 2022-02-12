@@ -1,17 +1,3 @@
-interface TourLogProps {
-  id: number | string
-  datetime: string
-  title: string
-  content: string
-  images: string[]
-}
-
-interface TourPlanProps {
-  id: number | string
-  year: string
-  tourLogs: TourLogProps[] | []
-}
-
 interface HistoryLogProps {
   tour_start_time: string
   tour_end_time: string
@@ -46,4 +32,4 @@ interface BasicInfoProps {
 
 interface TourLogInfoProps extends BasicInfoProps, HistoryLogProps {}
 
-export type { TourPlanProps, TourLogProps, HistoryLogProps, TourLogInfoProps }
+export type { HistoryLogProps, TourLogInfoProps }

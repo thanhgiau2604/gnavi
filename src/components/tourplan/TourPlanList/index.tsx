@@ -1,18 +1,14 @@
 import React, { useRef, useState } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Link from 'next/link'
-import { TourLogProps } from 'interfaces/TourLog'
 import useOnClickOutSide from 'hooks/useOnClickOutSide'
 import ButtonAction from 'components/common/TourPlan/ActionMenu/ButtonAction'
 import ActionMenu from 'components/common/TourPlan/ActionMenu'
 import { ROUTES } from '@constants'
-import { TourLogContainer } from './styled'
+import { TourPlanItemProps } from 'interfaces/TourPlan'
+import { TourPlanListContainer } from './styled'
 
-interface Props {
-  data: TourLogProps
-}
-
-const TourLog: React.FC<Props> = ({ data }) => {
+const TourPlanList: React.FC<TourPlanItemProps> = ({ id, title, content }) => {
   const [state, setState] = useState<boolean>(false)
   const ref = useRef(null)
   useOnClickOutSide(ref, () => setState(false))
@@ -22,17 +18,17 @@ const TourLog: React.FC<Props> = ({ data }) => {
   }
 
   return (
-    <Link href={`${ROUTES.tour_plan.detail}${data.id}`} passHref>
-      <TourLogContainer ref={ref}>
+    <Link href={`${ROUTES.tour_plan.detail}${id}`} passHref>
+      <TourPlanListContainer ref={ref}>
         <FlexContainer position="relative" justifyContent="space-between">
-          <p className="title">{data.title}</p>
+          <p className="title">{title}</p>
           <ButtonAction margin="1.9rem 0 0 0" onClick={handleDropdownMenu} />
         </FlexContainer>
-        <p className="content">{data.content}</p>
-        <ActionMenu state={state} id={data.id} />
-      </TourLogContainer>
+        <p className="content">{content}</p>
+        <ActionMenu state={state} id={id} />
+      </TourPlanListContainer>
     </Link>
   )
 }
 
-export default TourLog
+export default TourPlanList
