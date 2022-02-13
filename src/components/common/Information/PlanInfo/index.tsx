@@ -2,7 +2,7 @@ import Button from 'components/common/Button'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
-import { BUTTON_COLORS, CHECKBOX_THEME, INIT_TOUR_EVENT } from '@constants'
+import { BUTTON_COLORS, CHECKBOX_THEME, INIT_TOUR_EVENT, OPTIONS_TRANSPORT } from '@constants'
 import { FastField, FieldArray } from 'formik'
 import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
@@ -130,66 +130,18 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                   />
                   <p className="label">移動手段</p>
                   <FlexContainer WRAP>
-                    <FlexItem flex="50%">
-                      <FastField
-                        name={`plan_info.events[${index}].transporation`}
-                        component={CustomCheckBox}
-                        label="徒歩"
-                        pb={27}
-                        theme={CHECKBOX_THEME.primary}
-                        lbweight="normal"
-                      />
-                    </FlexItem>
-                    <FlexItem flex="50%">
-                      <FastField
-                        name={`plan_info.events[${index}].transporation`}
-                        component={CustomCheckBox}
-                        label="自転車"
-                        pb={27}
-                        theme={CHECKBOX_THEME.primary}
-                        lbweight="normal"
-                      />
-                    </FlexItem>
-                    <FlexItem flex="50%">
-                      <FastField
-                        name={`plan_info.events[${index}].transporation`}
-                        component={CustomCheckBox}
-                        label="電車"
-                        pb={27}
-                        theme={CHECKBOX_THEME.primary}
-                        lbweight="normal"
-                      />
-                    </FlexItem>
-                    <FlexItem flex="50%">
-                      <FastField
-                        name={`plan_info.events[${index}].transporation`}
-                        component={CustomCheckBox}
-                        label="バス"
-                        pb={27}
-                        theme={CHECKBOX_THEME.primary}
-                        lbweight="normal"
-                      />
-                    </FlexItem>
-                    <FlexItem flex="50%">
-                      <FastField
-                        name={`plan_info.events[${index}].transporation`}
-                        component={CustomCheckBox}
-                        label="タクシー"
-                        pb={52}
-                        theme={CHECKBOX_THEME.primary}
-                        lbweight="normal"
-                      />
-                    </FlexItem>
-                    <FlexItem flex="50%">
-                      <FastField
-                        name={`plan_info.events[${index}].transporation`}
-                        component={CustomCheckBox}
-                        label="ハイヤー"
-                        pb={52}
-                        theme={CHECKBOX_THEME.primary}
-                        lbweight="normal"
-                      />
-                    </FlexItem>
+                    {OPTIONS_TRANSPORT.map((option: string) => (
+                      <FlexItem flex="50%" key={option}>
+                        <FastField
+                          name={`plan_info.events[${index}].transporation`}
+                          component={CustomCheckBox}
+                          label={option}
+                          pb={27}
+                          theme={CHECKBOX_THEME.primary}
+                          lbweight="normal"
+                        />
+                      </FlexItem>
+                    ))}
                   </FlexContainer>
                 </div>
               ))}

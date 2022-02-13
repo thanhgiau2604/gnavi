@@ -74,6 +74,15 @@ export const INIT_TOUR_PLAN_FORM_VALUE: TourPlanInfoProps = {
   },
 }
 
+export const OPTIONS_TRANSPORT: string[] = [
+  '徒歩',
+  '自転車',
+  '電車',
+  'バス',
+  'タクシー',
+  'ハイヤー',
+]
+
 // [WILL REMOVE SOON] tour-plan list fake data - full data
 export const TOUR_PLAN_LIST_FAKE_FULL_DATA: TourPlanListProps[] = [
   {

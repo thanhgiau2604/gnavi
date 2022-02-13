@@ -4,7 +4,7 @@ interface HistoryInfoProps {
   when_gathering: string[]
   during_tour: string[]
   when_disbanded: string[]
-  locking_back_at_later_date: string[]
+  looking_back_at_later_date: string[]
   general_comment: string
   well_done: string
   points_to_improve: string
