@@ -94,7 +94,6 @@ const ProfileLayout = ({ userId, children }: ProfileLayoutProps) => {
         <ButtonGroupItem text="案内できる観光地" />
         <ButtonGroupItem text="スキル" />
         <ButtonGroupItem text="最近の活動" />
-        <ButtonGroupItem text="対応可能ツアー" />
         <ButtonGroupItem text="写真ギャラリー" />
       </ButtonGroup>
 

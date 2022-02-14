@@ -5,7 +5,7 @@ import { ButtonGroupStyledContainer, ButtonGroupStyledItem } from './styled'
 export const ButtonGroupItem: React.FC<ButtonGroupItemProps> = ({ handleClick, active, text }) => {
   return (
     <ButtonGroupStyledItem onClick={handleClick} active={active}>
-      {text}
+      <div className="text">{text}</div>
     </ButtonGroupStyledItem>
   )
 }
@@ -20,9 +20,17 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ itemPerRow, children }) => {
       <tbody>
         {arrRow.map((num: number) => (
           <tr key={num}>
-            {React.Children.toArray(children)
-              .slice(num * itemPerRow, num * itemPerRow + itemPerRow)
-              .map((child) => child)}
+            <td>
+              <ButtonGroupStyledContainer rowTop={num === 0}>
+                <tbody>
+                  <tr>
+                    {React.Children.toArray(children)
+                      .slice(num * itemPerRow, num * itemPerRow + itemPerRow)
+                      .map((child) => child)}
+                  </tr>
+                </tbody>
+              </ButtonGroupStyledContainer>
+            </td>
           </tr>
         ))}
       </tbody>

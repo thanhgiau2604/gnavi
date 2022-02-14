@@ -32,7 +32,7 @@ const StyleGuide = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={{ paddingBottom: 30 }}>
       <Header shadow />
       <Header showBtnBack title="ガイドの知恵袋" backTo="/login" />
       <Button width={200} buttonColor={BUTTON_COLORS.style02} title="上記内容で質問する" />
