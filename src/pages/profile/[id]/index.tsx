@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import toNumber from 'lodash/toNumber'
 import ProfileHome from 'containers/Profile'
+import { NextApplicationPage } from 'pages/_app'
 
 const res = [
   { type: 'title', value: '一緒に特別な思い出を作りましょう!!' },
@@ -13,7 +13,7 @@ const res = [
   { type: 'image', value: 'https://statics.vinpearl.com/diem-du-lich-9_1632662759.jpg' },
 ]
 
-const ProfilePage: NextPage = () => {
+const ProfilePage: NextApplicationPage = () => {
   const router = useRouter()
   const { id } = router.query
 
@@ -30,3 +30,5 @@ const ProfilePage: NextPage = () => {
 }
 
 export default ProfilePage
+
+ProfilePage.requireAuth = true

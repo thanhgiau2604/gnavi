@@ -1,3 +1,5 @@
+import { User } from './User'
+
 interface LoginPayload {
   email: string
   password: string
@@ -31,6 +33,15 @@ interface CfFormProps {
   handleConfirm: (payload: ConfirmPayload) => void
 }
 
+interface AuthState {
+  isLoggedIn?: boolean
+  isLogging?: boolean
+  accessToken: string
+  refreshToken: string
+  userData?: User
+  redirectUrl?: string
+}
+
 export type {
   LoginPayload,
   SignupPayload,
@@ -38,4 +49,5 @@ export type {
   LoginFormProps,
   SignupFormProps,
   CfFormProps,
+  AuthState,
 }

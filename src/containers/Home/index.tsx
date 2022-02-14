@@ -1,9 +1,11 @@
 import type { FC } from 'react'
-import Main from 'components/home/Main'
-// import HomeTop from 'components/home/Top'
+import HomeMain from 'components/home/Main'
+import HomeTop from 'components/home/Top'
+import { useAppSelector } from 'app/hooks'
 
 const Home: FC = () => {
-  return <Main />
+  const user = useAppSelector((state) => state.auth.userData)
+  return user ? <HomeMain /> : <HomeTop />
 }
 
 export default Home

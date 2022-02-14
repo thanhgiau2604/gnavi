@@ -5,10 +5,17 @@ import type { FC } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Button from 'components/common/Button'
 import { BUTTON_COLORS, FONT_SIZES } from '@constants'
+import { useAppDispatch } from 'app/hooks'
+import { authActions } from 'app/slices/authSlice'
 import { HomeMainSection } from './styled'
 import Menu from '../Menu'
 
 const HomeMain: FC = () => {
+  const dispatch = useAppDispatch()
+  const handleLogout = () => {
+    dispatch(authActions.logout())
+  }
+
   return (
     <HomeMainSection>
       <Header shadow />
@@ -52,6 +59,7 @@ const HomeMain: FC = () => {
           margin="4rem 0 0"
           height={48}
           width="100%"
+          onClick={handleLogout}
         />
       </div>
     </HomeMainSection>
