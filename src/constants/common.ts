@@ -12,7 +12,11 @@ const ROUTES = {
   },
   tour_log: {
     view: '/tourlog',
-    create: '/tourlog/create',
+    create: {
+      instruction: '/tourlog/create/instruction',
+      create_new: '/tourlog/create',
+      complete: '/tourlog/create/complete',
+    },
   },
 }
 
