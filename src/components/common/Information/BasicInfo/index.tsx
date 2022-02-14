@@ -6,22 +6,37 @@ import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import { FastField } from 'formik'
 import { OptionProps } from 'interfaces/CustomField'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { ImageContainer } from 'styles/styled/app/Image'
+import Image from 'next/image'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { BasicInfoContainer } from './styled'
 
 interface Props {
   of: string
+  images?: File[]
+  setImages?: (field: string, value: any) => void
 }
 
-const BasicInfo: React.FC<Props> = ({ of }) => {
+const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
+  const [thumb, setThumb] = useState<string | ArrayBuffer | undefined>(undefined)
   const orderFormOptions: OptionProps[] = [
     {
       value: '直接',
       label: '直接',
     },
   ]
+  useEffect(() => {
+    if (!images?.length) return
+
+    const file: any = images[0]
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      if (reader.result) setThumb(reader.result)
+    }
+    reader.readAsDataURL(file)
+  }, [images])
 
   return (
     <Container padding="0 3rem">
@@ -90,10 +105,16 @@ const BasicInfo: React.FC<Props> = ({ of }) => {
             />
             <FastField name="basic_info.title" component={CustomInput} label="タイトル" pb={27} />
             <FastField name="basic_info.explanation" component={CustomInput} label="説明" pb={17} />
+            {thumb && (
+              <ImageContainer width={314} height={236}>
+                <Image src={`${thumb}`} alt="images" layout="fill" objectFit="contain" />
+              </ImageContainer>
+            )}
             <ButtonUpload
               title="画像を選択する"
               margin="2.1rem auto 4.8rem auto"
               buttonUploadColor={BUTTON_UPLOAD_COLORS.style02}
+              setImages={setImages}
             />
           </>
         )}

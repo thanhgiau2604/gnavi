@@ -32,8 +32,10 @@ const TourLogCreate: React.FC = () => {
           actions.setSubmitting(false)
         }}
       >
-        {() => {
-          return <FormInfo tab={isTab} />
+        {({ values, setFieldValue }) => {
+          return (
+            <FormInfo tab={isTab} images={values.basic_info.images} setImages={setFieldValue} />
+          )
         }}
       </Formik>
     </TourLogCreateContainer>

@@ -27,7 +27,7 @@ interface BasicInfoProps {
   add_to_profile: boolean
   title: string
   explanation: string
-  images: string[]
+  images: File[]
 }
 
 interface TourLogInfoProps {

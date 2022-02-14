@@ -7,12 +7,14 @@ import History from 'components/common/Information/History'
 
 interface FormInfoProps {
   tab: string
+  images?: File[]
+  setImages?: (field: string, value: any) => void
 }
 
-const FormInfo: React.FC<FormInfoProps> = ({ tab }) => {
+const FormInfo: React.FC<FormInfoProps> = ({ tab, images, setImages }) => {
   return (
     <Form>
-      {tab === '基本情報' && <BasicInfo of="tour-log" />}
+      {tab === '基本情報' && <BasicInfo of="tour-log" images={images} setImages={setImages} />}
       {tab === '振り返り' && <History />}
       <div className="btn-submit">
         <Button
