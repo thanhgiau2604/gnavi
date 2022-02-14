@@ -12,7 +12,7 @@ const TourLogCreate: React.FC = () => {
 
   return (
     <TourLogCreateContainer>
-      <Header title="ツアーログの追加" showBtnBack backTo={ROUTES.tour_log.view} />
+      <Header title="ツアーログの追加" showBtnBack backTo={ROUTES.tour_log.create.instruction} />
       <ButtonGroup itemPerRow={2}>
         <ButtonGroupItem
           text="基本情報"
