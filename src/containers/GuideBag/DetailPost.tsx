@@ -1,6 +1,6 @@
 import { POSTS_DATA } from '@constants'
 import Header from 'components/common/Header'
-import PostItem from 'components/post/Item'
+import PostItem from 'components/guide_bag/Item'
 import React from 'react'
 import { DetailPostContainer } from './styled'
 

@@ -1,5 +1,5 @@
 import CustomInput from 'components/common/CustomFields/InputField'
-import { INIT_SEARCH_BAR_VALUE } from 'constants/post'
+import { INIT_SEARCH_BAR_VALUE } from 'constants/guide_bag'
 import { FastField, Form, Formik } from 'formik'
 import Image from 'next/image'
 import React from 'react'
