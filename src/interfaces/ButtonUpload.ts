@@ -5,8 +5,11 @@ export interface ButtonUploadColor {
 }
 
 export interface ButtonUploadProps {
+  title: string
   buttonUploadColor?: ButtonUploadColor
   _fontSize?: string
   fontWeight?: number
-  title: string
+  margin?: string
+  images?: File[]
+  setImages?: (field: string, value: any) => void
 }

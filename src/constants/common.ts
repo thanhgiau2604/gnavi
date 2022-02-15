@@ -9,8 +9,13 @@ const ROUTES = {
     detail: '/tourplan/detail?id=',
     create: '/tourplan/create',
     edit: '',
-    tour_log: {
-      create: '',
+  },
+  tour_log: {
+    view: '/tourlog',
+    create: {
+      instruction: '/tourlog/create/instruction',
+      create_new: '/tourlog/create',
+      complete: '/tourlog/create/complete',
     },
   },
 }

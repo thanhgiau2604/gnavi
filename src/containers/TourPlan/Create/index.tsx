@@ -1,7 +1,7 @@
 import { INIT_TOUR_PLAN_FORM_VALUE, ROUTES } from '@constants'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import Header from 'components/common/Header'
-import FormInfo from 'components/common/TourPlan/FormInfo'
+import TourPlanFormInfo from 'components/tourplan/TourPlanFormInfo'
 import { Formik } from 'formik'
 import React, { useState } from 'react'
 import { TourPlanCreateContainer } from './styled'
@@ -37,7 +37,7 @@ const TourPlanCreate = () => {
         }}
       >
         {(data) => {
-          return <FormInfo tab={isTab} data={data.values} />
+          return <TourPlanFormInfo tab={isTab} data={data.values} />
         }}
       </Formik>
     </TourPlanCreateContainer>

@@ -8,6 +8,7 @@ const TourPlanDetailContainer = styled.div`
   text-align: justify;
   line-height: 1;
   .title {
+    margin-bottom: 2.4rem;
     font-weight: ${FIELD_LABEL_WEIGHT.bold};
     font-size: ${FONT_SIZES.xlarge};
     width: 90%;

@@ -3,22 +3,22 @@ import { ButtonUploadProps } from 'interfaces/ButtonUpload'
 import { BUTTON_UPLOAD_COLORS, FONT_SIZES } from '@constants'
 import { UploadContainer } from './styled'
 
-const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, ...rest }) => {
-  const fileChangedHandler = () => {}
-  const { buttonUploadColor, fontWeight, _fontSize } = rest
+const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, images, setImages, ...rest }) => {
+  const fileChangedHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { files } = e.currentTarget
+    // parse FileList into Array of File
+    if (images && setImages && files)
+      setImages('basic_info.images', [...images, ...Array.from(files)])
+  }
+
   return (
-    <UploadContainer
-      buttonUploadColor={buttonUploadColor}
-      fontSize={_fontSize}
-      fontWeight={fontWeight}
-      {...rest}
-    >
+    <UploadContainer {...rest}>
       <input
         id="upload-file"
         type="file"
         accept="image/*"
         hidden
-        multiple={false}
+        multiple
         onChange={fileChangedHandler}
       />
       <label htmlFor="upload-file">
@@ -32,6 +32,7 @@ ButtonUpload.defaultProps = {
   buttonUploadColor: BUTTON_UPLOAD_COLORS.style01,
   fontWeight: 400,
   _fontSize: FONT_SIZES.medium,
+  margin: '1.8rem auto auto auto',
 }
 
 export default ButtonUpload
