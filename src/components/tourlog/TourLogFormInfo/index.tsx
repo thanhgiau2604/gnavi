@@ -2,16 +2,16 @@ import Button from 'components/common/Button'
 import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { Form } from 'formik'
 import React from 'react'
-import BasicInfo from 'components/common/Information/BasicInfo'
-import History from 'components/common/Information/History'
+import BasicInfo from 'components/Information/BasicInfo'
+import History from 'components/Information/History'
 
-interface FormInfoProps {
+interface TourLogFormInfoProps {
   tab: string
   images?: File[]
   setImages?: (field: string, value: any) => void
 }
 
-const FormInfo: React.FC<FormInfoProps> = ({ tab, images, setImages }) => {
+const TourLogFormInfo: React.FC<TourLogFormInfoProps> = ({ tab, images, setImages }) => {
   return (
     <Form>
       {tab === '基本情報' && <BasicInfo of="tour-log" images={images} setImages={setImages} />}
@@ -30,4 +30,4 @@ const FormInfo: React.FC<FormInfoProps> = ({ tab, images, setImages }) => {
   )
 }
 
-export default FormInfo
+export default TourLogFormInfo

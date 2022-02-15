@@ -3,16 +3,16 @@ import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { Form } from 'formik'
 import React from 'react'
 import { TourPlanInfoProps } from 'interfaces/TourPlan'
-import BasicInfo from 'components/common/Information/BasicInfo'
-import GuestInfo from 'components/common/Information/GuestInfo'
-import PlanInfo from 'components/common/Information/PlanInfo'
+import BasicInfo from 'components/Information/BasicInfo'
+import GuestInfo from 'components/Information/GuestInfo'
+import PlanInfo from 'components/Information/PlanInfo'
 
-interface FormInfoProps {
+interface TourPlanFormInfoProps {
   tab: string
   data: TourPlanInfoProps
 }
 
-const FormInfo: React.FC<FormInfoProps> = ({ tab, data }) => {
+const TourPlanFormInfo: React.FC<TourPlanFormInfoProps> = ({ tab, data }) => {
   return (
     <Form>
       {tab === 'ツアー情報' && <BasicInfo of="tour-plan" />}
@@ -33,4 +33,4 @@ const FormInfo: React.FC<FormInfoProps> = ({ tab, data }) => {
   )
 }
 
-export default FormInfo
+export default TourPlanFormInfo

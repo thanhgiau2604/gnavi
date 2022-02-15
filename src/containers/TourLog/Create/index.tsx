@@ -1,7 +1,7 @@
 import { ROUTES } from '@constants'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import Header from 'components/common/Header'
-import FormInfo from 'components/common/TourLog/FormInfo'
+import TourLogFormInfo from 'components/tourlog/TourLogFormInfo'
 import { INIT_TOUR_LOG_FORM_VALUE } from 'constants/tour_log'
 import { Formik } from 'formik'
 import React, { useState } from 'react'
@@ -34,7 +34,11 @@ const TourLogCreate: React.FC = () => {
       >
         {({ values, setFieldValue }) => {
           return (
-            <FormInfo tab={isTab} images={values.basic_info.images} setImages={setFieldValue} />
+            <TourLogFormInfo
+              tab={isTab}
+              images={values.basic_info.images}
+              setImages={setFieldValue}
+            />
           )
         }}
       </Formik>
