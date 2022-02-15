@@ -39,6 +39,17 @@ interface PostItemProps {
   itemType?: postItemType
 }
 
+interface GuideBagCateProps {
+  categoryList: string[]
+}
+
+interface GuideBagLayoutProps {
+  headerTitle: string
+  btnBackTitle?: string
+  showSearchForm: boolean
+  children: JSX.Element
+}
+
 export type {
   SearchPayload,
   NewPostPayload,
@@ -46,4 +57,6 @@ export type {
   PostItemData,
   PostItemProps,
   NewCommentPayload,
+  GuideBagCateProps,
+  GuideBagLayoutProps,
 }

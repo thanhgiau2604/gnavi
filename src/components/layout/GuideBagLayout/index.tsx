@@ -2,25 +2,20 @@ import { BUTTON_COLORS, ROUTES } from '@constants'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
 import SearchForm from 'components/guide_bag/SearchForm'
+import { GuideBagLayoutProps } from 'interfaces/GuideBag'
 import Link from 'next/link'
 import React from 'react'
-import { PostLayoutContainer } from './styled'
+import { GuideBagLayoutContainer } from './styled'
 
-interface PostLayoutProps {
-  headerTitle: string
-  btnBackTitle: string
-  showSearchForm: boolean
-  children: JSX.Element
-}
-const PostLayout: React.FC<PostLayoutProps> = ({
+const GuideBagLayout: React.FC<GuideBagLayoutProps> = ({
   headerTitle,
   btnBackTitle,
   showSearchForm,
   children,
 }) => {
   return (
-    <PostLayoutContainer>
-      <div className="post-layout-main">
+    <GuideBagLayoutContainer>
+      <div className="guidebag-layout-main">
         <Header title={headerTitle} btnBackTitle={btnBackTitle} showBtnBack />
         {showSearchForm && (
           <div className="container">
@@ -30,7 +25,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({
         {children}
       </div>
       <div className="container">
-        <div className="post-layout-btn-create">
+        <div className="guidebag-layout-btn-create">
           <Link href={ROUTES.new_post} passHref>
             <a>
               <Button title="質問する" height={40} buttonColor={BUTTON_COLORS.style01} margin="0" />
@@ -38,8 +33,8 @@ const PostLayout: React.FC<PostLayoutProps> = ({
           </Link>
         </div>
       </div>
-    </PostLayoutContainer>
+    </GuideBagLayoutContainer>
   )
 }
 
-export default PostLayout
+export default GuideBagLayout

@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
-const PostLayoutContainer = styled.div`
-  --post-footer-height: 5.6rem;
-  .post-layout {
+const GuideBagLayoutContainer = styled.div`
+  --guidebag-footer-height: 5.6rem;
+  .guidebag-layout {
     &-main {
-      height: calc(100vh - var(--post-footer-height));
+      height: calc(100vh - var(--guidebag-footer-height));
       background-color: ${Variables.color6};
       overflow-y: scroll;
       padding-bottom: 2rem;
     }
 
     &-btn-create {
-      height: var(--post-footer-height);
+      height: var(--guidebag-footer-height);
       display: flex;
       align-items: center;
       a {
@@ -23,4 +23,4 @@ const PostLayoutContainer = styled.div`
   }
 `
 
-export { PostLayoutContainer }
+export { GuideBagLayoutContainer }

@@ -1,5 +1,5 @@
 import { OptionProps } from 'interfaces/CustomField'
-import { NewCommentPayload, NewPostPayload, PostItemData, SearchPayload } from 'interfaces/Post'
+import { NewCommentPayload, NewPostPayload, PostItemData, SearchPayload } from 'interfaces/GuideBag'
 import { NO_AVATAR } from './avatar'
 
 const INIT_SEARCH_BAR_VALUE: SearchPayload = {
@@ -77,6 +77,18 @@ const POSTS_DATA: PostItemData[] = [
   },
 ]
 
+const GUIDE_BAG_CATEGORIES = [
+  '食事',
+  '地域',
+  '宗教',
+  '交通',
+  '国内',
+  '地図',
+  '海外',
+  'テーマパーク',
+  'イベント・フェス',
+]
+
 export {
   INIT_SEARCH_BAR_VALUE,
   POST_MENU_OPTIONS,
@@ -85,4 +97,5 @@ export {
   POSTS_DATA,
   PLACE_OPTIONS,
   INIT_COMMENT_FORM_VALUE,
+  GUIDE_BAG_CATEGORIES,
 }

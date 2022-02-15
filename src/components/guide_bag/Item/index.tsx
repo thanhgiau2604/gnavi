@@ -1,7 +1,7 @@
 import Button from 'components/common/Button'
 import ButtonReaction from 'components/common/ButtonReaction'
 import { BUTTON_COLORS, BUTTON_HEART_THEMES, BUTTON_LIKE_THEMES } from '@constants'
-import { PostItemProps } from 'interfaces/Post'
+import { PostItemProps } from 'interfaces/GuideBag'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'

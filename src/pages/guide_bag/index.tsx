@@ -1,9 +1,9 @@
 import React from 'react'
-import PostContainer from 'containers/GuideBag'
 import { NextPage } from 'next'
+import GuideBagContainer from 'containers/GuideBag'
 
-const PostsPage: NextPage = () => {
-  return <PostContainer />
+const GuideBagPage: NextPage = () => {
+  return <GuideBagContainer />
 }
 
-export default PostsPage
+export default GuideBagPage

@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import { PostInfoProps } from 'interfaces/Post'
+import { PostInfoProps } from 'interfaces/GuideBag'
 import { PostInfoContainer } from './styled'
 
 const PostInfo: React.FC<PostInfoProps> = ({ picture, showTag, username, time }) => {
