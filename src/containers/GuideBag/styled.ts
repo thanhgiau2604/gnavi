@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 const GuideBagContainer = styled.div`
-  .guide-bag-categories {
-    padding-top: 2.5rem;
+  .guidebag {
+    &-categories,
+    &-qa-link {
+      padding-top: 2.5rem;
+    }
   }
 `
 

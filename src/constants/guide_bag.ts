@@ -89,6 +89,18 @@ const GUIDE_BAG_CATEGORIES = [
   'イベント・フェス',
 ]
 
+const GUIDE_BAG_CATEGORIES_LEVEL2 = [
+  '北海道',
+  '東北',
+  '関東',
+  '甲信越・北陸',
+  '東海',
+  '関西',
+  '中国',
+  '四国',
+  '九州・沖縄',
+]
+
 export {
   INIT_SEARCH_BAR_VALUE,
   POST_MENU_OPTIONS,
@@ -98,4 +110,5 @@ export {
   PLACE_OPTIONS,
   INIT_COMMENT_FORM_VALUE,
   GUIDE_BAG_CATEGORIES,
+  GUIDE_BAG_CATEGORIES_LEVEL2,
 }

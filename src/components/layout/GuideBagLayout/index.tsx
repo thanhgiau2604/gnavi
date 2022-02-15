@@ -10,7 +10,7 @@ import { GuideBagLayoutContainer } from './styled'
 const GuideBagLayout: React.FC<GuideBagLayoutProps> = ({
   headerTitle,
   btnBackTitle,
-  showSearchForm,
+  showSearchForm = true,
   children,
 }) => {
   return (
@@ -26,7 +26,7 @@ const GuideBagLayout: React.FC<GuideBagLayoutProps> = ({
       </div>
       <div className="container">
         <div className="guidebag-layout-btn-create">
-          <Link href={ROUTES.new_post} passHref>
+          <Link href={ROUTES.guide_bag.post_new} passHref>
             <a>
               <Button title="質問する" height={40} buttonColor={BUTTON_COLORS.style01} margin="0" />
             </a>

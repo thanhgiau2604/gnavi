@@ -41,6 +41,7 @@ interface PostItemProps {
 
 interface GuideBagCateProps {
   categoryList: string[]
+  updateCategoryList: (list: string[]) => void
 }
 
 interface GuideBagLayoutProps {

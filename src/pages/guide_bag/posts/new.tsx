@@ -1,4 +1,4 @@
-import NewPostContainer from 'containers/GuideBag/NewPost'
+import NewPostContainer from 'containers/GuideBag/Post/NewPost'
 import { NextPage } from 'next'
 import React from 'react'
 

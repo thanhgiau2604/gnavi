@@ -32,7 +32,7 @@ const Post: React.FC = () => {
       </div>
       <div className="container">
         <div className="post-btn-create">
-          <Link href={ROUTES.new_post} passHref>
+          <Link href={ROUTES.guide_bag.post_new} passHref>
             <Button title="質問する" height={40} buttonColor={BUTTON_COLORS.style01} margin="0" />
           </Link>
         </div>

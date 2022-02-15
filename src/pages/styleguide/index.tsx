@@ -108,11 +108,6 @@ const StyleGuide = () => {
           active={isActive === 5}
           text="対応可能ツアー"
         />
-        <ButtonGroupItem
-          handleClick={() => setIsActive(6)}
-          active={isActive === 6}
-          text="写真ギャラリー"
-        />
       </ButtonGroup>
 
       <FlexContainer margin="2rem 0 0" col>

@@ -18,8 +18,11 @@ const ROUTES = {
       complete: '/tourlog/create/complete',
     },
   },
-  posts: '/posts',
-  new_post: '/posts/new',
+  guide_bag: {
+    view: '/guide_bag',
+    posts: '/guide_bag/posts',
+    post_new: '/guide_bag/posts/new',
+  },
 }
 
 const FONT_SIZES = {
