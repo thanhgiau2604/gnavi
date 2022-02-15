@@ -3,9 +3,12 @@ import { ButtonUploadProps } from 'interfaces/ButtonUpload'
 import { BUTTON_UPLOAD_COLORS, FONT_SIZES } from '@constants'
 import { UploadContainer } from './styled'
 
-const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, setImages, ...rest }) => {
+const ButtonUpload: React.FC<ButtonUploadProps> = ({ title, images, setImages, ...rest }) => {
   const fileChangedHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (setImages) setImages('basic_info.images', e.currentTarget.files)
+    const { files } = e.currentTarget
+    // parse FileList into Array of File
+    if (images && setImages && files)
+      setImages('basic_info.images', [...images, ...Array.from(files)])
   }
 
   return (

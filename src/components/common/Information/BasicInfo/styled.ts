@@ -26,6 +26,13 @@ const BasicInfoContainer = styled.div`
     padding-bottom: 1.5rem;
     margin-bottom: 1rem;
   }
+  .icon-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-70%, 70%);
+    background-color: lightslategray;
+  }
 `
 
 export { BasicInfoContainer }

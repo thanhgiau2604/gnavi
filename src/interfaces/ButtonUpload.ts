@@ -10,5 +10,6 @@ export interface ButtonUploadProps {
   _fontSize?: string
   fontWeight?: number
   margin?: string
+  images?: File[]
   setImages?: (field: string, value: any) => void
 }

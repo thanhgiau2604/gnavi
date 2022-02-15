@@ -11,6 +11,8 @@ import { ImageContainer } from 'styles/styled/app/Image'
 import Image from 'next/image'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
+import Slider from 'react-slick'
+import { multiFilesReader } from 'utils/events'
 import { BasicInfoContainer } from './styled'
 
 interface Props {
@@ -20,7 +22,14 @@ interface Props {
 }
 
 const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
-  const [thumb, setThumb] = useState<string | ArrayBuffer | undefined>(undefined)
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  }
+  const [thumb, setThumb] = useState<any>([])
   const orderFormOptions: OptionProps[] = [
     {
       value: '直接',
@@ -29,14 +38,19 @@ const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
   ]
   useEffect(() => {
     if (!images?.length) return
-
-    const file: any = images[0]
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      if (reader.result) setThumb(reader.result)
-    }
-    reader.readAsDataURL(file)
+    multiFilesReader(images).then((resolve: any) => setThumb([...resolve]))
   }, [images])
+  const removeImage = (index: number) => {
+    if (images && setImages) {
+      // remove
+      images.splice(index, 1)
+      // update thumb
+      if (images.length) multiFilesReader(images).then((resolve: any) => setThumb([...resolve]))
+      else setThumb([])
+      // update
+      setImages('basic_info.images', images)
+    }
+  }
 
   return (
     <Container padding="0 3rem">
@@ -105,15 +119,35 @@ const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
             />
             <FastField name="basic_info.title" component={CustomInput} label="タイトル" pb={27} />
             <FastField name="basic_info.explanation" component={CustomInput} label="説明" pb={17} />
-            {thumb && (
-              <ImageContainer width={314} height={236}>
-                <Image src={`${thumb}`} alt="images" layout="fill" objectFit="contain" />
-              </ImageContainer>
+            {!!thumb?.length && (
+              <Slider {...settings}>
+                {thumb.map((src: any, index: number) => (
+                  <ImageContainer width={314} height={236} key={src}>
+                    <Image src={`${src}`} alt="images" layout="fill" objectFit="contain" />
+                    <div
+                      className="icon-delete"
+                      role="button"
+                      tabIndex={index}
+                      onClick={() => removeImage(index)}
+                    >
+                      <ImageContainer width={14} height={18}>
+                        <Image
+                          src="/icons/recycle_bin.svg"
+                          alt="images"
+                          layout="fill"
+                          objectFit="contain"
+                        />
+                      </ImageContainer>
+                    </div>
+                  </ImageContainer>
+                ))}
+              </Slider>
             )}
             <ButtonUpload
               title="画像を選択する"
               margin="2.1rem auto 4.8rem auto"
               buttonUploadColor={BUTTON_UPLOAD_COLORS.style02}
+              images={images}
               setImages={setImages}
             />
           </>
