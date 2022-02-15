@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
-import { hideModal, showModal } from 'utils/modal'
+import { hideModal, showModal } from 'utils/events'
 import { TourLogCreateInstructionContainer } from './styled'
 
 const TourLogCreateInstruction: React.FC = () => {
