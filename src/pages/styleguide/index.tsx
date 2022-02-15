@@ -16,6 +16,8 @@ import Modal from 'components/common/Modal'
 import Header from 'components/common/Header'
 import ButtonReaction from 'components/common/ButtonReaction'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
+import ListItem from 'components/common/ListItem'
+import { Variables } from 'styles/styled/app/Variables'
 import FormInput from './FormInput'
 
 const StyleGuide = () => {
@@ -102,6 +104,28 @@ const StyleGuide = () => {
           text="写真ギャラリー"
         />
       </ButtonGroup>
+
+      <FlexContainer margin="2rem 0 0" col>
+        <ListItem text="食事" borderTop handleClick={() => alert('食事')} />
+        <ListItem text="地域" />
+      </FlexContainer>
+
+      <FlexContainer margin="2rem 0 0" col>
+        <ListItem
+          text="2022/02/03 18:24"
+          textColor={Variables.colorPrimary}
+          height={63}
+          iconWidth={12}
+          iconHeight={20}
+        />
+        <ListItem
+          text="2022/01/18 11:07"
+          textColor={Variables.colorPrimary}
+          height={63}
+          iconWidth={12}
+          iconHeight={20}
+        />
+      </FlexContainer>
     </div>
   )
 }

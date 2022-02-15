@@ -47,3 +47,11 @@ a {
   color: $color-4;
   line-height: calc(17 / 12);
 }
+
+.btn {
+  &-submit {
+    text-align: center;
+    border: 1px solid $color-3;
+    padding: 0 2.5rem;
+  }
+}

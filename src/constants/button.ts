@@ -49,6 +49,11 @@ const BUTTON_COLORS = {
     color: Variables.colorBlack,
     border: `1px solid ${Variables.color3}`,
   },
+  style07: {
+    bgColor: 'transparent',
+    color: Variables.colorPrimary,
+    border: 'none',
+  },
 }
 
 const BUTTON_UPLOAD_COLORS = {
