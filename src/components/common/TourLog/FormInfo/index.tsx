@@ -21,7 +21,6 @@ const FormInfo: React.FC<FormInfoProps> = ({ tab, images, setImages }) => {
           title="保存する"
           type="submit"
           buttonColor={BUTTON_COLORS.style02}
-          width={320}
           height={40}
           margin="0.8rem auto"
           _fontSize={FONT_SIZES.large}
