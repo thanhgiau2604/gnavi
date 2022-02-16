@@ -1,8 +1,8 @@
 import Home from 'containers/Home'
-import type { NextPage } from 'next'
 import Head from 'next/head'
+import { NextApplicationPage } from './_app'
 
-const HomePage: NextPage = () => {
+const HomePage: NextApplicationPage = () => {
   return (
     <>
       <Head>
