@@ -8,7 +8,7 @@ const ROUTES = {
     view: '/tourplan',
     detail: '/tourplan/detail?id=',
     create: '/tourplan/create',
-    edit: '',
+    edit: '/tourplan/edit?id=',
   },
   tour_log: {
     view: '/tourlog',
