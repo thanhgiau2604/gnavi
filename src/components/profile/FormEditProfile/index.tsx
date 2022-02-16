@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import { FastField, Form, Formik } from 'formik'
+import { FastField, Form, Formik, FieldArray } from 'formik'
 import { ColorResult } from 'react-color'
-import { EditProfileFormProps } from 'interfaces/Profile'
+import { EditProfileFormProps, Membership } from 'interfaces/Profile'
+
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import CustomDate from 'components/common/CustomFields/DateField'
 import ColorPicker from 'components/ColorPicker'
+import { onChangeColorHex, onChangeColorResult } from 'components/ColorPicker/functions'
 import {
   BUTTON_COLORS,
   BUTTON_UPLOAD_COLORS,
@@ -22,22 +24,19 @@ import { FieldLabel } from 'components/common/CustomFields/styled'
 
 const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
   const [showColorPicker, setShowColorPicker] = useState<boolean>(false)
-  const [color, setColor] = useState<string>('#fff')
+  const [color, setColor] = useState<string>('#ffffff')
   const [colorResult, setColorResult] = useState<ColorResult>(InitColorResult)
 
-  const handleShowColorPicker = () => setShowColorPicker(!showColorPicker)
-  const handleChangeColor = (_color: string) => setColor(_color)
-  const handleChangeColorResult = (_colorResult: ColorResult) => setColorResult(_colorResult)
   return (
     <Formik
       initialValues={INIT_FORM_EDIT_PROFILE_VALUE}
       validationSchema={FORM_EDIT_PROFILE_VALIDATE_SCHEMA}
       onSubmit={async (values, actions) => {
-        await handleSubmit(values)
+        await handleSubmit({ ...values, background_image: '', theme_color: '#ffffff' })
         actions.setSubmitting(false)
       }}
     >
-      {() => {
+      {({ values }) => {
         return (
           <Form>
             <FastField
@@ -55,7 +54,7 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
               type="password"
             />
 
-            <FastField name="name" component={CustomInput} label="名前" lbTag="require" />
+            <FastField name="ja_name" component={CustomInput} label="名前" lbTag="require" />
 
             <FastField
               name="eng_name"
@@ -70,17 +69,51 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
               name="gender"
               component={CustomSelect}
               label="性別"
-              lbTag="require"
+              lbTag="any"
               options={OPTIONS_GENDER}
             />
 
-            <FastField name="membership" component={CustomInput} label="所属団体" lbTag="any" />
+            <FieldArray
+              name="memberships"
+              render={(arrayHelpers) =>
+                values.memberships.map((member: Membership, index: number) => {
+                  const lastItem = index === values.memberships.length - 1
 
-            <Button
-              width="100%"
-              buttonColor={BUTTON_COLORS.style06}
-              title="所属団体を追加"
-              margin="0 0 30px 0"
+                  return (
+                    <div key={member.id}>
+                      <FastField
+                        name={`memberships.${index}.value`}
+                        component={CustomInput}
+                        label={`所属団体 - ${index}`}
+                        lbTag="any"
+                        pb={1}
+                      />
+
+                      {values.memberships.length !== 1 && (
+                        <button
+                          type="button"
+                          style={{ marginBottom: 20, width: '100%' }}
+                          onClick={() => arrayHelpers.remove(index)}
+                        >
+                          Remove
+                        </button>
+                      )}
+
+                      {lastItem && (
+                        <Button
+                          width="100%"
+                          buttonColor={BUTTON_COLORS.style06}
+                          title="所属団体を追加"
+                          margin={values.memberships.length === 1 ? '30px 0' : '0 0 30px 0'}
+                          onClick={() =>
+                            arrayHelpers.push({ id: Math.floor(Math.random() * 10000), value: '' })
+                          }
+                        />
+                      )}
+                    </div>
+                  )
+                })
+              }
             />
 
             <FastField
@@ -129,15 +162,19 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
               <p className="lb-tag lb-tag--any">任意</p>
             </FieldLabel>
 
-            <button type="button" className="color-picker-input" onClick={handleShowColorPicker}>
+            <button
+              type="button"
+              className="color-picker-input"
+              onClick={() => setShowColorPicker(!showColorPicker)}
+            >
               {color}
             </button>
 
             {showColorPicker && (
               <ColorPicker
-                color={colorResult}
-                handleChangeColor={handleChangeColor}
-                handleChangeColorResult={handleChangeColorResult}
+                colorResult={colorResult}
+                onChangeColorHex={onChangeColorHex(setColor)}
+                onChangeColorResult={onChangeColorResult(setColorResult)}
               />
             )}
 

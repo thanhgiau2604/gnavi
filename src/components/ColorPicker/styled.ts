@@ -35,7 +35,7 @@ export const ColorPickerContainer = styled.div<props>`
     div {
       border: 1px solid ${Variables.color3};
       background-color: ${({ colorPreview }) => colorPreview && colorPreview};
-      border-radius: 100%;
+      border-radius: 50%;
       width: 4rem;
       height: 4rem;
     }
