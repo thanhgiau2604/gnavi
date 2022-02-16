@@ -1,3 +1,4 @@
+import { OptionProps } from 'interfaces/CustomField'
 import { TourEventProps } from 'interfaces/TourEvent'
 import { TourPlanInfoProps, TourPlanListProps } from 'interfaces/TourPlan'
 
@@ -81,6 +82,222 @@ export const OPTIONS_TRANSPORT: string[] = [
   'バス',
   'タクシー',
   'ハイヤー',
+]
+
+// [WILL UPDATE MORE]
+export const OPTIONS_TIME: OptionProps[] = [
+  {
+    value: '00:00',
+    label: '00:00',
+  },
+  {
+    value: '00:30',
+    label: '00:30',
+  },
+  {
+    value: '01:00',
+    label: '01:00',
+  },
+  {
+    value: '01:30',
+    label: '01:30',
+  },
+  {
+    value: '02:00',
+    label: '02:00',
+  },
+  {
+    value: '02:30',
+    label: '02:30',
+  },
+  {
+    value: '03:00',
+    label: '03:00',
+  },
+  {
+    value: '03:30',
+    label: '03:30',
+  },
+  {
+    value: '04:00',
+    label: '04:00',
+  },
+  {
+    value: '04:30',
+    label: '04:30',
+  },
+  {
+    value: '05:00',
+    label: '05:00',
+  },
+  {
+    value: '05:30',
+    label: '05:30',
+  },
+  {
+    value: '06:00',
+    label: '06:00',
+  },
+  {
+    value: '06:30',
+    label: '06:30',
+  },
+  {
+    value: '07:00',
+    label: '07:00',
+  },
+  {
+    value: '07:30',
+    label: '07:30',
+  },
+  {
+    value: '08:00',
+    label: '08:00',
+  },
+  {
+    value: '08:30',
+    label: '08:30',
+  },
+  {
+    value: '09:00',
+    label: '09:00',
+  },
+  {
+    value: '09:30',
+    label: '09:30',
+  },
+  {
+    value: '10:00',
+    label: '10:00',
+  },
+  {
+    value: '10:30',
+    label: '10:30',
+  },
+  {
+    value: '11:00',
+    label: '11:00',
+  },
+  {
+    value: '11:30',
+    label: '11:30',
+  },
+  {
+    value: '12:00',
+    label: '12:00',
+  },
+  {
+    value: '12:30',
+    label: '12:30',
+  },
+  {
+    value: '13:00',
+    label: '13:00',
+  },
+  {
+    value: '13:30',
+    label: '13:30',
+  },
+  {
+    value: '14:00',
+    label: '14:00',
+  },
+  {
+    value: '14:30',
+    label: '14:30',
+  },
+  {
+    value: '15:00',
+    label: '15:00',
+  },
+  {
+    value: '15:30',
+    label: '15:30',
+  },
+  {
+    value: '16:00',
+    label: '16:00',
+  },
+  {
+    value: '16:30',
+    label: '16:30',
+  },
+  {
+    value: '17:00',
+    label: '17:00',
+  },
+  {
+    value: '17:30',
+    label: '17:30',
+  },
+  {
+    value: '18:00',
+    label: '18:00',
+  },
+  {
+    value: '18:30',
+    label: '18:30',
+  },
+  {
+    value: '19:00',
+    label: '19:00',
+  },
+  {
+    value: '19:30',
+    label: '19:30',
+  },
+  {
+    value: '20:00',
+    label: '20:00',
+  },
+  {
+    value: '20:30',
+    label: '20:30',
+  },
+  {
+    value: '21:00',
+    label: '21:00',
+  },
+  {
+    value: '21:30',
+    label: '21:30',
+  },
+  {
+    value: '22:00',
+    label: '22:00',
+  },
+  {
+    value: '22:30',
+    label: '22:30',
+  },
+  {
+    value: '23:00',
+    label: '23:00',
+  },
+  {
+    value: '23:30',
+    label: '23:30',
+  },
+]
+
+// [WILL UPDATE MORE]
+export const OPTIONS_ORDER_FORM: OptionProps[] = [
+  {
+    value: '直接',
+    label: '直接',
+  },
+  {
+    value: '間接',
+    label: '間接',
+  },
+]
+
+// [WILL UPDATE MORE]
+export const OPTIONS_PROVINCES: OptionProps[] = [
+  {
+    value: '沖縄県',
+    label: '沖縄県',
+  },
 ]
 
 // [WILL REMOVE SOON] tour-plan list fake data - full data
@@ -206,7 +423,7 @@ export const TOUR_PLAN_EDIT_FAKE_DATA: TourPlanInfoProps = {
     tour_name: 'マングローブSUPバラス島上陸',
     order_date: new Date('2021/12/05'),
     start_date: new Date('2021/12/10'),
-    start_time: '　9：00',
+    start_time: '09:00',
     overview: `西表島の大自然を満喫する凝縮ツアー！SUP（またはカヌー）で”幸運の滝”クーラの滝へ！
     滝遊びと鍾乳洞探検を楽しんだ後はサンゴの欠片でできた”奇跡の島”バラス島への上陸＆シュノーケリング。
     コバルトブルーの海遊びで最高の1日を締めくくります！`,
@@ -238,7 +455,7 @@ export const TOUR_PLAN_EDIT_FAKE_DATA: TourPlanInfoProps = {
   },
   // スポット情報 - Plan info
   plan_info: {
-    tour_start_time: '9:00',
+    tour_start_time: '09:00',
     tour_end_time: '18:00',
     meeting_place: '上原港（西表島北部）または上原地区の各ホテルへお迎え',
     dissolution_place: '上原港（西表島北部）',
@@ -246,14 +463,14 @@ export const TOUR_PLAN_EDIT_FAKE_DATA: TourPlanInfoProps = {
       {
         id: 0,
         event_name: 'クーラ川SUP',
-        post_code: '905-1503',
-        provinces: '',
-        address1: '',
+        post_code: '9051503',
+        provinces: '沖縄県',
+        address1: '国頭郡国頭村0-0-0',
         address2: '',
-        phone: '',
+        phone: '00000000000',
         reservation: true,
         start_time: '10:00',
-        end_time: '',
+        end_time: '10:30',
         content: `・SUPかカヌーをお好みでお選びいただけます
         ・自然観察にうってつけのクーラ川をのんびりクルーズでマングローブの森を抜けていきます
         ・普段見ることのない亜熱帯独特の植物は生き物を見て楽しみましょう`,
@@ -262,14 +479,14 @@ export const TOUR_PLAN_EDIT_FAKE_DATA: TourPlanInfoProps = {
       {
         id: 1,
         event_name: 'トレッキング',
-        post_code: '905-1503',
-        provinces: '',
-        address1: '',
+        post_code: '9051503',
+        provinces: '沖縄県',
+        address1: '国頭郡国頭村0-0-0',
         address2: '',
-        phone: '',
-        reservation: false,
+        phone: '00000000000',
+        reservation: true,
         start_time: '10:30',
-        end_time: '',
+        end_time: '10:40',
         content: `・SUPかカヌーをお好みでお選びいただけます
         ・自然観察にうってつけのクーラ川をのんびりクルーズでマングローブの森を抜けていきます
         ・普段見ることのない亜熱帯独特の植物は生き物を見て楽しみましょう`,

@@ -2,7 +2,14 @@ import Button from 'components/common/Button'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
-import { BUTTON_COLORS, CHECKBOX_THEME, INIT_TOUR_EVENT, OPTIONS_TRANSPORT } from '@constants'
+import {
+  BUTTON_COLORS,
+  CHECKBOX_THEME,
+  INIT_TOUR_EVENT,
+  OPTIONS_PROVINCES,
+  OPTIONS_TIME,
+  OPTIONS_TRANSPORT,
+} from '@constants'
 import { FastField, FieldArray } from 'formik'
 import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
@@ -22,12 +29,14 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
         <FastField
           name="plan_info.tour_start_time"
           component={CustomSelect}
+          options={OPTIONS_TIME}
           label="ツアー開始時間"
           pb={41}
         />
         <FastField
           name="plan_info.tour_end_time"
           component={CustomSelect}
+          options={OPTIONS_TIME}
           label="ツアー終了時間"
           pb={41}
         />
@@ -79,6 +88,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                   <FastField
                     name={`plan_info.events[${index}].provinces`}
                     component={CustomSelect}
+                    options={OPTIONS_PROVINCES}
                     label="都道府県"
                     pb={23}
                   />
@@ -112,12 +122,14 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                   <FastField
                     name={`plan_info.events[${index}].start_time`}
                     component={CustomSelect}
+                    options={OPTIONS_TIME}
                     label="開始時間"
                     pb={41}
                   />
                   <FastField
                     name={`plan_info.events[${index}].end_time`}
                     component={CustomSelect}
+                    options={OPTIONS_TIME}
                     label="終了時間"
                     pb={41}
                   />

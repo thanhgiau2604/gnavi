@@ -1,11 +1,10 @@
-import { BUTTON_UPLOAD_COLORS, CHECKBOX_THEME } from '@constants'
+import { BUTTON_UPLOAD_COLORS, CHECKBOX_THEME, OPTIONS_ORDER_FORM, OPTIONS_TIME } from '@constants'
 import ButtonUpload from 'components/common/ButtonUpload'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomDate from 'components/common/CustomFields/DateField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import { FastField } from 'formik'
-import { OptionProps } from 'interfaces/CustomField'
 import React, { useEffect, useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
 import Image from 'next/image'
@@ -30,12 +29,6 @@ const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
     slidesToScroll: 1,
   }
   const [thumb, setThumb] = useState<any>([])
-  const orderFormOptions: OptionProps[] = [
-    {
-      value: '直接',
-      label: '直接',
-    },
-  ]
   useEffect(() => {
     if (!images?.length) return
     multiFilesReader(images).then((resolve: any) => setThumb([...resolve]))
@@ -64,7 +57,13 @@ const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
         />
         <FastField name="basic_info.order_date" component={CustomDate} label="受注日" pb={34} />
         <FastField name="basic_info.start_date" component={CustomDate} label="催行日" pb={34} />
-        <FastField name="basic_info.start_time" component={CustomSelect} label="催行時間" pb={34} />
+        <FastField
+          name="basic_info.start_time"
+          component={CustomSelect}
+          options={OPTIONS_TIME}
+          label="催行時間"
+          pb={34}
+        />
         <FastField
           name="overview"
           component={CustomInput}
@@ -78,7 +77,7 @@ const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
           name="basic_info.order_form"
           component={CustomSelect}
           label="受注形態"
-          options={orderFormOptions}
+          options={OPTIONS_ORDER_FORM}
           pb={34}
         />
         <FastField name="basic_info.company_name" component={CustomInput} label="会社名" pb={34} />
