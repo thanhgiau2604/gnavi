@@ -33,7 +33,7 @@ const TourPlan = () => {
               <div key={item.id}>
                 <h3 className="title">{item.year}</h3>
                 {!!item?.tour_plan_list?.length &&
-                  item.tour_plan_list?.map((tour_plan_item: TourPlanItemProps) => (
+                  item.tour_plan_list.map((tour_plan_item: TourPlanItemProps) => (
                     <div key={tour_plan_item.id}>
                       <p className="datetime">
                         {formatDateTime(tour_plan_item.datetime, DATETIME_FORMAT.template02)}
