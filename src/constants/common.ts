@@ -28,4 +28,9 @@ const FONT_SIZES = {
   xlarge: '2rem',
 }
 
-export { ROUTES, FONT_SIZES }
+const ENV = {
+  dev: 'development',
+  prod: 'production',
+}
+
+export { ROUTES, FONT_SIZES, ENV }

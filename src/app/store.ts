@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist'
+import { ENV } from '@constants'
 import authSlice from './slices/authSlice'
 import counterSlice from './slices/counterSlice'
 
@@ -10,7 +11,7 @@ const reducers = combineReducers({
 })
 
 const persistConfig = {
-  key: 'root',
+  key: 'gnavi',
   storage,
 }
 
@@ -18,7 +19,7 @@ const persistedReducer = persistReducer(persistConfig, reducers)
 
 export const store = configureStore({
   reducer: persistedReducer,
-  devTools: process.env.NODE_ENV !== 'production',
+  devTools: process.env.NODE_ENV === ENV.dev,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
