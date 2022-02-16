@@ -1,4 +1,4 @@
-import { INIT_TOUR_PLAN_FORM_VALUE, ROUTES } from '@constants'
+import { ROUTES, TOUR_PLAN_EDIT_FAKE_DATA } from '@constants'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import Header from 'components/common/Header'
 import TourPlanFormInfo from 'components/tourplan/TourPlanFormInfo'
@@ -30,7 +30,7 @@ const TourPlanEdit = () => {
         />
       </ButtonGroup>
       <Formik
-        initialValues={INIT_TOUR_PLAN_FORM_VALUE}
+        initialValues={TOUR_PLAN_EDIT_FAKE_DATA}
         onSubmit={(values, actions) => {
           console.log(values)
           actions.setSubmitting(false)

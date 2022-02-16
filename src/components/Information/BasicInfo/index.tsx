@@ -64,7 +64,7 @@ const BasicInfo: React.FC<Props> = ({ of, images, setImages }) => {
         />
         <FastField name="basic_info.order_date" component={CustomDate} label="受注日" pb={34} />
         <FastField name="basic_info.start_date" component={CustomDate} label="催行日" pb={34} />
-        <FastField name="basic_info.start_time" component={CustomInput} label="催行時間" pb={34} />
+        <FastField name="basic_info.start_time" component={CustomSelect} label="催行時間" pb={34} />
         <FastField
           name="overview"
           component={CustomInput}

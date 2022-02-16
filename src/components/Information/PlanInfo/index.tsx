@@ -107,6 +107,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                     pb={46}
                     theme={CHECKBOX_THEME.primary}
                     lbweight="normal"
+                    checked={events[index].reservation}
                   />
                   <FastField
                     name={`plan_info.events[${index}].start_time`}
@@ -139,6 +140,7 @@ const PlanInfo: React.FC<Props> = ({ events }) => {
                           pb={27}
                           theme={CHECKBOX_THEME.primary}
                           lbweight="normal"
+                          checked={events[index].transporation.includes(option)}
                         />
                       </FlexItem>
                     ))}
