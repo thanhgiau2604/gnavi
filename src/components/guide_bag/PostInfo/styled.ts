@@ -23,6 +23,18 @@ const PostInfoContainer = styled.div`
     &-title {
       padding-left: 5px;
     }
+    &-more,
+    &-time {
+      padding-top: 1.6rem;
+    }
+
+    &-answer-num {
+      font-weight: 700;
+    }
+  }
+
+  button {
+    padding: 0;
   }
 `
 

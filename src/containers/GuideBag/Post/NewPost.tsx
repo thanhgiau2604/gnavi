@@ -7,17 +7,17 @@ import { NewPostContainer } from './styled'
 
 const NewPost: React.FC = () => {
   return (
-    <div className="container">
-      <NewPostContainer>
-        <Header showBtnBack title="質問を投稿する" />
+    <NewPostContainer>
+      <Header showBtnBack title="質問を投稿する" />
+      <div className="container">
         <div className="new-post-info">
-          <PostInfo picture={NO_AVATAR} username="旅行花子" />
+          <PostInfo picture={NO_AVATAR} username="旅行花子" postStatus="none" />
         </div>
         <div className="new-post-form">
           <PostForm />
         </div>
-      </NewPostContainer>
-    </div>
+      </div>
+    </NewPostContainer>
   )
 }
 

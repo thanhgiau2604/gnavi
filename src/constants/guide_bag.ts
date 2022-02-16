@@ -1,5 +1,11 @@
 import { OptionProps } from 'interfaces/CustomField'
-import { NewCommentPayload, NewPostPayload, PostItemData, SearchPayload } from 'interfaces/GuideBag'
+import {
+  CommentItemData,
+  NewCommentPayload,
+  NewPostPayload,
+  PostItemData,
+  SearchPayload,
+} from 'interfaces/GuideBag'
 import { NO_AVATAR } from './avatar'
 
 const INIT_SEARCH_BAR_VALUE: SearchPayload = {
@@ -26,21 +32,14 @@ const INIT_COMMENT_FORM_VALUE: NewCommentPayload = {
   content: '',
 }
 
-const THEME_OPTIONS: OptionProps[] = [
+const POST_TYPE_OPTIONS: OptionProps[] = [
   {
-    value: 'none',
-    label: '選択してください',
-  },
-]
-
-const PLACE_OPTIONS: OptionProps[] = [
-  {
-    value: 'tokyo',
-    label: '東京',
+    value: 'question',
+    label: '質問',
   },
   {
-    value: 'kyoto',
-    label: '京都',
+    value: 'sharing',
+    label: '情報共有',
   },
 ]
 
@@ -51,14 +50,14 @@ const POSTS_DATA: PostItemData[] = [
       username: 'コンドリア水戸',
       time: '2021年12月5日 14:58',
       showTag: true,
+      postStatus: 'accepting',
+      postType: '情報共有',
+      answerNum: 6,
     },
+    title: '香港粥が食べられるところはありますか',
     content:
       '知り合いの外国人が日本に来るらしく、 謝礼有りで数日ガイドをしてくれないか？と頼まれました。一日ごとの日程表を組む場合の注意点や効率の良い作成方法が知りたいで……',
-    is_like: true,
-    is_heart: false,
-    num_like: 5,
-    num_heart: 2,
-    num_comment: 3,
+    categories: ['地域', '食事'],
   },
   {
     post_info: {
@@ -66,16 +65,32 @@ const POSTS_DATA: PostItemData[] = [
       username: 'smile_hanako',
       time: '2021年12月4日 09:30',
       showTag: false,
+      postStatus: 'closed',
+      postType: '情報共有',
+      answerNum: 1,
     },
+    title: '羽田から東京駅への移動について',
     content:
       '知り合いの外国人が日本に来るらしく、 謝礼有りで数日ガイドをしてくれないか？と頼まれました。一日ごとの日程表を組む場合の注意点や効率の良い作成方法が知りたいで……',
-    is_like: false,
-    is_heart: true,
-    num_like: 1,
-    num_heart: 5,
-    num_comment: 2,
+    categories: ['地域', '食事'],
   },
 ]
+
+const COMMENTS_DATA: CommentItemData = {
+  post_info: {
+    picture: NO_AVATAR,
+    username: 'コンドリア水戸',
+    time: '2021年12月5日 14:58',
+    showTag: false,
+    postStatus: 'none',
+  },
+  content:
+    'どちらがいいかわかりませんけど、JR品川駅の改札内には朝もやってそうな店がたくさんあるので、朝の食べ物をというなら品川は良い気がします。',
+  is_heart: true,
+  is_like: false,
+  num_heart: 1,
+  num_like: 3,
+}
 
 const GUIDE_BAG_CATEGORIES = [
   '食事',
@@ -105,10 +120,10 @@ export {
   INIT_SEARCH_BAR_VALUE,
   POST_MENU_OPTIONS,
   INIT_POST_FORM_VALUE,
-  THEME_OPTIONS,
   POSTS_DATA,
-  PLACE_OPTIONS,
   INIT_COMMENT_FORM_VALUE,
   GUIDE_BAG_CATEGORIES,
   GUIDE_BAG_CATEGORIES_LEVEL2,
+  COMMENTS_DATA,
+  POST_TYPE_OPTIONS,
 }

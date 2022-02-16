@@ -5,16 +5,18 @@ import SearchForm from 'components/guide_bag/SearchForm'
 import { GuideBagLayoutProps } from 'interfaces/GuideBag'
 import Link from 'next/link'
 import React from 'react'
+import { Variables } from 'styles/styled/app/Variables'
 import { GuideBagLayoutContainer } from './styled'
 
 const GuideBagLayout: React.FC<GuideBagLayoutProps> = ({
   headerTitle,
   btnBackTitle,
-  showSearchForm = true,
+  showSearchForm = false,
+  bgColor = Variables.color6,
   children,
 }) => {
   return (
-    <GuideBagLayoutContainer>
+    <GuideBagLayoutContainer bgColor={bgColor}>
       <div className="guidebag-layout-main">
         <Header title={headerTitle} btnBackTitle={btnBackTitle} showBtnBack />
         {showSearchForm && (
@@ -24,7 +26,7 @@ const GuideBagLayout: React.FC<GuideBagLayoutProps> = ({
         )}
         {children}
       </div>
-      <div className="container">
+      <div className="container guidebag-layout-btn-wrapper">
         <div className="guidebag-layout-btn-create">
           <Link href={ROUTES.guide_bag.post_new} passHref>
             <a>

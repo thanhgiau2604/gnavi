@@ -11,7 +11,7 @@ const CommentForm = () => {
   return (
     <CommentFormContainer>
       <div className="comment-form-info">
-        <PostInfo picture="/images/profile_2.png" username="旅行花子" />
+        <PostInfo picture="/images/profile_2.png" username="旅行花子" postStatus="none" />
       </div>
       <div className="comment-form-main">
         <Formik

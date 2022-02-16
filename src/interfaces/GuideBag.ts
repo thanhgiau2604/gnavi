@@ -18,25 +18,35 @@ interface PostInfoProps {
   showTag?: boolean
   username: string
   time?: string
+  postStatus: 'accepting' | 'closed' | 'none'
+  answerNum?: number
+  postType?: string
 }
 
 interface PostItemData {
+  post_info: PostInfoProps
+  title: string
+  content: string
+  categories: string[]
+}
+
+interface CommentItemData {
   post_info: PostInfoProps
   content: string
   is_like: boolean
   is_heart: boolean
   num_like: number
   num_heart: number
-  num_comment: number
 }
 
-type commentControlType = 'link' | 'button' | 'none'
-type postItemType = 'post' | 'comment'
 interface PostItemProps {
   data: PostItemData
-  commentControlType: commentControlType
   withBoxWrapper?: boolean
-  itemType?: postItemType
+  isDetail?: boolean
+}
+
+interface CommentItemProps {
+  data: CommentItemData
 }
 
 interface GuideBagCateProps {
@@ -47,7 +57,8 @@ interface GuideBagCateProps {
 interface GuideBagLayoutProps {
   headerTitle: string
   btnBackTitle?: string
-  showSearchForm: boolean
+  showSearchForm?: boolean
+  bgColor?: string
   children: JSX.Element
 }
 
@@ -60,4 +71,6 @@ export type {
   NewCommentPayload,
   GuideBagCateProps,
   GuideBagLayoutProps,
+  CommentItemData,
+  CommentItemProps,
 }

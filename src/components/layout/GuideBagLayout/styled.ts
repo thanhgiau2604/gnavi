@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 import { Variables } from 'styles/styled/app/Variables'
 
-const GuideBagLayoutContainer = styled.div`
+interface GuideBagLayoutStyle {
+  bgColor: string
+}
+const GuideBagLayoutContainer = styled.div<GuideBagLayoutStyle>`
   --guidebag-footer-height: 5.6rem;
   .guidebag-layout {
     &-main {
       height: calc(100vh - var(--guidebag-footer-height));
-      background-color: ${Variables.color6};
+      background-color: ${({ bgColor }) => bgColor && `${bgColor}`};
       overflow-y: scroll;
       padding-bottom: 2rem;
     }
@@ -19,6 +22,10 @@ const GuideBagLayoutContainer = styled.div`
         display: block;
         width: 100%;
       }
+    }
+
+    &-btn-wrapper {
+      border-top: 1px solid ${Variables.color3};
     }
   }
 `
