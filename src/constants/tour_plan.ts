@@ -4,7 +4,7 @@ import { TourPlanInfoProps, TourPlanListProps } from 'interfaces/TourPlan'
 
 const buildTimeFrame = (timeStep: number) => {
   const buildTimeStep = () => {
-    return Array.from({ length: 60 / timeStep }, (_, i) => 0 + i * timeStep)
+    return Array.from({ length: 60 / timeStep }, (_, i) => i * timeStep)
   }
   return Array.from({ length: 24 }, (_, i) =>
     Array.from(buildTimeStep(), (j) => ({
