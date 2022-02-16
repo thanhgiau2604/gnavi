@@ -5,9 +5,9 @@ import Header from 'components/common/Header'
 import Button from 'components/common/Button'
 import { useRouter } from 'next/router'
 import { TourPlanItemProps, TourPlanListProps } from 'interfaces/TourPlan'
-import TourPlanItem from 'components/tourplan/TourPlanItem'
 import { formatDateTime } from 'utils/helper'
 import { TourPlanContainer } from './styled'
+import TourPlanItem from 'components/tourplan/TourPlanItem'
 
 const TourPlan = () => {
   const router = useRouter()
