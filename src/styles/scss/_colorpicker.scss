@@ -1,0 +1,15 @@
+.color-picker {
+  &-input {
+    width: 100%;
+    height: calc(48rem / 10);
+    border: 1px solid $color-3;
+    background-color: $color-white;
+    padding: 1.3rem;
+    color: $color-text-common;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    line-height: calc(23 / 16);
+    cursor: pointer;
+    text-align: left;
+  }
+}
