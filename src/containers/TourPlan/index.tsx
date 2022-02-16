@@ -1,12 +1,13 @@
 import React from 'react'
-import { FONT_SIZES, ROUTES, TOUR_PLAN_LIST_FAKE_FULL_DATA } from '@constants'
+import { DATETIME_FORMAT, FONT_SIZES, ROUTES, TOUR_PLAN_LIST_FAKE_FULL_DATA } from '@constants'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import Header from 'components/common/Header'
 import Button from 'components/common/Button'
 import { useRouter } from 'next/router'
 import { TourPlanItemProps, TourPlanListProps } from 'interfaces/TourPlan'
-import { TourPlanContainer } from './styled'
 import TourPlanItem from 'components/tourplan/TourPlanItem'
+import { formatDateTime } from 'utils/helper'
+import { TourPlanContainer } from './styled'
 
 const TourPlan = () => {
   const router = useRouter()
@@ -34,7 +35,9 @@ const TourPlan = () => {
                 {!!item?.tour_plan_list?.length &&
                   item.tour_plan_list?.map((tour_plan_item: TourPlanItemProps) => (
                     <div key={tour_plan_item.id}>
-                      <p className="datetime">{tour_plan_item.datetime}</p>
+                      <p className="datetime">
+                        {formatDateTime(tour_plan_item.datetime, DATETIME_FORMAT.template02)}
+                      </p>
                       <TourPlanItem
                         id={tour_plan_item.id}
                         datetime={tour_plan_item.datetime}
