@@ -1,0 +1,32 @@
+.color-picker {
+  &-input {
+    width: 100%;
+    height: calc(48rem / 10);
+    border: 1px solid $color-3;
+    background-color: $color-white;
+    padding: 1.3rem;
+    color: $color-text-common;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    line-height: calc(23 / 16);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  &-container {
+    position: relative;
+    z-index: 2;
+    background-color: $color-white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.btn-close-cp {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}

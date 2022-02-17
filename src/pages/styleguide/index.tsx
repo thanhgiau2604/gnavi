@@ -1,4 +1,6 @@
+/* eslint-disable no-alert */
 import React from 'react'
+import { ColorResult } from 'react-color'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import {
   BUTTON_COLORS,
@@ -6,6 +8,7 @@ import {
   FONT_SIZES,
   BUTTON_LIKE_THEMES,
   BUTTON_HEART_THEMES,
+  InitColorResult,
 } from '@constants'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
@@ -17,6 +20,8 @@ import Header from 'components/common/Header'
 import ButtonReaction from 'components/common/ButtonReaction'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import ListItem from 'components/common/ListItem'
+import ColorPicker from 'components/ColorPicker'
+import { onChangeColorHex, onChangeColorResult } from 'components/ColorPicker/functions'
 import { Variables } from 'styles/styled/app/Variables'
 import FormInput from './FormInput'
 
@@ -32,6 +37,10 @@ const StyleGuide = () => {
     // eslint-disable-next-line no-console
     console.log(id)
   }
+
+  const [showColorPicker, setShowColorPicker] = React.useState<boolean>(false)
+  const [colorHex, setColorHex] = React.useState<string>(InitColorResult.hex)
+  const [colorResult, setColorResult] = React.useState<ColorResult>(InitColorResult)
 
   return (
     <div className="container" style={{ paddingBottom: 30 }}>
@@ -126,6 +135,22 @@ const StyleGuide = () => {
           iconHeight={20}
         />
       </FlexContainer>
+
+      <button
+        type="button"
+        className="color-picker-input"
+        onClick={() => setShowColorPicker(!showColorPicker)}
+      >
+        {colorHex}
+      </button>
+
+      {showColorPicker && (
+        <ColorPicker
+          colorResult={colorResult}
+          onChangeColorHex={onChangeColorHex(setColorHex)}
+          onChangeColorResult={onChangeColorResult(setColorResult)}
+        />
+      )}
     </div>
   )
 }

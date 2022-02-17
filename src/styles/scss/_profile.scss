@@ -1,13 +1,13 @@
 .profile {
   &-page-title {
-    margin: 2.8rem 0;
+    margin: 2.8rem 0 4rem 0;
     text-align: center;
   }
 
-  &-form-edit-sub-text-input-nickname {
-    font-size: 1.2rem;
-    color: $color-4;
-    margin-bottom: 2rem;
+  &-edit-page-label {
+    font-weight: $font-weight-bold;
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
   }
 
   &-tag-home {
@@ -35,4 +35,14 @@
       margin: 0;
     }
   }
+}
+
+.background-colorpicker-active {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
 }

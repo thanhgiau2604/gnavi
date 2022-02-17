@@ -1,32 +1,33 @@
 import * as Yup from 'yup'
 
 export const INIT_FORM_EDIT_PROFILE_VALUE = {
-  nickname: '',
-  email: '',
-  password: '',
-  first_name: '',
-  last_name: '',
-  public_setting_full_name: 'yourself',
+  email: 'thanh.dinh@gmail.com',
+  password: '345456446356',
+  ja_name: '旅行花子',
   eng_name: '',
   birthday: new Date(),
   gender: '',
-  membership: '',
+  travel_organizations: [{ id: 1, value: 'one' }],
   phone_number: '',
   public_setting_phone_number: 'yourself',
   email_contact: '',
   public_setting_email_contact: 'yourself',
+  background_image: '',
+  theme_color: '',
 }
 export const FORM_EDIT_PROFILE_VALIDATE_SCHEMA = Yup.object().shape({
-  nickname: Yup.string(),
   email: Yup.string().required(),
   password: Yup.string().required(),
-  first_name: Yup.string().required(),
-  last_name: Yup.string().required(),
-  public_setting_full_name: Yup.string().required(),
+  ja_name: Yup.string().required(),
   eng_name: Yup.string(),
   birthday: Yup.date().required(),
-  gender: Yup.string().required(),
-  membership: Yup.string(),
+  gender: Yup.string(),
+  travel_organizations: Yup.array().of(
+    Yup.object().shape({
+      id: Yup.number(),
+      value: Yup.string(),
+    })
+  ),
   phone_number: Yup.string(),
   public_setting_phone_number: Yup.string().required(),
   email_contact: Yup.string(),
