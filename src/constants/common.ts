@@ -22,6 +22,7 @@ const ROUTES = {
     view: '/guide_bag',
     posts: '/guide_bag/posts',
     post_new: '/guide_bag/posts/new',
+    post_detail: '/guide_bag/posts/',
   },
 }
 

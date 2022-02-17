@@ -44,6 +44,7 @@ interface PostItemProps {
   data: PostItemData
   withBoxWrapper?: boolean
   isDetail?: boolean
+  handleClick?: () => void
 }
 
 interface CommentItemProps {

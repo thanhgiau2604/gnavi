@@ -4,11 +4,16 @@ import FlexContainer from 'styles/styled/layout/FlexLayout'
 import PostInfo from '../PostInfo'
 import { PostItemContainer } from './styled'
 
-const PostItem: React.FC<PostItemProps> = ({ data, withBoxWrapper, isDetail = false }) => {
+const PostItem: React.FC<PostItemProps> = ({
+  data,
+  withBoxWrapper,
+  isDetail = false,
+  handleClick,
+}) => {
   const { post_info, title, content, categories } = data
 
   return (
-    <PostItemContainer withBoxWrapper={withBoxWrapper}>
+    <PostItemContainer withBoxWrapper={withBoxWrapper} onClick={handleClick}>
       <PostInfo
         picture={post_info.picture}
         username={post_info.username}
