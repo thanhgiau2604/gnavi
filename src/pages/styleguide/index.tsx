@@ -23,6 +23,7 @@ import ListItem from 'components/common/ListItem'
 import ColorPicker from 'components/ColorPicker'
 import { onChangeColorHex, onChangeColorResult } from 'components/ColorPicker/functions'
 import { Variables } from 'styles/styled/app/Variables'
+import PullDownMenu from 'components/common/PullDownMenu'
 import FormInput from './FormInput'
 
 const StyleGuide = () => {
@@ -135,7 +136,6 @@ const StyleGuide = () => {
           iconHeight={20}
         />
       </FlexContainer>
-
       <button
         type="button"
         className="color-picker-input"
@@ -151,6 +151,10 @@ const StyleGuide = () => {
           onChangeColorResult={onChangeColorResult(setColorResult)}
         />
       )}
+      <PullDownMenu title="HELLO WORLD" hr>
+        Hello world
+      </PullDownMenu>
+      <PullDownMenu title="HELLO WORLD">Hello world</PullDownMenu>
     </div>
   )
 }
