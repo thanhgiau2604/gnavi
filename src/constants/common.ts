@@ -20,9 +20,9 @@ const ROUTES = {
   },
   guidebag: {
     view: '/guidebag',
-    posts: '/guidebag/posts',
-    post_new: '/guidebag/posts/new',
-    post_detail: '/guidebag/posts/',
+    posts: '/guidebag/q&a',
+    post_new: '/guidebag/q&a/new',
+    post_detail: '/guidebag/q&a/',
   },
 }
 
