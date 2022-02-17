@@ -2,8 +2,8 @@ import { TourEventProps } from './TourEvent'
 
 interface BasicInfoProps {
   tour_name: string
-  order_date: string
-  start_date: string
+  order_date: Date | null
+  start_date: Date | null
   start_time: string
   overview: string
   order_form: string
@@ -12,7 +12,7 @@ interface BasicInfoProps {
   email: string
   remuneration: number
   price: number
-  payment_date: string
+  payment_date: Date | null
   method_payment: string
 }
 
@@ -49,7 +49,7 @@ interface TourPlanInfoProps {
 
 interface TourPlanItemProps {
   id: number
-  datetime: string
+  datetime: Date | null
   title: string
   content: string
 }

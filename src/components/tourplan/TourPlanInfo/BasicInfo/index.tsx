@@ -4,6 +4,8 @@ import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Image from 'next/image'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import { BasicInfoProps } from 'interfaces/TourPlan'
+import { formatDateTime } from 'utils/helper'
+import { DATETIME_FORMAT } from '@constants'
 import { BasicInfoContainer } from './styled'
 
 interface Props {
@@ -29,9 +31,12 @@ const TourPlanInfoBasic: React.FC<Props> = ({ data }) => {
         </FlexContainer>
         <hr />
         <p className="tag">受注日</p>
-        <p className="information">{data.order_date}</p>
+        <p className="information">{formatDateTime(data.order_date, DATETIME_FORMAT.template01)}</p>
         <p className="tag">催行日時</p>
-        <p className="information">{`${data.start_date} ${data.start_time}`}</p>
+        <p className="information">{`${formatDateTime(
+          data.start_date,
+          DATETIME_FORMAT.template01
+        )} ${data.start_time}`}</p>
         <p className="tag">概要</p>
         <p className="information">{data.overview}</p>
 
@@ -60,7 +65,9 @@ const TourPlanInfoBasic: React.FC<Props> = ({ data }) => {
         <p className="tag">経費</p>
         <p className="information">{data.price}</p>
         <p className="tag">入金日</p>
-        <p className="information">{data.payment_date}</p>
+        <p className="information">
+          {formatDateTime(data.payment_date, DATETIME_FORMAT.template01)}
+        </p>
         <p className="tag">支払い方法</p>
         <p className="information">{data.method_payment}</p>
       </BasicInfoContainer>

@@ -1,35 +1,69 @@
 import Button from 'components/common/Button'
 import { BUTTON_COLORS, FONT_SIZES } from '@constants'
-import { Form } from 'formik'
-import React from 'react'
+import { Form, Formik } from 'formik'
+import React, { useState } from 'react'
 import { TourPlanInfoProps } from 'interfaces/TourPlan'
 import BasicInfo from 'components/Information/BasicInfo'
 import GuestInfo from 'components/Information/GuestInfo'
 import PlanInfo from 'components/Information/PlanInfo'
+import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
+import { TourPlanFormInfoContainer } from './styled'
 
-interface TourPlanFormInfoProps {
-  tab: string
+interface Props {
   data: TourPlanInfoProps
 }
 
-const TourPlanFormInfo: React.FC<TourPlanFormInfoProps> = ({ tab, data }) => {
+const TourPlanFormInfo: React.FC<Props> = ({ data }) => {
+  const [isTab, setIsTab] = useState<string>('ツアー情報')
+
   return (
-    <Form>
-      {tab === 'ツアー情報' && <BasicInfo of="tour-plan" />}
-      {tab === 'ゲスト情報' && <GuestInfo />}
-      {tab === 'スポット情報' && <PlanInfo events={data.plan_info.events} />}
-      <div className="btn-submit">
-        <Button
-          title="保存する"
-          type="submit"
-          buttonColor={BUTTON_COLORS.style02}
-          width={320}
-          height={40}
-          margin="0.8rem auto"
-          _fontSize={FONT_SIZES.large}
+    <TourPlanFormInfoContainer>
+      <ButtonGroup itemPerRow={3}>
+        <ButtonGroupItem
+          text="基本情報"
+          handleClick={() => setIsTab('ツアー情報')}
+          active={isTab === 'ツアー情報'}
         />
-      </div>
-    </Form>
+        <ButtonGroupItem
+          text="ゲスト情報"
+          handleClick={() => setIsTab('ゲスト情報')}
+          active={isTab === 'ゲスト情報'}
+        />
+        <ButtonGroupItem
+          text="スポット情報"
+          handleClick={() => setIsTab('スポット情報')}
+          active={isTab === 'スポット情報'}
+        />
+      </ButtonGroup>
+      <Formik
+        initialValues={data}
+        onSubmit={(values, actions) => {
+          console.log(values)
+          actions.setSubmitting(false)
+        }}
+      >
+        {({ values }) => {
+          return (
+            <Form>
+              {isTab === 'ツアー情報' && <BasicInfo of="tour-plan" />}
+              {isTab === 'ゲスト情報' && <GuestInfo />}
+              {isTab === 'スポット情報' && <PlanInfo events={values.plan_info.events} />}
+              <div className="btn-submit">
+                <Button
+                  title="保存する"
+                  type="submit"
+                  buttonColor={BUTTON_COLORS.style02}
+                  width={320}
+                  height={40}
+                  margin="0.8rem auto"
+                  _fontSize={FONT_SIZES.large}
+                />
+              </div>
+            </Form>
+          )
+        }}
+      </Formik>
+    </TourPlanFormInfoContainer>
   )
 }
 

@@ -8,7 +8,7 @@ const ROUTES = {
     view: '/tourplan',
     detail: '/tourplan/detail?id=',
     create: '/tourplan/create',
-    edit: '',
+    edit: '/tourplan/edit?id=',
   },
   tour_log: {
     view: '/tourlog',
@@ -33,4 +33,9 @@ const ENV = {
   prod: 'production',
 }
 
-export { ROUTES, FONT_SIZES, ENV }
+const DATETIME_FORMAT = {
+  template01: 'YYYY年M月D日',
+  template02: 'DD月MM日',
+}
+
+export { ROUTES, FONT_SIZES, ENV, DATETIME_FORMAT }

@@ -1,4 +1,4 @@
-import { CHECKBOX_THEME } from '@constants'
+import { CHECKBOX_THEME, OPTIONS_TIME } from '@constants'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
@@ -17,8 +17,20 @@ const History: React.FC = () => {
   return (
     <Container padding="0 3rem">
       <HistoryLogContainer>
-        <FastField name="tour_start_time" component={CustomSelect} label="ツアー開始時間" pb={41} />
-        <FastField name="tour_end_time" component={CustomSelect} label="ツアー終了時間" pb={40} />
+        <FastField
+          name="tour_start_time"
+          component={CustomSelect}
+          options={OPTIONS_TIME}
+          label="ツアー開始時間"
+          pb={41}
+        />
+        <FastField
+          name="tour_end_time"
+          component={CustomSelect}
+          options={OPTIONS_TIME}
+          label="ツアー終了時間"
+          pb={40}
+        />
         <h3 className="title">振り返り</h3>
         <div className="history_info.when_gathering">
           <h3 className="label">集合時</h3>
