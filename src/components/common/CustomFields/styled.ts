@@ -56,7 +56,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     padding-top: 0.8rem;
     font-size: ${FONT_SIZES.small};
     text-align: right;
-    font-weight: 700;
+    font-weight: ${Variables.fontWeightBold};
   }
 
   //custom datepicker from lib react-date-picker

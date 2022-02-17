@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Variables } from 'styles/styled/app/Variables'
 
 const TestInfoSection = styled.section`
   .container {
@@ -10,7 +11,7 @@ const TestInfoSection = styled.section`
       padding-top: 2.4rem;
       h3 {
         font-size: 1.8rem;
-        font-weight: 400;
+        font-weight: ${Variables.fontWeightNormal};
         line-height: calc(26 / 18);
       }
     }

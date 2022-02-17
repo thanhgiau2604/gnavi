@@ -26,7 +26,7 @@ const HeaderContainer = styled.header<HeaderProps>`
     &-title {
       font-size: ${FONT_SIZES.small};
       color: ${Variables.colorPrimary};
-      font-weight: 400;
+      font-weight: ${Variables.fontWeightNormal};
     }
   }
   .authen-btn {
@@ -41,7 +41,7 @@ const HeaderContainer = styled.header<HeaderProps>`
 const HeaderTitle = styled.h1`
   font-family: ${Variables.fontSecondary};
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: ${Variables.fontWeightBold};
   color: inherit;
   margin: 0 auto;
 `
