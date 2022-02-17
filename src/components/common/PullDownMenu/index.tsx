@@ -5,12 +5,12 @@ import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Image from 'next/image'
 import { PullDownMenuContainer } from './styled'
 
-const PullDownMenu: React.FC<PullDownMeunProps> = ({ hr, title, children }) => {
+const PullDownMenu: React.FC<PullDownMeunProps> = ({ hr, title, children, margin }) => {
   const [show, setShow] = useState<boolean>(true)
 
   return (
     <PullDownMenuContainer>
-      <FlexContainer justifyContent="space-between" margin="4rem auto auto auto">
+      <FlexContainer justifyContent="space-between" margin={`${margin || '4rem auto auto auto'}`}>
         <p className="field text--large">{title}</p>
         <ImageContainer
           onClick={() => setShow(!show)}

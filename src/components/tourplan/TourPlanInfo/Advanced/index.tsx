@@ -12,7 +12,7 @@ interface Props {
 const TourPlanAdvancedInfo: React.FC<Props> = ({ title, content, transportation }) => {
   return (
     <TourPlanAdvancedInfoContainer>
-      <PullDownMenu title={title}>
+      <PullDownMenu title={title} margin="0">
         <p className="content fm-noto">{content}</p>
         {!!transportation.length && (
           <div className="transportation">

@@ -1,5 +1,6 @@
 interface PullDownMeunProps {
   hr?: boolean
+  margin?: string
   title: string
   children: React.ReactNode
 }
