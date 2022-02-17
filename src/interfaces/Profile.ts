@@ -23,10 +23,10 @@ export interface EditProfilePayload {
   public_setting_phone_number: string
   email_contact: string
   public_setting_email_contact: string
-  background_image: any
   theme_color: string
 }
 
 export interface EditProfileFormProps {
+  infoUser?: EditProfilePayload
   handleSubmit: (payload: EditProfilePayload) => void
 }

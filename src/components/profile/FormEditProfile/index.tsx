@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { FastField, Form, Formik, FieldArray } from 'formik'
 import { ColorResult } from 'react-color'
 import { EditProfileFormProps, Membership } from 'interfaces/Profile'
-
+import useOnClickOutSide from 'hooks/useOnClickOutSide'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
 import CustomInput from 'components/common/CustomFields/InputField'
@@ -21,18 +21,37 @@ import {
   InitColorResult,
 } from '@constants'
 import { FieldLabel } from 'components/common/CustomFields/styled'
+import Flex from 'styles/styled/layout/FlexLayout'
 
-const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
+const EditProfileForm: React.FC<EditProfileFormProps> = ({ infoUser, handleSubmit }) => {
+  const [valueForm, setValueForm] = useState<any>()
+
   const [showColorPicker, setShowColorPicker] = useState<boolean>(false)
-  const [color, setColor] = useState<string>('#ffffff')
+  const [themeColor, setThemeColor] = useState<string>('#fff')
+  const [colorHex, setColorHex] = useState<string>('#fff')
   const [colorResult, setColorResult] = useState<ColorResult>(InitColorResult)
+  const ref = useRef(null)
+  const onCloseColorPicker = () => setShowColorPicker(false)
+  useOnClickOutSide(ref, onCloseColorPicker)
+
+  useEffect(() => {
+    if (infoUser) setValueForm(infoUser)
+    else setValueForm(INIT_FORM_EDIT_PROFILE_VALUE)
+  }, [infoUser])
+
+  const handleChooseColorHex = (_colorHex: string) => () => {
+    setThemeColor(_colorHex)
+    onCloseColorPicker()
+  }
+
+  if (!valueForm) return null
 
   return (
     <Formik
-      initialValues={INIT_FORM_EDIT_PROFILE_VALUE}
+      initialValues={valueForm}
       validationSchema={FORM_EDIT_PROFILE_VALIDATE_SCHEMA}
       onSubmit={async (values, actions) => {
-        await handleSubmit({ ...values, background_image: '', theme_color: '#ffffff' })
+        await handleSubmit({ ...values, theme_color: themeColor })
         actions.setSubmitting(false)
       }}
     >
@@ -145,7 +164,7 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
             />
 
             <FieldLabel>
-              <label className="profile-label">カバー画像を設定</label>
+              <label className="profile-edit-page-label">カバー画像を設定</label>
               <p className="lb-tag lb-tag--any">任意</p>
             </FieldLabel>
 
@@ -158,7 +177,7 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
             />
 
             <FieldLabel>
-              <label className="profile-label">プロフィールのテーマカラーを設定</label>
+              <label className="profile-edit-page-label">プロフィールのテーマカラーを設定</label>
               <p className="lb-tag lb-tag--any">任意</p>
             </FieldLabel>
 
@@ -167,15 +186,32 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ handleSubmit }) => {
               className="color-picker-input"
               onClick={() => setShowColorPicker(!showColorPicker)}
             >
-              {color}
+              {themeColor}
             </button>
 
             {showColorPicker && (
-              <ColorPicker
-                colorResult={colorResult}
-                onChangeColorHex={onChangeColorHex(setColor)}
-                onChangeColorResult={onChangeColorResult(setColorResult)}
-              />
+              <>
+                <div className="background-colorpicker-active" />
+                <div className="color-picker-container" ref={ref}>
+                  <span role="presentation" className="btn-close-cp" onClick={onCloseColorPicker}>
+                    &times;
+                  </span>
+                  <ColorPicker
+                    colorResult={colorResult}
+                    onChangeColorHex={onChangeColorHex(setColorHex)}
+                    onChangeColorResult={onChangeColorResult(setColorResult)}
+                  />
+                  <Flex justifyContent="center">
+                    <Button
+                      title="保存する"
+                      buttonColor={BUTTON_COLORS.style01}
+                      onClick={handleChooseColorHex(colorHex)}
+                      margin="0"
+                      width="90%"
+                    />
+                  </Flex>
+                </div>
+              </>
             )}
 
             <Button

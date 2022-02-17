@@ -12,4 +12,21 @@
     cursor: pointer;
     text-align: left;
   }
+
+  &-container {
+    position: relative;
+    z-index: 2;
+    background-color: $color-white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.btn-close-cp {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }

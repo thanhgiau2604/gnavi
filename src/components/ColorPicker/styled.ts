@@ -7,7 +7,7 @@ interface props {
 
 export const ColorPickerContainer = styled.div<props>`
   width: 100%;
-  padding: 25px;
+  padding: 40px 25px 25px 25px;
 
   .pointer {
     width: 18px;
