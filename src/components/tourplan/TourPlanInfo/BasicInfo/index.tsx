@@ -6,6 +6,8 @@ import { Container } from 'styles/styled/layout/ContainerLayout'
 import { BasicInfoProps } from 'interfaces/TourPlan'
 import { formatDateTime } from 'utils/helper'
 import { DATETIME_FORMAT } from '@constants'
+import PullDownMenu from 'components/common/PullDownMenu'
+import PullDownMenuItem from 'components/common/PullDownMenu/PullDownMenuItem'
 import { BasicInfoContainer } from './styled'
 
 interface Props {
@@ -18,27 +20,19 @@ const TourPlanInfoBasic: React.FC<Props> = ({ data }) => {
   return (
     <Container padding="0 2rem">
       <BasicInfoContainer>
-        <FlexContainer justifyContent="space-between" margin="4rem auto auto auto">
-          <p className="field text--large">ツアー情報</p>
-          <ImageContainer
-            onClick={() => setShow(!show)}
-            className={`icon icon-${show ? 'expand' : 'collapse'}`}
-            width={20}
-            height={20}
-          >
-            <Image src="/icons/circle_arrow.svg" layout="fill" objectFit="contain" />
-          </ImageContainer>
-        </FlexContainer>
-        <hr />
-        <p className="tag">受注日</p>
-        <p className="information">{formatDateTime(data.order_date, DATETIME_FORMAT.template01)}</p>
-        <p className="tag">催行日時</p>
-        <p className="information">{`${formatDateTime(
-          data.start_date,
-          DATETIME_FORMAT.template01
-        )} ${data.start_time}`}</p>
-        <p className="tag">概要</p>
-        <p className="information">{data.overview}</p>
+        <PullDownMenu title="ツアー情報" hr>
+          <PullDownMenuItem
+            tag="受注日"
+            info={formatDateTime(data.order_date, DATETIME_FORMAT.template01)}
+          />
+          <PullDownMenuItem
+            tag="催行日時"
+            info={`${formatDateTime(data.start_date, DATETIME_FORMAT.template01)} ${
+              data.start_time
+            }`}
+          />
+          <PullDownMenuItem tag="概要" info={data.overview} />
+        </PullDownMenu>
 
         <FlexContainer justifyContent="space-between" margin="4rem auto auto auto">
           <p className="field text--large">依頼元情報</p>
