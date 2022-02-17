@@ -6,10 +6,13 @@ const buildTimeFrame = (timeStep: number) => {
   const buildTimeStep = () => {
     return Array.from({ length: 60 / timeStep }, (_, i) => i * timeStep)
   }
+  const format = (i: number, j: number) => {
+    return `${i < 10 ? `0${i}` : i}:${j < 10 ? `0${j}` : j}`
+  }
   return Array.from({ length: 24 }, (_, i) =>
     Array.from(buildTimeStep(), (j) => ({
-      value: `${i < 10 ? `0${i}` : i}:${j < 10 ? `0${j}` : j}`,
-      label: `${i < 10 ? `0${i}` : i}:${j < 10 ? `0${j}` : j}`,
+      value: format(i, j),
+      label: format(i, j),
     }))
   ).flat()
 }
