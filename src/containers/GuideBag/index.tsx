@@ -1,4 +1,4 @@
-import { GUIDE_BAG_CATEGORIES, ROUTES } from '@constants'
+import { GUIDEBAG_CATEGORIES, ROUTES } from '@constants'
 import ListItem from 'components/common/ListItem'
 import Category from 'components/guidebag/Category'
 import GuideBagLayout from 'components/layout/GuideBagLayout'
@@ -9,7 +9,7 @@ import { GuideBagContainer } from './styled'
 const GuideBag = () => {
   const router = useRouter()
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [categories, setCategories] = useState<string[]>(GUIDE_BAG_CATEGORIES)
+  const [categories, setCategories] = useState<string[]>(GUIDEBAG_CATEGORIES[0])
   const [showQA, setShowQA] = useState<boolean>(false)
 
   const updateCategoryList = (categoryList: string[]) => {

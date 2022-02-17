@@ -93,28 +93,9 @@ const COMMENTS_DATA: CommentItemData = {
   num_like: 3,
 }
 
-const GUIDE_BAG_CATEGORIES = [
-  '食事',
-  '地域',
-  '宗教',
-  '交通',
-  '国内',
-  '地図',
-  '海外',
-  'テーマパーク',
-  'イベント・フェス',
-]
-
-const GUIDE_BAG_CATEGORIES_LEVEL2 = [
-  '北海道',
-  '東北',
-  '関東',
-  '甲信越・北陸',
-  '東海',
-  '関西',
-  '中国',
-  '四国',
-  '九州・沖縄',
+const GUIDEBAG_CATEGORIES = [
+  ['食事', '地域', '宗教', '交通', '国内', '地図', '海外', 'テーマパーク', 'イベント・フェス'],
+  ['北海道', '東北', '関東', '甲信越・北陸', '東海', '関西', '中国', '四国', '九州・沖縄'],
 ]
 
 export {
@@ -123,8 +104,7 @@ export {
   INIT_POST_FORM_VALUE,
   POSTS_DATA,
   INIT_COMMENT_FORM_VALUE,
-  GUIDE_BAG_CATEGORIES,
-  GUIDE_BAG_CATEGORIES_LEVEL2,
+  GUIDEBAG_CATEGORIES,
   COMMENTS_DATA,
   POST_TYPE_OPTIONS,
 }

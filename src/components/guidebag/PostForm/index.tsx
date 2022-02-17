@@ -1,6 +1,6 @@
 import {
   BUTTON_COLORS,
-  GUIDE_BAG_CATEGORIES,
+  GUIDEBAG_CATEGORIES,
   INIT_POST_FORM_VALUE,
   POST_TYPE_OPTIONS,
 } from '@constants'
@@ -42,14 +42,14 @@ const PostForm: React.FC = () => {
                 name="category_01"
                 component={CategorySelect}
                 label="カテゴリ1"
-                categories={GUIDE_BAG_CATEGORIES}
+                categories={GUIDEBAG_CATEGORIES[0]}
               />
 
               <FastField
                 name="category_02"
                 component={CategorySelect}
                 label="カテゴリ2"
-                categories={GUIDE_BAG_CATEGORIES}
+                categories={GUIDEBAG_CATEGORIES[0]}
               />
 
               <Button
