@@ -1,8 +1,8 @@
 import React from 'react'
-import { NextPage } from 'next'
 import GuideBagContainer from 'containers/GuideBag'
+import { NextApplicationPage } from 'pages/_app'
 
-const GuideBagPage: NextPage = () => {
+const GuideBagPage: NextApplicationPage = () => {
   return <GuideBagContainer />
 }
 

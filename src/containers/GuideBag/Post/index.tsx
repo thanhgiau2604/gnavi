@@ -1,5 +1,5 @@
-import PostItem from 'components/guide_bag/PostItem'
-import PostMenu from 'components/guide_bag/Menu'
+import PostItem from 'components/guidebag/PostItem'
+import PostMenu from 'components/guidebag/Menu'
 import React from 'react'
 import GuideBagLayout from 'components/layout/GuideBagLayout'
 import { POSTS_DATA, ROUTES } from '@constants'

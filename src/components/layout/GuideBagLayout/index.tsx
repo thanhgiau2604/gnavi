@@ -1,7 +1,7 @@
 import { BUTTON_COLORS, ROUTES } from '@constants'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import SearchForm from 'components/guide_bag/SearchForm'
+import SearchForm from 'components/guidebag/SearchForm'
 import { GuideBagLayoutProps } from 'interfaces/GuideBag'
 import Link from 'next/link'
 import React from 'react'

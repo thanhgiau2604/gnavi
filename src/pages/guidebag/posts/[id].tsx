@@ -1,8 +1,8 @@
 import DetailPostContainer from 'containers/GuideBag/Post/DetailPost'
-import { NextPage } from 'next'
+import { NextApplicationPage } from 'pages/_app'
 import React from 'react'
 
-const DetailPostPage: NextPage = () => {
+const DetailPostPage: NextApplicationPage = () => {
   return <DetailPostContainer />
 }
 

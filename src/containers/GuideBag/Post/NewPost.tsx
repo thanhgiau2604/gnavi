@@ -1,7 +1,7 @@
 import { NO_AVATAR } from '@constants'
 import Header from 'components/common/Header'
-import PostForm from 'components/guide_bag/PostForm'
-import PostInfo from 'components/guide_bag/PostInfo'
+import PostForm from 'components/guidebag/PostForm'
+import PostInfo from 'components/guidebag/PostInfo'
 import React from 'react'
 import { NewPostContainer } from './styled'
 

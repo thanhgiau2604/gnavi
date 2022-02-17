@@ -1,8 +1,8 @@
 import NewPostContainer from 'containers/GuideBag/Post/NewPost'
-import { NextPage } from 'next'
+import { NextApplicationPage } from 'pages/_app'
 import React from 'react'
 
-const NewPostPage: NextPage = () => {
+const NewPostPage: NextApplicationPage = () => {
   return <NewPostContainer />
 }
 

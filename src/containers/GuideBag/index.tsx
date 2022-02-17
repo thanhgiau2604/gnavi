@@ -1,6 +1,6 @@
 import { GUIDE_BAG_CATEGORIES, ROUTES } from '@constants'
 import ListItem from 'components/common/ListItem'
-import Category from 'components/guide_bag/Category'
+import Category from 'components/guidebag/Category'
 import GuideBagLayout from 'components/layout/GuideBagLayout'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
