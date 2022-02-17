@@ -6,7 +6,7 @@ interface PullDownMeunProps {
 
 interface PullDownMeunItemProps {
   tag: string
-  info: string
+  info: string | number
 }
 
 export type { PullDownMeunProps, PullDownMeunItemProps }
