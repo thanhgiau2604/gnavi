@@ -11,7 +11,7 @@ const PullDownMenu: React.FC<PullDownMeunProps> = ({ hr, title, children, margin
   return (
     <PullDownMenuContainer>
       <FlexContainer justifyContent="space-between" margin={`${margin || '4rem auto auto auto'}`}>
-        <p className="field text--large">{title}</p>
+        <p className="field">{title}</p>
         <ImageContainer
           onClick={() => setShow(!show)}
           className={`icon-${show ? 'expand' : 'collapse'}`}
@@ -22,7 +22,7 @@ const PullDownMenu: React.FC<PullDownMeunProps> = ({ hr, title, children, margin
         </ImageContainer>
       </FlexContainer>
       {hr && <hr />}
-      {children}
+      <div className={`pull-down-detailed-${show ? 'block' : 'hide'}`}>{children}</div>
     </PullDownMenuContainer>
   )
 }

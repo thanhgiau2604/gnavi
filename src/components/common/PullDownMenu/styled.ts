@@ -20,6 +20,14 @@ const PullDownMenuContainer = styled.div`
       transform: rotate(0deg);
     }
   }
+  .pull-down-detailed {
+    &-show {
+      display: block;
+    }
+    &-hide {
+      display: none;
+    }
+  }
 `
 
 export { PullDownMenuContainer }
