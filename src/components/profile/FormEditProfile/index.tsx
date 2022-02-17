@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { FastField, Form, Formik, FieldArray } from 'formik'
 import { ColorResult } from 'react-color'
-import { EditProfileFormProps, Membership } from 'interfaces/Profile'
+import { Membership, InfoProfile, EditProfilePayload } from 'interfaces/Profile'
 import useOnClickOutSide from 'hooks/useOnClickOutSide'
 import Button from 'components/common/Button'
 import ButtonUpload from 'components/common/ButtonUpload'
@@ -23,20 +23,29 @@ import {
 import { FieldLabel } from 'components/common/CustomFields/styled'
 import Flex from 'styles/styled/layout/FlexLayout'
 
-const EditProfileForm: React.FC<EditProfileFormProps> = ({ infoUser, handleSubmit }) => {
-  const [valueForm, setValueForm] = useState<any>()
+export interface props {
+  infoUser?: InfoProfile
+  handleSubmit: (payload: EditProfilePayload) => void
+}
+
+const EditProfileForm: React.FC<props> = ({ infoUser, handleSubmit }) => {
+  const [valueForm, setValueForm] = useState<InfoProfile>()
 
   const [showColorPicker, setShowColorPicker] = useState<boolean>(false)
-  const [themeColor, setThemeColor] = useState<string>('#fff')
-  const [colorHex, setColorHex] = useState<string>('#fff')
+  const [themeColor, setThemeColor] = useState<string>('')
+  const [colorHex, setColorHex] = useState<string>('')
   const [colorResult, setColorResult] = useState<ColorResult>(InitColorResult)
   const ref = useRef(null)
   const onCloseColorPicker = () => setShowColorPicker(false)
   useOnClickOutSide(ref, onCloseColorPicker)
 
   useEffect(() => {
-    if (infoUser) setValueForm(infoUser)
-    else setValueForm(INIT_FORM_EDIT_PROFILE_VALUE)
+    if (infoUser) {
+      setValueForm(infoUser)
+      setThemeColor(infoUser.theme_color)
+      setColorHex(infoUser.theme_color)
+      setColorResult({ ...InitColorResult, hex: infoUser.theme_color })
+    } else setValueForm(INIT_FORM_EDIT_PROFILE_VALUE)
   }, [infoUser])
 
   const handleChooseColorHex = (_colorHex: string) => () => {
@@ -95,8 +104,8 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ infoUser, handleSubmi
             <FieldArray
               name="memberships"
               render={(arrayHelpers) =>
-                values.memberships.map((member: Membership, index: number) => {
-                  const lastItem = index === values.memberships.length - 1
+                values.travel_organizations.map((member: Membership, index: number) => {
+                  const lastItem = index === values.travel_organizations.length - 1
 
                   return (
                     <div key={member.id}>
@@ -108,7 +117,7 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ infoUser, handleSubmi
                         pb={1}
                       />
 
-                      {values.memberships.length !== 1 && (
+                      {values.travel_organizations.length !== 1 && (
                         <button
                           type="button"
                           style={{ marginBottom: 20, width: '100%' }}
@@ -123,7 +132,9 @@ const EditProfileForm: React.FC<EditProfileFormProps> = ({ infoUser, handleSubmi
                           width="100%"
                           buttonColor={BUTTON_COLORS.style06}
                           title="所属団体を追加"
-                          margin={values.memberships.length === 1 ? '30px 0' : '0 0 30px 0'}
+                          margin={
+                            values.travel_organizations.length === 1 ? '30px 0' : '0 0 30px 0'
+                          }
                           onClick={() =>
                             arrayHelpers.push({ id: Math.floor(Math.random() * 10000), value: '' })
                           }

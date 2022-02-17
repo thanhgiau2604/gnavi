@@ -11,6 +11,22 @@ export interface Membership {
   value: string
 }
 
+export interface InfoProfile {
+  email: string
+  password: string
+  ja_name: string
+  eng_name: string
+  birthday: Date
+  gender: string
+  travel_organizations: Membership[]
+  phone_number: string
+  public_setting_phone_number: string
+  email_contact: string
+  public_setting_email_contact: string
+  background_image: string
+  theme_color: string
+}
+
 export interface EditProfilePayload {
   email: string
   password: string
@@ -18,15 +34,10 @@ export interface EditProfilePayload {
   eng_name: string
   birthday: Date
   gender: string
-  memberships: Membership[]
+  travel_organizations: Membership[]
   phone_number: string
   public_setting_phone_number: string
   email_contact: string
   public_setting_email_contact: string
   theme_color: string
-}
-
-export interface EditProfileFormProps {
-  infoUser?: EditProfilePayload
-  handleSubmit: (payload: EditProfilePayload) => void
 }

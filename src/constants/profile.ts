@@ -7,11 +7,13 @@ export const INIT_FORM_EDIT_PROFILE_VALUE = {
   eng_name: '',
   birthday: new Date(),
   gender: '',
-  memberships: [{ id: 1, value: 'one' }],
+  travel_organizations: [{ id: 1, value: 'one' }],
   phone_number: '',
   public_setting_phone_number: 'yourself',
   email_contact: '',
   public_setting_email_contact: 'yourself',
+  background_image: '',
+  theme_color: '',
 }
 export const FORM_EDIT_PROFILE_VALIDATE_SCHEMA = Yup.object().shape({
   email: Yup.string().required(),
@@ -20,7 +22,7 @@ export const FORM_EDIT_PROFILE_VALIDATE_SCHEMA = Yup.object().shape({
   eng_name: Yup.string(),
   birthday: Yup.date().required(),
   gender: Yup.string(),
-  memberships: Yup.array().of(
+  travel_organizations: Yup.array().of(
     Yup.object().shape({
       id: Yup.number(),
       value: Yup.string(),
