@@ -32,7 +32,7 @@ const MenuItemContainer = styled.div`
   }
   p.menu-item-title {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: ${Variables.fontWeightNormal};
     color: ${Variables.colorTextCommon};
   }
 `

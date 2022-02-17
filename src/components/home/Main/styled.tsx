@@ -24,7 +24,7 @@ const HomeMainSection = styled.div`
       a {
         display: inline-block;
         margin-top: 1rem;
-        font-weight: 400;
+        font-weight: ${Variables.fontWeightNormal};
       }
     }
   }
@@ -35,7 +35,7 @@ const HomeMainSection = styled.div`
     margin-top: 4.1rem;
     a {
       color: ${Variables.colorTextCommon};
-      font-weight: 400;
+      font-weight: ${Variables.fontWeightNormal};
       height: 4.8rem;
       padding-top: 1.3rem;
     }

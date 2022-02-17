@@ -10,6 +10,7 @@ interface props {
 export const ButtonGroupStyledContainer = styled.table<props>`
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
   td {
     padding: 0;
     ${({ rowTop }) => rowTop === false && `border-top: none !important`};

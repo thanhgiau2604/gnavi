@@ -15,7 +15,7 @@ export interface FieldStyleProps {
 const FieldContainer = styled.div<FieldStyleProps>`
   display: flex;
   flex-direction: column;
-  padding-bottom: ${({ pb }) => (pb ? `calc( ${pb}rem / 10)` : `2.5rem`)};
+  padding-bottom: ${({ pb }) => (pb !== null ? `calc( ${pb}rem / 10)` : `2.5rem`)};
 
   input,
   textarea,
@@ -40,7 +40,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
   select {
     appearance: none;
     background-image: url('/images/arrow_down.png');
-    background-position: 95% 50%;
+    background-position: 97% 50%;
     background-repeat: no-repeat;
     background-size: 1.2rem 0.74rem;
   }
@@ -56,7 +56,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     padding-top: 0.8rem;
     font-size: ${FONT_SIZES.small};
     text-align: right;
-    font-weight: 700;
+    font-weight: ${Variables.fontWeightBold};
   }
 
   //custom datepicker from lib react-date-picker

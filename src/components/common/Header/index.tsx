@@ -3,9 +3,10 @@ import { HeaderProps } from 'interfaces/Header'
 import Image from 'next/image'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { useRouter } from 'next/router'
+import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { HeaderContainer, HeaderTitle } from './styled'
 
-const Header = ({ title, showBtnBack, shadow, backTo, children }: HeaderProps) => {
+const Header = ({ title, showBtnBack, shadow, backTo, btnBackTitle, children }: HeaderProps) => {
   const router = useRouter()
   const handleNavigateBack = () => backTo && router.push(backTo)
 
@@ -13,9 +14,12 @@ const Header = ({ title, showBtnBack, shadow, backTo, children }: HeaderProps) =
     <HeaderContainer shadow={shadow}>
       <div className={showBtnBack ? 'back-btn' : ''}>
         {showBtnBack ? (
-          <ImageContainer width={24} height={24} onClick={handleNavigateBack}>
-            <Image src="/images/arrow_back.png" alt="" layout="fill" objectFit="contain" />
-          </ImageContainer>
+          <FlexContainer>
+            <ImageContainer width={24} height={24} onClick={handleNavigateBack}>
+              <Image src="/images/arrow_back.png" alt="" layout="fill" objectFit="contain" />
+            </ImageContainer>
+            {btnBackTitle && <h4 className="back-btn-title">{btnBackTitle}</h4>}
+          </FlexContainer>
         ) : (
           <ImageContainer width={121} height={34}>
             <Image src="/images/logo.png" alt="logo" layout="fill" objectFit="contain" />
