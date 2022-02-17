@@ -25,7 +25,8 @@ export const ModalContainer = styled.div<ModalContainerProps>`
     background-color: ${Variables.colorWhite};
     border: 1px solid #888;
     border-radius: 8px;
-    margin: 15px 0;
+    max-width: 80rem;
+    margin: 0 auto;
   }
 `
 
