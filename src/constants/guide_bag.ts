@@ -22,10 +22,11 @@ const POST_MENU_OPTIONS = [
 ]
 
 const INIT_POST_FORM_VALUE: NewPostPayload = {
+  title: '',
   content: '',
-  place: '',
-  theme: 'none',
-  new_theme: '',
+  post_type: 'question',
+  category_01: '地域：関東（東京）',
+  category_02: '',
 }
 
 const INIT_COMMENT_FORM_VALUE: NewCommentPayload = {

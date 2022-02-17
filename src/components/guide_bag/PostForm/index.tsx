@@ -1,9 +1,15 @@
-import { BUTTON_COLORS, INIT_POST_FORM_VALUE, POST_TYPE_OPTIONS } from '@constants'
+import {
+  BUTTON_COLORS,
+  GUIDE_BAG_CATEGORIES,
+  INIT_POST_FORM_VALUE,
+  POST_TYPE_OPTIONS,
+} from '@constants'
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import { FastField, Form, Formik } from 'formik'
 import React from 'react'
+import CategorySelect from '../CategorySelect'
 import { PostFormContainer } from './styled'
 
 const PostForm: React.FC = () => {
@@ -32,6 +38,21 @@ const PostForm: React.FC = () => {
                 label="場所"
                 options={POST_TYPE_OPTIONS}
               />
+
+              <FastField
+                name="category_01"
+                component={CategorySelect}
+                label="カテゴリ1"
+                categories={GUIDE_BAG_CATEGORIES}
+              />
+
+              <FastField
+                name="category_02"
+                component={CategorySelect}
+                label="カテゴリ2"
+                categories={GUIDE_BAG_CATEGORIES}
+              />
+
               <Button
                 title="上記内容で質問する"
                 type="submit"

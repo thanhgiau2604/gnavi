@@ -3,10 +3,11 @@ interface SearchPayload {
 }
 
 interface NewPostPayload {
+  title: string
   content: string
-  place: string
-  theme: string
-  new_theme: string
+  post_type: string
+  category_01: string
+  category_02: string
 }
 
 interface NewCommentPayload {
@@ -62,6 +63,11 @@ interface GuideBagLayoutProps {
   children: JSX.Element
 }
 
+interface CategorySelectProps {
+  label: string
+  categories: string[]
+}
+
 export type {
   SearchPayload,
   NewPostPayload,
@@ -73,4 +79,5 @@ export type {
   GuideBagLayoutProps,
   CommentItemData,
   CommentItemProps,
+  CategorySelectProps,
 }
