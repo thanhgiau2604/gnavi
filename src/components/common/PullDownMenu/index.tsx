@@ -1,11 +1,11 @@
-import { PullDownMeunProps } from 'interfaces/PullDownMenu'
+import { PullDownMenuProps } from 'interfaces/PullDownMenu'
 import React, { useState } from 'react'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Image from 'next/image'
 import { PullDownMenuContainer } from './styled'
 
-const PullDownMenu: React.FC<PullDownMeunProps> = ({ hr, title, children, margin }) => {
+const PullDownMenu: React.FC<PullDownMenuProps> = ({ hr, title, children, margin }) => {
   const [show, setShow] = useState<boolean>(true)
 
   return (

@@ -1,13 +1,13 @@
-interface PullDownMeunProps {
+interface PullDownMenuProps {
   hr?: boolean
   margin?: string
   title: string
   children: React.ReactNode
 }
 
-interface PullDownMeunItemProps {
+interface PullDownMenuItemProps {
   tag: string
   info: string | number
 }
 
-export type { PullDownMeunProps, PullDownMeunItemProps }
+export type { PullDownMenuProps, PullDownMenuItemProps }

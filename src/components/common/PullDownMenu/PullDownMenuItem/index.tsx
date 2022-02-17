@@ -1,8 +1,8 @@
-import { PullDownMeunItemProps } from 'interfaces/PullDownMenu'
+import { PullDownMenuItemProps } from 'interfaces/PullDownMenu'
 import React from 'react'
 import { PullDownMenuItemContainer } from './styled'
 
-const PullDownMenuItem: React.FC<PullDownMeunItemProps> = ({ tag, info }) => {
+const PullDownMenuItem: React.FC<PullDownMenuItemProps> = ({ tag, info }) => {
   return (
     <PullDownMenuItemContainer>
       <p className="tag">{tag}</p>
