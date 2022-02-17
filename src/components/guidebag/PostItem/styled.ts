@@ -19,7 +19,7 @@ const PostItemContainer = styled.div<PostItemStyleProps>`
     &-title {
       color: ${Variables.colorPrimary};
       font-size: 1.7rem;
-      font-weight: 700;
+      font-weight: ${Variables.fontWeightBold};
       padding-top: 1.5rem;
     }
 
@@ -33,14 +33,14 @@ const PostItemContainer = styled.div<PostItemStyleProps>`
       margin-top: 3rem;
       padding: 5px;
       h4 {
-        font-weight: 400;
+        font-weight: ${Variables.fontWeightNormal};
       }
     }
 
     &-category-item {
       font-size: ${FONT_SIZES.small};
       color: ${Variables.colorPrimary};
-      font-weight: 700;
+      font-weight: ${Variables.fontWeightBold};
       &:not(:first-of-type) {
         padding-left: 8px;
       }

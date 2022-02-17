@@ -28,7 +28,7 @@ const GuideBagLayout: React.FC<GuideBagLayoutProps> = ({
       </div>
       <div className="container guidebag-layout-btn-wrapper">
         <div className="guidebag-layout-btn-create">
-          <Link href={ROUTES.guide_bag.post_new} passHref>
+          <Link href={ROUTES.guidebag.post_new} passHref>
             <a>
               <Button title="質問する" height={40} buttonColor={BUTTON_COLORS.style01} margin="0" />
             </a>

@@ -25,7 +25,7 @@ const GuideBag = () => {
               <ListItem
                 text="このカテゴリのすべてのQ&A"
                 borderTop
-                handleClick={() => router.push(ROUTES.guide_bag.posts)}
+                handleClick={() => router.push(ROUTES.guidebag.posts)}
               />
             </div>
           )}

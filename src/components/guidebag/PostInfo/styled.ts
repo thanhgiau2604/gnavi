@@ -29,7 +29,7 @@ const PostInfoContainer = styled.div`
     }
 
     &-answer-num {
-      font-weight: 700;
+      font-weight: ${Variables.fontWeightBold};
     }
   }
 

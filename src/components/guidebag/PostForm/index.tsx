@@ -10,11 +10,10 @@ import CustomSelect from 'components/common/CustomFields/SelectField'
 import { FastField, Form, Formik } from 'formik'
 import React from 'react'
 import CategorySelect from '../CategorySelect'
-import { PostFormContainer } from './styled'
 
 const PostForm: React.FC = () => {
   return (
-    <PostFormContainer>
+    <div>
       <Formik
         initialValues={INIT_POST_FORM_VALUE}
         onSubmit={(values, actions) => {
@@ -64,7 +63,7 @@ const PostForm: React.FC = () => {
           )
         }}
       </Formik>
-    </PostFormContainer>
+    </div>
   )
 }
 

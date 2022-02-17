@@ -35,7 +35,7 @@ const CategorySelect: React.FC<FieldProps & CategorySelectProps> = ({
         <div className="category-not-selected">
           <Button
             title="選択してください"
-            buttonColor={BUTTON_COLORS.style07}
+            buttonColor={BUTTON_COLORS.style08}
             height={48}
             fontWeight={400}
             onClick={showSelection}

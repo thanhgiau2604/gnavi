@@ -9,7 +9,7 @@ import { PostContainer } from './styled'
 const Post: React.FC = () => {
   const router = useRouter()
   const goToDetailPage = (index: number) => {
-    router.push(ROUTES.guide_bag.post_detail + index.toString())
+    router.push(ROUTES.guidebag.post_detail + index.toString())
   }
   return (
     <PostContainer>
