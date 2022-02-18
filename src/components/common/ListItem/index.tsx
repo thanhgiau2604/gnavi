@@ -16,6 +16,8 @@ const ListItem: React.FC<ListItemProps> = ({
   borderBottom = true,
   borderTop = false,
   handleClick,
+  showIcon = true,
+  isActive = false,
 }) => {
   return (
     <ListItemContainer
@@ -25,6 +27,7 @@ const ListItem: React.FC<ListItemProps> = ({
       borderBottom={borderBottom}
       borderTop={borderTop}
       onClick={handleClick}
+      className={isActive ? 'active' : ''}
     >
       <div className="container">
         <FlexContainer
@@ -33,9 +36,11 @@ const ListItem: React.FC<ListItemProps> = ({
           className="list-item-flex"
         >
           <p>{text}</p>
-          <ImageContainer width={iconWidth} height={iconHeight}>
-            <Image src="/icons/arrow_right.svg" alt="" layout="fill" objectFit="contain" />
-          </ImageContainer>
+          {showIcon && (
+            <ImageContainer width={iconWidth} height={iconHeight}>
+              <Image src="/icons/arrow_right.svg" alt="" layout="fill" objectFit="contain" />
+            </ImageContainer>
+          )}
         </FlexContainer>
       </div>
     </ListItemContainer>

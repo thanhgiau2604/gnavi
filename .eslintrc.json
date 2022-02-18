@@ -43,6 +43,7 @@
     "jsx-a11y/label-has-associated-control": "off",
     "camelcase": "off",
     "import/no-cycle": "off",
-    "react/jsx-no-useless-fragment": "off"
+    "react/jsx-no-useless-fragment": "off",
+    "jsx-a11y/no-static-element-interactions": "off"
   }
 }
