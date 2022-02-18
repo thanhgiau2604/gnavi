@@ -8,17 +8,6 @@ const CategorySelectContainer = styled.div`
     font-weight: ${Variables.fontWeightBold};
     font-size: ${FONT_SIZES.medium};
   }
-
-  .category-selected {
-    font-size: ${FONT_SIZES.medium};
-    padding-top: 2rem;
-  }
-
-  .category-selection-cancel {
-    margin-bottom: 2rem;
-    display: block;
-    text-align: center;
-  }
 `
 
 export { CategorySelectContainer }

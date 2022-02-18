@@ -48,8 +48,8 @@ export const ModalHeader = styled.div`
 
   .btn-back {
     position: absolute;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 3rem;
+    height: 3rem;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);

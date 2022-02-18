@@ -4,15 +4,18 @@ import { persistReducer } from 'redux-persist'
 import { ENV } from '@constants'
 import authSlice from './slices/authSlice'
 import counterSlice from './slices/counterSlice'
+import gbCategoriesSlice from './slices/gbCategoriesSlice'
 
 const reducers = combineReducers({
   counter: counterSlice,
   auth: authSlice,
+  gbCategories: gbCategoriesSlice,
 })
 
 const persistConfig = {
   key: 'gnavi',
   storage,
+  whitelist: ['auth'],
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)
