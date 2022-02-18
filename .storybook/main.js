@@ -6,6 +6,10 @@ module.exports = {
   framework: '@storybook/react',
   webpackFinal: async (config) => {
     config.resolve.modules = [...(config.resolve.modules || []), path.resolve(__dirname, '../src')]
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@constants': path.resolve(__dirname, '../src/constants'),
+    }
 
     return config
   },
