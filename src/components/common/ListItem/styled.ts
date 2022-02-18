@@ -12,8 +12,15 @@ const ListItemContainer = styled.div<ListItemStyleProps>`
   border-right: 1px solid ${Variables.color3};
   color: ${({ textColor }) => textColor && `${textColor}`};
   cursor: pointer;
+
   .list-item-flex {
     height: ${({ height }) => height && `calc(${height}rem / 10)`};
+  }
+
+  &.active,
+  &:hover {
+    background-color: ${Variables.color1};
+    color: ${Variables.colorWhite};
   }
 `
 

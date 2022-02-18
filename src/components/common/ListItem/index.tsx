@@ -17,6 +17,7 @@ const ListItem: React.FC<ListItemProps> = ({
   borderTop = false,
   handleClick,
   showIcon = true,
+  isActive = false,
 }) => {
   return (
     <ListItemContainer
@@ -26,6 +27,7 @@ const ListItem: React.FC<ListItemProps> = ({
       borderBottom={borderBottom}
       borderTop={borderTop}
       onClick={handleClick}
+      className={isActive ? 'active' : ''}
     >
       <div className="container">
         <FlexContainer

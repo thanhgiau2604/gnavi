@@ -12,6 +12,7 @@ interface ListItemProps extends ListItemStyleProps {
   iconHeight?: number
   handleClick?: () => void
   showIcon?: boolean
+  isActive?: boolean
 }
 
 export type { ListItemProps, ListItemStyleProps }
