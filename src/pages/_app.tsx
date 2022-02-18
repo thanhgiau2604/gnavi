@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import 'styles/scss/index.scss'
 import 'react-datepicker/dist/react-datepicker.css'
 import 'slick-carousel/slick/slick.css'
@@ -11,6 +12,22 @@ import AuthProvider from 'providers/AuthProvider'
 import { NextPage } from 'next'
 import { Provider } from 'react-redux'
 
+import i18next from 'i18next'
+import { I18nextProvider, initReactI18next } from 'react-i18next'
+
+import translation_en from 'locales/en/translation.json'
+import translation_ja from 'locales/ja/translation.json'
+
+// https://react.i18next.com/
+i18next.use(initReactI18next).init({
+  fallbackLng: 'ja', // fallback if not find
+  lng: 'ja', // default language
+  resources: {
+    en: { translate: translation_en },
+    ja: { translate: translation_ja },
+  },
+})
+
 export type NextApplicationPage<P = any, IP = P> = NextPage<P, IP> & {
   requireAuth?: boolean
 }
@@ -22,15 +39,17 @@ function MyApp(props: AppProps) {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <div className="wrapper">
-          {Component.requireAuth ? (
-            <AuthProvider>
+        <I18nextProvider i18n={i18next}>
+          <div className="wrapper">
+            {Component.requireAuth ? (
+              <AuthProvider>
+                <Component {...pageProps} />
+              </AuthProvider>
+            ) : (
               <Component {...pageProps} />
-            </AuthProvider>
-          ) : (
-            <Component {...pageProps} />
-          )}
-        </div>
+            )}
+          </div>
+        </I18nextProvider>
       </PersistGate>
     </Provider>
   )

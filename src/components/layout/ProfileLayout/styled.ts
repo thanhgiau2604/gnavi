@@ -9,6 +9,27 @@ export const ProfileLayoutStyled = styled.div`
     margin-bottom: 1rem;
   }
 
+  .gr-guide {
+    margin-left: -30px;
+  }
+
+  .guide {
+    font-size: ${FONT_SIZES.medium};
+    font-weight: ${Variables.fontWeightBold};
+    margin-bottom: 6px;
+  }
+
+  .correspondence-area {
+    &-value {
+      font-size: ${FONT_SIZES.small};
+      font-weight: ${Variables.fontWeightBold};
+    }
+  }
+
+  .gr-btn-language {
+    margin-top: 1rem;
+  }
+
   .avatar {
     position: relative;
   }
@@ -23,12 +44,12 @@ export const ProfileLayoutStyled = styled.div`
     max-width: 16rem;
   }
 
-  .name-jp {
+  .main-name {
     font-weight: ${Variables.fontWeightBold};
     font-size: ${FONT_SIZES.xlarge};
   }
 
-  .name-eng {
+  .sub-name {
     margin-left: 1rem;
     font-size: 1.2rem;
     color: ${Variables.color5};
@@ -45,9 +66,7 @@ export const ProfileLayoutStyled = styled.div`
     background-position: 100% 5px;
   }
 
-  .value-rating {
-  }
-
+  .value-rating,
   .value-follower {
     font-weight: ${Variables.fontWeightBold};
   }

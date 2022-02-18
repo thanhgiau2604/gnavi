@@ -56,3 +56,12 @@ a {
     padding: 0 2.5rem;
   }
 }
+
+.text {
+  &-capfirst {
+    text-transform: capitalize;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+}

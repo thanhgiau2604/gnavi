@@ -35,7 +35,7 @@
     "import/no-named-as-default": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
-    "import/extensions": [2, { "tsx": "never", "ts": "never" }],
+    "import/extensions": [2, { "tsx": "never", "ts": "never", "json": "always" }],
     "@next/next/no-img-element": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/click-events-have-key-events": "off",
