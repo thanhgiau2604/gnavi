@@ -8,8 +8,6 @@ import ButtonUpload from 'components/common/ButtonUpload'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
 import CustomDate from 'components/common/CustomFields/DateField'
-import ColorPicker from 'components/ColorPicker'
-import { onChangeColorHex, onChangeColorResult } from 'components/ColorPicker/functions'
 import {
   BUTTON_COLORS,
   BUTTON_UPLOAD_COLORS,
@@ -22,6 +20,8 @@ import {
 } from '@constants'
 import { FieldLabel } from 'components/common/CustomFields/styled'
 import Flex from 'styles/styled/layout/FlexLayout'
+import ColorPicker from 'components/common/ColorPicker'
+import { onChangeColorHex, onChangeColorResult } from 'components/common/ColorPicker/functions'
 
 export interface props {
   infoUser?: InfoProfile
