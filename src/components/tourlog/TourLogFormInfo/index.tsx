@@ -2,8 +2,8 @@ import Button from 'components/common/Button'
 import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { Form } from 'formik'
 import React from 'react'
-import BasicInfo from 'components/Information/BasicInfo'
-import History from 'components/Information/History'
+import BasicInfo from 'components/information/BasicInfo'
+import History from 'components/information/History'
 
 interface TourLogFormInfoProps {
   tab: string
