@@ -7,6 +7,7 @@ import Button from 'components/common/Button'
 import { FieldLabel } from 'components/common/CustomFields/styled'
 import { CategorySelectProps } from 'interfaces/GuideBag'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
+import { hideModal, showModal } from 'utils/events'
 import ModalCategory from '../ModalCategory'
 import { CategorySelectContainer } from './styled'
 
@@ -18,13 +19,12 @@ const CategorySelect: React.FC<FieldProps & CategorySelectProps> = ({ field, lab
 
   const openModal = () => {
     dispatch(gbCategoriesActions.resetState())
-    setOpenModal(true)
+    showModal(setOpenModal)
   }
-  const hideModal = () => setOpenModal(false)
 
   const changeFormValue = () => {
     form.setFieldValue(name, selected)
-    hideModal()
+    hideModal(setOpenModal)
   }
 
   return (

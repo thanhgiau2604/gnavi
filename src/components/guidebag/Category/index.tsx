@@ -23,16 +23,17 @@ const Category: React.FC = () => {
   }
   return (
     <div>
-      {categories.map((cate, index) => (
-        <ListItem
-          text={cate}
-          key={`guidebag_cate_${index.toString()}`}
-          borderTop={index === 0}
-          handleClick={() => handleSelect(cate)}
-          showIcon={!isLast}
-          isActive={cate === selected}
-        />
-      ))}
+      {categories &&
+        categories.map((cate, index) => (
+          <ListItem
+            text={cate}
+            key={`guidebag_cate_${index.toString()}`}
+            borderTop={index === 0}
+            handleClick={() => handleSelect(cate)}
+            showIcon={!isLast}
+            isActive={cate === selected}
+          />
+        ))}
     </div>
   )
 }
