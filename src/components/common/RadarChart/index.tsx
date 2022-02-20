@@ -10,6 +10,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
+import { RADAR_CHART_LABELS, RADAR_CHART_STYLES } from '@constants'
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend)
 
@@ -41,22 +42,17 @@ const RadarChart: React.FC<RadarChartProps> = ({ indicators }) => {
     },
   }
   const data = {
-    labels: ['Communication', 'Basic Capabilities', 'Technique', 'Knowledge', 'Mindset'],
+    labels: RADAR_CHART_LABELS.all,
     datasets: [
       {
-        label: 'ガイドスキル',
-        data: indicators, // indicators
-        /* styles */
-        backgroundColor: 'rgba(255, 177, 193, 0.65)',
-        borderColor: 'rgba(255, 138, 162, 255)',
-        borderWidth: 1.5,
-        pointBackgroundColor: 'rgba(255, 138, 162, 255)',
-        pointBorderColor: 'rgba(255, 138, 162, 255)',
-        pointBorderWidth: 0.25,
-        pointRadius: 1.5,
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgb(255, 99, 132)',
-        /* styles */
+        label: RADAR_CHART_LABELS.label01,
+        data: indicators[0], // indicators
+        ...RADAR_CHART_STYLES.style01, // styles
+      },
+      {
+        label: RADAR_CHART_LABELS.label02,
+        data: indicators[1], // indicators
+        ...RADAR_CHART_STYLES.style02, // styles
       },
     ],
   }

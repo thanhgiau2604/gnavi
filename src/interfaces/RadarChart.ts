@@ -1,3 +1,5 @@
-export interface RadarChartProps {
-  indicators: number[]
+interface RadarChartProps {
+  indicators: number[][]
 }
+
+export type { RadarChartProps }
