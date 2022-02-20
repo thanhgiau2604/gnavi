@@ -1,7 +1,17 @@
 import React from 'react'
-import 'chart.js/auto' // required
 import { Radar } from 'react-chartjs-2'
 import { RadarChartProps } from 'interfaces/RadarChart'
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+} from 'chart.js'
+
+ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend)
 
 const RadarChart: React.FC<RadarChartProps> = ({ indicators }) => {
   const options = {
