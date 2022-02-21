@@ -85,7 +85,7 @@ const EditProfileForm: React.FC<props> = ({ infoUser, handleSubmit }) => {
             <FastField name="ja_name" component={CustomInput} label="名前" lbTag="require" />
 
             <FastField
-              name="eng_name"
+              name="en_name"
               component={CustomInput}
               label="名前(英語/ローマ字表記)"
               lbTag="any"

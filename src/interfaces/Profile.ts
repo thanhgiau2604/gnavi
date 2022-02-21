@@ -1,6 +1,6 @@
 export interface ProfileHomeContainerProps {
-  id: number
-  res: { type: string; value: string }[]
+  userInfo: any
+  data: any[]
 }
 export interface ProfileEditContainerProps {
   id: number
