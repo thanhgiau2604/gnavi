@@ -45,12 +45,12 @@ const RadarChart: React.FC<RadarChartProps> = ({ indicators }) => {
     labels: RADAR_CHART_LABELS.all,
     datasets: [
       {
-        label: RADAR_CHART_LABELS.label01,
+        label: RADAR_CHART_LABELS.current_result,
         data: indicators[0], // indicators
         ...RADAR_CHART_STYLES.style01, // styles
       },
       {
-        label: RADAR_CHART_LABELS.label02,
+        label: RADAR_CHART_LABELS.last_result,
         data: indicators[1], // indicators
         ...RADAR_CHART_STYLES.style02, // styles
       },

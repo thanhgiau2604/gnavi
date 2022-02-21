@@ -2,8 +2,8 @@ import { Variables } from 'styles/styled/app/Variables'
 
 const RADAR_CHART_LABELS = {
   all: ['Mindset', 'Basic Capabilities', 'Communication', 'Technique', 'Knowledge'],
-  label01: '今回',
-  label02: '前回',
+  current_result: '今回',
+  last_result: '前回',
 }
 
 const RADAR_CHART_STYLES = {
