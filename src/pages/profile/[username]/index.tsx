@@ -18,8 +18,6 @@ const mockDataTagHome = [
   },
   { id: 3, type: 'image', src: 'https://statics.vinpearl.com/diem-du-lich-9_1632662759.jpg' },
 ]
-//
-//
 
 const mockDataUserProfile = {
   id: 1,
