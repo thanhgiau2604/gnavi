@@ -11,7 +11,7 @@ const Assistant = () => {
       <div className="assistant-main">
         <div className="container">
           <h2>ガイドに関する緊急の相談が可能です</h2>
-          <Link href="tel:0969315430" passHref>
+          <Link href="tel:" passHref>
             <div className="assistant-call-btn">
               <Button title="相談する" height={50} margin="0" />
               <img src="/icons/phone_call.svg" alt="" />
