@@ -1,23 +1,31 @@
+import React, { useState } from 'react'
+import { FieldProps } from 'formik'
 import { BUTTON_COLORS } from '@constants'
+import { useAppDispatch, useAppSelector } from 'app/hooks'
+import { gbCategoriesActions } from 'app/slices/gbCategoriesSlice'
 import Button from 'components/common/Button'
 import { FieldLabel } from 'components/common/CustomFields/styled'
-import Modal from 'components/common/Modal'
-import { FieldProps } from 'formik'
 import { CategorySelectProps } from 'interfaces/GuideBag'
-import React, { useState } from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import Category from '../Category'
+import { hideModal, showModal } from 'utils/events'
+import ModalCategory from '../ModalCategory'
 import { CategorySelectContainer } from './styled'
 
-const CategorySelect: React.FC<FieldProps & CategorySelectProps> = ({
-  field,
-  label,
-  categories,
-}) => {
-  const [openSelection, setOpenSelection] = useState<boolean>(false)
-  const showSelection = () => setOpenSelection(true)
-  const hideSelection = () => setOpenSelection(false)
+const CategorySelect: React.FC<FieldProps & CategorySelectProps> = ({ field, label, form }) => {
+  const dispatch = useAppDispatch()
+  const [isOpenModal, setOpenModal] = useState<boolean>(false)
   const { name, value } = field
+  const selected = useAppSelector((state) => state.gbCategories.selected)
+
+  const openModal = () => {
+    dispatch(gbCategoriesActions.resetState())
+    showModal(setOpenModal)
+  }
+
+  const changeFormValue = () => {
+    form.setFieldValue(name, selected)
+    hideModal(setOpenModal)
+  }
 
   return (
     <CategorySelectContainer>
@@ -28,7 +36,7 @@ const CategorySelect: React.FC<FieldProps & CategorySelectProps> = ({
         <div className="category-selected">
           <FlexContainer justifyContent="space-between">
             <p>{value}</p>
-            <a onClick={showSelection}>選び直す</a>
+            <a onClick={openModal}>選び直す</a>
           </FlexContainer>
         </div>
       ) : (
@@ -38,31 +46,15 @@ const CategorySelect: React.FC<FieldProps & CategorySelectProps> = ({
             buttonColor={BUTTON_COLORS.style08}
             height={48}
             fontWeight={400}
-            onClick={showSelection}
+            onClick={openModal}
           />
         </div>
       )}
-      <Modal
-        open={openSelection}
-        title="カテゴリを選択"
-        onBack={hideSelection}
-        onClose={hideSelection}
-      >
-        <Category categoryList={categories} updateCategoryList={() => []} />
-        <div className="category-selection-footer">
-          <div className="container">
-            <Button
-              title="上記内容で質問する"
-              buttonColor={BUTTON_COLORS.style01}
-              height={40}
-              margin="3.6rem 0 5rem 0"
-            />
-            <a className="category-selection-cancel" onClick={hideSelection}>
-              キャンセル
-            </a>
-          </div>
-        </div>
-      </Modal>
+      <ModalCategory
+        isOpen={isOpenModal}
+        hideModal={() => hideModal(setOpenModal)}
+        handleSubmit={changeFormValue}
+      />
     </CategorySelectContainer>
   )
 }

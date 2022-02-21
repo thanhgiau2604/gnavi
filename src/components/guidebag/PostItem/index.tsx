@@ -29,11 +29,12 @@ const PostItem: React.FC<PostItemProps> = ({
         <div className="post-categories">
           <FlexContainer>
             <h4>カテゴリー：</h4>
-            {categories.map((cate, index) => (
-              <p key={cate + index.toString()} className="post-category-item">
-                {cate}
-              </p>
-            ))}
+            {categories &&
+              categories.map((cate, index) => (
+                <p key={cate + index.toString()} className="post-category-item">
+                  {cate}
+                </p>
+              ))}
           </FlexContainer>
         </div>
       )}

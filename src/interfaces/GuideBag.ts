@@ -51,11 +51,6 @@ interface CommentItemProps {
   data: CommentItemData
 }
 
-interface GuideBagCateProps {
-  categoryList: string[]
-  updateCategoryList: (list: string[]) => void
-}
-
 interface GuideBagLayoutProps {
   headerTitle: string
   btnBackTitle?: string
@@ -66,7 +61,13 @@ interface GuideBagLayoutProps {
 
 interface CategorySelectProps {
   label: string
+}
+
+interface GuideBagCategoriesState {
+  selected?: string
   categories: string[]
+  isLast: boolean
+  currentLevel: number
 }
 
 export type {
@@ -76,9 +77,9 @@ export type {
   PostItemData,
   PostItemProps,
   NewCommentPayload,
-  GuideBagCateProps,
   GuideBagLayoutProps,
   CommentItemData,
   CommentItemProps,
   CategorySelectProps,
+  GuideBagCategoriesState,
 }
