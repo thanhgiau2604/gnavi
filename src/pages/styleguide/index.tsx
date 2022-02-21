@@ -27,7 +27,10 @@ import PullDownMenu from 'components/common/PullDownMenu'
 import FormInput from './FormInput'
 
 const StyleGuide = () => {
-  const indicators = [8, 6, 10, 7, 9]
+  const indicators = [
+    [7, 8, 7, 6, 10],
+    [5, 7, 8, 6, 8],
+  ]
   const [openModal, setOpenModal] = React.useState<boolean>(false)
   const showModal = () => setOpenModal(true)
   const hideModal = () => setOpenModal(false)
