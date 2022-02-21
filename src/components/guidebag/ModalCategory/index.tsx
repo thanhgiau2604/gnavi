@@ -6,22 +6,17 @@ import { useAppSelector } from 'app/hooks'
 import Category from '../Category'
 import { ModalCategoryContainer } from './styled'
 
-interface ModelCategoryProps {
+interface ModalCategoryProps {
   isOpen: boolean
-  hideModal: (setState: React.Dispatch<React.SetStateAction<boolean>>) => void
+  hideModal: () => void
   handleSubmit: () => void
 }
 
-const ModalCategory: React.FC<ModelCategoryProps> = ({ isOpen, hideModal, handleSubmit }) => {
+const ModalCategory: React.FC<ModalCategoryProps> = ({ isOpen, hideModal, handleSubmit }) => {
   const isLast = useAppSelector((state) => state.gbCategories.isLast)
   return (
     <ModalCategoryContainer>
-      <Modal
-        open={isOpen}
-        title="カテゴリを選択"
-        onBack={() => hideModal}
-        onClose={() => hideModal}
-      >
+      <Modal open={isOpen} title="カテゴリを選択" onBack={hideModal} onClose={hideModal}>
         <Category />
         <div className="category-selection-footer">
           <div className="container">
@@ -34,7 +29,7 @@ const ModalCategory: React.FC<ModelCategoryProps> = ({ isOpen, hideModal, handle
                 onClick={handleSubmit}
               />
             )}
-            <a className="category-selection-cancel" onClick={() => hideModal}>
+            <a className="category-selection-cancel" onClick={hideModal}>
               キャンセル
             </a>
           </div>

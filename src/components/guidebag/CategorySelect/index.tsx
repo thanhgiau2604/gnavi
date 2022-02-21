@@ -50,7 +50,11 @@ const CategorySelect: React.FC<FieldProps & CategorySelectProps> = ({ field, lab
           />
         </div>
       )}
-      <ModalCategory isOpen={isOpenModal} hideModal={hideModal} handleSubmit={changeFormValue} />
+      <ModalCategory
+        isOpen={isOpenModal}
+        hideModal={() => hideModal(setOpenModal)}
+        handleSubmit={changeFormValue}
+      />
     </CategorySelectContainer>
   )
 }
