@@ -7,14 +7,10 @@ interface LoginPayload {
 
 interface SignupPayload {
   username: string
-  nickname: string
   email: string
   password: string
-  last_name: string
-  first_name: string
-  public_setting: string
+  fullname: string
   birthday: Date
-  gender: string
 }
 
 interface ConfirmPayload {
