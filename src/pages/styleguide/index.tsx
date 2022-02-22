@@ -1,7 +1,6 @@
 /* eslint-disable no-alert */
 import React from 'react'
 import { ColorResult } from 'react-color'
-import FlexContainer from 'styles/styled/layout/FlexLayout'
 import {
   BUTTON_COLORS,
   BUTTON_UPLOAD_COLORS,
@@ -10,20 +9,21 @@ import {
   BUTTON_HEART_THEMES,
   InitColorResult,
 } from '@constants'
-import Button from 'components/common/Button'
-import ButtonUpload from 'components/common/ButtonUpload'
 import Avatar from 'components/common/Avatar'
-import RadarChart from 'components/common/RadarChart'
-import { ChartContainer } from 'styles/styled/layout/ChartLayout'
-import Modal from 'components/common/Modal'
-import Header from 'components/common/Header'
-import ButtonReaction from 'components/common/ButtonReaction'
+import Button from 'components/common/Button'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
-import ListItem from 'components/common/ListItem'
+import ButtonReaction from 'components/common/ButtonReaction'
+import ButtonUpload from 'components/common/ButtonUpload'
 import ColorPicker from 'components/common/ColorPicker'
 import { onChangeColorHex, onChangeColorResult } from 'components/common/ColorPicker/functions'
-import { Variables } from 'styles/styled/app/Variables'
+import Header from 'components/common/Header'
+import ListItem from 'components/common/ListItem'
+import Modal from 'components/common/Modal'
 import PullDownMenu from 'components/common/PullDownMenu'
+import RadarChart from 'components/common/RadarChart'
+import { Variables } from 'styles/styled/app/Variables'
+import { ChartContainer } from 'styles/styled/layout/ChartLayout'
+import FlexContainer from 'styles/styled/layout/FlexLayout'
 import FormInput from './FormInput'
 
 const StyleGuide = () => {

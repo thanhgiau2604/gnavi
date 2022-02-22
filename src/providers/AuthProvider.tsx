@@ -1,7 +1,7 @@
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { ROUTES } from '@constants'
 import { useAppDispatch, useAppSelector } from 'app/hooks'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import { authActions } from 'app/slices/authSlice'
 
 const AuthProvider = ({ children }: { children: JSX.Element }) => {

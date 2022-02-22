@@ -1,6 +1,6 @@
+import * as Yup from 'yup'
 import { ConfirmPayload, LoginPayload, SignupPayload } from 'interfaces/Auth'
 import { OptionProps } from 'interfaces/CustomField'
-import * as Yup from 'yup'
 
 const INIT_LOGIN_FORM_VALUE: LoginPayload = {
   email: '',

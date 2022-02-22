@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import DatePicker from 'react-datepicker'
 import { FieldProps } from 'formik'
-import { CustomInputProps } from 'interfaces/CustomField'
+import DatePicker from 'react-datepicker'
 import { FIELD_DF_VALUE, LABEL_TAGS } from '@constants'
+import { CustomInputProps } from 'interfaces/CustomField'
 import { FieldContainer, FieldLabel } from '../styled'
 
 const CustomDate: React.FC<FieldProps & CustomInputProps> = ({

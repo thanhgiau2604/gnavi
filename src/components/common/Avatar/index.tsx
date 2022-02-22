@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { AvatarContainer } from 'components/common/Avatar/styled'
 import { NO_AVATAR } from '@constants'
+import { AvatarContainer } from 'components/common/Avatar/styled'
 
 interface AvatarProps {
   src: string | undefined

@@ -1,6 +1,6 @@
 import React from 'react'
-import LoginContainer from 'containers/Login'
 import { NextPage } from 'next'
+import LoginContainer from 'containers/Login'
 
 const LoginPage: NextPage = () => {
   return <LoginContainer />

@@ -1,8 +1,8 @@
+import React from 'react'
 import { NO_AVATAR } from '@constants'
 import Header from 'components/common/Header'
 import PostForm from 'components/guidebag/PostForm'
 import PostInfo from 'components/guidebag/PostInfo'
-import React from 'react'
 import { NewPostContainer } from './styled'
 
 const NewPost: React.FC = () => {

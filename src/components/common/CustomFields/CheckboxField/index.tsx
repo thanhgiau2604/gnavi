@@ -1,7 +1,7 @@
 import React from 'react'
 import { FieldProps } from 'formik'
-import { CustomCheckboxProps } from 'interfaces/CustomField'
 import { FIELD_DF_VALUE } from '@constants'
+import { CustomCheckboxProps } from 'interfaces/CustomField'
 import { FieldCheckboxContainer, FieldCheckboxLabel } from './styled'
 
 const CustomCheckBox: React.FC<FieldProps & CustomCheckboxProps> = ({

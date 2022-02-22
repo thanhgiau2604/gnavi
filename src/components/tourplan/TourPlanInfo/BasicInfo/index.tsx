@@ -1,10 +1,10 @@
 import React from 'react'
-import { Container } from 'styles/styled/layout/ContainerLayout'
-import { BasicInfoProps } from 'interfaces/TourPlan'
-import { formatDateTime } from 'utils/helper'
 import { DATETIME_FORMAT } from '@constants'
 import PullDownMenu from 'components/common/PullDownMenu'
 import PullDownMenuItem from 'components/common/PullDownMenu/PullDownMenuItem'
+import { BasicInfoProps } from 'interfaces/TourPlan'
+import { Container } from 'styles/styled/layout/ContainerLayout'
+import { formatDateTime } from 'utils/helper'
 import { BasicInfoContainer } from './styled'
 
 interface Props {

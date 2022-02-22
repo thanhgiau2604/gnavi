@@ -1,6 +1,6 @@
-import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
-import { POST_MENU_OPTIONS } from '@constants'
 import React from 'react'
+import { POST_MENU_OPTIONS } from '@constants'
+import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 
 const PostMenu = () => {
   const [isActive, setIsActive] = React.useState<number>(0)

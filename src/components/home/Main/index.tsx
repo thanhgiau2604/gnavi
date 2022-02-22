@@ -1,14 +1,14 @@
-import Header from 'components/common/Header'
-import Image from 'next/image'
-import { ImageContainer } from 'styles/styled/app/Image'
 import type { FC } from 'react'
-import FlexContainer from 'styles/styled/layout/FlexLayout'
-import Button from 'components/common/Button'
+import Image from 'next/image'
 import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { useAppDispatch } from 'app/hooks'
 import { authActions } from 'app/slices/authSlice'
-import { HomeMainSection } from './styled'
+import Button from 'components/common/Button'
+import Header from 'components/common/Header'
+import { ImageContainer } from 'styles/styled/app/Image'
+import FlexContainer from 'styles/styled/layout/FlexLayout'
 import Menu from '../Menu'
+import { HomeMainSection } from './styled'
 
 const HomeMain: FC = () => {
   const dispatch = useAppDispatch()

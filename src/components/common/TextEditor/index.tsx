@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import dynamic from 'next/dynamic'
 import { EditorState, convertToRaw } from 'draft-js'
-import { EditorProps } from 'react-draft-wysiwyg'
 import draftToHtml from 'draftjs-to-html'
+import dynamic from 'next/dynamic'
+import { EditorProps } from 'react-draft-wysiwyg'
 
 const Editor = dynamic<EditorProps>(() => import('react-draft-wysiwyg').then((mod) => mod.Editor), {
   ssr: false,

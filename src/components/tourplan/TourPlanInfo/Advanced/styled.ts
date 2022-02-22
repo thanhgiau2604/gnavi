@@ -1,5 +1,5 @@
-import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
 import styled from 'styled-components'
+import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
 import { Variables } from 'styles/styled/app/Variables'
 
 const TourPlanAdvancedInfoContainer = styled.div`

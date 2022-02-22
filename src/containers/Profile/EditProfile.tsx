@@ -1,7 +1,7 @@
 import React from 'react'
-import { EditProfilePayload } from 'interfaces/Profile'
 import Header from 'components/common/Header'
 import FormEditProfile from 'components/profile/FormEditProfile'
+import { EditProfilePayload } from 'interfaces/Profile'
 
 const EditProfileContainer = () => {
   const handleSubmitForm = async (payload: EditProfilePayload) => {

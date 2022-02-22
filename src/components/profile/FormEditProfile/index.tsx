@@ -1,13 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { FastField, Form, Formik, FieldArray } from 'formik'
 import { ColorResult } from 'react-color'
-import { Membership, InfoProfile, EditProfilePayload } from 'interfaces/Profile'
-import useOnClickOutSide from 'hooks/useOnClickOutSide'
-import Button from 'components/common/Button'
-import ButtonUpload from 'components/common/ButtonUpload'
-import CustomInput from 'components/common/CustomFields/InputField'
-import CustomSelect from 'components/common/CustomFields/SelectField'
-import CustomDate from 'components/common/CustomFields/DateField'
 import {
   BUTTON_COLORS,
   BUTTON_UPLOAD_COLORS,
@@ -18,10 +11,17 @@ import {
   INIT_FORM_EDIT_PROFILE_VALUE,
   InitColorResult,
 } from '@constants'
-import { FieldLabel } from 'components/common/CustomFields/styled'
-import Flex from 'styles/styled/layout/FlexLayout'
+import Button from 'components/common/Button'
+import ButtonUpload from 'components/common/ButtonUpload'
 import ColorPicker from 'components/common/ColorPicker'
 import { onChangeColorHex, onChangeColorResult } from 'components/common/ColorPicker/functions'
+import CustomDate from 'components/common/CustomFields/DateField'
+import CustomInput from 'components/common/CustomFields/InputField'
+import CustomSelect from 'components/common/CustomFields/SelectField'
+import { FieldLabel } from 'components/common/CustomFields/styled'
+import useOnClickOutSide from 'hooks/useOnClickOutSide'
+import { Membership, InfoProfile, EditProfilePayload } from 'interfaces/Profile'
+import Flex from 'styles/styled/layout/FlexLayout'
 
 export interface props {
   infoUser?: InfoProfile

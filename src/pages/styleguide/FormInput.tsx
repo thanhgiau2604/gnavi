@@ -1,13 +1,13 @@
-import { OptionProps } from 'interfaces/CustomField'
 import { FastField, Formik, Form } from 'formik'
 import * as Yup from 'yup'
-import CustomSelect from 'components/common/CustomFields/SelectField'
-import CustomInput from 'components/common/CustomFields/InputField'
-import Button from 'components/common/Button'
-import FlexContainer from 'styles/styled/layout/FlexLayout'
-import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import { CHECKBOX_THEME } from '@constants'
+import Button from 'components/common/Button'
+import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomDate from 'components/common/CustomFields/DateField'
+import CustomInput from 'components/common/CustomFields/InputField'
+import CustomSelect from 'components/common/CustomFields/SelectField'
+import { OptionProps } from 'interfaces/CustomField'
+import FlexContainer from 'styles/styled/layout/FlexLayout'
 
 interface FormValues {
   username: string

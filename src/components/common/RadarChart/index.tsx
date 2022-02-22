@@ -1,6 +1,4 @@
 import React from 'react'
-import { Radar } from 'react-chartjs-2'
-import { RadarChartProps } from 'interfaces/RadarChart'
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -10,7 +8,9 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
+import { Radar } from 'react-chartjs-2'
 import { RADAR_CHART_LABELS, RADAR_CHART_STYLES } from '@constants'
+import { RadarChartProps } from 'interfaces/RadarChart'
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend)
 

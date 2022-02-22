@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer from 'styles/styled/layout/FlexLayout'

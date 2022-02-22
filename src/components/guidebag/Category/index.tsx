@@ -1,8 +1,8 @@
+import React from 'react'
 import { GUIDEBAG_CATEGORIES } from '@constants'
 import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { gbCategoriesActions } from 'app/slices/gbCategoriesSlice'
 import ListItem from 'components/common/ListItem'
-import React from 'react'
 
 const Category: React.FC = () => {
   const dispatch = useAppDispatch()

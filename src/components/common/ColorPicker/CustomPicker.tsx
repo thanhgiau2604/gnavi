@@ -7,8 +7,8 @@ import { Saturation, Hue } from 'react-color/lib/components/common'
 import { EditableInputProps } from 'react-color/lib/components/common/EditableInput'
 import { InitColorResult } from '@constants'
 import Flex from 'styles/styled/layout/FlexLayout'
-import { ColorPickerContainer } from './styled'
 import { PointerSaturation, PointerHue } from './Pointer'
+import { ColorPickerContainer } from './styled'
 
 const EditableInput = dynamic<EditableInputProps>(
   () => import('react-color/lib/components/common').then((mod) => mod.EditableInput),

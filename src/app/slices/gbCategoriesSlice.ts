@@ -1,5 +1,5 @@
-import { GUIDEBAG_CATEGORIES } from '@constants'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { GUIDEBAG_CATEGORIES } from '@constants'
 import { GuideBagCategoriesState } from 'interfaces/GuideBag'
 
 const initialState: GuideBagCategoriesState = {

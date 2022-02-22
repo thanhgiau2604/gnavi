@@ -1,7 +1,7 @@
-import { NextApplicationPage } from 'pages/_app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import ProfileHome from 'containers/Profile'
+import { NextApplicationPage } from 'pages/_app'
 
 const mockDataTagHome = [
   {

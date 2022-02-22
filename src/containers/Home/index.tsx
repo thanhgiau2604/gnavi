@@ -1,7 +1,7 @@
 import type { FC } from 'react'
+import { useAppSelector } from 'app/hooks'
 import HomeMain from 'components/home/Main'
 import HomeTop from 'components/home/Top'
-import { useAppSelector } from 'app/hooks'
 
 const Home: FC = () => {
   const user = useAppSelector((state) => state.auth.userData)

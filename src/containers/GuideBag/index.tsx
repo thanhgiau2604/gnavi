@@ -1,10 +1,10 @@
+import React from 'react'
+import { useRouter } from 'next/router'
 import { ROUTES } from '@constants'
 import { useAppSelector } from 'app/hooks'
 import ListItem from 'components/common/ListItem'
 import Category from 'components/guidebag/Category'
 import GuideBagLayout from 'components/layout/GuideBagLayout'
-import { useRouter } from 'next/router'
-import React from 'react'
 import { GuideBagContainer } from './styled'
 
 const GuideBag = () => {

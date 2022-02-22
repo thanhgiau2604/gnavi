@@ -1,9 +1,9 @@
 import type { FC } from 'react'
-import { ImageContainer } from 'styles/styled/app/Image'
 import Image from 'next/image'
-import FlexContainer from 'styles/styled/layout/FlexLayout'
-import { MenuItemProps } from 'interfaces/Home'
 import { useRouter } from 'next/router'
+import { MenuItemProps } from 'interfaces/Home'
+import { ImageContainer } from 'styles/styled/app/Image'
+import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { MenuItemContainer } from './styled'
 
 const MenuItem: FC<MenuItemProps> = ({ option, redirectTo }) => {

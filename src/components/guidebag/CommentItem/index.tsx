@@ -1,7 +1,7 @@
+import React from 'react'
 import { BUTTON_HEART_THEMES, BUTTON_LIKE_THEMES } from '@constants'
 import ButtonReaction from 'components/common/ButtonReaction'
 import { CommentItemProps } from 'interfaces/GuideBag'
-import React from 'react'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import PostInfo from '../PostInfo'
 import { CommentItemContainer } from './styled'

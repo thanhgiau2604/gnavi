@@ -1,8 +1,8 @@
+import type { FC } from 'react'
+import { useRouter } from 'next/router'
+import { BUTTON_COLORS, FONT_SIZES, ROUTES } from '@constants'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { BUTTON_COLORS, FONT_SIZES, ROUTES } from '@constants'
-import { useRouter } from 'next/router'
-import type { FC } from 'react'
 import { HomeTopSection } from './styled'
 
 const HomeTop: FC = () => {

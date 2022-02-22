@@ -1,5 +1,5 @@
-import { PostItemProps } from 'interfaces/GuideBag'
 import React from 'react'
+import { PostItemProps } from 'interfaces/GuideBag'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import PostInfo from '../PostInfo'
 import { PostItemContainer } from './styled'
