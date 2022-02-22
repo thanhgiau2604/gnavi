@@ -1,10 +1,10 @@
+import React from 'react'
+import Link from 'next/link'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import Link from 'next/link'
-import React from 'react'
 import { AssistantContainer } from './styled'
 
-const Assistant = () => {
+const Assistant: React.FC = () => {
   return (
     <AssistantContainer>
       <Header title="アシスタント" showBtnBack />

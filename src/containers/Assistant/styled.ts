@@ -1,14 +1,14 @@
-import { FONT_SIZES } from '@constants'
 import styled from 'styled-components'
+import { FONT_SIZES } from '@constants'
 import { Variables } from 'styles/styled/app/Variables'
 
 const AssistantContainer = styled.div`
   .assistant-main {
     padding-top: 2.4rem;
-  }
-  h2 {
-    font-size: ${FONT_SIZES.large};
-    font-weight: ${Variables.fontWeightNormal};
+    h2 {
+      font-size: ${FONT_SIZES.large};
+      font-weight: ${Variables.fontWeightNormal};
+    }
   }
 
   .assistant-call-btn {
