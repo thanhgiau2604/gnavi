@@ -88,7 +88,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     cursor: pointer;
     border: none;
 
-    background-image: url('/images/date_picker.png');
+    background-image: url('/icons/date_picker.svg');
     background-repeat: no-repeat;
     background-size: contain;
 
