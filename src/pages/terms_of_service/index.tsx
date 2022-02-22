@@ -1,6 +1,6 @@
+import React from 'react'
 import TermsServiceContainer from 'containers/TermsService'
 import { NextApplicationPage } from 'pages/_app'
-import React from 'react'
 
 const TermsServicePage: NextApplicationPage = () => {
   return <TermsServiceContainer />
