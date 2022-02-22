@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container } from 'styles/styled/layout/ContainerLayout'
-import { PlanInfoProps } from 'interfaces/TourPlan'
-import { TourEventProps } from 'interfaces/TourEvent'
 import PullDownMenu from 'components/common/PullDownMenu'
 import PullDownMenuItem from 'components/common/PullDownMenu/PullDownMenuItem'
-import { SpotInfoContainer } from './styled'
+import { TourEventProps } from 'interfaces/TourEvent'
+import { PlanInfoProps } from 'interfaces/TourPlan'
+import { Container } from 'styles/styled/layout/ContainerLayout'
 import TourPlanAdvancedInfo from '../Advanced'
+import { SpotInfoContainer } from './styled'
 
 interface Props {
   data: PlanInfoProps

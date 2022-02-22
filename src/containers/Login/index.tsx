@@ -1,9 +1,9 @@
 import React from 'react'
-import LoginForm from 'components/login/Form'
-import { AuthState, LoginPayload } from 'interfaces/Auth'
+import { useRouter } from 'next/router'
 import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { authActions } from 'app/slices/authSlice'
-import { useRouter } from 'next/router'
+import LoginForm from 'components/login/Form'
+import { AuthState, LoginPayload } from 'interfaces/Auth'
 
 const Login = () => {
   const router = useRouter()

@@ -1,7 +1,7 @@
+import React from 'react'
 import { BUTTON_COLORS, FIELD_LABEL_WEIGHT, FONT_SIZES, ROUTES } from '@constants'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import { BusinessCardCreateInstructionContainer } from './styled'
 

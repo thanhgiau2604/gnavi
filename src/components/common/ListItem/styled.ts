@@ -1,5 +1,5 @@
-import { ListItemStyleProps } from 'interfaces/ListItem'
 import styled from 'styled-components'
+import { ListItemStyleProps } from 'interfaces/ListItem'
 import { Variables } from 'styles/styled/app/Variables'
 
 const ListItemContainer = styled.div<ListItemStyleProps>`

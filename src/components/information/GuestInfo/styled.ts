@@ -1,5 +1,5 @@
-import { FONT_SIZES } from '@constants'
 import styled from 'styled-components'
+import { FONT_SIZES } from '@constants'
 import { Variables } from 'styles/styled/app/Variables'
 
 const GuestInfoContainer = styled.div`

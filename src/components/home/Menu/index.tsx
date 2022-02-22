@@ -1,6 +1,6 @@
+import type { FC } from 'react'
 import { MENU_DATA } from '@constants'
 import { MenuGroup } from 'interfaces/Home'
-import type { FC } from 'react'
 import MenuItem from './Item'
 import { HomeMenuContainer } from './styled'
 

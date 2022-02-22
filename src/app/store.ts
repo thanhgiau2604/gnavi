@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 import { ENV } from '@constants'
 import authSlice from './slices/authSlice'
 import counterSlice from './slices/counterSlice'

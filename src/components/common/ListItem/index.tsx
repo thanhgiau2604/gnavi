@@ -1,6 +1,6 @@
-import { ListItemProps } from 'interfaces/ListItem'
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
+import { ListItemProps } from 'interfaces/ListItem'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { Variables } from 'styles/styled/app/Variables'
 import FlexContainer from 'styles/styled/layout/FlexLayout'

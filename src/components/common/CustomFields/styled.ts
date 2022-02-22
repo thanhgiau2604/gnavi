@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Variables } from 'styles/styled/app/Variables'
 import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { FieldPaddingBottom, FieldWidth, LabelWeight, TextAlign } from 'interfaces/CustomField'
+import { Variables } from 'styles/styled/app/Variables'
 
 export interface FieldStyleProps {
   width?: FieldWidth

@@ -1,5 +1,5 @@
-import Home from 'containers/Home'
 import Head from 'next/head'
+import Home from 'containers/Home'
 import { NextApplicationPage } from './_app'
 
 const HomePage: NextApplicationPage = () => {

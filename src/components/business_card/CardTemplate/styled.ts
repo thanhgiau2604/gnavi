@@ -1,6 +1,6 @@
+import styled from 'styled-components'
 import { FONT_SIZES } from '@constants'
 import { Variables } from 'styles/styled/app/Variables'
-import styled from 'styled-components'
 
 const CardTemplateComponent = styled.div`
   border: 1px solid ${Variables.color3};

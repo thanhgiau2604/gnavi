@@ -1,9 +1,5 @@
 import React from 'react'
-import Button from 'components/common/Button'
-import CustomDate from 'components/common/CustomFields/DateField'
-import CustomInput from 'components/common/CustomFields/InputField'
-import CustomSelect from 'components/common/CustomFields/SelectField'
-import Header from 'components/common/Header'
+import { FastField, Form, Formik } from 'formik'
 import {
   BUTTON_COLORS,
   INIT_SIGNUP_FORM_VALUE,
@@ -11,7 +7,11 @@ import {
   OPTIONS_PUBLIC_SETTING,
   VALIDATE_SIGNUP_SCHEMA,
 } from '@constants'
-import { FastField, Form, Formik } from 'formik'
+import Button from 'components/common/Button'
+import CustomDate from 'components/common/CustomFields/DateField'
+import CustomInput from 'components/common/CustomFields/InputField'
+import CustomSelect from 'components/common/CustomFields/SelectField'
+import Header from 'components/common/Header'
 import { SignupFormProps } from 'interfaces/Auth'
 import { SignupSection } from './styled'
 

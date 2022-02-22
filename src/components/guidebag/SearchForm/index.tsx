@@ -1,8 +1,8 @@
-import CustomInput from 'components/common/CustomFields/InputField'
-import { INIT_SEARCH_BAR_VALUE } from 'constants/guidebag'
+import React from 'react'
 import { FastField, Form, Formik } from 'formik'
 import Image from 'next/image'
-import React from 'react'
+import CustomInput from 'components/common/CustomFields/InputField'
+import { INIT_SEARCH_BAR_VALUE } from 'constants/guidebag'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { SearchFormContainer } from './styled'
 

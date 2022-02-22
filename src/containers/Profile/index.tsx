@@ -1,10 +1,10 @@
 import React from 'react'
 import parser from 'html-react-parser'
 import { useTranslation } from 'react-i18next'
-import { ProfileHomeContainerProps } from 'interfaces/Profile'
+import { LANGUAGE_CODE } from '@constants'
 import Header from 'components/common/Header'
 import ProfileLayout from 'components/layout/ProfileLayout'
-import { LANGUAGE_CODE } from '@constants'
+import { ProfileHomeContainerProps } from 'interfaces/Profile'
 
 const ProfileHome = ({ userInfo, data }: ProfileHomeContainerProps) => {
   const { i18n } = useTranslation()

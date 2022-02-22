@@ -1,12 +1,12 @@
 import React from 'react'
+import { FastField, Form, Formik } from 'formik'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { INIT_LOGIN_FORM_VALUE, VALIDATE_LOGIN_SCHEMA, BUTTON_COLORS, ROUTES } from '@constants'
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import Header from 'components/common/Header'
-import { INIT_LOGIN_FORM_VALUE, VALIDATE_LOGIN_SCHEMA, BUTTON_COLORS, ROUTES } from '@constants'
-import { FastField, Form, Formik } from 'formik'
 import { LoginFormProps } from 'interfaces/Auth'
-import { useRouter } from 'next/router'
 import { LoginSection } from './styled'
 
 const LoginForm: React.FC<LoginFormProps> = ({ handleLogin }) => {

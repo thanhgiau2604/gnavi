@@ -1,8 +1,8 @@
 import React from 'react'
 import { BUTTON_COLORS } from '@constants'
+import { useAppSelector } from 'app/hooks'
 import Button from 'components/common/Button'
 import Modal from 'components/common/Modal'
-import { useAppSelector } from 'app/hooks'
 import Category from '../Category'
 import { ModalCategoryContainer } from './styled'
 

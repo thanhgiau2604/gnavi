@@ -1,6 +1,6 @@
-import { ButtonReactionProps } from 'interfaces/ButtonReaction'
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
+import { ButtonReactionProps } from 'interfaces/ButtonReaction'
 import { ImageContainer } from 'styles/styled/app/Image'
 import { ButtonReactionContainer } from './styled'
 

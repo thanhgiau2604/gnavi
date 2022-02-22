@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
 import get from 'lodash/get'
+import styled, { css } from 'styled-components'
 import { SIZE_CONSTANTS } from '@constants'
 
 interface AvatarContainerStyledProps {

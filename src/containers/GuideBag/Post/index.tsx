@@ -1,9 +1,9 @@
-import PostItem from 'components/guidebag/PostItem'
-import PostMenu from 'components/guidebag/Menu'
 import React from 'react'
-import GuideBagLayout from 'components/layout/GuideBagLayout'
-import { POSTS_DATA, ROUTES } from '@constants'
 import { useRouter } from 'next/router'
+import { POSTS_DATA, ROUTES } from '@constants'
+import PostMenu from 'components/guidebag/Menu'
+import PostItem from 'components/guidebag/PostItem'
+import GuideBagLayout from 'components/layout/GuideBagLayout'
 import { PostContainer } from './styled'
 
 const Post: React.FC = () => {

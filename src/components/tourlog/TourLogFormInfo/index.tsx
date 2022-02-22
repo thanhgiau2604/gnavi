@@ -1,7 +1,7 @@
-import Button from 'components/common/Button'
-import { BUTTON_COLORS, FONT_SIZES } from '@constants'
-import { Form } from 'formik'
 import React from 'react'
+import { Form } from 'formik'
+import { BUTTON_COLORS, FONT_SIZES } from '@constants'
+import Button from 'components/common/Button'
 import BasicInfo from 'components/information/BasicInfo'
 import History from 'components/information/History'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FieldProps } from 'formik'
-import { CustomSelectProps } from 'interfaces/CustomField'
 import { FIELD_DF_VALUE, LABEL_TAGS } from '@constants'
+import { CustomSelectProps } from 'interfaces/CustomField'
 import { FieldContainer, FieldLabel } from '../styled'
 
 const CustomSelect: React.FC<FieldProps & CustomSelectProps> = ({

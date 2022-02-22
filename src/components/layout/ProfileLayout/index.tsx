@@ -1,11 +1,11 @@
 import React from 'react'
 import Router from 'next/router'
 import { useTranslation } from 'react-i18next'
+import { BUTTON_COLORS, FONT_SIZES, LANGUAGE_CODE } from '@constants'
 import Avatar from 'components/common/Avatar'
 import Button from 'components/common/Button'
 import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
-import { BUTTON_COLORS, FONT_SIZES, LANGUAGE_CODE } from '@constants'
 import { ProfileLayoutStyled } from './styled'
 
 interface ProfileLayoutProps {

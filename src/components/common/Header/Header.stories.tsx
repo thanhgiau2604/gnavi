@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { HeaderProps } from 'interfaces/Header'
 import Header from 'components/common/Header'
+import { HeaderProps } from 'interfaces/Header'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

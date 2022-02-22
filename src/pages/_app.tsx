@@ -5,17 +5,17 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 
-import type { AppProps } from 'next/app'
+import i18next from 'i18next'
 import type { NextPage } from 'next'
-import { store } from 'app/store'
+import type { AppProps } from 'next/app'
+import { I18nextProvider, initReactI18next } from 'react-i18next'
+import { Provider } from 'react-redux'
 import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
-import AuthProvider from 'providers/AuthProvider'
-import { Provider } from 'react-redux'
-import i18next from 'i18next'
-import { I18nextProvider, initReactI18next } from 'react-i18next'
+import { store } from 'app/store'
 import translation_en from 'locales/en/translation.json'
 import translation_ja from 'locales/ja/translation.json'
+import AuthProvider from 'providers/AuthProvider'
 
 // https://react.i18next.com/
 i18next.use(initReactI18next).init({

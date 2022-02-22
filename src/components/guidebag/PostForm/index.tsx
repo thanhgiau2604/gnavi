@@ -1,10 +1,10 @@
+import React from 'react'
+import { FastField, Form, Formik } from 'formik'
 import { BUTTON_COLORS, INIT_POST_FORM_VALUE, POST_TYPE_OPTIONS } from '@constants'
 import { useAppSelector } from 'app/hooks'
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import CustomSelect from 'components/common/CustomFields/SelectField'
-import { FastField, Form, Formik } from 'formik'
-import React from 'react'
 import CategorySelect from '../CategorySelect'
 
 const PostForm: React.FC = () => {

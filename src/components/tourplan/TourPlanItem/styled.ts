@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Variables } from 'styles/styled/app/Variables'
 import { FONT_SIZES, FIELD_LABEL_WEIGHT } from '@constants'
+import { Variables } from 'styles/styled/app/Variables'
 
 const TourPlanItemContainer = styled.div`
   cursor: pointer;
