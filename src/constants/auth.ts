@@ -9,14 +9,10 @@ const INIT_LOGIN_FORM_VALUE: LoginPayload = {
 
 const INIT_SIGNUP_FORM_VALUE: SignupPayload = {
   username: '',
-  nickname: '',
   email: '',
   password: '',
-  last_name: '',
-  first_name: '',
-  public_setting: 'yourself',
+  fullname: '',
   birthday: new Date('1/1/1990'),
-  gender: 'male',
 }
 
 const INIT_CONFIRM_FORM_VALUE: ConfirmPayload = {
@@ -32,11 +28,8 @@ const VALIDATE_SIGNUP_SCHEMA = Yup.object().shape({
   username: Yup.string().required(),
   email: Yup.string().required(),
   password: Yup.string().required(),
-  last_name: Yup.string().required(),
-  first_name: Yup.string().required(),
-  public_setting: Yup.string().required(),
+  fullname: Yup.string().required(),
   birthday: Yup.string().required(),
-  gender: Yup.string().required(),
 })
 
 const VALIDATE_CONFIRM_SCHEMA = Yup.object().shape({
