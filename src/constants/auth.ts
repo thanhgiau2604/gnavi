@@ -11,7 +11,7 @@ const INIT_SIGNUP_FORM_VALUE: SignupPayload = {
   username: '',
   email: '',
   password: '',
-  fullname: '',
+  name: '',
   birthday: new Date('1/1/1990'),
 }
 
@@ -28,7 +28,7 @@ const VALIDATE_SIGNUP_SCHEMA = Yup.object().shape({
   username: Yup.string().required(),
   email: Yup.string().required(),
   password: Yup.string().required(),
-  fullname: Yup.string().required(),
+  name: Yup.string().required(),
   birthday: Yup.string().required(),
 })
 

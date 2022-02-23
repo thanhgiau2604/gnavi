@@ -55,7 +55,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
                     lbTag="require"
                   />
 
-                  <FastField name="fullname" component={CustomInput} label="氏名" lbTag="require" />
+                  <FastField name="name" component={CustomInput} label="氏名" lbTag="require" />
 
                   <FastField
                     name="birthday"

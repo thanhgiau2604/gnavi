@@ -7,20 +7,20 @@ import { authActions } from 'app/slices/authSlice'
 const AuthProvider = ({ children }: { children: JSX.Element }) => {
   const router = useRouter()
   const dispatch = useAppDispatch()
-  const user = useAppSelector((state) => state.auth.userData)
+  const token = useAppSelector((state) => state.auth.accessToken)
 
   useEffect(() => {
     if (!router.isReady) {
       return
     }
 
-    if (!user) {
+    if (!token) {
       router.push(ROUTES.login)
       dispatch(authActions.updateRedirectUrl(router.asPath))
     }
-  }, [router, user, dispatch])
+  }, [router, token, dispatch])
 
-  return user ? <>{children}</> : null
+  return token ? <>{children}</> : null
 }
 
 export default AuthProvider

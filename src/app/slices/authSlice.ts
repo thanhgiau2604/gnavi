@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { RootState } from 'app/store'
 import { AuthState } from 'interfaces/Auth'
 
 const initialState: AuthState = {
@@ -8,6 +9,7 @@ const initialState: AuthState = {
   refreshToken: '',
   userData: undefined,
   redirectUrl: '/',
+  expiredAt: 0,
 }
 
 const authSlice = createSlice({
@@ -22,6 +24,7 @@ const authSlice = createSlice({
       state.isLogging = false
       state.accessToken = action.payload.accessToken
       state.refreshToken = action.payload.refreshToken
+      state.expiredAt = action.payload.expiredAt
       state.userData = action.payload.userData
     },
     loginFailed(state) {
@@ -30,6 +33,9 @@ const authSlice = createSlice({
     logout(state) {
       state.isLoggedIn = false
       state.userData = undefined
+      state.accessToken = initialState.accessToken
+      state.refreshToken = initialState.refreshToken
+      state.redirectUrl = initialState.redirectUrl
     },
     updateRedirectUrl(state, action: PayloadAction<string>) {
       state.redirectUrl = action.payload
@@ -40,6 +46,8 @@ const authSlice = createSlice({
 // Actions
 export const authActions = authSlice.actions
 
+// Selectors
+export const AccessToken = (state: RootState) => state.auth.accessToken
 // Reducer
 const authReducer = authSlice.reducer
 
