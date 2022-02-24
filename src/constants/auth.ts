@@ -12,7 +12,7 @@ const INIT_SIGNUP_FORM_VALUE: SignupPayload = {
   email: '',
   password: '',
   name: '',
-  birthday: new Date('1/1/1990'),
+  birthday: '1990/01/01',
 }
 
 const INIT_CONFIRM_FORM_VALUE: ConfirmPayload = {

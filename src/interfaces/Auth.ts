@@ -32,7 +32,7 @@ interface SignupPayload {
   email: string
   password: string
   name: string
-  birthday: Date
+  birthday: string
 }
 
 interface SignupFormProps {

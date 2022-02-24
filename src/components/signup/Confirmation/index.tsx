@@ -18,7 +18,7 @@ const Confirmation: React.FC<CfFormProps> = ({ handleConfirm }) => {
           </h1>
 
           <p className="global-desc cf-mail-desc">
-            ＠xxx.comからのメールが受信できるようにしてください。メールが届いていない場合、迷惑メールフォルダを確認してください。
+            @teqnological.asiaからのメールが受信できるようにしてください。メールが届いていない場合、迷惑メールフォルダを確認してください。
           </p>
 
           <h3 className="global-heading cf-mail-expired">本登録メールの有効期限が切れた場合</h3>

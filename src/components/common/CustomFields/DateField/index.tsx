@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FieldProps } from 'formik'
+import moment from 'moment'
 import DatePicker from 'react-datepicker'
 import { FIELD_DF_VALUE, LABEL_TAGS } from '@constants'
 import { CustomInputProps } from 'interfaces/CustomField'
@@ -23,7 +24,7 @@ const CustomDate: React.FC<FieldProps & CustomInputProps> = ({
     const changeEvent = {
       target: {
         name,
-        value: date,
+        value: moment(date).format('YYYY/MM/DD'),
       },
     }
     field.onChange(changeEvent)
@@ -56,7 +57,7 @@ const CustomDate: React.FC<FieldProps & CustomInputProps> = ({
         <DatePicker
           {...field}
           placeholderText={placeholder}
-          selected={field.value}
+          selected={new Date(field.value)}
           onChange={handleChangeDateTime}
           dateFormat="yyyy/MM/dd"
           open={isOpen}

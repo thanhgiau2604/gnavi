@@ -2,17 +2,18 @@ import type { FC } from 'react'
 import Image from 'next/image'
 import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { authApi } from 'app/api'
-import { useAppSelector } from 'app/hooks'
-// import { authActions } from 'app/slices/authSlice'
+import { useAppDispatch, useAppSelector } from 'app/hooks'
+import { authActions } from 'app/slices/authSlice'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
+import { showNotify } from 'utils/notify'
 import Menu from '../Menu'
 import { HomeMainSection } from './styled'
 
 const HomeMain: FC = () => {
-  // const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch()
   const [email, refreshToken] = useAppSelector((state) => [
     state.auth.userData?.email,
     state.auth.refreshToken,
@@ -20,7 +21,8 @@ const HomeMain: FC = () => {
 
   const handleLogout = async () => {
     await authApi.logout({ email, refresh_token: refreshToken })
-    // dispatch(authActions.logout())
+    dispatch(authActions.logout())
+    showNotify('success', 'Logout successfully', 2000)
   }
 
   return (

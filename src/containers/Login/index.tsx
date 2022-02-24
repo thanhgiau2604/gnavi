@@ -5,12 +5,12 @@ import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { authActions } from 'app/slices/authSlice'
 import LoginForm from 'components/login/Form'
 import { AuthState, LoginPayload } from 'interfaces/Auth'
+import { showNotify } from 'utils/notify'
 
 const Login = () => {
   const router = useRouter()
   const dispatch = useAppDispatch()
   const urlRedirect = useAppSelector((state) => state.auth.redirectUrl)
-
   const handleLogin = async (payload: LoginPayload) => {
     const { code, data, message } = await authApi.login(payload)
     if (code === undefined) {
@@ -23,11 +23,14 @@ const Login = () => {
         },
       }
       dispatch(authActions.loginSuccess(authState))
-      if (urlRedirect) {
-        router.push(urlRedirect)
-      }
+      showNotify('success', 'Login successfully', 2000)
+      setTimeout(() => {
+        if (urlRedirect) {
+          router.push(urlRedirect)
+        }
+      }, 2000)
     } else {
-      alert(message)
+      showNotify('error', message ?? '', 2000)
     }
   }
 
