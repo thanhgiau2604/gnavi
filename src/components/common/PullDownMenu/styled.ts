@@ -1,5 +1,5 @@
-import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import styled from 'styled-components'
+import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { Variables } from 'styles/styled/app/Variables'
 
 const PullDownMenuContainer = styled.div`

@@ -1,17 +1,10 @@
 import React from 'react'
+import { FastField, Form, Formik } from 'formik'
+import { BUTTON_COLORS, INIT_SIGNUP_FORM_VALUE, VALIDATE_SIGNUP_SCHEMA } from '@constants'
 import Button from 'components/common/Button'
 import CustomDate from 'components/common/CustomFields/DateField'
 import CustomInput from 'components/common/CustomFields/InputField'
-import CustomSelect from 'components/common/CustomFields/SelectField'
 import Header from 'components/common/Header'
-import {
-  BUTTON_COLORS,
-  INIT_SIGNUP_FORM_VALUE,
-  OPTIONS_GENDER,
-  OPTIONS_PUBLIC_SETTING,
-  VALIDATE_SIGNUP_SCHEMA,
-} from '@constants'
-import { FastField, Form, Formik } from 'formik'
 import { SignupFormProps } from 'interfaces/Auth'
 import { SignupSection } from './styled'
 
@@ -26,8 +19,8 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
             initialValues={INIT_SIGNUP_FORM_VALUE}
             validationSchema={VALIDATE_SIGNUP_SCHEMA}
             onSubmit={(values, actions) => {
-              handleSignup(values)
               actions.setSubmitting(false)
+              handleSignup(values)
             }}
           >
             {() => {
@@ -48,16 +41,6 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
                   </p>
 
                   <FastField
-                    name="nickname"
-                    component={CustomInput}
-                    label="ニックネーム"
-                    lbTag="any"
-                    pb={8}
-                  />
-
-                  <p className="global-desc signup-desc-nickname">後から変更できます</p>
-
-                  <FastField
                     name="email"
                     component={CustomInput}
                     label="メールアドレス"
@@ -72,41 +55,13 @@ const SignupForm: React.FC<SignupFormProps> = ({ handleSignup }) => {
                     lbTag="require"
                   />
 
-                  <FastField
-                    name="last_name"
-                    component={CustomInput}
-                    label="本名（苗字）"
-                    lbTag="require"
-                  />
-
-                  <FastField
-                    name="first_name"
-                    component={CustomInput}
-                    label="本名（名前）"
-                    lbTag="require"
-                  />
-
-                  <FastField
-                    name="public_setting"
-                    component={CustomSelect}
-                    label="公開設定"
-                    lbTag="require"
-                    options={OPTIONS_PUBLIC_SETTING}
-                  />
+                  <FastField name="name" component={CustomInput} label="氏名" lbTag="require" />
 
                   <FastField
                     name="birthday"
                     component={CustomDate}
                     label="誕生日"
                     lbTag="require"
-                  />
-
-                  <FastField
-                    name="gender"
-                    component={CustomSelect}
-                    label="性別"
-                    lbTag="require"
-                    options={OPTIONS_GENDER}
                   />
 
                   <Button

@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import { BUTTON_COLORS, FONT_SIZES } from '@constants'
+import Button from 'components/common/Button'
+import { PostInfoProps } from 'interfaces/GuideBag'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import { PostInfoProps } from 'interfaces/GuideBag'
-import Button from 'components/common/Button'
-import { BUTTON_COLORS, FONT_SIZES } from '@constants'
 import { PostInfoContainer } from './styled'
 
 const PostInfo: React.FC<PostInfoProps> = ({

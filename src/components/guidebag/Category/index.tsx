@@ -1,27 +1,39 @@
+import React from 'react'
 import { GUIDEBAG_CATEGORIES } from '@constants'
+import { useAppDispatch, useAppSelector } from 'app/hooks'
+import { gbCategoriesActions } from 'app/slices/gbCategoriesSlice'
 import ListItem from 'components/common/ListItem'
-import { GuideBagCateProps } from 'interfaces/GuideBag'
-import React, { useState } from 'react'
 
-const Category: React.FC<GuideBagCateProps> = ({ categoryList, updateCategoryList }) => {
-  const [selected, setSelected] = useState<string>('')
+const Category: React.FC = () => {
+  const dispatch = useAppDispatch()
+  const data = useAppSelector((state) => state.gbCategories)
+  const { currentLevel, selected, isLast, categories } = data
 
   const handleSelect = (cate: string) => {
-    setSelected(cate)
-    updateCategoryList(GUIDEBAG_CATEGORIES[1])
+    dispatch(gbCategoriesActions.updateSelection(cate))
+    if (GUIDEBAG_CATEGORIES.length !== currentLevel) {
+      dispatch(
+        gbCategoriesActions.updateCategories({
+          categories: GUIDEBAG_CATEGORIES[currentLevel],
+          isLast: GUIDEBAG_CATEGORIES.length === currentLevel + 1,
+          currentLevel: currentLevel + 1,
+        })
+      )
+    }
   }
   return (
     <div>
-      {categoryList.map((cate, index) => (
-        <ListItem
-          text={cate}
-          key={`guidebag_cate_${index.toString()}`}
-          borderTop={index === 0}
-          handleClick={() => handleSelect(cate)}
-          showIcon={categoryList !== GUIDEBAG_CATEGORIES[1]}
-          isActive={cate === selected}
-        />
-      ))}
+      {categories &&
+        categories.map((cate, index) => (
+          <ListItem
+            text={cate}
+            key={`guidebag_cate_${index.toString()}`}
+            borderTop={index === 0}
+            handleClick={() => handleSelect(cate)}
+            showIcon={!isLast}
+            isActive={cate === selected}
+          />
+        ))}
     </div>
   )
 }

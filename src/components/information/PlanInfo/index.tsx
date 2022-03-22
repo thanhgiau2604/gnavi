@@ -1,7 +1,5 @@
-import Button from 'components/common/Button'
-import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
-import CustomInput from 'components/common/CustomFields/InputField'
-import CustomSelect from 'components/common/CustomFields/SelectField'
+import React from 'react'
+import { FastField, FieldArray } from 'formik'
 import {
   BUTTON_COLORS,
   CHECKBOX_THEME,
@@ -10,11 +8,13 @@ import {
   OPTIONS_TIME,
   OPTIONS_TRANSPORT,
 } from '@constants'
-import { FastField, FieldArray } from 'formik'
-import React from 'react'
+import Button from 'components/common/Button'
+import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
+import CustomInput from 'components/common/CustomFields/InputField'
+import CustomSelect from 'components/common/CustomFields/SelectField'
+import { TourEventProps } from 'interfaces/TourEvent'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import FlexContainer, { FlexItem } from 'styles/styled/layout/FlexLayout'
-import { TourEventProps } from 'interfaces/TourEvent'
 import { PlanInfoContainer } from './styled'
 
 interface Props {

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import { Variables } from 'styles/styled/app/Variables'
 import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { CheckboxTheme } from 'interfaces/CustomField'
+import { Variables } from 'styles/styled/app/Variables'
 import { FieldStyleProps } from '../styled'
 
 interface FieldCheckboxStyleProps extends FieldStyleProps {

@@ -1,18 +1,37 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import storage from 'redux-persist/lib/storage'
 import { persistReducer } from 'redux-persist'
+import createWebStorage from 'redux-persist/lib/storage/createWebStorage'
 import { ENV } from '@constants'
 import authSlice from './slices/authSlice'
 import counterSlice from './slices/counterSlice'
+import gbCategoriesSlice from './slices/gbCategoriesSlice'
 
 const reducers = combineReducers({
   counter: counterSlice,
   auth: authSlice,
+  gbCategories: gbCategoriesSlice,
 })
+
+const createNoopStorage = () => {
+  return {
+    getItem() {
+      return Promise.resolve(null)
+    },
+    setItem(_key: string, value: unknown) {
+      return Promise.resolve(value)
+    },
+    removeItem() {
+      return Promise.resolve()
+    },
+  }
+}
+
+const storage = typeof window !== 'undefined' ? createWebStorage('local') : createNoopStorage()
 
 const persistConfig = {
   key: 'gnavi',
   storage,
+  whitelist: ['auth'],
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

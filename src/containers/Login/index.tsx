@@ -1,29 +1,36 @@
 import React from 'react'
-import LoginForm from 'components/login/Form'
-import { AuthState, LoginPayload } from 'interfaces/Auth'
+import { useRouter } from 'next/router'
+import { authApi } from 'app/api'
 import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { authActions } from 'app/slices/authSlice'
-import { useRouter } from 'next/router'
+import LoginForm from 'components/login/Form'
+import { AuthState, LoginPayload } from 'interfaces/Auth'
+import { showNotify } from 'utils/notify'
 
 const Login = () => {
   const router = useRouter()
   const dispatch = useAppDispatch()
   const urlRedirect = useAppSelector((state) => state.auth.redirectUrl)
-  // TODO: handle logic later
-  const handleLogin = (payload: LoginPayload) => {
-    // example payload
-    const authState: AuthState = {
-      accessToken: payload.email,
-      refreshToken: payload.email,
-      userData: {
-        username: 'giaunguyen',
-        nickname: 'giau.nguyen',
-        phone: '09xxx',
-      },
-    }
-    dispatch(authActions.loginSuccess(authState))
-    if (urlRedirect) {
-      router.push(urlRedirect)
+  const handleLogin = async (payload: LoginPayload) => {
+    const { code, data, message } = await authApi.login(payload)
+    if (code === undefined) {
+      const authState: AuthState = {
+        accessToken: data?.access_token,
+        refreshToken: data?.refresh_token,
+        expiredAt: data?.expire_at,
+        userData: {
+          email: payload.email,
+        },
+      }
+      dispatch(authActions.loginSuccess(authState))
+      showNotify('success', 'Login successfully', 2000)
+      setTimeout(() => {
+        if (urlRedirect) {
+          router.push(urlRedirect)
+        }
+      }, 2000)
+    } else {
+      showNotify('error', message ?? '', 2000)
     }
   }
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import { HeaderProps } from 'interfaces/Header'
 import Image from 'next/image'
-import { ImageContainer } from 'styles/styled/app/Image'
 import { useRouter } from 'next/router'
+import { HeaderProps } from 'interfaces/Header'
+import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
 import { HeaderContainer, HeaderTitle } from './styled'
 

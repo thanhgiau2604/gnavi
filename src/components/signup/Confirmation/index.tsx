@@ -1,9 +1,9 @@
 import React from 'react'
+import { FastField, Form, Formik } from 'formik'
+import { BUTTON_COLORS, INIT_CONFIRM_FORM_VALUE, VALIDATE_CONFIRM_SCHEMA } from '@constants'
 import Button from 'components/common/Button'
 import CustomInput from 'components/common/CustomFields/InputField'
 import Header from 'components/common/Header'
-import { BUTTON_COLORS, INIT_CONFIRM_FORM_VALUE, VALIDATE_CONFIRM_SCHEMA } from '@constants'
-import { FastField, Form, Formik } from 'formik'
 import { CfFormProps } from 'interfaces/Auth'
 import { ConfirmationSection } from './styled'
 
@@ -18,7 +18,7 @@ const Confirmation: React.FC<CfFormProps> = ({ handleConfirm }) => {
           </h1>
 
           <p className="global-desc cf-mail-desc">
-            ＠xxx.comからのメールが受信できるようにしてください。メールが届いていない場合、迷惑メールフォルダを確認してください。
+            @teqnological.asiaからのメールが受信できるようにしてください。メールが届いていない場合、迷惑メールフォルダを確認してください。
           </p>
 
           <h3 className="global-heading cf-mail-expired">本登録メールの有効期限が切れた場合</h3>

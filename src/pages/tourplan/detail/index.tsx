@@ -1,6 +1,6 @@
 import React from 'react'
-import TourPlanDetail from 'containers/TourPlan/Detail'
 import { NextPage } from 'next'
+import TourPlanDetail from 'containers/TourPlan/Detail'
 
 const TourPlanDetailPage: NextPage = () => {
   return <TourPlanDetail />

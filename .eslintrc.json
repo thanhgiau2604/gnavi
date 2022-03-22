@@ -6,7 +6,8 @@
     "airbnb/hooks",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/recommended"
   ],
   "rules": {
     "prettier/prettier": "error",
@@ -35,7 +36,7 @@
     "import/no-named-as-default": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
-    "import/extensions": [2, { "tsx": "never", "ts": "never" }],
+    "import/extensions": [2, { "tsx": "never", "ts": "never", "json": "always" }],
     "@next/next/no-img-element": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/click-events-have-key-events": "off",
@@ -44,6 +45,27 @@
     "camelcase": "off",
     "import/no-cycle": "off",
     "react/jsx-no-useless-fragment": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
+    "jsx-a11y/no-static-element-interactions": "off",
+    "dot-notation": "off",
+
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling"]],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }

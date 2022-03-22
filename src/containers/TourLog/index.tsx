@@ -1,6 +1,6 @@
+import React from 'react'
 import { ROUTES } from '@constants'
 import Header from 'components/common/Header'
-import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import { TourLogContainer } from './styled'
 

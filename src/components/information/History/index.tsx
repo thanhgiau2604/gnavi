@@ -1,3 +1,5 @@
+import React from 'react'
+import { FastField } from 'formik'
 import { CHECKBOX_THEME, OPTIONS_TIME } from '@constants'
 import CustomCheckBox from 'components/common/CustomFields/CheckboxField'
 import CustomInput from 'components/common/CustomFields/InputField'
@@ -8,8 +10,6 @@ import {
   OPTIONS_WHEN_DISBANDED,
   OPTIONS_WHEN_GATHERING,
 } from 'constants/tour_log'
-import { FastField } from 'formik'
-import React from 'react'
 import { Container } from 'styles/styled/layout/ContainerLayout'
 import { HistoryLogContainer } from './styled'
 

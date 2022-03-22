@@ -1,8 +1,8 @@
+import React from 'react'
+import { useRouter } from 'next/router'
+import { BUTTON_COLORS, ROUTES } from '@constants'
 import Button from 'components/common/Button'
 import Header from 'components/common/Header'
-import { BUTTON_COLORS, ROUTES } from '@constants'
-import { useRouter } from 'next/router'
-import React from 'react'
 import { TestInstructionSection } from './styled'
 
 const TestInstruction = () => {

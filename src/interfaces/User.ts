@@ -1,7 +1,5 @@
 interface User {
-  nickname: string
-  username: string
-  phone: string
+  email: string
 }
 
 export type { User }

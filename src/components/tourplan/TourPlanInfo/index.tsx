@@ -1,5 +1,5 @@
-import { TourPlanInfoProps } from 'interfaces/TourPlan'
 import React from 'react'
+import { TourPlanInfoProps } from 'interfaces/TourPlan'
 import TourPlanInfoBasic from './BasicInfo'
 import TourPlanGuestInfo from './GuestInfo'
 import TourPlanSpotInfo from './SpotInfo'

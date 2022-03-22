@@ -1,7 +1,7 @@
+import React from 'react'
 import { INIT_TOUR_PLAN_FORM_VALUE, ROUTES } from '@constants'
 import Header from 'components/common/Header'
 import TourPlanFormInfo from 'components/tourplan/TourPlanFormInfo'
-import React from 'react'
 import { TourPlanCreateContainer } from './styled'
 
 const TourPlanCreate: React.FC = () => {

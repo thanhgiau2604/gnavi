@@ -1,12 +1,12 @@
-import Button from 'components/common/Button'
-import { BUTTON_COLORS, FONT_SIZES } from '@constants'
-import { Form, Formik } from 'formik'
 import React, { useState } from 'react'
-import { TourPlanInfoProps } from 'interfaces/TourPlan'
+import { Form, Formik } from 'formik'
+import { BUTTON_COLORS, FONT_SIZES } from '@constants'
+import Button from 'components/common/Button'
+import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
 import BasicInfo from 'components/information/BasicInfo'
 import GuestInfo from 'components/information/GuestInfo'
 import PlanInfo from 'components/information/PlanInfo'
-import ButtonGroup, { ButtonGroupItem } from 'components/common/ButtonGroup'
+import { TourPlanInfoProps } from 'interfaces/TourPlan'
 import { TourPlanFormInfoContainer } from './styled'
 
 interface Props {

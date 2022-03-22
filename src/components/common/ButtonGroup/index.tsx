@@ -5,7 +5,7 @@ import { ButtonGroupStyledContainer, ButtonGroupStyledItem } from './styled'
 export const ButtonGroupItem: React.FC<ButtonGroupItemProps> = ({ handleClick, active, text }) => {
   return (
     <ButtonGroupStyledItem onClick={handleClick} active={active}>
-      <div className="text">{text}</div>
+      <div className={`text ${active ? 'text-uppercase' : ''}`}>{text}</div>
     </ButtonGroupStyledItem>
   )
 }

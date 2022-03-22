@@ -1,8 +1,8 @@
-import { PullDownMenuProps } from 'interfaces/PullDownMenu'
 import React, { useState } from 'react'
+import Image from 'next/image'
+import { PullDownMenuProps } from 'interfaces/PullDownMenu'
 import { ImageContainer } from 'styles/styled/app/Image'
 import FlexContainer from 'styles/styled/layout/FlexLayout'
-import Image from 'next/image'
 import { PullDownMenuContainer } from './styled'
 
 const PullDownMenu: React.FC<PullDownMenuProps> = ({ hr, title, children, margin }) => {

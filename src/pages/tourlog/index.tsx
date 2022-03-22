@@ -1,6 +1,6 @@
-import TourLogContainer from 'containers/TourLog'
-import { NextPage } from 'next'
 import React from 'react'
+import { NextPage } from 'next'
+import TourLogContainer from 'containers/TourLog'
 
 const TourLogPage: NextPage = () => {
   return <TourLogContainer />

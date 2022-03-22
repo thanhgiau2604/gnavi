@@ -1,9 +1,10 @@
 import React from 'react'
 import LoginContainer from 'containers/Login'
-import { NextPage } from 'next'
+import { NextApplicationPage } from 'pages/_app'
 
-const LoginPage: NextPage = () => {
+const LoginPage: NextApplicationPage = () => {
   return <LoginContainer />
 }
 
+LoginPage.requireAuth = true
 export default LoginPage

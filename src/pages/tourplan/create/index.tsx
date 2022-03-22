@@ -1,6 +1,6 @@
-import TourPlanCreate from 'containers/TourPlan/Create'
-import { NextPage } from 'next'
 import React from 'react'
+import { NextPage } from 'next'
+import TourPlanCreate from 'containers/TourPlan/Create'
 
 const TourPlanCreatePage: NextPage = () => {
   return <TourPlanCreate />

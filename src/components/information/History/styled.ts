@@ -1,5 +1,5 @@
-import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import styled from 'styled-components'
+import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 
 const HistoryLogContainer = styled.div`
   margin-top: 4.3rem;

@@ -1,0 +1,25 @@
+.regulation {
+  &-intro {
+    font-weight: $font-weight-normal;
+    font-size: $fz-medium;
+  }
+
+  &-main {
+    padding: 2.4rem 0;
+  }
+
+  &-article {
+    padding-top: 3.3rem;
+  }
+
+  &-title {
+    font-size: $fz-xlarge;
+    font-weight: $font-weight-bold;
+    padding-bottom: 3.3rem;
+  }
+
+  &-content {
+    font-size: $fz-medium;
+    line-height: calc(23.17 / 16);
+  }
+}

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Variables } from 'styles/styled/app/Variables'
 import { FIELD_LABEL_WEIGHT, FONT_SIZES } from '@constants'
 import { FieldPaddingBottom, FieldWidth, LabelWeight, TextAlign } from 'interfaces/CustomField'
+import { Variables } from 'styles/styled/app/Variables'
 
 export interface FieldStyleProps {
   width?: FieldWidth
@@ -88,7 +88,7 @@ const FieldContainer = styled.div<FieldStyleProps>`
     cursor: pointer;
     border: none;
 
-    background-image: url('/images/date_picker.png');
+    background-image: url('/icons/date_picker.svg');
     background-repeat: no-repeat;
     background-size: contain;
 
